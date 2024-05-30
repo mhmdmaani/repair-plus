@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" modified="2024-03-09T19:21:34.104Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="o1P5cVPPQiErC6sNPTgy" version="24.0.0" type="device">
+  <diagram name="Page-1" id="Pt4nEdpt8qy42fsQejII">
+    <mxGraphModel dx="2074" dy="2280" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CnaoorKMNTPSKkrIE8KU-1" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Delivery Quotes&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="390" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CnaoorKMNTPSKkrIE8KU-3" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Deliver Quote&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="70" width="390" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CnaoorKMNTPSKkrIE8KU-4" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Delivery Quote&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="120" width="390" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CnaoorKMNTPSKkrIE8KU-6" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Select Project Name:&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="-30" width="390" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CnaoorKMNTPSKkrIE8KU-8" value="&lt;h1&gt;Platform:(&lt;/h1&gt;&lt;h1&gt;&amp;nbsp;client website, client app, Driver app, admin panel&lt;/h1&gt;&lt;h1&gt;)&lt;/h1&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="220" width="770" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="CnaoorKMNTPSKkrIE8KU-9" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Description:&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="370" width="390" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CnaoorKMNTPSKkrIE8KU-10" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Description:&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="430" width="760" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="CnaoorKMNTPSKkrIE8KU-11" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Use Cases&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="760" width="390" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CnaoorKMNTPSKkrIE8KU-12" value="&lt;h1&gt;Programming languages and tech stack&lt;/h1&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="1150" width="510" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CnaoorKMNTPSKkrIE8KU-13" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Database Structure&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry y="1470" width="390" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

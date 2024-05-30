@@ -1,0 +1,34 @@
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="cJrn9Q4fMytQ14IZbBap">
+        <mxGraphModel dx="677" dy="462" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="NlPfUWOi0T5fKWzDXsfD-1" value="Collection" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="190" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="NlPfUWOi0T5fKWzDXsfD-2" value="Delivery" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="270" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="NlPfUWOi0T5fKWzDXsfD-3" value="stop points" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="350" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="NlPfUWOi0T5fKWzDXsfD-4" value="Map" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="190" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="NlPfUWOi0T5fKWzDXsfD-5" value="TruckType" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="270" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="NlPfUWOi0T5fKWzDXsfD-6" value="Payment" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="190" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Status" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="270" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Payment" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="350" width="80" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

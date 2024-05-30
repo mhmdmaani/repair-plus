@@ -1,0 +1,34 @@
+{
+    "apple_devices": [
+        {
+            "name": "iPhone 12",
+            "image": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple_announce-iphone12pro_10132020_big.jpg.large.jpg",
+            "brand": {
+                "name": "Apple"
+            }
+        },
+        {
+            "name": "iPhone 13",
+            "image": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple_announce-iphone13_09142021.jpg.large.jpg",
+            "brand": {
+                "name": "Apple"
+            }
+        }
+    ],
+    "samsung_devices": [
+        {
+            "name": "Galaxy S21",
+            "image": "https://images.samsung.com/is/image/samsung/p5/uk/smartphones/galaxy-s21-5g/galaxy-s21-5g_overview_kv_l.jpg",
+            "brand": {
+                "name": "Samsung"
+            }
+        },
+        {
+            "name": "Galaxy Note 20",
+            "image": "https://images.samsung.com/is/image/samsung/p6pim/uk/galaxy-note20/gallery/uk-galaxy-note20-front-mysticbronze-thumb-279818197?$720_576_PNG$",
+            "brand": {
+                "name": "Samsung"
+            }
+        }
+    ]
+}

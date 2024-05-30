@@ -1,0 +1,131 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgres"
+  url      = env("DATABASE_URL")
+}
+
+enum OrderStatus {
+  WAITING
+  PENDING
+  IN_PROGRESS
+  DONE
+  TOKEN
+  CANCELLED
+}
+
+model Brand {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  logo      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  devices   Device[]
+}
+
+model Device {
+  id        String     @id @default(cuid())
+  name      String     @unique
+  image     String?
+  brand     Brand      @relation(fields: [brandId], references: [id])
+  brandId   String
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  Repair    Repair[]
+  FixOrder  FixOrder[]
+}
+
+model Repair {
+  id                   String    @id @default(cuid())
+  device               Device    @relation(fields: [deviceId], references: [id])
+  deviceId             String
+  name                 String
+  description          String
+  price                Float
+  vat                  Float
+  totalPrice           Float
+  quantity             Int
+  quality              String
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+  expectedMinutesToFix Int
+  FixOrder             FixOrder? @relation(fields: [fixOrderId], references: [id])
+  fixOrderId           String?
+}
+
+model FixOrder {
+  id                String      @id @default(cuid())
+  device            Device      @relation(fields: [deviceId], references: [id])
+  deviceId          String
+  imei              String
+  image             String?
+  problems          String[]
+  repairs           Repair[]
+  userNote          String?
+  user              User        @relation(fields: [userId], references: [id])
+  userId            String
+  maintenanceNote   String?
+  status            OrderStatus @default(WAITING)
+  price             Float
+  vat               Float
+  totalPrice        Float
+  doneAt            DateTime?
+  receivedAt        DateTime?
+  cancelledAt       DateTime?
+  tokenAt           DateTime?
+  expectedDateToFix DateTime?
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+}
+
+model User {
+  id        String     @id @default(cuid())
+  name      String
+  email     String     @unique
+  password  String
+  tel       String
+  address   String?
+  company   String?
+  orgNumber String?
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  orders    FixOrder[]
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Subscription {
+  id        String   @id @default(uuid())
+  email     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Settings {
+  id                         String   @id @default(uuid())
+  currency                   String
+  currencySymbol             String
+  vatPercentage              Float
+  contactPhone               String?
+  contactEmail               String?
+  facebook                   String?
+  instagram                  String?
+  twitter                    String?
+  linkedin                   String?
+  youtube                    String?
+  createdAt                  DateTime @default(now())
+  updatedAt                  DateTime @updatedAt
+  displayEmailInSeperatePage Boolean  @default(false)
+}
