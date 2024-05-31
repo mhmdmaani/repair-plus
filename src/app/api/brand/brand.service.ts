@@ -1,4 +1,6 @@
+import { randomUUID } from 'crypto';
 import { Brand, PrismaClient } from 'prisma/prisma-client';
+import { v4 as uuidv4 } from 'uuid';
 
 export class BrandService {
   static async getAll() {
@@ -26,6 +28,7 @@ export class BrandService {
                 {
                   name: {
                     contains: searchKey,
+                    mode: 'insensitive',
                   },
                 },
               ]
@@ -45,6 +48,7 @@ export class BrandService {
                 {
                   name: {
                     contains: searchKey,
+                    mode: 'insensitive',
                   },
                 },
               ]
@@ -97,7 +101,10 @@ export class BrandService {
   static async insert(data: Brand) {
     const prisma = new PrismaClient();
     const inserted = await prisma.brand.create({
-      data,
+      data: {
+        ...data,
+        id: uuidv4(),
+      },
     });
     await prisma.$disconnect();
     return inserted;

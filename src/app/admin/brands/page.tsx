@@ -1,5 +1,5 @@
-import OffersPage from '@/modules/admin/offers/OffersPage';
+import BrandsPage from '@/modules/admin/brands/BrandsPage';
 
 export default function Brands() {
-  return <OffersPage />;
+  return <BrandsPage />;
 }

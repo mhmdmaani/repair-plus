@@ -1,5 +1,4 @@
 'use client';
-import { useOffers } from '@/hooks/admin/useOffers';
 import { useSortAndSearch } from '@/hooks/useSearchAndSort';
 import EnhancedTable from '@/shared/table/EnhancedTable';
 import {
@@ -14,9 +13,12 @@ import {
   styled,
 } from '@mui/material';
 import { format } from 'date-fns';
-import { useState } from 'react';
-import OfferForm from './OfferForm';
-import { useAllBrands } from '@/hooks/admin/useBrands';
+import { useEffect, useState } from 'react';
+import DeviceForm from './DeviceForm';
+import { useAllBrands, useSearchBrands } from '@/hooks/admin/useBrands';
+import { useSearchDevices } from '@/hooks/admin/useDevices';
+import SelectBrand from './SelectBrand';
+import { Brand } from 'prisma/prisma-client';
 
 const SearchContainer = styled('div')`
   display: flex;
@@ -24,15 +26,30 @@ const SearchContainer = styled('div')`
   margin-bottom: 20px;
 `;
 
-export default function BrandsPage() {
+export default function DevicesPage() {
   const [addNew, setAddNew] = useState(false);
-  const [currentOffer, setCurrentOffer] = useState(null);
-  const { data } = useAllBrands({
+  const [selectedBrand, setSelectedBrand] = useState<Brand | null>(null);
+  const {
+    page,
+    perPage,
+    search,
+    sortBy,
+    isASC,
+    setPage,
+    setPerPage,
+    setIsASC,
+    setSearch,
+    setSortBy,
+  } = useSortAndSearch();
+  const [currentDevice, setCurrentDevice] = useState(null);
+  const { data } = useSearchDevices({
     searchKey: search,
     page,
     perPage,
     sortBy,
     isAsc: isASC,
+    brandId:
+      !selectedBrand || !selectedBrand?.id ? undefined : selectedBrand?.id,
   });
 
   const columns = [
@@ -42,46 +59,35 @@ export default function BrandsPage() {
       renderCell: (row: any) => row.id,
     },
     {
-      id: 'title',
-      label: 'Title',
-      renderCell: (row: any) => row.title,
+      id: 'name',
+      label: 'Name',
+      renderCell: (row: any) => row.name,
     },
     {
-      id: 'summery',
-      label: 'Summery',
-      renderCell: (row: any) => row.summery.slice(0, 50) + '...',
+      id: 'image',
+      label: 'Image',
+      renderCell: (row: any) => (
+        <img
+          src={row.image}
+          alt={row.name}
+          style={{ width: 50, height: 50, objectFit: 'contain' }}
+        />
+      ),
     },
     {
-      id: 'content',
-      label: 'Content',
-      renderCell: (row: any) => row.content?.slice(0, 50) + '...',
-    },
-    {
-      id: 'Is Active',
-      label: 'Active',
-      renderCell: (row: any) => (row.isActive ? 'Yes' : 'No'),
-    },
-    {
-      id: 'is percent',
-      label: 'Active',
-      renderCell: (row: any) => (row.isPercent ? 'Yes' : 'No'),
-    },
-
-    {
-      id: 'from',
-      label: 'From',
-      renderCell: (row: any) => format(new Date(row.from), 'yyyy-MM-dd hh:mm'),
-    },
-
-    {
-      id: 'To',
-      label: 'To',
-      renderCell: (row: any) => format(new Date(row.to), 'yyyy-MM-dd hh:mm'),
+      id: 'brand',
+      label: 'Brand',
+      renderCell: (row: any) => <Typography>{row.brand?.name}</Typography>,
     },
     {
       id: 'createdAt',
-      label: 'Creation Date',
-      renderCell: (row: any) => format(new Date(row.createdAt), 'yyyy-MM-dd'),
+      label: 'Created At',
+      renderCell: (row: any) => format(new Date(row.createdAt), 'dd/MM/yyyy'),
+    },
+    {
+      id: 'updatedAt',
+      label: 'Updated At',
+      renderCell: (row: any) => format(new Date(row.updatedAt), 'dd/MM/yyyy'),
     },
 
     {
@@ -91,7 +97,7 @@ export default function BrandsPage() {
         <Stack direction='row' spacing={2}>
           <Button
             onClick={() => {
-              setCurrentOffer(row);
+              setCurrentDevice(row);
               setAddNew(true);
             }}
           >
@@ -104,7 +110,7 @@ export default function BrandsPage() {
 
   return (
     <>
-      <Typography variant='h4'>Offers List</Typography>
+      <Typography variant='h4'>Devices List</Typography>
       <Stack
         direction='row'
         justifyContent={'space-between'}
@@ -118,15 +124,17 @@ export default function BrandsPage() {
             onChange={(e) => setSearch(e.target.value)}
           />
         </SearchContainer>
+
         <Button
           onClick={() => {
-            setCurrentOffer(null);
+            setCurrentDevice(null);
             setAddNew(true);
           }}
         >
           Add New
         </Button>
       </Stack>
+      <SelectBrand selectedBrand={selectedBrand} onSelect={setSelectedBrand} />
 
       <EnhancedTable
         data={data?.data || []}
@@ -150,7 +158,7 @@ export default function BrandsPage() {
         onClose={() => setAddNew(false)}
       >
         <DialogTitle>
-          {currentOffer ? 'Edit Offer' : 'Add New Offer'}
+          {currentDevice ? 'Edit Device' : 'Add New Device'}
         </DialogTitle>
         <DialogContent
           sx={{
@@ -160,7 +168,7 @@ export default function BrandsPage() {
             },
           }}
         >
-          <OfferForm offer={currentOffer} onAdd={() => setAddNew(false)} />
+          <DeviceForm device={currentDevice} onAdd={() => setAddNew(false)} />
         </DialogContent>
       </Dialog>
     </>

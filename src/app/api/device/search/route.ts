@@ -8,12 +8,14 @@ export async function GET(req: Request) {
   const perPage = searchParams.get('perPage');
   const sortBy = searchParams.get('sortBy');
   const isAsc = searchParams.get('isAsc');
+  const brandId = searchParams.get('brandId');
   const res = await DeviceService.getSearch({
     searchKey,
     page,
     perPage,
     sortBy,
     isAsc,
+    brandId,
   });
   return NextResponse.json(res);
 }

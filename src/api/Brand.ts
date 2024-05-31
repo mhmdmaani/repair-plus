@@ -8,7 +8,11 @@ export class Brand {
   }
 
   static async getSearch(data: any) {
-    const result = await axios.get(`${BASE_URL}/brand`).then((res) => res.data);
+    const result = await axios
+      .get(`${BASE_URL}/brand/search`, {
+        params: data,
+      })
+      .then((res) => res.data);
     return result;
   }
 
@@ -35,19 +39,38 @@ export class Brand {
   }
 
   static async update(data: BrandType) {
+    // upload image if existed
+    if (data.logo && data.logo !== '') {
+      const formData = new FormData();
+      formData.append('file', data.logo);
+      const response = await fetch(`${BASE_URL}/upload`, {
+        method: 'POST',
+        body: formData,
+      });
+      const result = await response.json();
+      data.logo = result.urls[0];
+    }
+
     const result = await axios
-      .put(`${BASE_URL}/brand`, {
-        params: {
-          id: data.id,
-        },
-        data,
-      })
+      .put(`${BASE_URL}/brand`, data)
       .then((res) => res.data);
 
     return result;
   }
 
   static async create(data: BrandType) {
+    // upload image if existed
+    if (data.logo && data.logo !== '') {
+      const formData = new FormData();
+      formData.append('file', data.logo);
+      const response = await fetch(`${BASE_URL}/upload`, {
+        method: 'POST',
+        body: formData,
+      });
+      const result = await response.json();
+      data.logo = result.urls[0];
+    }
+
     const result = await axios
       .post(`${BASE_URL}/brand`, data)
       .then((res) => res.data);

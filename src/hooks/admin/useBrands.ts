@@ -9,6 +9,20 @@ export const useAllBrands = () => {
   });
 };
 
+export const useSearchBrands = (data: any) => {
+  return useQuery({
+    queryKey: [
+      'brands',
+      data.searchKey,
+      data.page,
+      data.perPage,
+      data.sortBy,
+      data.isAsc,
+    ],
+    queryFn: () => Brand.getSearch(data),
+  });
+};
+
 export const useBrand = (id: string) => {
   return useQuery({
     queryKey: ['brand', id],
@@ -35,7 +49,7 @@ export const useUpdateBrand = () => {
     mutationFn: Brand.update,
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ['brands', 'brand'],
+        queryKey: ['brands'],
       });
       toast.success('Brand updated successfully');
     },

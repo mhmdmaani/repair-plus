@@ -20,7 +20,7 @@ enum OrderStatus {
 }
 
 model Brand {
-  id        String   @id @default(cuid())
+  id        String   @id @default(uuid())
   name      String   @unique
   logo      String?
   createdAt DateTime @default(now())
@@ -29,7 +29,7 @@ model Brand {
 }
 
 model Device {
-  id        String     @id @default(cuid())
+  id        String     @id @default(uuid())
   name      String     @unique
   image     String?
   brand     Brand      @relation(fields: [brandId], references: [id])
@@ -41,7 +41,7 @@ model Device {
 }
 
 model Repair {
-  id                   String     @id @default(cuid())
+  id                   String     @id @default(uuid())
   device               Device     @relation(fields: [deviceId], references: [id])
   deviceId             String
   name                 String
@@ -58,7 +58,7 @@ model Repair {
 }
 
 model FixOrder {
-  id                String      @id @default(cuid())
+  id                String      @id @default(uuid())
   device            Device      @relation(fields: [deviceId], references: [id])
   deviceId          String
   imei              String
@@ -83,7 +83,7 @@ model FixOrder {
 }
 
 model User {
-  id        String     @id @default(cuid())
+  id        String     @id @default(uuid())
   name      String
   email     String     @unique
   password  String
@@ -97,7 +97,7 @@ model User {
 }
 
 model Admin {
-  id        String   @id @default(cuid())
+  id        String   @id @default(uuid())
   name      String
   email     String   @unique
   password  String

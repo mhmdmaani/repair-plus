@@ -45,9 +45,10 @@ export class DeviceService {
     perPage: any;
     sortBy?: any;
     isAsc?: any;
+    brandId?: any;
   }) {
     const prisma = new PrismaClient();
-    const { searchKey, page, perPage, sortBy, isAsc } = dt;
+    const { searchKey, page, perPage, sortBy, isAsc, brandId } = dt;
     const skip = page * perPage;
     const devices = await prisma.device.findMany({
       where: {
@@ -57,10 +58,15 @@ export class DeviceService {
                 {
                   name: {
                     contains: searchKey,
+                    mode: 'insensitive',
                   },
                 },
               ]
             : undefined,
+        brandId: brandId && brandId?.length > 0 ? brandId : undefined,
+      },
+      include: {
+        brand: true,
       },
       orderBy: {
         [sortBy]: isAsc === 'true' ? 'asc' : 'desc',
@@ -76,6 +82,7 @@ export class DeviceService {
                 {
                   name: {
                     contains: searchKey,
+                    mode: 'insensitive',
                   },
                 },
               ]
