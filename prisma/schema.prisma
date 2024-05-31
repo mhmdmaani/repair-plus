@@ -36,13 +36,13 @@ model Device {
   brandId   String
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
-  Repair    Repair[]
-  FixOrder  FixOrder[]
+  repairs   Repair[]
+  fixOrders FixOrder[]
 }
 
 model Repair {
-  id                   String    @id @default(cuid())
-  device               Device    @relation(fields: [deviceId], references: [id])
+  id                   String     @id @default(cuid())
+  device               Device     @relation(fields: [deviceId], references: [id])
   deviceId             String
   name                 String
   description          String
@@ -51,11 +51,10 @@ model Repair {
   totalPrice           Float
   quantity             Int
   quality              String
-  createdAt            DateTime  @default(now())
-  updatedAt            DateTime  @updatedAt
+  createdAt            DateTime   @default(now())
+  updatedAt            DateTime   @updatedAt
   expectedMinutesToFix Int
-  FixOrder             FixOrder? @relation(fields: [fixOrderId], references: [id])
-  fixOrderId           String?
+  fixOrders            FixOrder[]
 }
 
 model FixOrder {
@@ -128,4 +127,11 @@ model Settings {
   createdAt                  DateTime @default(now())
   updatedAt                  DateTime @updatedAt
   displayEmailInSeperatePage Boolean  @default(false)
+}
+
+model Term {
+  id        String   @id @default(uuid())
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
