@@ -134,7 +134,7 @@ export default function AdminWrapper({
               <FiMenu />
             </IconButton>
             <Typography variant='h6' noWrap component='div'>
-              National Quick Courier
+              Repair Plus
             </Typography>
           </Toolbar>
 
@@ -184,47 +184,20 @@ export default function AdminWrapper({
           </ListItem>
 
           <ListItem disablePadding>
-            <ListItemButton href='/admin/trucktypes'>
+            <ListItemButton href='/admin/brands'>
               <ListItemIcon>
                 <FaTruck />
               </ListItemIcon>
-              <ListItemText primary={'Truck Types'} />
+              <ListItemText primary={'Brands'} />
             </ListItemButton>
           </ListItem>
 
           <ListItem disablePadding>
-            <ListItemButton href='/admin/orders'>
+            <ListItemButton href='/admin/devices'>
               <ListItemIcon>
                 <MdLibraryBooks />
               </ListItemIcon>
-              <ListItemText primary={'Orders'} />
-            </ListItemButton>
-          </ListItem>
-
-          <ListItem disablePadding>
-            <ListItemButton href='/admin/driver'>
-              <ListItemIcon>
-                <FaUserTie />
-              </ListItemIcon>
-              <ListItemText primary={'Drivers'} />
-            </ListItemButton>
-          </ListItem>
-
-          <ListItem disablePadding>
-            <ListItemButton href='/admin/truck'>
-              <ListItemIcon>
-                <FaTruckFast />
-              </ListItemIcon>
-              <ListItemText primary={'Trucks'} />
-            </ListItemButton>
-          </ListItem>
-
-          <ListItem disablePadding>
-            <ListItemButton href='/admin/offers'>
-              <ListItemIcon>
-                <BiSolidOffer />
-              </ListItemIcon>
-              <ListItemText primary={'Offers'} />
+              <ListItemText primary={'Devices'} />
             </ListItemButton>
           </ListItem>
 

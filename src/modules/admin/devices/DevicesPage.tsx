@@ -19,6 +19,7 @@ import { useAllBrands, useSearchBrands } from '@/hooks/admin/useBrands';
 import { useSearchDevices } from '@/hooks/admin/useDevices';
 import SelectBrand from './SelectBrand';
 import { Brand } from 'prisma/prisma-client';
+import { useRouter } from 'next/navigation';
 
 const SearchContainer = styled('div')`
   display: flex;
@@ -28,6 +29,7 @@ const SearchContainer = styled('div')`
 
 export default function DevicesPage() {
   const [addNew, setAddNew] = useState(false);
+  const router = useRouter();
   const [selectedBrand, setSelectedBrand] = useState<Brand | null>(null);
   const {
     page,
@@ -102,6 +104,15 @@ export default function DevicesPage() {
             }}
           >
             Edit
+          </Button>
+
+          <Button
+            variant='contained'
+            onClick={() => {
+              router.push(`/admin/devices/${row.id}`);
+            }}
+          >
+            View Repairs
           </Button>
         </Stack>
       ),

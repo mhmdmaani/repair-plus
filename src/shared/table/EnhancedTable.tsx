@@ -91,7 +91,7 @@ const EnhancedTable = ({
       <TablePagination
         rowsPerPageOptions={[5, 10, 25, 50, 75, 100, 200]}
         component='div'
-        count={data.length}
+        count={-1}
         rowsPerPage={perPage}
         page={page}
         onPageChange={handleChangePage}

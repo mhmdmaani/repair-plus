@@ -8,12 +8,14 @@ export async function GET(req: Request) {
   const perPage = searchParams.get('perPage');
   const sortBy = searchParams.get('sortBy');
   const isAsc = searchParams.get('isAsc');
+  const deviceId = searchParams.get('deviceId');
   const res = await RepairService.getSearch({
     searchKey,
     page,
     perPage,
     sortBy,
     isAsc,
+    deviceId,
   });
   return NextResponse.json(res);
 }

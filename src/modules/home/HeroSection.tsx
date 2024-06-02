@@ -122,7 +122,7 @@ export default function HeroSection() {
       </LargeText>
 
       <CustomVideo autoPlay playsInline muted loop poster='./videoPoster.png'>
-        <source src='heroVideo.mp4' type='video/mp4' />
+        <source src='homeVideo.mp4' type='video/mp4' />
         Your browser does not support HTML5 video.
       </CustomVideo>
 
@@ -130,15 +130,12 @@ export default function HeroSection() {
         <Container>
           <Content data-aos='fade-zoom-in'>
             <Title variant='h1' fontWeight={'semi-bold'}>
-              National Quick
+              Repair Plus
             </Title>
             <Title variant='h1' fontWeight={'semi-bold'}>
-              Courier
+              Your One-Stop Solution for All Electronic Repairs
             </Title>
-            <Description variant='body1'>
-              We provide the best logistic services for your business needs
-            </Description>
-            <Description variant='body1'>and help you grow.</Description>
+
             <CustomButton href={'/quote'}>
               <Typography fontWeight={'bold'}>Get Quote Now</Typography>
               <MdOutlineDoubleArrow />

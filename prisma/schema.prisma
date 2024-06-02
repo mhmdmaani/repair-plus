@@ -45,10 +45,12 @@ model Repair {
   device               Device     @relation(fields: [deviceId], references: [id])
   deviceId             String
   name                 String
+  image                String?
   description          String
-  price                Float
-  vat                  Float
-  totalPrice           Float
+  buyPrice             Float      @default(0)
+  sellPrice            Float      @default(0)
+  repairingPrice       Float      @default(0)
+  repairingTimeMinutes Int        @default(0)
   quantity             Int
   quality              String
   createdAt            DateTime   @default(now())

@@ -112,21 +112,32 @@ export default function AboutSection() {
                 color={'primary'}
                 fontWeight={'bold'}
               >
-                About Quick National
+                About Us
               </Tagline>
             </Fade>
             <Fade in timeout={1600}>
-              <Title variant='h3' fontWeight={'bold'}>
-                Solutions
-              </Title>
+              <Title variant='h3' fontWeight={'bold'}></Title>
             </Fade>
             <Divider />
             <div data-aos='fade-right'>
               <Typography variant='body1' color={'GrayText'}>
-                Quick National is a logistics company that provides services in
-                the areas of courier, cargo, and parcel delivery. We are a
-                customer-centric company that is dedicated to providing the best
-                services to our customers.
+                Welcome to Repair Plus, your trusted partner in electronic
+                device repairs. We are dedicated to providing high-quality
+                repair services for a wide range of electronic devices,
+                including smartphones, tablets, PlayStation consoles,
+                e-scooters, and more. Our mission is to deliver reliable,
+                efficient, and affordable repair solutions to get your devices
+                back in perfect working condition.
+              </Typography>
+
+              <Typography variant='body1' color={'GrayText'} mt={1}>
+                At Repair Plus, we understand the inconvenience and frustration
+                that comes with a malfunctioning device. That's why our team of
+                experienced and certified technicians is committed to diagnosing
+                and fixing your electronic issues swiftly and accurately.
+                Whether it's a cracked screen, battery issue, software problem,
+                or any other technical glitch, we have the expertise to handle
+                it all.
               </Typography>
             </div>
             <CustomButton variant='contained'>Learn More</CustomButton>
@@ -134,7 +145,7 @@ export default function AboutSection() {
           <Grid item xs={12} sm={6} md={6} lg={6}>
             <ImageContainer data-aos='fade-left'>
               <img
-                src='./about.png'
+                src='./about.jpg'
                 alt='delivery'
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />

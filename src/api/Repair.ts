@@ -20,6 +20,15 @@ export class Repair {
     return result;
   }
 
+  static async getSearch(data: any) {
+    const result = await axios
+      .get(`${BASE_URL}/repair/search`, {
+        params: data,
+      })
+      .then((res) => res.data);
+    return result;
+  }
+
   static async getDeviceTree(id: string) {
     const result = await axios
       .get(`${BASE_URL}/repair/tree`, {

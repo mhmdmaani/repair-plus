@@ -27,18 +27,21 @@ export class RepairService {
     perPage: any;
     sortBy?: any;
     isAsc?: any;
+    deviceId?: string | null;
   }) {
     const prisma = new PrismaClient();
     const { searchKey, page, perPage, sortBy, isAsc } = dt;
     const skip = page * perPage;
     const repairs = await prisma.repair.findMany({
       where: {
+        deviceId: dt.deviceId ? dt.deviceId : undefined,
         OR:
           searchKey && searchKey !== ''
             ? [
                 {
                   name: {
                     contains: searchKey,
+                    mode: 'insensitive',
                   },
                 },
               ]
@@ -52,12 +55,14 @@ export class RepairService {
     });
     const total = await prisma.repair.count({
       where: {
+        deviceId: dt.deviceId ? dt.deviceId : undefined,
         OR:
           searchKey && searchKey !== ''
             ? [
                 {
                   name: {
                     contains: searchKey,
+                    mode: 'insensitive',
                   },
                 },
               ]
