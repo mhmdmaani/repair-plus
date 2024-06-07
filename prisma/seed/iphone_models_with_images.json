@@ -1,0 +1,612 @@
+[
+  {
+    "name": "iPad Pro 13 (2024)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-13-2024.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Pro_13_(2024).png"
+  },
+  {
+    "name": "iPad Pro 11 (2024)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-11-2024.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Pro_11_(2024).png"
+  },
+  {
+    "name": "iPad Air 13 (2024)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air-13-2024.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Air_13_(2024).png"
+  },
+  {
+    "name": "iPad Air 11 (2024)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air-11-2024.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Air_11_(2024).png"
+  },
+  {
+    "name": "iPhone 15 Pro Max",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro-max.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_15_Pro_Max.png"
+  },
+  {
+    "name": "iPhone 15 Pro",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_15_Pro.png"
+  },
+  {
+    "name": "iPhone 15 Plus",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-plus-.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_15_Plus.png"
+  },
+  {
+    "name": "iPhone 15",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_15.png"
+  },
+  {
+    "name": "Watch Ultra 2",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-ultra2.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Ultra_2.png"
+  },
+  {
+    "name": "Watch Series 9",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-series9.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_9.png"
+  },
+  {
+    "name": "Watch Series 9 Aluminum",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-series9-aluminum.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_9_Aluminum.png"
+  },
+  {
+    "name": "iPad Pro 12.9 (2022)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-129-2022.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Pro_12.9_(2022).png"
+  },
+  {
+    "name": "iPad Pro 11 (2022)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-11-2022.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Pro_11_(2022).png"
+  },
+  {
+    "name": "iPad (2022)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-10-2022.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_(2022).png"
+  },
+  {
+    "name": "iPhone 14 Pro Max",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro-max-.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_14_Pro_Max.png"
+  },
+  {
+    "name": "iPhone 14 Pro",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_14_Pro.png"
+  },
+  {
+    "name": "iPhone 14 Plus",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-plus.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_14_Plus.png"
+  },
+  {
+    "name": "iPhone 14",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_14.png"
+  },
+  {
+    "name": "Watch Ultra",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-ultra.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Ultra.png"
+  },
+  {
+    "name": "Watch Series 8",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-8.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_8.png"
+  },
+  {
+    "name": "Watch Series 8 Aluminum",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-8-aluminum.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_8_Aluminum.png"
+  },
+  {
+    "name": "Watch SE (2022)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-8se-2022.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_SE_(2022).png"
+  },
+  {
+    "name": "iPhone SE (2022)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-se-2022.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_SE_(2022).png"
+  },
+  {
+    "name": "iPad Air (2022)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air-2022-new.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Air_(2022).png"
+  },
+  {
+    "name": "iPhone 13 Pro Max",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro-max.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_13_Pro_Max.png"
+  },
+  {
+    "name": "iPhone 13 Pro",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_13_Pro.png"
+  },
+  {
+    "name": "iPhone 13",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_13.png"
+  },
+  {
+    "name": "iPhone 13 mini",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_13_mini.png"
+  },
+  {
+    "name": "iPad mini (2021)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-mini-2021.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_mini_(2021).png"
+  },
+  {
+    "name": "iPad 10.2 (2021)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-102-2021-.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_10.2_(2021).png"
+  },
+  {
+    "name": "Watch Edition Series 7",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-series-7-titanium.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Edition_Series_7.png"
+  },
+  {
+    "name": "Watch Series 7",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-series-7-stainless-steel.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_7.png"
+  },
+  {
+    "name": "Watch Series 7 Aluminum",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-series-7-aluminum.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_7_Aluminum.png"
+  },
+  {
+    "name": "iPad Pro 12.9 (2021)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-129-2021.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Pro_12.9_(2021).png"
+  },
+  {
+    "name": "iPad Pro 11 (2021)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-11-2021.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Pro_11_(2021).png"
+  },
+  {
+    "name": "iPhone 12 Pro Max",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro-max-.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_12_Pro_Max.png"
+  },
+  {
+    "name": "iPhone 12 Pro",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro--.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_12_Pro.png"
+  },
+  {
+    "name": "iPhone 12",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_12.png"
+  },
+  {
+    "name": "iPhone 12 mini",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-mini.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_12_mini.png"
+  },
+  {
+    "name": "iPad Air (2020)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air4-2020.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Air_(2020).png"
+  },
+  {
+    "name": "iPad 10.2 (2020)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad8-102-inches-2020.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_10.2_(2020).png"
+  },
+  {
+    "name": "Watch SE",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-se.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_SE.png"
+  },
+  {
+    "name": "Watch Series 6 Aluminum",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-s6.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_6_Aluminum.png"
+  },
+  {
+    "name": "Watch Series 6",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-s6-steel.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_6.png"
+  },
+  {
+    "name": "Watch Edition Series 6",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-s6-titanium.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Edition_Series_6.png"
+  },
+  {
+    "name": "iPhone SE (2020)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-se-2020.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_SE_(2020).png"
+  },
+  {
+    "name": "iPad Pro 12.9 (2020)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-12-2020.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Pro_12.9_(2020).png"
+  },
+  {
+    "name": "iPad Pro 11 (2020)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-11-2020.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Pro_11_(2020).png"
+  },
+  {
+    "name": "iPhone 11 Pro Max",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11-pro.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_11_Pro_Max.png"
+  },
+  {
+    "name": "iPhone 11 Pro",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11-pro-max-.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_11_Pro.png"
+  },
+  {
+    "name": "iPhone 11",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_11.png"
+  },
+  {
+    "name": "iPad 10.2 (2019)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad7-102-inches.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_10.2_(2019).png"
+  },
+  {
+    "name": "Watch Edition Series 5",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-edition-series-5.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Edition_Series_5.png"
+  },
+  {
+    "name": "Watch Series 5",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-series-5.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_5.png"
+  },
+  {
+    "name": "Watch Series 5 Aluminum",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-aluminum-series-5.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_5_Aluminum.png"
+  },
+  {
+    "name": "iPad Air (2019)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air3-2019.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Air_(2019).png"
+  },
+  {
+    "name": "iPad mini (2019)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-mini-2019.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_mini_(2019).png"
+  },
+  {
+    "name": "iPad Pro 12.9 (2018)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-129-2018.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Pro_12.9_(2018).png"
+  },
+  {
+    "name": "iPad Pro 11 (2018)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-11-2018.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Pro_11_(2018).png"
+  },
+  {
+    "name": "iPhone XS Max",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xs-max-new1.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_XS_Max.png"
+  },
+  {
+    "name": "iPhone XS",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xs-new.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_XS.png"
+  },
+  {
+    "name": "iPhone XR",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xr-new.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_XR.png"
+  },
+  {
+    "name": "Watch Series 4",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-series-4-steel.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_4.png"
+  },
+  {
+    "name": "Watch Series 4 Aluminum",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-series-4-aluminum.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_4_Aluminum.png"
+  },
+  {
+    "name": "iPad 9.7 (2018)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-97-2018.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_9.7_(2018).png"
+  },
+  {
+    "name": "iPhone X",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-x.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_X.png"
+  },
+  {
+    "name": "iPhone 8 Plus",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-8-plus-new.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_8_Plus.png"
+  },
+  {
+    "name": "iPhone 8",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-8-new.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_8.png"
+  },
+  {
+    "name": "Watch Edition Series 3",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-edition-series3.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Edition_Series_3.png"
+  },
+  {
+    "name": "Watch Series 3",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-series3-.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_3.png"
+  },
+  {
+    "name": "Watch Series 3 Aluminum",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-series3-sport-.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_3_Aluminum.png"
+  },
+  {
+    "name": "iPad Pro 12.9 (2017)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-129-2017.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Pro_12.9_(2017).png"
+  },
+  {
+    "name": "iPad Pro 10.5 (2017)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-105-2017.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Pro_10.5_(2017).png"
+  },
+  {
+    "name": "iPad 9.7 (2017)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-97-2017.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_9.7_(2017).png"
+  },
+  {
+    "name": "Watch Edition Series 2 42mm",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch2-edition-42mm.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Edition_Series_2_42mm.png"
+  },
+  {
+    "name": "Watch Edition Series 2 38mm",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch2-s2-edition-38mm.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Edition_Series_2_38mm.png"
+  },
+  {
+    "name": "Watch Series 2 42mm",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch2-s2-42mm.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_2_42mm.png"
+  },
+  {
+    "name": "Watch Series 2 38mm",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch2-s2-38mm.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_2_38mm.png"
+  },
+  {
+    "name": "Watch Series 2 Aluminum 42mm",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch2-s2-sport-42mm.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_2_Aluminum_42mm.png"
+  },
+  {
+    "name": "Watch Series 1 Aluminum 42mm",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch1-sport-42mm.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_1_Aluminum_42mm.png"
+  },
+  {
+    "name": "Watch Series 2 Aluminum 38mm",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch2-s2-sport-38mm.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_2_Aluminum_38mm.png"
+  },
+  {
+    "name": "Watch Series 1 Aluminum 38mm",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch2-s2-sport-38mm.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Series_1_Aluminum_38mm.png"
+  },
+  {
+    "name": "iPhone 7 Plus",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-7-plus-r2.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_7_Plus.png"
+  },
+  {
+    "name": "iPhone 7",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-7r4.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_7.png"
+  },
+  {
+    "name": "iPad Pro 9.7 (2016)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-97.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Pro_9.7_(2016).png"
+  },
+  {
+    "name": "iPhone SE",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-5se-ofic.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_SE.png"
+  },
+  {
+    "name": "iPhone 6s Plus",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-6s-plus.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6s_Plus.png"
+  },
+  {
+    "name": "iPhone 6s",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-6s1.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6s.png"
+  },
+  {
+    "name": "iPad Pro 12.9 (2015)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Pro_12.9_(2015).png"
+  },
+  {
+    "name": "iPad mini 4 (2015)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/ipad-mini-41.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_mini_4_(2015).png"
+  },
+  {
+    "name": "Watch Edition 42mm (1st gen)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-edition-42mm.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Edition_42mm_(1st_gen).png"
+  },
+  {
+    "name": "Watch Edition 38mm (1st gen)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-edition-38mm.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Edition_38mm_(1st_gen).png"
+  },
+  {
+    "name": "Watch 42mm (1st gen)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-42mm.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_42mm_(1st_gen).png"
+  },
+  {
+    "name": "Watch 38mm (1st gen)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-38mm.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_38mm_(1st_gen).png"
+  },
+  {
+    "name": "Watch Sport 42mm (1st gen)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-sport-42mm2.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Sport_42mm_(1st_gen).png"
+  },
+  {
+    "name": "Watch Sport 38mm (1st gen)",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-watch-sport-38mm.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/Watch_Sport_38mm_(1st_gen).png"
+  },
+  {
+    "name": "iPad Air 2",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air-2-new.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Air_2.png"
+  },
+  {
+    "name": "iPad mini 3",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-mini-3-new.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_mini_3.png"
+  },
+  {
+    "name": "iPhone 6 Plus",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-6-plus2.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6_Plus.png"
+  },
+  {
+    "name": "iPhone 6",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-6-4.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6.png"
+  },
+  {
+    "name": "iPad Air",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Air.png"
+  },
+  {
+    "name": "iPad mini 2",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-mini2.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_mini_2.png"
+  },
+  {
+    "name": "iPhone 5s",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-5s-ofic.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_5s.png"
+  },
+  {
+    "name": "iPhone 5c",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-5c-new2.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_5c.png"
+  },
+  {
+    "name": "iPad mini Wi-Fi",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-mini-final.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_mini_Wi-Fi.png"
+  },
+  {
+    "name": "iPad mini Wi-Fi + Cellular",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-mini-final.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_mini_Wi-Fi_+_Cellular.png"
+  },
+  {
+    "name": "iPad 4 Wi-Fi",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-3-new.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_4_Wi-Fi.png"
+  },
+  {
+    "name": "iPad 4 Wi-Fi + Cellular",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-3-new.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_4_Wi-Fi_+_Cellular.png"
+  },
+  {
+    "name": "iPhone 5",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-5-ofic.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_5.png"
+  },
+  {
+    "name": "iPad 3 Wi-Fi + Cellular",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-3-new.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_3_Wi-Fi_+_Cellular.png"
+  },
+  {
+    "name": "iPad 3 Wi-Fi",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-3-new.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_3_Wi-Fi.png"
+  },
+  {
+    "name": "iPhone 4s",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-4s-new.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_4s.png"
+  },
+  {
+    "name": "iPad 2 Wi-Fi + 3G",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad2-new.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_2_Wi-Fi_+_3G.png"
+  },
+  {
+    "name": "iPad 2 Wi-Fi",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad2-new.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_2_Wi-Fi.png"
+  },
+  {
+    "name": "iPad 2 CDMA",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad2-new.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_2_CDMA.png"
+  },
+  {
+    "name": "iPhone 4",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-4-ofic-final.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_4.png"
+  },
+  {
+    "name": "iPhone 4 CDMA",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone4-cdma.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_4_CDMA.png"
+  },
+  {
+    "name": "iPad Wi-Fi + 3G",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-original.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Wi-Fi_+_3G.png"
+  },
+  {
+    "name": "iPad Wi-Fi",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-original.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPad_Wi-Fi.png"
+  },
+  {
+    "name": "iPhone 3GS",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-3gs-ofic.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_3GS.png"
+  },
+  {
+    "name": "iPhone 3G",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone3g.jpg",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_3G.png"
+  },
+  {
+    "name": "iPhone",
+    "image_url": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone.gif",
+    "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone.png"
+  }
+]

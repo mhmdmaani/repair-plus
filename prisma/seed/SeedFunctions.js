@@ -1,6 +1,6 @@
 const { PrismaClient } = require('@prisma/client');
 const { faker } = require('@faker-js/faker');
-
+const brands = require('./brands.json');
 const { appleModels } = require('./appleModels');
 const { samsungModels } = require('./samsungModels');
 
