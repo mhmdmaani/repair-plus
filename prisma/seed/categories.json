@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Mac",
+    "image": "https://guide-images.cdn.ifixit.com/igi/fqOwLIXJtQYvBYrh.standard"
+  },
+  {
+    "name": "Tablet",
+    "image": "https://guide-images.cdn.ifixit.com/igi/cdgpFo2Gmc4amp3s.standard"
+  },
+  {
+    "name": "Phone",
+    "image": "https://guide-images.cdn.ifixit.com/igi/jZaiuAYs5NLNLbJx.standard"
+  },
+  {
+    "name": "Car and Truck",
+    "image": "https://guide-images.cdn.ifixit.com/igi/qZEfWObqRESuGwM4.standard"
+  },
+  {
+    "name": "PC Desktop",
+    "image": "https://guide-images.cdn.ifixit.com/igi/iBvvrr5slRsZ15FZ.standard"
+  },
+  {
+    "name": "Game Console",
+    "image": "https://guide-images.cdn.ifixit.com/igi/EEskYBovinrIQtQe.standard"
+  },
+  {
+    "name": "PC Laptop",
+    "image": "https://guide-images.cdn.ifixit.com/igi/kLo4L3BhR6DsVKGR.standard"
+  },
+  {
+    "name": "Camera",
+    "image": "https://guide-images.cdn.ifixit.com/igi/FrmtLP24FSsPDqab.standard"
+  }
+]

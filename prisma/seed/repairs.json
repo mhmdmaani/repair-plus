@@ -1,0 +1,3914 @@
+[
+  {
+    "name": "iPhone 15 Pro Max",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/lnwHCfxQCCxVHGqx.standard",
+    "link": "/Device/iPhone_15_Pro_Max",
+    "repairs": [
+      {
+        "name": "Back Glass",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/YLdQRRZGTk5fWPYI.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Back_Glass.png"
+      },
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/iZGtSuPdsShiDRSL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aKx2TZTpFH6geOuo.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Camera Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/NmeCg6yqKyYBvhaJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Camera_Assembly.png"
+      },
+      {
+        "name": "Loudspeaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/BME2JnTfrD3RDY56.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Loudspeaker.png"
+      },
+      {
+        "name": "Rear Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1K4RGTYVBiqJJBUE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Cameras.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Y1Usvh1elxyZDjUB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/WBqyGIDWWGeA5wLW.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "Force restart Iphone 15 Pro Max",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Gq5OcGb3q1MHb6QE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Force_restart_Iphone_15_Pro_Max.png"
+      },
+      {
+        "name": "iPhone 15 Pro Max Chip ID",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/OubNKsPvXuFCZZDF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_15_Pro_Max_Chip_ID.png"
+      },
+      {
+        "name": "iPhone 15 Pro Max Teardown: Big Phone, Microscopic Scratches",
+        "imageUrl": "https://valkyrie.cdn.ifixit.com/media/2023/09/24204536/iPhone15_TD_436b.jpg",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_15_Pro_Max_Teardown:_Big_Phone,_Microscopic_Scratches.png"
+      },
+      {
+        "name": "iPhone 15 Teardown Reveals Software Lockdown",
+        "imageUrl": "https://valkyrie.cdn.ifixit.com/media/2023/09/24195020/iPhone15_TD_436-1.jpg",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_15_Teardown_Reveals_Software_Lockdown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 15 Pro",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/s6aaFyNT36IJf4Ab.standard",
+    "link": "/Device/iPhone_15_Pro",
+    "repairs": [
+      {
+        "name": "Back Glass",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/YLdQRRZGTk5fWPYI.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Back_Glass.png"
+      },
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/MmnlyZanLKXdOPSU.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Vdu3gMPuMx5wo3CP.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Camera Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/UmZwfN6V5cRjwsER.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Camera_Assembly.png"
+      },
+      {
+        "name": "Loudspeaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/YvYaSpGSTxNDfATE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Loudspeaker.png"
+      },
+      {
+        "name": "Rear Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/BEEFGEN1qMuyhFhL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Cameras.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/yehrPtQOjvYhdwkp.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/HyLwBISDGWGEcQIu.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 15 Plus",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/lMFcWXo1ppqkIHYV.standard",
+    "link": "/Device/iPhone_15_Plus",
+    "repairs": [
+      {
+        "name": "Back Glass",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/gxcioL2cmvNJNGdI.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Back_Glass.png"
+      },
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/OnbDHm51ZHKylPZj.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/pcjIRFuUpDJUxvPO.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Camera Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/kjNnC26gIVyWPdE1.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Camera_Assembly.png"
+      },
+      {
+        "name": "Loudspeaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1kfmUfXQb5Ak3Zmq.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Loudspeaker.png"
+      },
+      {
+        "name": "Microphone",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/uYZSmsjqN2CtKomJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Microphone.png"
+      },
+      {
+        "name": "Rear Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/MMkvCcKESeLSH4KN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Cameras.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/WyRAaXWXWIP2yGYH.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Yb2JZSZQ5uYST3mY.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 15",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/AP3Ky1i5YOOSuoTp.standard",
+    "link": "/Device/iPhone_15",
+    "repairs": [
+      {
+        "name": "Back Glass",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/AbBvNxIqbXtQrKE5.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Back_Glass.png"
+      },
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/IGGcLVknZaV3gXwB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/E1xpfY2EnKbBKWwQ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Camera Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/qOxnRYYdZnI2VcB2.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Camera_Assembly.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/udJbVJcu15XXJSjv.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Loudspeaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/UILJOJ2QlWv4UUBp.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Loudspeaker.png"
+      },
+      {
+        "name": "Microphone",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/f4wUBOxiLEFL1Pnr.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Microphone.png"
+      },
+      {
+        "name": "Rear Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/IuP4LfVJ6yovrYoU.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Cameras.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/p2O5VQl4OAEmhTML.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/SnISdkDU5pIJMk12.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "iPhone 15",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/BTNm1ZOQURvXlpfU.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_15.png"
+      },
+      {
+        "name": "A Microscopic Journey: iPhone 15 Unveiled",
+        "imageUrl": "https://valkyrie.cdn.ifixit.com/media/2023/10/06110954/15_glue.jpg",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/A_Microscopic_Journey:_iPhone_15_Unveiled.png"
+      },
+      {
+        "name": "iPhone 15 Wallpapers",
+        "imageUrl": "https://valkyrie.cdn.ifixit.com/media/2023/09/02105810/iPhone-15-Pro-Max-Wallpaper-xray-c-e1696269503204.jpg",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_15_Wallpapers.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 14 Pro Max",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/stsGu3TIrGqg5ocy.standard",
+    "link": "/Device/iPhone_14_Pro_Max",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ILAb3NdnGWyVZIcm.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/jKlBhEhZxaOuJorS.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front-Facing Camera Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/meFUoYSv3YLVVaGo.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front-Facing_Camera_Assembly.png"
+      },
+      {
+        "name": "Housing",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1WCJPdcL14EXwOsf.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Housing.png"
+      },
+      {
+        "name": "Lidar Sensor",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/lkO4UGvjItAbrfUI.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lidar_Sensor.png"
+      },
+      {
+        "name": "Loudspeaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/STDMq2esREtlSpPW.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Loudspeaker.png"
+      },
+      {
+        "name": "Pentalobe Screw",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ZRZX4IhkZlDVJpBX.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screw.png"
+      },
+      {
+        "name": "Rear-Facing Camera Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Lv5MCQIlWImHr4yL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Camera_Assembly.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/vOE1HTuQJg3VMjAM.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/YDyWAfxlvGQDGitC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/lSp5cvU3P4GViCpC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "Apple’s 14 Pro Max Is Worse Than the Vanilla 14",
+        "imageUrl": "https://valkyrie.cdn.ifixit.com/media/2022/09/19215012/EU-iPhone-14-pro-max-prop-open.jpg",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Apple’s_14_Pro_Max_Is_Worse_Than_the_Vanilla_14.png"
+      },
+      {
+        "name": "iPhone 14 Pro Max Chip ID",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aoOSP1e1s5kDyeZX.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_14_Pro_Max_Chip_ID.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 14 Pro",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/BNBpmDXHiiZIDKYY.standard",
+    "link": "/Device/iPhone_14_Pro",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aKacXFeobNuEc1EZ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/3snOqaxINJDKTPjc.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front-Facing Camera Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1yNL3IKwCsneACRT.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front-Facing_Camera_Assembly.png"
+      },
+      {
+        "name": "Lidar Sensor",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PP6rSPI4XPpMLJrS.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lidar_Sensor.png"
+      },
+      {
+        "name": "Loudspeaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/qCK4nDp5KZU3Pq4C.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Loudspeaker.png"
+      },
+      {
+        "name": "Pentalobe Screw",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/hRKFWhkVV4XqofbL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screw.png"
+      },
+      {
+        "name": "Rear-Facing Camera Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ofsrMuDtVSjGioOB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Camera_Assembly.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/IZZfOwS2ROcxog5B.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1HsScuSRUgfXBLGL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/plBSDSR1VndXAYHP.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "How to fix iPhone 14 Pro that doesn’t turn on.",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/RIPx44o3OnOVklGq.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_fix_iPhone_14_Pro_that_doesn’t_turn_on..png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 14 Plus",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/tHoGXqWZJW1iXgnC.standard",
+    "link": "/Device/iPhone_14_Plus",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/xXxTyfqLvd2HmVZR.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aJYsaTDd3LdrUlSF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front-Facing Camera Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/DlaNj2muv4sKYq1F.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front-Facing_Camera_Assembly.png"
+      },
+      {
+        "name": "Loudspeaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/GZQpnIgZx3eZuIrl.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Loudspeaker.png"
+      },
+      {
+        "name": "Pentalobe Screw",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/drjaV4HqqNHEV1eF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screw.png"
+      },
+      {
+        "name": "Rear Glass",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/llJTxBreILWlVL4h.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Glass.png"
+      },
+      {
+        "name": "Rear-Facing Camera Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/3K5QRpLxGLhcrrSq.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Camera_Assembly.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/lMAogfJlnT1hOQIL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/nyl4gJld1sBsqO2E.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/t5lWVdhXkOKX22px.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "The iPhone 14 Plus Is More Repairable, Too",
+        "imageUrl": "https://valkyrie.cdn.ifixit.com/media/2022/10/07112527/iPhone14_Plus-front-back-3x2-1.jpg",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/The_iPhone_14_Plus_Is_More_Repairable,_Too.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 14",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/vHLAXd1OyVEBVZ5Q.standard",
+    "link": "/Device/iPhone_14",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/2qpgDse6XOHTCuJY.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/rIkfASP32xpYXJsb.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front-Facing Camera Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/HVZVieCBGNaKBTPi.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front-Facing_Camera_Assembly.png"
+      },
+      {
+        "name": "Loudspeaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Nt1FieSYAQc4t1Tf.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Loudspeaker.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/vtEJ36dNpnbieC5w.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Rear Glass",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/eIeeuyhLUNWED5FE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Glass.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ypxwcStyJuBrIMov.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/FhYEhjySWXSt61uL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/SSSHufTqlhuQIpYZ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/BiwviXLvXufgUVLi.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "Inside Apple’s Secret iPhone 14 Redesign",
+        "imageUrl": "https://valkyrie.cdn.ifixit.com/media/2022/09/17131616/iPhone14-193.jpg",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Inside_Apple’s_Secret_iPhone_14_Redesign.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone SE 2022",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/WLqQMVYJOPbgaBKa.standard",
+    "link": "/Device/iPhone_SE_2022",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/otlQ1ecA45njmkJk.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/yaBSeHGVUNi6BX6k.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Camera And Sensor Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/hI3kNxoVLDosULwc.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Camera_And_Sensor_Cable.png"
+      },
+      {
+        "name": "Home/Touch ID Sensor",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/laTCUWyEae2rtrVH.standard"
+      },
+      {
+        "name": "LCD and Digitizer",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/nRMNdRWQdpD3fFoR.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_and_Digitizer.png"
+      },
+      {
+        "name": "Lightning Connector Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PKm1yu3WYkQejd63.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector_Assembly.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/luRUBFgepQI3b5B5.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/MGKa4hAucch3aLWB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Rear Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/A6wUtWVxINwagdP1.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Camera.png"
+      },
+      {
+        "name": "SIM Card Tray",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/IAE6PyNLmqaIdTFJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card_Tray.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/HmeiHxpO4VRTxBQO.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/YkNTlMH1lnwLD4dt.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "Wi-Fi Diversity Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JNx1wWSJxRDhcnRD.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Wi-Fi_Diversity_Antenna.png"
+      },
+      {
+        "name": "iPhone SE 2022 Teardown",
+        "imageUrl": "https://assets.cdn.ifixit.com/static/images/default_images/GuideNoImage_300x225.jpg",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_SE_2022_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 13 Pro Max",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/s3IjPYJuZYchJDnv.standard",
+    "link": "/Device/iPhone_13_Pro_Max",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/SVEahqupJEQF3gS2.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Lidar Sensor",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/133YQSDwcyLKbvZr.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lidar_Sensor.png"
+      },
+      {
+        "name": "Loudspeaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/GsQmuFZdnt4BvpiH.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Loudspeaker.png"
+      },
+      {
+        "name": "Pentalobe Screw",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/raayiAutmUOs1RMV.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screw.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/pXEikbmJ22IBxdUC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/uZNJqNIP3KIKIUeX.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/dbusZjhOieww4rtA.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/gQ3fL3gTxL4DVB14.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 13 Pro",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/3Vl3h5GWMOvmKiln.standard",
+    "link": "/Device/iPhone_13_Pro",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/lV2MpQVRE1FRvpUB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Lidar Sensor",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/HEKbKyEJYWsSKLtg.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lidar_Sensor.png"
+      },
+      {
+        "name": "Loudspeaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/F4ZlTCJIJQtXgWG4.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Loudspeaker.png"
+      },
+      {
+        "name": "Pentalobe Screw",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/TmXQHnnPXwrgVlFh.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screw.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/hQgmgiErVdFhDQfl.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/LQJyxr2RxGXxaIyg.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/wJoU5B6DZ4keLoDC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/iG5GhmWHgZtBR6Sa.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "iPhone 13 Pro Motherboard Separation",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/KesBJLBOx6m3ZVxo.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_13_Pro_Motherboard_Separation.png"
+      },
+      {
+        "name": "Five Things You Need to Know About the iPhone 13 Pro",
+        "imageUrl": "https://valkyrie.cdn.ifixit.com/media/2021/10/05153006/iphone_13_thumbnail.jpg",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Five_Things_You_Need_to_Know_About_the_iPhone_13_Pro.png"
+      },
+      {
+        "name": "iPhone 13 Pro Full Chip ID",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/xRcSVSwAC2ENpdkL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_13_Pro_Full_Chip_ID.png"
+      },
+      {
+        "name": "iPhone 13 Pro Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/kLnZ4dpjSIIxjSDI.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_13_Pro_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 13 mini",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/uCIPQMgRYaxFZDl2.standard",
+    "link": "/Device/iPhone_13_mini",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/AIPTHElVQfnG63Kj.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Bottom Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/FtTLeYv2sjtjM513.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Bottom_Speaker.png"
+      },
+      {
+        "name": "Front Sensor Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Xc4vnQFnWQUYlStq.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Sensor_Assembly.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1tQMjXucoEFEwl4w.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "SIM Card Tray",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ndLN6IyRTuFxVlUV.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card_Tray.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/LANQb2Npugnn6iLe.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/3SkEAiENcOlW6K2c.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 13",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/nGcRgAKBpmABSW5N.standard",
+    "link": "/Device/iPhone_13",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ORbSyqAvAy3Dbuw2.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Loudspeaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/c5FDOEJoyjXnBfdG.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Loudspeaker.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/42xC63CoVc1QSsLl.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/YKwBkKvuXMrMKmDJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Card Reader",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/wBETajKJH3tXxOsD.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card_Reader.png"
+      },
+      {
+        "name": "SIM Card Tray",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/EnSlrA4UWDoNwZCD.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card_Tray.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/cp2Z2UHtnwDthaUL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/qhxixaaEKWPu3waW.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "Force restart Iphone 13",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/rSJPeatQ323DybLN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Force_restart_Iphone_13.png"
+      },
+      {
+        "name": "How to Fix iPhone 13 Face ID Not Working",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aMjbMhoXxHQOObvR.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Fix_iPhone_13_Face_ID_Not_Working.png"
+      },
+      {
+        "name": "iPhone 13 No Power Easy Solution",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/VGDG2utBLBCWtf2K.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_13_No_Power_Easy_Solution.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 12 Pro Max",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/ouen3ykssWaW1IRE.standard",
+    "link": "/Device/iPhone_12_Pro_Max",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/xOKysMbAyjTIlNl2.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker and Front Sensor Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/cKsu1khnHifjXEgH.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker_and_Front_Sensor_Assembly.png"
+      },
+      {
+        "name": "Front-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/FXo1gH16uGBguFj1.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front-Facing_Cameras.png"
+      },
+      {
+        "name": "Loudspeaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/qFQeSKMUgptJiwsc.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Loudspeaker.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/TyRiluDic3lsVsgK.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/TMJERloZKVDG3Jhv.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/WMdZIsrsVkIPREYG.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "SIM Card Reader",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/fdDlF1efkfbV6G43.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card_Reader.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/wQWnn1skspdSfHPH.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/YO2nDZ1PdudgUmJE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "iPhone 12 Pro Max Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ckfjuopZITpWmRyy.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_12_Pro_Max_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 12 Pro",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/5lOJPJGSrK3AXbOR.standard",
+    "link": "/Device/iPhone_12_Pro",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/k1KlINOqMSRPQaCf.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker and Front Sensor Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/BSWWpuX2DVkIXWuQ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker_and_Front_Sensor_Assembly.png"
+      },
+      {
+        "name": "Front-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/WlyeXJlsN1pJ1mDs.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front-Facing_Cameras.png"
+      },
+      {
+        "name": "Loudspeaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/x4BCs1AHScKgLrx3.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Loudspeaker.png"
+      },
+      {
+        "name": "Pentalobe",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/MK6MCxQ5VQhLPxch.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/4kxKL4YJRdeThNaR.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/dnN1Dah6MpVQmill.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "SIM Card Reader",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/hLVIv5DwyZUf5CYS.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card_Reader.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/olFWdjfonykLV1ZM.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/P6kDYKO4opEjK4OC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "How to Force Restart the iPhone 12 Pro",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JCUMZYctK6TB4DuZ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_the_iPhone_12_Pro.png"
+      },
+      {
+        "name": "iPhone 12 and 12 Pro Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/VJ1rjFYGSbXPVaNL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_12_and_12_Pro_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 12 mini",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/mVx5ZEYjBiuVhB1b.standard",
+    "link": "/Device/iPhone_12_mini",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/dOmMPxyIn4ZYLiSx.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Bottom Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/AU2alVDlDMnWkxNP.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Bottom_Speaker.png"
+      },
+      {
+        "name": "Earpiece Speaker and Front Sensor Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/gTQfqDuwQKHWnGKY.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker_and_Front_Sensor_Assembly.png"
+      },
+      {
+        "name": "Front-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1eaTIr1ed3dMaaOX.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front-Facing_Cameras.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/uDAxPevJoc3WNNHs.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/TKMLVfTZFX5IuLiY.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Tray",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/J2naYMCPIvuEVIQN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Tray.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/HDHhAp1R3MgANAup.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/6UXphSagCnVM2Ecf.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "How to force restart the iPhone 12 mini",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/cEplQqecpatTxNKM.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_force_restart_the_iPhone_12_mini.png"
+      },
+      {
+        "name": "iPhone 12 mini Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/tVrdHyYdPeXY24qa.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_12_mini_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 12",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/cBtIm1imcyyypWCI.standard",
+    "link": "/Device/iPhone_12",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/3P3vYIESwES1TCR5.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker and Front Sensor Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/wLPNUDHLiogpYQXG.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker_and_Front_Sensor_Assembly.png"
+      },
+      {
+        "name": "Front-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/mDrPQTrnZfqwMTVK.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front-Facing_Cameras.png"
+      },
+      {
+        "name": "Loudspeaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/LjrUYAOQLZDyTxl2.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Loudspeaker.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/oBBxtkV2gJcIPKkK.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ODPvJVrtmHK4uVZB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/wIiUMjQKB4Ljs2ws.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "SIM Card Reader",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/igaaUD5q1Kxc6LOv.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card_Reader.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ogN6hLbDmkLcSQCl.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Screen Protector",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/XugJNE2KGxTZ6Spg.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen_Protector.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aWX5mpNEJSTkYHvY.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "How to Force Restart the iPhone 12",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/jbVU4dYXNUQVGATU.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_the_iPhone_12.png"
+      },
+      {
+        "name": "Upgrade iPhone 12 64GB Storage to 256GB",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/c1SWOEZeH1ZZINsO.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Upgrade_iPhone_12_64GB_Storage_to_256GB.png"
+      },
+      {
+        "name": "iPhone 12 Back Glass Replacement",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/sRBSPiAdV3rxmoyF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_12_Back_Glass_Replacement.png"
+      },
+      {
+        "name": "iPhone 12 Screen Refurbishment",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/xBFlLIXXX2vTgbPN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_12_Screen_Refurbishment.png"
+      },
+      {
+        "name": "iPhone 12 Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/4BWgUrswCBGJHcn5.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_12_Teardown.png"
+      },
+      {
+        "name": "iPhone 12 and 12 Pro Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/VJ1rjFYGSbXPVaNL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_12_and_12_Pro_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone SE 2020",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/3IsUrHofPZUAKfXR.standard",
+    "link": "/Device/iPhone_SE_2020",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/pWQFBwuOf13v5Lif.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/eIhucwGDgtTCCa51.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Camera And Sensor Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ixpeYEKoAuJ1FTcD.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Camera_And_Sensor_Cable.png"
+      },
+      {
+        "name": "Home/Touch ID Sensor",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/vAc35KBXQ4ewvCxK.standard"
+      },
+      {
+        "name": "LCD and Digitizer",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/b4jgVeTBSMpZhttc.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_and_Digitizer.png"
+      },
+      {
+        "name": "Lightning Connector Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/FWIFDkbLiQbdmVmf.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector_Assembly.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/v3WxZPanYNjNO4Ya.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Rear Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/cCFaHKmrChGSGvXu.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Camera.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/mICpHSYgkWuD5pPi.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/O61Pbh4f6TUEsPnt.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/sF3STNjd2IZGYbcE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "Wi-Fi Diversity Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/DCakYeWLNEoFLVHu.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Wi-Fi_Diversity_Antenna.png"
+      },
+      {
+        "name": "How to Force Restart the iPhone SE 2020",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/KaWO3kuhIhYBuGom.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_the_iPhone_SE_2020.png"
+      },
+      {
+        "name": "iPhone SE 2020 Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/21mC2mIQm4xYgLsN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_SE_2020_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 11 Pro Max",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/PXjOTLakIPPKEC3E.standard",
+    "link": "/Device/iPhone_11_Pro_Max",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/SBxFvVGHrBK5oC1O.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker and Front Sensor Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/kYjRPpWUTeKsEpRw.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker_and_Front_Sensor_Assembly.png"
+      },
+      {
+        "name": "Front-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/VbePJCZwj14iFLbO.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front-Facing_Cameras.png"
+      },
+      {
+        "name": "Lightning Connector Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/A51lUyrkTCFGXNsJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector_Assembly.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/UNjifVHATsvaagZB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/FDeAfD2hBbNYvxCM.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1c5SXMOTj4l2YnCF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/VcCtnVGbPRyQQMDN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/CdG5klK1ZHaiNH26.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/IygLBL45bZeNaZqU.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "How To Fix iPhone 11 Pro Max Face ID Not Available - Motherboard Repair",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/IjUH1dpcUGrZdZtO.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_To_Fix_iPhone_11_Pro_Max_Face_ID_Not_Available_-_Motherboard_Repair.png"
+      },
+      {
+        "name": "How To Replace iPhone 11 Pro Max Broken Screen Successfully-OCA Lamination Machine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1qyyayhWRO4uuW36.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_To_Replace_iPhone_11_Pro_Max_Broken_Screen_Successfully-OCA_Lamination_Machine.png"
+      },
+      {
+        "name": "How to Apply a Screen Protector for iPhone11 Pro Max",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/OA2X2Pv1AdVlCvqL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Apply_a_Screen_Protector_for_iPhone11_Pro_Max.png"
+      },
+      {
+        "name": "How to Force Restart an iPhone 11 Pro Max",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/BjWb4VpgyZoHeAVc.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_an_iPhone_11_Pro_Max.png"
+      },
+      {
+        "name": "iPhone 11 Pro Max Back Glass Replacement",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/iOnAokDoKW6d4RRF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_11_Pro_Max_Back_Glass_Replacement.png"
+      },
+      {
+        "name": "iPhone 11 Pro Max Rear Case Replacement",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/RWQlH21nLAcnCU3Y.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_11_Pro_Max_Rear_Case_Replacement.png"
+      },
+      {
+        "name": "iPhone 11 Pro Max Connector ID",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/SEpuBlvoNMFIlmbc.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_11_Pro_Max_Connector_ID.png"
+      },
+      {
+        "name": "iPhone 11 Pro Max Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/cuiVDwkNqDBOqVkF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_11_Pro_Max_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 11 Pro",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/XIWFAbZrjd4Vgdry.standard",
+    "link": "/Device/iPhone_11_Pro",
+    "repairs": [
+      {
+        "name": "Back Glass",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/QvyU3ETp2ZHJ6EUV.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Back_Glass.png"
+      },
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/2sSDSmS1f1AXwvgq.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker and Front Sensor Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/LaoEDLPJM3tsXMYD.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker_and_Front_Sensor_Assembly.png"
+      },
+      {
+        "name": "Front Camera Only",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/22YCnoACRVMBvKom.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Camera_Only.png"
+      },
+      {
+        "name": "Front-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/oU1VNkIeETludDFt.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front-Facing_Cameras.png"
+      },
+      {
+        "name": "Lightning Connector Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/kiTl3cU15EwEny6f.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector_Assembly.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ZLVZNsfVx2MpMQoA.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Lower Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/TxTNYPFddnjxPRAY.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lower_Speaker.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/DaTW1KMhaBRUPdTq.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ksUaETrvGWpw4vpv.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/vvh6SHupP5NDXqiE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/EfBobUlggOh5JPmf.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/fVmEAyOWrTslpetp.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "How to Force Restart an iPhone 11 Pro",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/HqUZX5K2KfG6AgTT.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_an_iPhone_11_Pro.png"
+      },
+      {
+        "name": "iPhone 11 Pro Back Glass Replacement",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/VMESyPC6mYL2XTxk.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_11_Pro_Back_Glass_Replacement.png"
+      },
+      {
+        "name": "iPhone 11 Series Non-Genuine Screen Warning/Important Display Message - 100% Fix",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/YQlQEHfrYFIAvYKr.standard"
+      },
+      {
+        "name": "iPhone 11 Pro Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/WoMb4SMHhdsyHLrJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_11_Pro_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 11",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/DloUgLs2IpDAbDFF.standard",
+    "link": "/Device/iPhone_11",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/dPjkPWDYjsF5c6yr.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Display Panel",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/WApS2TGCNurfXRs6.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Display_Panel.png"
+      },
+      {
+        "name": "Earpiece Speaker and Front Sensor Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/WC1JH5HSwKpfLsrk.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker_and_Front_Sensor_Assembly.png"
+      },
+      {
+        "name": "Lightning Connector Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/EHdMZL6NqEALblQT.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector_Assembly.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ImKAK6ueMkFbbrNL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Lower Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Q2kNFQgemqLYPiwI.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lower_Speaker.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/gE6F5VNgOEYX1VFV.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Rear Case",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/xNNJWEbGhKWMQAcl.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Case.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/XWChSJYNFCDDYROZ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/RODmOZkQKgZhHBcI.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "SIM Card Reader",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/gAywATDpksQficlh.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card_Reader.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/b1Ol2gEqPojgjgYn.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PpMnE2Qag6vjjB4Q.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "main camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/l5ieD2cGeSlQwVrB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/main_camera.png"
+      },
+      {
+        "name": "How to Force Restart an iPhone 11",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/HAU32Zqg3RdYpXtW.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_an_iPhone_11.png"
+      },
+      {
+        "name": "iPhone 11 Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/FZWHhFKBSFH4mGGX.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_11_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone XR",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/yiiosKwJCvSrNS12.standard",
+    "link": "/Device/iPhone_XR",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JGMYBCcNS2GTHmmV.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece and Front Sensor Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/EuWQLKcDJ5pQToLh.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_and_Front_Sensor_Assembly.png"
+      },
+      {
+        "name": "LCD and Digitizer",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/cUTy2SpaOLmmOQsa.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_and_Digitizer.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aOMBQVGl1RwahXoW.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Lower Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/QcPKO4POMFsagpVe.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lower_Speaker.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aGeYRP3gUuAwIhn6.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Rear-Facing Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/MCvvVgZcsYgmuXPY.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Camera.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/nniEXKZkwICbVKFw.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/p3Ey6Ovp2myPYSlS.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/2pWPHoUOcA4Mivxx.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "How to Force Restart an iPhone XR",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/clkyWnLdcYPhZ4Ow.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_an_iPhone_XR.png"
+      },
+      {
+        "name": "How to restore True Tone after screen replacement on iPhone XR",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/XFiceFwegaCbbU3E.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_restore_True_Tone_after_screen_replacement_on_iPhone_XR.png"
+      },
+      {
+        "name": "iPhone XR Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/nZM5eSg2fREyTgwe.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_XR_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone XS Max",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/BBjFFN1lmmWhH3gR.standard",
+    "link": "/Device/iPhone_XS_Max",
+    "repairs": [
+      {
+        "name": "Back Glass",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ymRSrwSV4eLcR2S2.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Back_Glass.png"
+      },
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/f2oDW26QRcWtELCO.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker and Front Sensor Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/HrPkUaebXyRxrMRE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker_and_Front_Sensor_Assembly.png"
+      },
+      {
+        "name": "Lower Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/vBwVPVdFBHLeWwUa.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lower_Speaker.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/DIwQnpcLqDnBcKcW.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Rear Glass",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/GNxIPquRCVoLXmBE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Glass.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ttXYVcUJbY2BscWB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/nGF1mLC4XgvV4wRd.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ZMSuVFQBIOf4ERNS.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PidsBng3Wk5JHRuD.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "How to Force Restart iPhone XS Max",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/mobHQHfEvQ5FGOBy.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_iPhone_XS_Max.png"
+      },
+      {
+        "name": "How to restore True Tone after screen replacement on iPhone XS Max",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/bHAGArhxjPRDFLws.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_restore_True_Tone_after_screen_replacement_on_iPhone_XS_Max.png"
+      },
+      {
+        "name": "iPhone XS Max Face ID Not Working Fixed - Dot Projector Repair",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/NEqhKxX4hbMuCKXu.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_XS_Max_Face_ID_Not_Working_Fixed_-_Dot_Projector_Repair.png"
+      },
+      {
+        "name": "iPhone XS and XS Max Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aJwdWNI1iSVZeKGj.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_XS_and_XS_Max_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone XS",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/vQTvYLrOfMBrWxTy.standard",
+    "link": "/Device/iPhone_XS",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/IZSXmOvUlPMjhLMX.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker and Front Sensor Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/I3yaMB5IfDIFgoKy.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker_and_Front_Sensor_Assembly.png"
+      },
+      {
+        "name": "Lightning Connector Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/hAX1qrAsYRjPpJ14.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector_Assembly.png"
+      },
+      {
+        "name": "Lower Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/TYMc3vSvqw4lQTnX.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lower_Speaker.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/QOiQrSQPsRJtCPWH.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Rear Glass",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/GwItwjMHQJpVPDXE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Glass.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/MXElMZmHKBJsJWCl.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/BgUa2i5MDNGbdAi5.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/luKcXkkbXqy3nHNf.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/xDsFNwNGFO46tYdI.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "Repainting the outer casing",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/3TFJArC1HvxSR4GL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Repainting_the_outer_casing.png"
+      },
+      {
+        "name": "How To Restore True Tone After Screen Replacement On iPhone XS",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/jH5dZBbNGn5W2jYP.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_To_Restore_True_Tone_After_Screen_Replacement_On_iPhone_XS.png"
+      },
+      {
+        "name": "How to force restart the iPhone XS",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/HMUObVVOf6oSpDvY.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_force_restart_the_iPhone_XS.png"
+      },
+      {
+        "name": "iPhone XS and XS Max Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aJwdWNI1iSVZeKGj.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_XS_and_XS_Max_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone X",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/fUXPemE2GpmGSuGA.standard",
+    "link": "/Device/iPhone_X",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/BlY5j4lb4JWONNEU.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Bluetooth Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Lj5I1pQZL1ADACNn.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Bluetooth_Antenna.png"
+      },
+      {
+        "name": "Charging Pad / Volume Button Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/K4kRWsNFIZNHU5QZ.standard"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/kCHlvTnOrSvPwDui.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Earpiece Speaker and Front Sensor Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/reMKPGALwP2THvER.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker_and_Front_Sensor_Assembly.png"
+      },
+      {
+        "name": "Face ID",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/juoVafo2DdC3HZka.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Face_ID.png"
+      },
+      {
+        "name": "Front Camera Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/BWnQpYQQirsTtSh6.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Camera_Assembly.png"
+      },
+      {
+        "name": "Front Panel Screen Retainers",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/khYypUT1FGrjFxak.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Panel_Screen_Retainers.png"
+      },
+      {
+        "name": "Interconnect Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/KkbVMXK4VNlPu4RS.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Interconnect_Cable.png"
+      },
+      {
+        "name": "Lightning Connector",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/FoDO1mPcMmHDkQjB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector.png"
+      },
+      {
+        "name": "Logic Board (Motherboard)",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/dnv21PLTCiJWRGQG.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board_(Motherboard).png"
+      },
+      {
+        "name": "Lower Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/hNxj1AGhLKNoRIMq.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lower_Speaker.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/BO6lEF2W1kX5S1sI.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Power Button and Flash Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/f2Qn2hGAAam63cBr.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button_and_Flash_Cable.png"
+      },
+      {
+        "name": "Power and Audio Exterior Buttons",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/pwhHmNvMWMBbiugZ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_and_Audio_Exterior_Buttons.png"
+      },
+      {
+        "name": "Rear Case",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/6ucl1g1qQPZObHGU.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Case.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Fu2kDDrmYAicpojT.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PMGlYmQCBuvM4IES.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/B3xMlliNcOW63NUO.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/6Mide4cuJPxUcR2S.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "WiFi Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PWYgifod2Teo3DrV.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/WiFi_Antenna.png"
+      },
+      {
+        "name": "iPhone X Disassembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/SLIWlhhPUFLULXjO.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_X_Disassembly.png"
+      },
+      {
+        "name": "How to Fix iPhone X Face ID Not Working After Screen Replacement",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/c4emkQalXNiHYksF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Fix_iPhone_X_Face_ID_Not_Working_After_Screen_Replacement.png"
+      },
+      {
+        "name": "How to Force Restart iPhone X",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/YPnbSLFVJvRHIvES.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_iPhone_X.png"
+      },
+      {
+        "name": "How to apply tempered glass / screen protector to an iPhone X",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/dyTB2r4KIrgJPNpu.standard"
+      },
+      {
+        "name": "How to restore True Tone after screen replacement on iPhone X",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/tTyn11bp1nRkZbcC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_restore_True_Tone_after_screen_replacement_on_iPhone_X.png"
+      },
+      {
+        "name": "How to shutdown an IPhone X",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JSbFiQemFLfD1ERA.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_shutdown_an_IPhone_X.png"
+      },
+      {
+        "name": "Troubleshooting iPhone X Face ID Not Working 'Move iPhone a Little Lower/Higher'",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/6LAVe3kKZkAAQgrl.standard"
+      },
+      {
+        "name": "Why Face ID Not Working After Repair",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aNGaCEZpNmycC1Im.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Why_Face_ID_Not_Working_After_Repair.png"
+      },
+      {
+        "name": "Why iPhone X Face ID not work after repairing",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ExZnVQMHjuCGbHth.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Why_iPhone_X_Face_ID_not_work_after_repairing.png"
+      },
+      {
+        "name": "iPhone X Rear Camera Lens Replacement",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/IZtDeVlIVNDADpRJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_X_Rear_Camera_Lens_Replacement.png"
+      },
+      {
+        "name": "iPhone X Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/nsqMxKCNqIHx5wXX.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_X_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 8 Plus",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/G4eiVK2oul2cpZUD.standard",
+    "link": "/Device/iPhone_8_Plus",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/GMdqXqyyfv3XrIML.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/RfXI3jubtFZMwQ5q.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Camera and Sensor Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/hkhpcBloRagmNnJ5.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Camera_and_Sensor_Cable.png"
+      },
+      {
+        "name": "Home/Touch ID Sensor",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/XJnK4qqIQQnW3R3g.standard"
+      },
+      {
+        "name": "LCD and Digitizer",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/2W6T6SayilPcpilq.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_and_Digitizer.png"
+      },
+      {
+        "name": "Lightning Connector Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/6v44GAXdlocwX6Sr.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector_Assembly.png"
+      },
+      {
+        "name": "Lower Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Ud4vRT6cnFEj2BfM.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lower_Speaker.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/TarLKT6XsfriAQUJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/55HVGhDdjEgwcdEY.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/DXaEX3RlUyHfj3Qn.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/5lNtaUgVrrZDUsH2.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/MqccpG2Yq3jAxDhq.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "Top Left Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/MMWP3No1D4YxlMc3.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Top_Left_Antenna.png"
+      },
+      {
+        "name": "Wi-Fi Diversity Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/d5WXE54FJZfbZVOe.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Wi-Fi_Diversity_Antenna.png"
+      },
+      {
+        "name": "How to force reset an iPhone 8 Plus",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/CI6WG3ajtuCAb3vN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_force_reset_an_iPhone_8_Plus.png"
+      },
+      {
+        "name": "How to test and charge iPhone 8+ battery with BAKU 305d power source and sunshine SS-909 cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/xHKfn25EYEFC2CZn.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_test_and_charge_iPhone_8+_battery_with_BAKU_305d_power_source_and_sunshine_SS-909_cable.png"
+      },
+      {
+        "name": "iPhone 8 Plus Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/GXgJcKUxwgx6LJSx.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_8_Plus_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 7 Plus",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/RaW5CBghXHFNYe1s.standard",
+    "link": "/Device/iPhone_7_Plus",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Ua2ydEpJ4xqtCBal.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/HXIFvg5RKwBBZPQi.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Camera and Sensor Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/MoHxsE6JJ4btIcE6.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Camera_and_Sensor_Cable.png"
+      },
+      {
+        "name": "Home/Touch ID Sensor",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/XPDPFMcOcHjINfDT.standard"
+      },
+      {
+        "name": "LCD and Digitizer",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/NxUIFgTTliSRpkth.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_and_Digitizer.png"
+      },
+      {
+        "name": "Left Wi-Fi Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/SfgvQfnjS6HOLbeM.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Left_Wi-Fi_Antenna.png"
+      },
+      {
+        "name": "Lightning Connector Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/uAuFwEsu4ZLL2Xsk.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector_Assembly.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/su3jFfOZBKOooKAq.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/lmhcoVgsVMmGK1sw.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Rear Camera Lens Glass",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/OaWLCbXgRxYNwAOO.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Camera_Lens_Glass.png"
+      },
+      {
+        "name": "Rear-Facing Cameras",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/OVSTMpTeoVsPGI2P.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Cameras.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Gt6pNIolL1o6hyS6.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/mCM3AnaMwgqCOxlR.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/4pTFmCHxZYrVG6ta.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Speaker.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/mlOFhtrDPxqpciPA.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "Wi-Fi Diversity Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/4ScJOKsw5MT6vbIO.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Wi-Fi_Diversity_Antenna.png"
+      },
+      {
+        "name": "How to boot into Recovery Mode on the iPhone 7 Plus",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/g4QEUZ5curDBdRaS.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_boot_into_Recovery_Mode_on_the_iPhone_7_Plus.png"
+      },
+      {
+        "name": "How to force restart the iPhone 7 Plus",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/HFkiSX2MwKP3qENQ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_force_restart_the_iPhone_7_Plus.png"
+      },
+      {
+        "name": "iPhone 7 Plus Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/jDa3Swwgw4qUqFFv.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_7_Plus_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 7",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/NFvyDsAOXAjqdfTF.standard",
+    "link": "/Device/iPhone_7",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JWCS3PHnITsAmBVa.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/KZMKpyGlYGES5WZ4.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Camera and Sensor Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/gI1MusSkZYmyGmQg.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Camera_and_Sensor_Cable.png"
+      },
+      {
+        "name": "Home/Touch ID Sensor",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/XPDPFMcOcHjINfDT.standard"
+      },
+      {
+        "name": "LCD Shield Plate",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/pFeKxDefLNUhTlf6.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_Shield_Plate.png"
+      },
+      {
+        "name": "LCD and Digitizer",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/mmZjSGEOisDKUx1c.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_and_Digitizer.png"
+      },
+      {
+        "name": "Lightning Connector Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/NcbJFC2NRwPO5Gkm.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector_Assembly.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/xbO1kanIrADStWem.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/2NRSsvRZ6MEnDBSy.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Power Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/XZEZCXcn3Nfu5ElR.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button.png"
+      },
+      {
+        "name": "Power and Volume Control Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/nKlqlhOBLPnYqXyF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_and_Volume_Control_Cable.png"
+      },
+      {
+        "name": "Rear Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/QubLOb1NDDSPdOTI.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Camera.png"
+      },
+      {
+        "name": "Rear Camera Cover Glass",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JFT2ZyyxOE26uhaE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Camera_Cover_Glass.png"
+      },
+      {
+        "name": "Rear Case",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ty4dqedGiurQmelc.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Case.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/UhXOp4euYnapQJxr.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/N2F1UsZcNMIXSNnP.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Bw6sFFfA4BGK5Ojq.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Speaker.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Om4m5LuuEftLpCgJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "U3101 Audio IC",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/kIfJgnKrPMrZmdqc.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/U3101_Audio_IC.png"
+      },
+      {
+        "name": "Volume Buttons",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/onMgsZZsnDpOQSJM.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Volume_Buttons.png"
+      },
+      {
+        "name": "Wi-Fi Diversity Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/QKYMIpMYclTnYBEM.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Wi-Fi_Diversity_Antenna.png"
+      },
+      {
+        "name": "How to fix an iPhone 7 stuck / hanging on a logo",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/hQMJIEMZnxY2Yq1U.standard"
+      },
+      {
+        "name": "How to force restart the iPhone 7",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ltw6dN2UJHVIdgXY.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_force_restart_the_iPhone_7.png"
+      },
+      {
+        "name": "How to repair dead battery in an iPhone 7",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/6XUJYjAqjGdq1QCK.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_repair_dead_battery_in_an_iPhone_7.png"
+      },
+      {
+        "name": "How to replace the touch IC on the home button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/6WSNcGVZiEUO2ci6.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_replace_the_touch_IC_on_the_home_button.png"
+      },
+      {
+        "name": "How you put your iPhone 7 into DFU Mode?",
+        "imageUrl": "https://assets.cdn.ifixit.com/static/images/default_images/GuideNoImage_300x225.jpg",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_you_put_your_iPhone_7_into_DFU_Mode?.png"
+      },
+      {
+        "name": "iPhone 7 Not Charging",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/SDdbAdLSuSbsAYEg.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_7_Not_Charging.png"
+      },
+      {
+        "name": "iPhone DIY Night Vision Camera and Massive External Battery Pack",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JroGhSOiGvg24hEh.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_DIY_Night_Vision_Camera_and_Massive_External_Battery_Pack.png"
+      },
+      {
+        "name": "iPhone 7 Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Ob6bKZiLiVAWJMAg.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_7_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone SE (1st Generation)",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/MqGZWCWTTRYMR5a5.standard",
+    "link": "/Device/iPhone_SE",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/jnHnAoHhFlbRNJRa.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/kHIApiblKkSerLko.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Facing Camera and Sensor Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ksqk4rYhaIu5Hlql.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Facing_Camera_and_Sensor_Cable.png"
+      },
+      {
+        "name": "Home Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/yrG2tVVOYKoxTyXV.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button.png"
+      },
+      {
+        "name": "LCD and Digitizer",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/UioYDs4KdPxtGpLk.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_and_Digitizer.png"
+      },
+      {
+        "name": "Lightning Connector",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/NmCfYNYRqhLgAFGg.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/K6KEssQFKo4JU2Cb.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Rear Facing Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/SEbEpGAWBPcDaQYp.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Facing_Camera.png"
+      },
+      {
+        "name": "SIM Eject Lever",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/MsRAYafStfPqOYsJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Eject_Lever.png"
+      },
+      {
+        "name": "SIM Tray",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PblxyjekrPX5RBK6.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Tray.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ReOtObSpoQaoTNRp.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/EUJJn6EUlhjLXsgC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Speaker.png"
+      },
+      {
+        "name": "Vibrator",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/LHRmQ5QjWUiREZdm.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Vibrator.png"
+      },
+      {
+        "name": "Volume Controls",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/wl2QZPZ1H1qAH1Wg.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Volume_Controls.png"
+      },
+      {
+        "name": "How to 'repair' iPhone SE Lightning Connector",
+        "imageUrl": "https://assets.cdn.ifixit.com/static/images/default_images/GuideNoImage_300x225.jpg",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_'repair'_iPhone_SE_Lightning_Connector.png"
+      },
+      {
+        "name": "How to fix iTunes error -1 in an iPhone SE",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/V2RSqPjDuqv5ZF2o.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_fix_iTunes_error_-1_in_an_iPhone_SE.png"
+      },
+      {
+        "name": "How to force the restart of an iPhone SE",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/OBxHOLgQ1eHQqyxS.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_force_the_restart_of_an_iPhone_SE.png"
+      },
+      {
+        "name": "How to repair Touch ID in an iPhone SE",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/2rrZCvGWyJxSaeQc.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_repair_Touch_ID_in_an_iPhone_SE.png"
+      },
+      {
+        "name": "How to resolve not powering up or not charging iPhone SE",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PsWhDpgq2BWRBZHQ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_resolve_not_powering_up_or_not_charging_iPhone_SE.png"
+      },
+      {
+        "name": "How to straighten the frame in an iPhone SE",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aSfweBWZxApawRkr.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_straighten_the_frame_in_an_iPhone_SE.png"
+      },
+      {
+        "name": "iPhone SE Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JDGNygRG5mjuOAEF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_SE_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 6s Plus",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/cMVbyIbIrTEbi2j5.standard",
+    "link": "/Device/iPhone_6s_Plus",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/LVQpdSdCEY1YxPkM.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/UkfrjXrHFbQA2rNv.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "FaceTime Camera and Sensor Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/qvVQGVWS2xsDmgDN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/FaceTime_Camera_and_Sensor_Assembly.png"
+      },
+      {
+        "name": "Home Button Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/anWGhcMIHhgJJipd.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button_Assembly.png"
+      },
+      {
+        "name": "LCD and Digitizer",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/YaZnxnJgOXj2qtIl.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_and_Digitizer.png"
+      },
+      {
+        "name": "Lightning Connector and Headphone Jack",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1EBDhe6oGOKUY11L.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector_and_Headphone_Jack.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/blc2AmZXfr1uWX6D.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Power Button Cable Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ZIRl6WDDnrGsBukg.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button_Cable_Assembly.png"
+      },
+      {
+        "name": "Power Button Cover",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/SZQofIobkGCRNbNU.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button_Cover.png"
+      },
+      {
+        "name": "Rear Case",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/KyspIhcdGCngaEKV.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Case.png"
+      },
+      {
+        "name": "SIM Tray",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/hYYK3oxO6LAFKZwn.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Tray.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/eQ23uvKkPogQEMs4.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/oFHGOyLAU6HONose.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Speaker.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/bfVid63LWHqEPCGO.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "Top left Wi-Fi Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PGNCoZHWK2jwwlct.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Top_left_Wi-Fi_Antenna.png"
+      },
+      {
+        "name": "Volume Control Button Covers",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/gAPmfMKClR6FwrlU.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Volume_Control_Button_Covers.png"
+      },
+      {
+        "name": "Volume Control Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/w5FPtJKMloFehBGW.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Volume_Control_Cable.png"
+      },
+      {
+        "name": "Wi-Fi Diversity Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/vg1Uo6QCHWmp36vB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Wi-Fi_Diversity_Antenna.png"
+      },
+      {
+        "name": "Wi-Fi/Bluetooth Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/t3tov5FDpFRgiJBD.standard"
+      },
+      {
+        "name": "iSight Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/E1DRnfIEbjuFCCPs.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iSight_Camera.png"
+      },
+      {
+        "name": "How to Force Restart an iPhone 6s Plus",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/wJDA6MhtqnxDpfNl.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_an_iPhone_6s_Plus.png"
+      },
+      {
+        "name": "How to fix iPhone 6S/6S+ home button, when home button click does not work.",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/AHTspNTgs4JKuVHH.standard"
+      },
+      {
+        "name": "iPhone 6s Plus Glass-Only Screen Repair",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/3lYeAmfgKVQmCIgg.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6s_Plus_Glass-Only_Screen_Repair.png"
+      },
+      {
+        "name": "iPhone 6s Plus Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/iQUDNg5J5ghsDaDV.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6s_Plus_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 6s",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/ipv5OG2NckM3DfE2.standard",
+    "link": "/Device/iPhone_6s",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/tEAXSWZVxiUk5qkm.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Camera Ring",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/6TVMniRaXnWEn2ik.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Camera_Ring.png"
+      },
+      {
+        "name": "Cellular Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/NO2QljaXLKKZrWeI.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Cellular_Antenna.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PPquxRmvl1QHnp21.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front-Facing Camera and Sensor Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1N3MQGTI2rgMEjMF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front-Facing_Camera_and_Sensor_Assembly.png"
+      },
+      {
+        "name": "Home Button Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/fNq4FD1tGPWHlOJM.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button_Assembly.png"
+      },
+      {
+        "name": "LCD and Digitizer",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PyctVOfNvZwOQZmy.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_and_Digitizer.png"
+      },
+      {
+        "name": "Lightning Connector Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/beH3wTSQMYX2EQTe.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector_Assembly.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/mnEYW2TjN33nIFRs.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JATCLqMKWMWEOJKD.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Power Button Cover",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/HWgsLjb2n1POIQHt.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button_Cover.png"
+      },
+      {
+        "name": "Rear Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/cpCLKRfSKOO1FFcc.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Camera.png"
+      },
+      {
+        "name": "Rear Case",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/mR5ykDVfCNZckJnd.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Case.png"
+      },
+      {
+        "name": "SIM Tray",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/pwXNRZA3FKDwW112.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Tray.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Fu1ZajDHpheFtmen.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/BvmNxhv4SjLISp1H.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Speaker.png"
+      },
+      {
+        "name": "Taptic Engine",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/qDDf1j2ExOJPthsS.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taptic_Engine.png"
+      },
+      {
+        "name": "Upper Component Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/BtoNPwP3oU1sMuOx.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Upper_Component_Cable.png"
+      },
+      {
+        "name": "Volume Control Button Covers",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/kAfTnWmr3ZmYd4bJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Volume_Control_Button_Covers.png"
+      },
+      {
+        "name": "Wi-Fi Diversity Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JfdsGgXWY4IIKrRG.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Wi-Fi_Diversity_Antenna.png"
+      },
+      {
+        "name": "How to Force Restart an iPhone 6s",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/VruUUexpJcoaWGlF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_an_iPhone_6s.png"
+      },
+      {
+        "name": "How to fix iTunes error 9 in an Apple iPhone 6s",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/OZNGBRU2JJdyvPJE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_fix_iTunes_error_9_in_an_Apple_iPhone_6s.png"
+      },
+      {
+        "name": "How to repair backlight iPhone 6",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/lmfKLksDiyDevxN5.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_repair_backlight_iPhone_6.png"
+      },
+      {
+        "name": "How to replace iPhone 6s flash memory",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/uLBxEaw6aEmqWXRr.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_replace_iPhone_6s_flash_memory.png"
+      },
+      {
+        "name": "iPhone 6s Flash Memory Replacement",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/qLlUZOmpuWY2NoC6.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6s_Flash_Memory_Replacement.png"
+      },
+      {
+        "name": "iPhone 6s Glass-Only Display Repair",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/4XiANkOqPhInXpX1.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6s_Glass-Only_Display_Repair.png"
+      },
+      {
+        "name": "iPhone 6s Polarizer Replacement",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/tOfmdoeHmTNF6BSM.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6s_Polarizer_Replacement.png"
+      },
+      {
+        "name": "iPhone 6s Display Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/2OUHOHtEveaOSDTH.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6s_Display_Teardown.png"
+      },
+      {
+        "name": "iPhone 6s Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/rDoRmRUq6CC5iCtM.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6s_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 6 Plus",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/DINYKyig41MvxEHi.standard",
+    "link": "/Device/iPhone_6_Plus",
+    "repairs": [
+      {
+        "name": "5GHz Wi-Fi Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/sV114pcx2PwIp1ON.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/5GHz_Wi-Fi_Antenna.png"
+      },
+      {
+        "name": "Audio Control and Rocker Switch Buttons",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/d2GZstVnQ6Ck6LZN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Audio_Control_and_Rocker_Switch_Buttons.png"
+      },
+      {
+        "name": "Audio Control and Rocker Switch Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/mRfwKZuNbFDeWHTF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Audio_Control_and_Rocker_Switch_Cable.png"
+      },
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/2FWghdhqaNsiEHVA.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/RtVMGMKB3LuCIkrL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Facing Camera and Sensor Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/VtFOOwXyGWaMZlJb.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Facing_Camera_and_Sensor_Assembly.png"
+      },
+      {
+        "name": "Home Button Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PNYnxx2lk2jV2iqD.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button_Assembly.png"
+      },
+      {
+        "name": "LCD and Digitizer",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/wFbcIwghCHnMfhSP.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_and_Digitizer.png"
+      },
+      {
+        "name": "Lightning Connector and Headphone Jack Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1VMXGwnKBJlUgPDD.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector_and_Headphone_Jack_Cable.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/TQwTgHsWqHoXAckO.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/USCeHYChW5fqBuWf.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Power Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/VERiuqmrhUkqv1tp.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button.png"
+      },
+      {
+        "name": "Power Button Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/YaZCQEHHZ4pDPVkK.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button_Cable.png"
+      },
+      {
+        "name": "Rear Case",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/SZF6LCQIQsLZ11jO.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Case.png"
+      },
+      {
+        "name": "Rear Facing Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/uDGpyqmVFXewjjGC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Facing_Camera.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/LsFsrLWUYCOW4Bw1.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "SIM Eject Lever",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/3NtaRTPMQ24Kkgup.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Eject_Lever.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ostTKJqMw2NqQnKE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/im1XZRcTAW1rm1Sl.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Speaker.png"
+      },
+      {
+        "name": "Vibrator",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ULKxgCscuRy1Clhe.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Vibrator.png"
+      },
+      {
+        "name": "How to Force Restart an iPhone 6 Plus",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1SPA5DyRtyeGcHxq.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_an_iPhone_6_Plus.png"
+      },
+      {
+        "name": "Taping Over The Display",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/gjTJHEWqBnqgCsnT.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taping_Over_The_Display.png"
+      },
+      {
+        "name": "What to do if your iPhone 6 or 6 Plus won't respond to touch",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/TKTFY6gi3JQpAZYP.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/What_to_do_if_your_iPhone_6_or_6_Plus_won't_respond_to_touch.png"
+      },
+      {
+        "name": "iPhone 6 Plus Touch IC Repair",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/FoMZGlGeaiZVygAB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6_Plus_Touch_IC_Repair.png"
+      },
+      {
+        "name": "Smontaggio iPhone 6 Plus (Italiano)",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/3DPFDYTElmcusXgQ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Smontaggio_iPhone_6_Plus_(Italiano).png"
+      },
+      {
+        "name": "iPhone 6 Plus Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/sVW2d2vSElGdtoSG.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6_Plus_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 6",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/H4M1JEQiZabe4Vo2.standard",
+    "link": "/Device/iPhone_6",
+    "repairs": [
+      {
+        "name": "Antenna Flex Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Q26i2XEnXk5ovHTu.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Antenna_Flex_Cable.png"
+      },
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/NDuE6dAWvWl2YYoU.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Camera Lens",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/X1yENlOk1v4WbSPy.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Camera_Lens.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/GamCJADJbriq36dg.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front-Facing Camera and Sensor Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/WPHK5d2n2HZJLWkh.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front-Facing_Camera_and_Sensor_Cable.png"
+      },
+      {
+        "name": "Home Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/xBsAlmtAuS23eybD.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button.png"
+      },
+      {
+        "name": "Home Button Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ytqjF3CrL1qsFsBk.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button_Cable.png"
+      },
+      {
+        "name": "LCD Shield Plate",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Cisr6bLydMSIcFkW.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_Shield_Plate.png"
+      },
+      {
+        "name": "LCD and Digitizer",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/tTYBofsgFJDvaHBV.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_and_Digitizer.png"
+      },
+      {
+        "name": "Lightning Connector Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/WHoEHel6WKFudPVf.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector_Assembly.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/FZIyxxiPx6APvjtD.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/4O2ARkdCHfToqXR4.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Power Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JCOBwZAODZpLLwlM.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button.png"
+      },
+      {
+        "name": "Power Button Cable Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ilKuESwYTY1KrpTP.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button_Cable_Assembly.png"
+      },
+      {
+        "name": "Rear Case",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/gw1riolKPUUFDCbO.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Case.png"
+      },
+      {
+        "name": "Rear Facing Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/xqaanEM2NBdAlAqR.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Facing_Camera.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/r5jlNy3mvLvbOHXN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "SIM Eject Lever",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/MwSZ6MIim6pLlPIN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Eject_Lever.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/HFOPtfyXTSiAlZb2.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/QVgGFR5KVl1cTbiW.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Speaker.png"
+      },
+      {
+        "name": "Vibrator",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/sbqsy5OXbaDUIoqZ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Vibrator.png"
+      },
+      {
+        "name": "Volume Control Buttons",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ne3mDRHahgYNpSNN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Volume_Control_Buttons.png"
+      },
+      {
+        "name": "Volume Control Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/KtPT2rrNTE4RKOXc.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Volume_Control_Cable.png"
+      },
+      {
+        "name": "Wi-Fi Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/wxMU6qZXZnYURvtQ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Wi-Fi_Antenna.png"
+      },
+      {
+        "name": "Error -1 / 50 iPhone 6",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/nPIatqM3rxlfwMCh.standard"
+      },
+      {
+        "name": "How To Fix Vertical Lines On An iPhone Screen After Replacement",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JhCVGOEqlyhMRwiC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_To_Fix_Vertical_Lines_On_An_iPhone_Screen_After_Replacement.png"
+      },
+      {
+        "name": "How to Force Restart an iPhone 6",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/pRFtxwMqJf3PRqCe.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_an_iPhone_6.png"
+      },
+      {
+        "name": "How to fix backlight in an iPhone 6",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/yI2bZrIGEmsGHA5R.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_fix_backlight_in_an_iPhone_6.png"
+      },
+      {
+        "name": "How to fix iTunes error -1 in an iPhone 6",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Bg5GqboMqGa4m3vX.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_fix_iTunes_error_-1_in_an_iPhone_6.png"
+      },
+      {
+        "name": "How to fix no image / black display for iPhone 6",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/yOxIc1bbEOimRELd.standard"
+      },
+      {
+        "name": "How to get rid of water damage iPhone 6",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/DkKUdNBOTF4KGUaY.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_get_rid_of_water_damage_iPhone_6.png"
+      },
+      {
+        "name": "How to repair touch [hardware issue] iPhone 6",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/pbAXmqFBmdREo2Ef.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_repair_touch_[hardware_issue]_iPhone_6.png"
+      },
+      {
+        "name": "How to resolve NO SIM problem / SIM card problem iPhone 6",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/NGGlJeC3kHRCoGZy.standard"
+      },
+      {
+        "name": "Taping Over The Display",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Fec4ly2NlSKCokoB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Taping_Over_The_Display.png"
+      },
+      {
+        "name": "iPhone 6 Damaged Diode - Backlight issue Replacement",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/fLrJsMK4d1H5usgP.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6_Damaged_Diode_-_Backlight_issue_Replacement.png"
+      },
+      {
+        "name": "iPhone 6 NOT CHARGING",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/k3lPRrGswgPQOA2A.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6_NOT_CHARGING.png"
+      },
+      {
+        "name": "iPhone 6 Searching / No Service",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/kT5vbggunUHAxHIB.standard"
+      },
+      {
+        "name": "Apple iPhone 6 Teardown by X-ray",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/tEISOeloDoudwvF3.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Apple_iPhone_6_Teardown_by_X-ray.png"
+      },
+      {
+        "name": "iPhone 6 Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PQndNmsgSkuBybl6.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6_Teardown.png"
+      },
+      {
+        "name": "iPhone 6 Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/VPXd1RyvBBFXaBNP.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_6_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 5s",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/sX5iMoIvYMbCvHoF.standard",
+    "link": "/Device/iPhone_5s",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/VY6GjBOeJ2FpVQZp.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Bluetooth and Wi-Fi Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/FGkhE3V2yDHCCXYG.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Bluetooth_and_Wi-Fi_Antenna.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/UQwKvXOIPDTdBMwR.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Facing Camera and Sensor Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/mxu3AjHXOTUVXysi.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Facing_Camera_and_Sensor_Cable.png"
+      },
+      {
+        "name": "Home Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/FvlVGVL1caPct4FQ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button.png"
+      },
+      {
+        "name": "LCD and Digitizer",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/DPanYTsys6muX1CL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_and_Digitizer.png"
+      },
+      {
+        "name": "Lightning Connector",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/xjKCTB3XlaXyCvfF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/6g3WVWqAkhoREBJl.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/kfCGgjBDjPCVlGUV.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Power Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/TAJyHyWjSHVNINul.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button.png"
+      },
+      {
+        "name": "Rear Case",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/pOgB3MPbo4X3kWLC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Case.png"
+      },
+      {
+        "name": "Rear Facing Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/CfsaJxQdEKeZHYFC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Facing_Camera.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/TVtXGmX5XHKFBkEp.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "SIM Eject Lever",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/XIIvYxu2eEWwXPMJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Eject_Lever.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/p4NxkKBZ1ChJNb2v.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/6Pl5hAhecYnZpGir.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Speaker.png"
+      },
+      {
+        "name": "Upper Component Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ALa3KHylcLxLmDsZ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Upper_Component_Cable.png"
+      },
+      {
+        "name": "Vibrator",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/sCPgxHN3tXu5ngQH.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Vibrator.png"
+      },
+      {
+        "name": "Volume Controls",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/TOnVdSKbXQlTZs4P.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Volume_Controls.png"
+      },
+      {
+        "name": "How to Force Restart an iPhone 5s",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/YixMdYvFsaPdABBL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_an_iPhone_5s.png"
+      },
+      {
+        "name": "How to fix iPhone 5s NOT CHARGING",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/voqQCeCcUCxxYXUd.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_fix_iPhone_5s_NOT_CHARGING.png"
+      },
+      {
+        "name": "How to fix proximity sensor iPhone 5s",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/WyYnqaVPuqKPaPLR.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_fix_proximity_sensor_iPhone_5s.png"
+      },
+      {
+        "name": "How to get rid of iTunes -1 error iPhone 5s",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/MAScaCSihja252wZ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_get_rid_of_iTunes_-1_error_iPhone_5s.png"
+      },
+      {
+        "name": "How to repair not charging or quckly discharging battery issue in an iPhone 5s",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/TDstxQDqACPsrImX.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_repair_not_charging_or_quckly_discharging_battery_issue_in_an_iPhone_5s.png"
+      },
+      {
+        "name": "How to resolve bootloop problem (long screw damage) iPhone 5s",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/mGG1x6TFUjOIOww6.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_resolve_bootloop_problem_(long_screw_damage)_iPhone_5s.png"
+      },
+      {
+        "name": "How to resolve quick discharging of the battery in an iPhone 5s",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/iHvNwC5254ZCa4pC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_resolve_quick_discharging_of_the_battery_in_an_iPhone_5s.png"
+      },
+      {
+        "name": "iPhone 5s Glass-Only Screen Repair",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/yEtHXYrcgIYtTATC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_5s_Glass-Only_Screen_Repair.png"
+      },
+      {
+        "name": "Apple A7 Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/UoNnKYFCltO1Svxr.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Apple_A7_Teardown.png"
+      },
+      {
+        "name": "iPhone 5S Teardown by X-ray",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/wId4dYNH4KqS4mmW.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_5S_Teardown_by_X-ray.png"
+      },
+      {
+        "name": "iPhone 5s Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/FTU3CkfVAZCaPY31.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_5s_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 5c",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/1QluZIfJXBuQIVZn.standard",
+    "link": "/Device/iPhone_5c",
+    "repairs": [
+      {
+        "name": "Audio Control and Power Button Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ceYKZh3vo3cFSGP2.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Audio_Control_and_Power_Button_Cable.png"
+      },
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/IeyLSkxWdk3OqtKR.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/iCGCQSeYcLmuKrdI.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front-Facing Camera and Sensor Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/4jrGwmwgw2buOq6N.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front-Facing_Camera_and_Sensor_Cable.png"
+      },
+      {
+        "name": "Home Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/NreVZsAjHulDQtEN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button.png"
+      },
+      {
+        "name": "Home Button Ribbon Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/bhRnuQoYQcIvIinu.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button_Ribbon_Cable.png"
+      },
+      {
+        "name": "LCD and Digitizer",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/w2hoxsKLR2IGcYku.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_and_Digitizer.png"
+      },
+      {
+        "name": "Lightning Connector Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/hWtvopVmF3vVjhBE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector_Assembly.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/mC4LCscwWQNgwDoU.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/5VJvMcwWHekyJCVd.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Power Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/IN4NnOlaZyafJnFx.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button.png"
+      },
+      {
+        "name": "Rear Case",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/xFqSF5dRGtjqTybH.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Case.png"
+      },
+      {
+        "name": "Rear-Facing Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/TrY1FGMxLFdnRG2o.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Camera.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/KyiZNeqvK5jasgle.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "SIM Ejector",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/YD2mqcPklfTTPk2D.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Ejector.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/WQTAXs2kTXywDAFt.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/GTMfitpTOXgJ5c5D.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Speaker.png"
+      },
+      {
+        "name": "Vibrator",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/5lIusLQbUAuSe2Em.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Vibrator.png"
+      },
+      {
+        "name": "Volume Controls",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/KRHeoNKHbOGJFTfl.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Volume_Controls.png"
+      },
+      {
+        "name": "How to Force Restart an iPhone 5c",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/6hVLJfl3IDjVTdaJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_an_iPhone_5c.png"
+      },
+      {
+        "name": "How to resolve incorrect hour and data issue in an iPhone 5c",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/25sZfuGsepo25DnB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_resolve_incorrect_hour_and_data_issue_in_an_iPhone_5c.png"
+      },
+      {
+        "name": "iPhone 5c Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/F3QCuKfSwuWY6GUp.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_5c_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 5",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/KVbXAtic2yB1htOd.standard",
+    "link": "/Device/iPhone_5",
+    "repairs": [
+      {
+        "name": "Audio Control and Power Button Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/w3pNDoOkcfSqGh5N.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Audio_Control_and_Power_Button_Cable.png"
+      },
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aD3oxevif6k36Ahh.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/lp6uSoQWa6PpGWsi.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Panel Clips",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/FuDopHtgu15QfAmU.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Panel_Clips.png"
+      },
+      {
+        "name": "Front-Facing Camera and Sensor Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Z1XAjMLBZBpXAwKj.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front-Facing_Camera_and_Sensor_Cable.png"
+      },
+      {
+        "name": "Home Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Eb3XOhf6uDylmQJp.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button.png"
+      },
+      {
+        "name": "Home Button Ribbon Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/SvHpG4MDusRIkQt2.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button_Ribbon_Cable.png"
+      },
+      {
+        "name": "Interconnect Cables",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/5sw1uXR5WNaTvb15.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Interconnect_Cables.png"
+      },
+      {
+        "name": "LCD Shield Plate",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/xjWUES1oQSx3ZUPW.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_Shield_Plate.png"
+      },
+      {
+        "name": "LCD and Digitizer",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/LSsBLyOSac5dcBWE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/LCD_and_Digitizer.png"
+      },
+      {
+        "name": "Lightning Connector and Headphone Jack",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/fUEqMKTVkYpTCSlv.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Lightning_Connector_and_Headphone_Jack.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/kSeTHfoPRTXmiSKU.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/SnSlJYEespKwTWRE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Power Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/bxNlWpWxk12TXW2I.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button.png"
+      },
+      {
+        "name": "Rear Case",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/gyXoDcCGdBXQDfIC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Case.png"
+      },
+      {
+        "name": "Rear-Facing Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/gduXMvnmOBFXUmMi.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear-Facing_Camera.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/6apCHjSAqkJPEEQA.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "SIM Eject Lever",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/QogS5kYaCMC2RZuK.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Eject_Lever.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/3dRqj5XufXi4IGEl.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Speaker Enclosure",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/arSyYRgyLMmVmTMP.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Speaker_Enclosure.png"
+      },
+      {
+        "name": "Vibrator",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/k6SYtcUdhL4AXrVv.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Vibrator.png"
+      },
+      {
+        "name": "Volume Controls",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Z6tfd2dYqNKdgsPf.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Volume_Controls.png"
+      },
+      {
+        "name": "Wi-Fi Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/LlHuNcWvBpMjEnEA.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Wi-Fi_Antenna.png"
+      },
+      {
+        "name": "Fixing an iPhone 5 with disabled wireless switch",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JPYLvUVU2XfjDWLN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Fixing_an_iPhone_5_with_disabled_wireless_switch.png"
+      },
+      {
+        "name": "How to Force Restart an iPhone 5",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/DIkYMKtNBXwM1b62.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_an_iPhone_5.png"
+      },
+      {
+        "name": "How to resolve iTunes error 4005 in an iPhone 5",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ls6on5Tx6YGdROMf.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_resolve_iTunes_error_4005_in_an_iPhone_5.png"
+      },
+      {
+        "name": "Apple A6 Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/pLDBDAIaeFFrBEdN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Apple_A6_Teardown.png"
+      },
+      {
+        "name": "iPhone 5 Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ojDdAHaHG1OWRtIP.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_5_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 4s",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/pLYg4Mbqni2LYlN3.standard",
+    "link": "/Device/iPhone_4S",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/OaWJfF2aPErhOENC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/EQSoQ2gp3IODuwpJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Cellular Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/hggFvgSVpFuPhLYF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Cellular_Antenna.png"
+      },
+      {
+        "name": "Dock Connector",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/esvtYNplQXAr5RXW.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Dock_Connector.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/YAHUHeHaZYAF6FR2.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Facing Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1OQVSyrbX3XtQVxW.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Facing_Camera.png"
+      },
+      {
+        "name": "Headphone Jack Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/UQHJmb5Sdkv1PBiH.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Headphone_Jack_Cable.png"
+      },
+      {
+        "name": "Home Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/2exVWxOgCaAMI4UZ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button.png"
+      },
+      {
+        "name": "Home Button Gasket",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/MEFFuWx5neUAQI4R.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button_Gasket.png"
+      },
+      {
+        "name": "Home Button Ribbon Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/jxWjYKhkVWpmgIDE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button_Ribbon_Cable.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Mxv3hbYVZUJ6PIB5.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/MojBiEJMIe4SdTdT.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Power Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/EOGEiOL2QLeol6Oi.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button.png"
+      },
+      {
+        "name": "Power and Sensor Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/R3oQ6QMLHyYoBO1O.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_and_Sensor_Cable.png"
+      },
+      {
+        "name": "Rear Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/EHbrkKDybUGvGe2R.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Camera.png"
+      },
+      {
+        "name": "Rear Panel",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/LdDxX5GNMZDGPvEQ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Panel.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/wDV2hJseppF2ckmB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "SIM Card Tray",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/mfJ2Khx5bGA4Xy5I.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card_Tray.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/qg3PXFS6CKOxV4mL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Silent Switch",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ppcnKmJXsxKYsepk.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Silent_Switch.png"
+      },
+      {
+        "name": "Speaker Enclosure",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/rVoJOK1LTqUK6RSi.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Speaker_Enclosure.png"
+      },
+      {
+        "name": "Upper Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aPNKJHGpNiQ5YumN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Upper_Antenna.png"
+      },
+      {
+        "name": "Vibrator",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PeVPiJ1dVgB4WYDe.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Vibrator.png"
+      },
+      {
+        "name": "Volume Buttons",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/rmEfYmhEHoUDvTS5.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Volume_Buttons.png"
+      },
+      {
+        "name": "Прокладка кнопки Home",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/O2llEjxJ4O5qKnoE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Прокладка_кнопки_Home.png"
+      },
+      {
+        "name": "How to Fix iPhone 4S Wi-Fi Grayed Out",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/3UKEIDqhhxQhAbLa.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Fix_iPhone_4S_Wi-Fi_Grayed_Out.png"
+      },
+      {
+        "name": "How to Force Restart an iPhone 4S",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JtQMrEmdplEIgGNY.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_an_iPhone_4S.png"
+      },
+      {
+        "name": "How to fix an iPhone 4S that won't turn on or charge",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/GD3vUmedIQoKTsKm.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_fix_an_iPhone_4S_that_won't_turn_on_or_charge.png"
+      },
+      {
+        "name": "How to install iOS 6 iPhone 4S ( Video )",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/XKoE3REfRBBVkF4F.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_install_iOS_6_iPhone_4S_(_Video_).png"
+      },
+      {
+        "name": "iPhone 4S Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/RGZaPEyWiMHqfPO4.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_4S_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 4 CDMA",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/dF6DITZNDVYNEGRh.standard",
+    "link": "/Device/iPhone_4_Verizon",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JujBA4iVpOZWGAAi.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Cellular Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/k6mDgLsCFLx1XLAM.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Cellular_Antenna.png"
+      },
+      {
+        "name": "Dock Connector",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/JQJNU2wRhToP6KkB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Dock_Connector.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/NnT2SpJyfNQXNVXl.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Facing Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/qqKUDRHZNRGtlbdF.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Facing_Camera.png"
+      },
+      {
+        "name": "Headphone Jack Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Sj3t5dk4vhPK5RPI.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Headphone_Jack_Cable.png"
+      },
+      {
+        "name": "Home Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/MbmYFMYDkb5HSSmD.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/OKaDTVdAbvKWAZEY.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Power Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Qf2GWecgXRayjawQ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button.png"
+      },
+      {
+        "name": "Power Button Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/v3f6Uab5dmKIhu3x.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button_Cable.png"
+      },
+      {
+        "name": "Rear Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/n2CgfjMZ5ZGtXEPn.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Camera.png"
+      },
+      {
+        "name": "Rear Panel",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/paDO2uIAGvZ31F5G.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Panel.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/erexoAmJJvKHlKUg.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Silent Switch",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/kqASSNAPi1VZK4Er.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Silent_Switch.png"
+      },
+      {
+        "name": "Speaker Enclosure",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1Y3xRtgGcsmftagI.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Speaker_Enclosure.png"
+      },
+      {
+        "name": "Upper Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/3BivNvyStmLUnt1X.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Upper_Antenna.png"
+      },
+      {
+        "name": "Vibrator",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/TKD1UWVnPKPsMLxY.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Vibrator.png"
+      },
+      {
+        "name": "Volume Buttons",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/bTTvJwuJuXrqosso.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Volume_Buttons.png"
+      },
+      {
+        "name": "How to Force Restart an iPhone 4 Verizon",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/2nlIPEcSPInIBXKd.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_an_iPhone_4_Verizon.png"
+      },
+      {
+        "name": "iPhone 4 Verizon Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/bSAdrXAoB1BrIkUq.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_4_Verizon_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 4",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/qV2UinVhSchxgPGo.standard",
+    "link": "/Device/iPhone_4",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/2duZfGtv2FSF1BtJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Cellular Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/LcuqfoHDh5pxKqat.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Cellular_Antenna.png"
+      },
+      {
+        "name": "Contact Clip",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ccJYRJJvaQOE1SGc.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Contact_Clip.png"
+      },
+      {
+        "name": "Dock Connector",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/iABgn5EvVnCTXOTB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Dock_Connector.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/qV35fCGFMYeHrhYe.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Facing Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aIH6JyP2XsAIcOqC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Facing_Camera.png"
+      },
+      {
+        "name": "Headphone Jack & Volume Control Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/RBJmAlCy2cc5abhw.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Headphone_Jack_&_Volume_Control_Cable.png"
+      },
+      {
+        "name": "Home Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/q6Vr5RGaYemBLj1J.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/d1q6haylDHiMPXfw.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Pentalobe Screws",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/BiJxhaTMaVwf5aUl.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Pentalobe_Screws.png"
+      },
+      {
+        "name": "Power & Lock Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/HjbUaVU4hUwLfAHj.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_&_Lock_Button.png"
+      },
+      {
+        "name": "Power & Sensor Cable",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Dgv4llDRNdsEaNka.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_&_Sensor_Cable.png"
+      },
+      {
+        "name": "Rear Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/2BOiWWDxsATNPXIW.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Camera.png"
+      },
+      {
+        "name": "Rear Panel",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/BJdD5veOHITij2Jx.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Panel.png"
+      },
+      {
+        "name": "Screen",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aNBl6IvZDvcCPqG1.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Screen.png"
+      },
+      {
+        "name": "Speaker Enclosure",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/1xgKUlYmOLBtoQPb.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Speaker_Enclosure.png"
+      },
+      {
+        "name": "Vibrate Ring Switch",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/yXo4ERHLQ6xbSlqI.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Vibrate_Ring_Switch.png"
+      },
+      {
+        "name": "Vibrator",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ax34pDXKMnJSBoPe.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Vibrator.png"
+      },
+      {
+        "name": "Volume Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/tDNVsW6v3vxgfp5O.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Volume_Button.png"
+      },
+      {
+        "name": "Wi-Fi Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/diPxJJbPrKTKJUSq.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Wi-Fi_Antenna.png"
+      },
+      {
+        "name": "How to Force Restart an iPhone 4",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ExuVIOWNQBUpYlqb.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Restart_an_iPhone_4.png"
+      },
+      {
+        "name": "How to fix an iPhone 4 home button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PnTfYP4BawrolrqD.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_fix_an_iPhone_4_home_button.png"
+      },
+      {
+        "name": "OBSOLETE - Battery Bulge Inspection",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/xJpjNTJXpLArqEUJ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/OBSOLETE_-_Battery_Bulge_Inspection.png"
+      },
+      {
+        "name": "Repairing iPhone 4 LCD Backlight Dim spot issue",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/m2fEkVyBATIKefZZ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Repairing_iPhone_4_LCD_Backlight_Dim_spot_issue.png"
+      },
+      {
+        "name": "Repairing iPhone 4 dust mesh",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/g5JD4t2DJVwd3qWU.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Repairing_iPhone_4_dust_mesh.png"
+      },
+      {
+        "name": "iPhone 4 Gyroscope Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/5jLMGpxXnvX3CEXn.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_4_Gyroscope_Teardown.png"
+      },
+      {
+        "name": "iPhone 4 Microphone Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/WGbMBnDJlWerTSNY.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_4_Microphone_Teardown.png"
+      },
+      {
+        "name": "iPhone 4 Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/2JwqKBrKPSFxseNf.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_4_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 3G",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/HrZAcS3cCISuPAt4.standard",
+    "link": "/Device/iPhone_3G",
+    "repairs": [
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ROdtWppuWQNwNQNL.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/5sRmVZ15W3JRfFJa.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Camera.png"
+      },
+      {
+        "name": "Display",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/seqxPNb5WZPkrb2C.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Display.png"
+      },
+      {
+        "name": "Display Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/SsEhPMTIcQrtATBK.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Display_Assembly.png"
+      },
+      {
+        "name": "Dock Connector",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/VgHbKe4DxFyZWDPB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Dock_Connector.png"
+      },
+      {
+        "name": "Earpiece Speaker",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/EMLGTVgHHu1aBfmn.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Earpiece_Speaker.png"
+      },
+      {
+        "name": "Front Panel",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Nb6HIkK2cjAcpmCZ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Panel.png"
+      },
+      {
+        "name": "Front Panel",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/kxSemBJKg4Nx1irm.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Panel.png"
+      },
+      {
+        "name": "Front Panel Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Zvjn6kWEgdlphXMr.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Panel_Assembly.png"
+      },
+      {
+        "name": "GPS Antenna",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/BOyTffUDOpsOmeRS.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/GPS_Antenna.png"
+      },
+      {
+        "name": "Headphone Jack",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/I6cLP6cHcNTJVLVi.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Headphone_Jack.png"
+      },
+      {
+        "name": "Home Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/IHCOI1OXYKTSQoSO.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Home_Button.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/lQbToOkGxxcOOaUM.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Mute Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/Jhufp3ZdKvFxovLQ.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Mute_Button.png"
+      },
+      {
+        "name": "Mute Switch",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/LWljbfB5RMO4wWQr.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Mute_Switch.png"
+      },
+      {
+        "name": "Power Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/S4EI3y1jpTLTUFnC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Power_Button.png"
+      },
+      {
+        "name": "Rear Case",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/4WoRjFVjHsKDmbxD.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Case.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/34lUeWllJiop2CAq.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "Vibrator",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ascbMkVpmCBVOapr.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Vibrator.png"
+      },
+      {
+        "name": "Volume Button",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/IM2BoDLXEWZUSRCK.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Volume_Button.png"
+      },
+      {
+        "name": "iPhone 3G Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/e6XYuhMSFfPOw6kc.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_3G_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone 2G",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/CtpcI4pqikGonOye.standard",
+    "link": "/Device/iPhone_1st_Generation",
+    "repairs": [
+      {
+        "name": "Antenna Cover",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/OylfJVUojJTlqpSX.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Antenna_Cover.png"
+      },
+      {
+        "name": "Battery",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/pZofCqP6crokfwcp.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Battery.png"
+      },
+      {
+        "name": "Camera",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/6MceW2jovDF3BwkN.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Camera.png"
+      },
+      {
+        "name": "Case",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/aq5biaFe5OKGLGOC.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Case.png"
+      },
+      {
+        "name": "Communications Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/EMeTMarC1LOGhNZu.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Communications_Board.png"
+      },
+      {
+        "name": "Display Assembly",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/nJpFYvyEdJXeSBLE.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Display_Assembly.png"
+      },
+      {
+        "name": "Front Bezel",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/hSkSevGlkpkpZtFU.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Front_Bezel.png"
+      },
+      {
+        "name": "Headphone Jack",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/NNixfo6Zm1w31LZB.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Headphone_Jack.png"
+      },
+      {
+        "name": "Logic Board",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/pLqLyNIrL6x2FNxT.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Logic_Board.png"
+      },
+      {
+        "name": "Rear Panel",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/LiGiysVXO6B4XkBh.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/Rear_Panel.png"
+      },
+      {
+        "name": "SIM Card",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/ZWjLMDAugORLkvyw.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/SIM_Card.png"
+      },
+      {
+        "name": "How to Force Reboot the 1st Generation iPhone",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/cplAWb1VNYNlsHHH.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/How_to_Force_Reboot_the_1st_Generation_iPhone.png"
+      },
+      {
+        "name": "iPhone 1st Generation Teardown",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/oOkmlSurxKZZg4mD.standard",
+        "image_path": "/Volumes/MAC/scraping/iphones/images/iPhone_1st_Generation_Teardown.png"
+      }
+    ]
+  },
+  {
+    "name": "iPhone Accessories",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/BCxhD63p12TdNFgV.standard",
+    "link": "/Device/iPhone_Accessories",
+    "repairs": [
+      {
+        "name": "Spring/coil",
+        "imageUrl": "https://guide-images.cdn.ifixit.com/igi/PpOxxBivACKLBbQj.standard"
+      }
+    ]
+  }
+]
