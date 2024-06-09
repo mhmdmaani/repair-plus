@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { DeviceService } from '../device.service';
+import { CategoryService } from '../category.service';
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
@@ -8,16 +8,12 @@ export async function GET(req: Request) {
   const perPage = searchParams.get('perPage');
   const sortBy = searchParams.get('sortBy');
   const isAsc = searchParams.get('isAsc');
-  const brandId = searchParams.get('brandId');
-  const categoryId = searchParams.get('categoryId');
-  const res = await DeviceService.getSearch({
+  const res = await CategoryService.getSearch({
     searchKey,
     page,
     perPage,
     sortBy,
     isAsc,
-    brandId,
-    categoryId,
   });
   return NextResponse.json(res);
 }

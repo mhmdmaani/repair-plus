@@ -20,6 +20,7 @@ export const useSearchDevices = (data: any) => {
       data.sortBy,
       data.isAsc,
       data.brandId,
+      data.categoryId,
     ],
     queryFn: () => Device.getSearch(data),
   });

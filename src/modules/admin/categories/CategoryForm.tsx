@@ -1,5 +1,8 @@
 'use client';
-import { useCreateBrand, useUpdateBrand } from '@/hooks/admin/useBrands';
+import {
+  useCreateCategory,
+  useUpdateCategory,
+} from '@/hooks/admin/useCategories';
 import {
   Button,
   FormControlLabel,
@@ -8,7 +11,7 @@ import {
   styled,
 } from '@mui/material';
 import { addMonths } from 'date-fns';
-import { Brand } from 'prisma/prisma-client';
+import { Brand, Category } from 'prisma/prisma-client';
 import { useEffect, useState } from 'react';
 
 const FormContainer = styled('div')`
@@ -29,37 +32,37 @@ const FeildContainer = styled('div')`
     gap: 5px;
   }
 `;
-export default function BrandForm({
-  brand,
+export default function CategoryForm({
+  category,
   onAdd,
 }: {
-  brand?: Brand | null;
+  category?: Category | null;
   onAdd?: (a: any) => void;
 }) {
-  const updateMutation = useUpdateBrand();
-  const createMutation = useCreateBrand();
+  const updateMutation = useUpdateCategory();
+  const createMutation = useCreateCategory();
   const [name, setName] = useState('');
-  const [logo, setLogo] = useState('');
+  const [image, setImage] = useState('');
 
   const handleFileChange = (event: any) => {
-    setLogo(event.target.files[0]);
+    setImage(event.target.files[0]);
   };
 
   useEffect(() => {
-    if (brand) {
-      setName(brand.name);
+    if (category) {
+      setName(category.name);
     }
-  }, [brand]);
+  }, [category]);
 
   const onSave = async () => {
     let saved = null;
     const data: any = {
-      id: brand?.id || '',
+      id: category?.id || '',
       name,
-      logo: logo && logo !== '' ? logo : undefined,
+      image: image && image !== '' ? image : undefined,
     };
 
-    if (brand?.id) {
+    if (category?.id) {
       const saved = await updateMutation.mutate(data);
       // refetch trcuks
       //  refetch();

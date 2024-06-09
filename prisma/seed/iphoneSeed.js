@@ -2,7 +2,7 @@ const { PrismaClient } = require('@prisma/client');
 const iphones = require('./iphones.json');
 
 const BASE_IMAGE_URL = 'https://repair-plus.s3.eu-west-2.amazonaws.com/images/';
-class CategorySeed {
+class IphoneSeed {
   static async seed() {
     const prisma = new PrismaClient();
     const currentBrand = await prisma.brand.findFirst({
@@ -18,7 +18,7 @@ class CategorySeed {
     const toInsert = iphones.map((device) => {
       return {
         name: device.name,
-        image: `${BASE_IMAGE_URL}${this.getImageName(device.image)}`,
+        image: `${BASE_IMAGE_URL}${this.getImageName(device.image_path)}`,
         brandId: currentBrand.id,
         categoryId: currentCategory.id,
         createdAt: new Date(),
@@ -44,4 +44,4 @@ class CategorySeed {
   }
 }
 
-module.exports = { CategorySeed };
+module.exports = { IphoneSeed };

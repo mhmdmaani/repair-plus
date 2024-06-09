@@ -4,6 +4,7 @@ import {
   useCreateBrand,
   useUpdateBrand,
 } from '@/hooks/admin/useBrands';
+import { useAllCategories } from '@/hooks/admin/useCategories';
 import { useCreateDevice, useUpdateDevice } from '@/hooks/admin/useDevices';
 import {
   Button,
@@ -44,6 +45,7 @@ export default function OfferForm({
   onAdd?: (a: any) => void;
 }) {
   const { data: brands } = useAllBrands();
+  const { data: categories } = useAllCategories();
   const updateMutation = useUpdateDevice();
   const createMutation = useCreateDevice();
   const [name, setName] = useState('');
@@ -107,6 +109,22 @@ export default function OfferForm({
           ))}
         </Select>
       </FeildContainer>
+
+      <FeildContainer>
+        <Select
+          value={brand}
+          onChange={(e) => {
+            setBrand(e.target.value);
+          }}
+        >
+          {categories.map((category: Brand) => (
+            <MenuItem key={category.id} value={category.id}>
+              {category.name}
+            </MenuItem>
+          ))}
+        </Select>
+      </FeildContainer>
+
       <FeildContainer>
         <input type='file' onChange={handleFileChange} />
       </FeildContainer>

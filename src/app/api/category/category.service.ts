@@ -1,42 +1,13 @@
-import { Device, PrismaClient } from 'prisma/prisma-client';
+import { randomUUID } from 'crypto';
+import { Brand, PrismaClient } from 'prisma/prisma-client';
+import { v4 as uuidv4 } from 'uuid';
 
-export class DeviceService {
+export class CategoryService {
   static async getAll() {
     const prisma = new PrismaClient();
-    const results = await prisma.device.findMany();
+    const results = await prisma.category.findMany();
     await prisma.$disconnect();
     return results;
-  }
-
-  static async getById(id: string | null) {
-    if (!id) {
-      return null;
-    }
-    const prisma = new PrismaClient();
-    const result = await prisma.device.findUnique({
-      where: { id },
-      include: {
-        repairs: true,
-      },
-    });
-    await prisma.$disconnect();
-    return result;
-  }
-
-  static async getBrandTree(id: string | null) {
-    if (!id) {
-      return null;
-    }
-
-    const prisma = new PrismaClient();
-    const result = await prisma.device.findUnique({
-      where: { id },
-      include: {
-        repairs: true,
-      },
-    });
-    await prisma.$disconnect();
-    return result;
   }
 
   static async getSearch(dt: {
@@ -45,13 +16,11 @@ export class DeviceService {
     perPage: any;
     sortBy?: any;
     isAsc?: any;
-    brandId?: any;
-    categoryId?: any;
   }) {
     const prisma = new PrismaClient();
-    const { searchKey, page, perPage, sortBy, isAsc, brandId } = dt;
+    const { searchKey, page, perPage, sortBy, isAsc } = dt;
     const skip = page * perPage;
-    const devices = await prisma.device.findMany({
+    const brands = await prisma.category.findMany({
       where: {
         OR:
           searchKey && searchKey !== ''
@@ -64,15 +33,6 @@ export class DeviceService {
                 },
               ]
             : undefined,
-        brandId: brandId && brandId?.length > 0 ? brandId : undefined,
-        categoryId:
-          dt.categoryId && dt.categoryId?.length > 0
-            ? dt.categoryId
-            : undefined,
-      },
-      include: {
-        brand: true,
-        category: true,
       },
       orderBy: {
         [sortBy]: isAsc === 'true' ? 'asc' : 'desc',
@@ -80,7 +40,7 @@ export class DeviceService {
       skip: skip,
       take: parseInt(perPage),
     });
-    const total = await prisma.device.count({
+    const total = await prisma.category.count({
       where: {
         OR:
           searchKey && searchKey !== ''
@@ -97,23 +57,62 @@ export class DeviceService {
     });
     prisma.$disconnect();
     return {
-      data: devices,
+      data: brands,
       total,
     };
   }
 
-  static async insert(data: Device) {
+  static async getById(id: string | null) {
+    if (!id) {
+      return null;
+    }
+
     const prisma = new PrismaClient();
-    const inserted = await prisma.device.create({
-      data,
+    const result = await prisma.category.findUnique({
+      where: { id },
+      include: {
+        devices: true,
+      },
+    });
+    await prisma.$disconnect();
+    return result;
+  }
+
+  static async getBrandTree(id: string | null) {
+    if (!id) {
+      return null;
+    }
+
+    const prisma = new PrismaClient();
+    const result = await prisma.category.findUnique({
+      where: { id },
+      include: {
+        devices: {
+          include: {
+            repairs: true,
+          },
+        },
+      },
+    });
+    await prisma.$disconnect();
+    return result;
+  }
+
+  static async insert(data: Brand) {
+    const prisma = new PrismaClient();
+    const inserted = await prisma.category.create({
+      data: {
+        ...data,
+        id: uuidv4(),
+      },
     });
     await prisma.$disconnect();
     return inserted;
   }
 
-  static async update(id: string, data: Device) {
+  static async update(id: string, data: Brand) {
     const prisma = new PrismaClient();
-    const updated = await prisma.device.update({
+    const updated = await prisma.category.update({
       where: { id },
       data,
     });
@@ -123,7 +122,7 @@ export class DeviceService {
 
   static async delete(id: string) {
     const prisma = new PrismaClient();
-    const deleted = await prisma.device.delete({
+    const deleted = await prisma.category.delete({
       where: { id },
     });
     await prisma.$disconnect();

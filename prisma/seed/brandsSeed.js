@@ -2,7 +2,7 @@ const { PrismaClient } = require('@prisma/client');
 const brands = require('./brands.json');
 
 class SeedBrand {
-  static async seedBrand() {
+  static async seed() {
     const prisma = new PrismaClient();
 
     const toInsert = brands.map((brand) => {

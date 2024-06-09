@@ -2,7 +2,6 @@
 import { useSortAndSearch } from '@/hooks/useSearchAndSort';
 import EnhancedTable from '@/shared/table/EnhancedTable';
 import {
-  Box,
   Button,
   Dialog,
   DialogContent,
@@ -14,13 +13,9 @@ import {
   styled,
 } from '@mui/material';
 import { format } from 'date-fns';
-import { useState } from 'react';
-import DeviceForm from './DeviceForm';
-import { useSearchDevices } from '@/hooks/admin/useDevices';
-import SelectBrand from './SelectBrand';
-import { Brand } from 'prisma/prisma-client';
-import { useRouter } from 'next/navigation';
-import SelectCategory from './SelectCategory';
+import { useEffect, useState } from 'react';
+import CategoryForm from './CategoryForm';
+import { useSearchCategories } from '@/hooks/admin/useCategories';
 
 const SearchContainer = styled('div')`
   display: flex;
@@ -28,11 +23,8 @@ const SearchContainer = styled('div')`
   margin-bottom: 20px;
 `;
 
-export default function DevicesPage() {
+export default function CategoriesPage() {
   const [addNew, setAddNew] = useState(false);
-  const router = useRouter();
-  const [selectedBrand, setSelectedBrand] = useState<Brand | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<Brand | null>(null);
   const {
     page,
     perPage,
@@ -45,19 +37,13 @@ export default function DevicesPage() {
     setSearch,
     setSortBy,
   } = useSortAndSearch();
-  const [currentDevice, setCurrentDevice] = useState(null);
-  const { data } = useSearchDevices({
+  const [currentCategory, setCurrentCategory] = useState(null);
+  const { data } = useSearchCategories({
     searchKey: search,
     page,
     perPage,
     sortBy,
     isAsc: isASC,
-    brandId:
-      !selectedBrand || !selectedBrand?.id ? undefined : selectedBrand?.id,
-    categoryId:
-      !selectedCategory || !selectedCategory?.id
-        ? undefined
-        : selectedCategory?.id,
   });
 
   const columns = [
@@ -83,16 +69,6 @@ export default function DevicesPage() {
       ),
     },
     {
-      id: 'brand',
-      label: 'Brand',
-      renderCell: (row: any) => <Typography>{row.brand?.name}</Typography>,
-    },
-    {
-      id: 'category',
-      label: 'Category',
-      renderCell: (row: any) => <Typography>{row.category?.name}</Typography>,
-    },
-    {
       id: 'createdAt',
       label: 'Created At',
       renderCell: (row: any) => format(new Date(row.createdAt), 'dd/MM/yyyy'),
@@ -110,20 +86,11 @@ export default function DevicesPage() {
         <Stack direction='row' spacing={2}>
           <Button
             onClick={() => {
-              setCurrentDevice(row);
+              setCurrentCategory(row);
               setAddNew(true);
             }}
           >
             Edit
-          </Button>
-
-          <Button
-            variant='contained'
-            onClick={() => {
-              router.push(`/admin/devices/${row.id}`);
-            }}
-          >
-            View Repairs
           </Button>
         </Stack>
       ),
@@ -132,7 +99,7 @@ export default function DevicesPage() {
 
   return (
     <>
-      <Typography variant='h4'>Devices List</Typography>
+      <Typography variant='h4'>Categories List</Typography>
       <Stack
         direction='row'
         justifyContent={'space-between'}
@@ -146,29 +113,15 @@ export default function DevicesPage() {
             onChange={(e) => setSearch(e.target.value)}
           />
         </SearchContainer>
-
         <Button
           onClick={() => {
-            setCurrentDevice(null);
+            setCurrentCategory(null);
             setAddNew(true);
           }}
         >
           Add New
         </Button>
       </Stack>
-      <Box sx={{ width: '95vw' }}>
-        <SelectBrand
-          selectedBrand={selectedBrand}
-          onSelect={setSelectedBrand}
-        />
-      </Box>
-
-      <Box sx={{ width: '95vw' }}>
-        <SelectCategory
-          selectedCategory={selectedCategory}
-          onSelect={setSelectedCategory}
-        />
-      </Box>
 
       <EnhancedTable
         data={data?.data || []}
@@ -192,7 +145,7 @@ export default function DevicesPage() {
         onClose={() => setAddNew(false)}
       >
         <DialogTitle>
-          {currentDevice ? 'Edit Device' : 'Add New Device'}
+          {currentCategory ? 'Edit Offer' : 'Add New Offer'}
         </DialogTitle>
         <DialogContent
           sx={{
@@ -202,7 +155,10 @@ export default function DevicesPage() {
             },
           }}
         >
-          <DeviceForm device={currentDevice} onAdd={() => setAddNew(false)} />
+          <CategoryForm
+            category={currentCategory}
+            onAdd={() => setAddNew(false)}
+          />
         </DialogContent>
       </Dialog>
     </>
