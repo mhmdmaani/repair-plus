@@ -10,6 +10,7 @@ import HeroSection from './HeroSection';
 import Services from './Services';
 import SubscribeSection from './SubscribeSection';
 import TopHeader from './TopHeader';
+import SelectDevice from './SelectDevice';
 const MainContainer = styled('div')`
   overflow-x: hidden;
 `;
@@ -19,9 +20,11 @@ export default function HomePage() {
       <TopHeader />
       <Appbar />
       <HeroSection />
+      <SelectDevice />
       <div data-aos={'fade-up'}>
         <AboutSection />
       </div>
+
       <Services />
       <ChooseUs />
       <SubscribeSection />
