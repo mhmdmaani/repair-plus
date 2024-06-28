@@ -2,7 +2,7 @@
 import { useStateValue } from '@/providers/StateContext';
 import { styled, useMediaQuery } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
+import div from '@mui/material/div';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
@@ -70,10 +70,10 @@ function CustomNavbar() {
       <MainContainer>
         <Toolbar disableGutters>
           <Logo src={'nq.png'} />
-          <Box
-            sx={{
+          <div
+            style={{
               flexGrow: 1,
-              display: { xs: 'flex', md: 'none', lg: 'none' },
+              display: 'flex',
               flexDirection: matches ? 'row-reverse' : 'row',
             }}
           >
@@ -111,12 +111,12 @@ function CustomNavbar() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </div>
 
-          <Box
-            sx={{
+          <div
+            style={{
               flexGrow: 1,
-              display: { xs: 'none', md: 'flex', justifyContent: 'center' },
+              display: 'flex',
             }}
           >
             {pages.map((page) => (
@@ -128,9 +128,9 @@ function CustomNavbar() {
                 {page}
               </Button>
             ))}
-          </Box>
+          </div>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <div style={{ flexGrow: 0 }}>
             <Tooltip title='Open settings'>
               <>
                 <IconButton
@@ -167,7 +167,7 @@ function CustomNavbar() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </div>
         </Toolbar>
       </MainContainer>
     </CustomAppBar>

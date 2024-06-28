@@ -1,6 +1,6 @@
 import LoadingProvider from '@/providers/LoadingProvider';
 import { useStateValue } from '@/providers/StateContext';
-import { Box } from '@mui/material';
+import { div } from '@mui/material';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
@@ -115,8 +115,8 @@ export default function AdminWrapper({
     <MainContainer>
       <CssBaseline />
       <AppBar position='fixed' open={open}>
-        <Box
-          sx={{
+        <div
+          style={{
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
@@ -152,7 +152,7 @@ export default function AdminWrapper({
               </IconButton>
             </>
           </Tooltip>
-        </Box>
+        </div>
       </AppBar>
       <Drawer
         sx={{

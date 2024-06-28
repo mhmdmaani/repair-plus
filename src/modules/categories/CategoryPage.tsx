@@ -2,7 +2,7 @@
 import { useSortAndSearch } from '@/hooks/useSearchAndSort';
 import EnhancedTable from '@/shared/table/EnhancedTable';
 import {
-  Box,
+  div,
   Button,
   Dialog,
   DialogContent,
@@ -33,7 +33,7 @@ const SearchContainer = styled('div')`
   max-width: 500px;
 `;
 
-const GridContainer = styled(Box)`
+const GridContainer = styled('div')`
   margin-top: 20px;
   margin-bottom: 20px;
 `;
@@ -120,7 +120,7 @@ export default function CategoryPage({ categoryId }: { categoryId: string }) {
                 {data?.data?.map((model: Device) => (
                   <Grid item xs={12} sm={6} md={4} lg={3} key={model.id}>
                     <UnstyledLink href={`/fix/model/${model.id}`}>
-                      <Box
+                      <div
                         sx={{
                           cursor: 'pointer',
                           marginTop: '30px',
@@ -153,7 +153,7 @@ export default function CategoryPage({ categoryId }: { categoryId: string }) {
                             {model.name}
                           </Typography>
                         </CardContent>
-                      </Box>
+                      </div>
                     </UnstyledLink>
                   </Grid>
                 ))}
