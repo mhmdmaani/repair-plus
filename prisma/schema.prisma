@@ -27,6 +27,7 @@ model Brand {
   updatedAt  DateTime @updatedAt
   devices    Device[]
   isFeatured Boolean  @default(false)
+  isActive   Boolean  @default(true)
 }
 
 model Category {
@@ -37,6 +38,7 @@ model Category {
   updatedAt  DateTime @updatedAt
   devices    Device[]
   isFeatured Boolean  @default(false)
+  isActive   Boolean  @default(true)
 }
 
 model Device {
@@ -49,6 +51,7 @@ model Device {
   brandId    String
   createdAt  DateTime   @default(now())
   updatedAt  DateTime   @updatedAt
+  isActive   Boolean    @default(true)
   repairs    Repair[]
   fixOrders  FixOrder[]
 }
@@ -69,6 +72,7 @@ model Repair {
   createdAt            DateTime   @default(now())
   updatedAt            DateTime   @updatedAt
   fixOrders            FixOrder[]
+  isActive             Boolean    @default(true)
 }
 
 model FixOrder {

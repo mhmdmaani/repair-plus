@@ -14,7 +14,7 @@ import {
   TextField,
   styled,
 } from '@mui/material';
-import { addMonths } from 'date-fns';
+import { addMonths, set } from 'date-fns';
 import { Brand, Device } from 'prisma/prisma-client';
 import { useEffect, useState } from 'react';
 
@@ -37,39 +37,52 @@ const FeildContainer = styled('div')`
   }
 `;
 export default function RepairForm({
-  device,
+  deviceId,
   onAdd,
+  currentRepair,
 }: {
-  device?: Device | null;
+  deviceId?: string | null;
+  currentRepair?: any;
   onAdd?: (a: any) => void;
 }) {
-  const { data: brands } = useAllBrands();
   const updateMutation = useUpdateDevice();
   const createMutation = useCreateDevice();
   const [name, setName] = useState('');
   const [image, setLogo] = useState('');
-  const [brand, setBrand] = useState('');
+  const [description, setDescription] = useState('');
+  const [buyPrice, setBuyPrice] = useState(0);
+  const [sellPrice, setSellPrice] = useState(0);
+  const [repairingPrice, setRepairingPrice] = useState(0);
+  const [repairingTimeMinutes, setRepairingTimeMinutes] = useState(0);
+  const [quantity, setQuantity] = useState(0);
+  const [quality, setQuality] = useState('');
+  const [isActive, setIsActive] = useState(false);
   const handleFileChange = (event: any) => {
     setLogo(event.target.files[0]);
   };
 
   useEffect(() => {
-    if (device) {
-      setName(device.name);
-      setBrand(device.brandId);
+    if (currentRepair) {
+      setName(currentRepair.name);
+      setIsActive(currentRepair.isActive);
+      setDescription(currentRepair.description);
+      setBuyPrice(currentRepair.buyPrice);
+      setSellPrice(currentRepair.sellPrice);
+      setRepairingPrice(currentRepair.repairingPrice);
+      setRepairingTimeMinutes(currentRepair.repairingTimeMinutes);
+      setQuantity(currentRepair.quantity);
+      setQuality(currentRepair.quality);
     }
-  }, [device]);
+  }, [currentRepair]);
 
   const onSave = async () => {
-    let saved = null;
     const data: any = {
-      id: device?.id,
+      id: deviceId,
       name,
       image: image && image !== '' ? image : undefined,
-      brandId: brand || '',
     };
 
-    if (device?.id) {
+    if (deviceId) {
       const saved = await updateMutation.mutate(data);
       // refetch trcuks
       //  refetch();
@@ -94,21 +107,71 @@ export default function RepairForm({
         />
       </FeildContainer>
       <FeildContainer>
-        <Select
-          value={brand}
-          onChange={(e) => {
-            setBrand(e.target.value);
-          }}
-        >
-          {brands.map((brand: Brand) => (
-            <MenuItem key={brand.id} value={brand.id}>
-              {brand.name}
-            </MenuItem>
-          ))}
-        </Select>
+        <TextField
+          multiline
+          rows={4}
+          label='Description'
+          value={description}
+          onChange={(e) => set}
+        />
       </FeildContainer>
       <FeildContainer>
+        <TextField
+          label='Buy Price'
+          value={buyPrice}
+          onChange={(e) => setBuyPrice(parseFloat(e.target.value))}
+        />
+      </FeildContainer>
+      <FeildContainer>
+        <TextField
+          label='Sell Price'
+          value={sellPrice}
+          onChange={(e) => setSellPrice(parseFloat(e.target.value))}
+        />
+      </FeildContainer>
+      <FeildContainer>
+        <TextField
+          label='Repairing Price'
+          value={repairingPrice}
+          onChange={(e) => setRepairingPrice(parseFloat(e.target.value))}
+        />
+      </FeildContainer>
+      <FeildContainer>
+        <TextField
+          label='Repairing Time(Minutes)'
+          value={repairingTimeMinutes}
+          onChange={(e) => setRepairingTimeMinutes(parseInt(e.target.value))}
+        />
+      </FeildContainer>
+      <FeildContainer>
+        <TextField
+          label='Quantity'
+          value={quantity}
+          onChange={(e) => setQuantity(parseInt(e.target.value))}
+        />
+      </FeildContainer>
+      <FeildContainer>
+        <TextField
+          label='Quality'
+          value={quality}
+          onChange={(e) => setQuality(e.target.value)}
+        />
+      </FeildContainer>
+
+      <FeildContainer>
         <input type='file' onChange={handleFileChange} />
+      </FeildContainer>
+
+      <FeildContainer>
+        <FormControlLabel
+          control={
+            <Switch
+              checked={isActive}
+              onChange={(e) => setIsActive(e.target.checked)}
+            />
+          }
+          label='Is Active'
+        />
       </FeildContainer>
       <FeildContainer>
         <Button variant='contained' onClick={onSave}>

@@ -44,6 +44,7 @@ export default function CategoryForm({
   const [name, setName] = useState('');
   const [image, setImage] = useState('');
   const [isFeatured, setIsFeatured] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const handleFileChange = (event: any) => {
     setImage(event.target.files[0]);
   };
@@ -52,6 +53,7 @@ export default function CategoryForm({
     if (category) {
       setName(category.name);
       setIsFeatured(category.isFeatured);
+      setIsActive(category.isActive);
     }
   }, [category]);
 
@@ -62,6 +64,7 @@ export default function CategoryForm({
       name,
       image: image && image !== '' ? image : undefined,
       isFeatured,
+      isActive,
     };
 
     if (category?.id) {
@@ -100,6 +103,17 @@ export default function CategoryForm({
             />
           }
           label='Is Featured'
+        />
+      </FeildContainer>
+      <FeildContainer>
+        <FormControlLabel
+          control={
+            <Switch
+              checked={isActive}
+              onChange={(e) => setIsActive(e.target.checked)}
+            />
+          }
+          label='Is Active'
         />
       </FeildContainer>
       <FeildContainer>

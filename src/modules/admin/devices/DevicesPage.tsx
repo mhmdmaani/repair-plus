@@ -16,11 +16,12 @@ import {
 import { format } from 'date-fns';
 import { useState } from 'react';
 import DeviceForm from './DeviceForm';
-import { useSearchDevices } from '@/hooks/admin/useDevices';
+import { useDeleteDevice, useSearchDevices } from '@/hooks/admin/useDevices';
 import SelectBrand from './SelectBrand';
-import { Brand } from 'prisma/prisma-client';
+import { Brand, Device } from 'prisma/prisma-client';
 import { useRouter } from 'next/navigation';
 import SelectCategory from './SelectCategory';
+import SlideModal from '@/shared/modals/SlideModal';
 
 const SearchContainer = styled('div')`
   display: flex;
@@ -45,7 +46,9 @@ export default function DevicesPage() {
     setSearch,
     setSortBy,
   } = useSortAndSearch();
-  const [currentDevice, setCurrentDevice] = useState(null);
+  const [currentDevice, setCurrentDevice] = useState<Device | null>(null);
+  const [deleteDialog, setDeleteDialog] = useState(false);
+  const deleteMutation = useDeleteDevice();
   const { data } = useSearchDevices({
     searchKey: search,
     page,
@@ -124,6 +127,16 @@ export default function DevicesPage() {
             }}
           >
             View Repairs
+          </Button>
+
+          <Button
+            color='warning'
+            onClick={() => {
+              setCurrentDevice(row);
+              setDeleteDialog(true);
+            }}
+          >
+            Delete
           </Button>
         </Stack>
       ),
@@ -205,6 +218,39 @@ export default function DevicesPage() {
           <DeviceForm device={currentDevice} onAdd={() => setAddNew(false)} />
         </DialogContent>
       </Dialog>
+
+      <SlideModal
+        open={deleteDialog}
+        setOpen={setDeleteDialog}
+        title='Delete Brand'
+      >
+        <div className='text-lg p-2'>
+          <Typography variant='body2'>
+            Are you sure you want to delete this brand(All Devices and Repairs
+            in this brand will be removed )?
+          </Typography>
+
+          <Stack direction='row' spacing={2}>
+            <Button
+              onClick={() => {
+                setDeleteDialog(false);
+              }}
+            >
+              Cancel
+            </Button>
+            <Button
+              color='error'
+              onClick={() => {
+                currentDevice && deleteMutation.mutate(currentDevice?.id);
+                setDeleteDialog(false);
+              }}
+              disabled={deleteMutation.status === 'pending'}
+            >
+              Delete
+            </Button>
+          </Stack>
+        </div>
+      </SlideModal>
     </>
   );
 }

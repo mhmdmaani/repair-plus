@@ -65,7 +65,7 @@ export const useDeleteDevice = () => {
     mutationFn: Device.delete,
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ['devices', 'device'],
+        queryKey: ['devices'],
       });
       toast.success('Device deleted successfully');
     },

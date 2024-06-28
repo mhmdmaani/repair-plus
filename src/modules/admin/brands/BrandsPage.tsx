@@ -102,7 +102,7 @@ export default function BrandsPage() {
           </Button>
 
           <Button
-            color='warning'
+            color='error'
             onClick={() => {
               setCurrentBrand(row);
               setDeleteDialog(true);

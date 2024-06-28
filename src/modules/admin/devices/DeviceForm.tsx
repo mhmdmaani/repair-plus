@@ -51,6 +51,7 @@ export default function OfferForm({
   const [name, setName] = useState('');
   const [image, setLogo] = useState('');
   const [brand, setBrand] = useState('');
+  const [isActive, setIsActive] = useState(false);
 
   const handleFileChange = (event: any) => {
     setLogo(event.target.files[0]);
@@ -60,16 +61,17 @@ export default function OfferForm({
     if (device) {
       setName(device.name);
       setBrand(device.brandId);
+      setIsActive(device.isActive);
     }
   }, [device]);
 
   const onSave = async () => {
-    let saved = null;
     const data: any = {
       id: device?.id,
       name,
       image: image && image !== '' ? image : undefined,
       brandId: brand || '',
+      isActive,
     };
 
     if (device?.id) {
@@ -128,6 +130,18 @@ export default function OfferForm({
       <FeildContainer>
         <input type='file' onChange={handleFileChange} />
       </FeildContainer>
+      <FeildContainer>
+        <FormControlLabel
+          control={
+            <Switch
+              checked={isActive}
+              onChange={(e) => setIsActive(e.target.checked)}
+            />
+          }
+          label='Is Active'
+        />
+      </FeildContainer>
+
       <FeildContainer>
         <Button variant='contained' onClick={onSave}>
           Submit

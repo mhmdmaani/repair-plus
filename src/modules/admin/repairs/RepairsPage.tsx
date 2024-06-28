@@ -17,9 +17,10 @@ import { useEffect, useState } from 'react';
 import RepairForm from './RepairForm';
 import { useAllBrands, useSearchBrands } from '@/hooks/admin/useBrands';
 import { useSearchDevices } from '@/hooks/admin/useDevices';
-import { Brand } from 'prisma/prisma-client';
+import { Brand, Repair } from 'prisma/prisma-client';
 import { useRouter } from 'next/navigation';
-import { useSearchRepairs } from '@/hooks/admin/useRepairs';
+import { useDeleteRepair, useSearchRepairs } from '@/hooks/admin/useRepairs';
+import SlideModal from '@/shared/modals/SlideModal';
 
 const SearchContainer = styled('div')`
   display: flex;
@@ -29,6 +30,8 @@ const SearchContainer = styled('div')`
 
 export default function RepairsPage({ deviceId }: { deviceId: string }) {
   const [addNew, setAddNew] = useState(false);
+  const [currentRepair, setCurrentRepair] = useState<Repair | null>(null);
+  const [deleteDialog, setDeleteDialog] = useState(false);
   const router = useRouter();
   const {
     page,
@@ -42,7 +45,7 @@ export default function RepairsPage({ deviceId }: { deviceId: string }) {
     setSearch,
     setSortBy,
   } = useSortAndSearch();
-  const [currentRepair, setCurrentRepair] = useState(null);
+  const deleteMutation = useDeleteRepair();
   const { data } = useSearchRepairs({
     searchKey: search,
     page,
@@ -112,6 +115,16 @@ export default function RepairsPage({ deviceId }: { deviceId: string }) {
           >
             Edit
           </Button>
+
+          <Button
+            color='error'
+            onClick={() => {
+              setCurrentRepair(row);
+              setDeleteDialog(true);
+            }}
+          >
+            Delete
+          </Button>
         </Stack>
       ),
     },
@@ -176,9 +189,46 @@ export default function RepairsPage({ deviceId }: { deviceId: string }) {
             },
           }}
         >
-          <RepairForm device={currentRepair} onAdd={() => setAddNew(false)} />
+          <RepairForm
+            deviceId={deviceId}
+            onAdd={() => setAddNew(false)}
+            currentRepair={currentRepair}
+          />
         </DialogContent>
       </Dialog>
+
+      <SlideModal
+        open={deleteDialog}
+        setOpen={setDeleteDialog}
+        title='Delete Brand'
+      >
+        <div className='text-lg p-2'>
+          <Typography variant='body2'>
+            Are you sure you want to delete this brand(All Devices and Repairs
+            in this brand will be removed )?
+          </Typography>
+
+          <Stack direction='row' spacing={2}>
+            <Button
+              onClick={() => {
+                setDeleteDialog(false);
+              }}
+            >
+              Cancel
+            </Button>
+            <Button
+              color='error'
+              onClick={() => {
+                currentRepair && deleteMutation.mutate(currentRepair?.id);
+                setDeleteDialog(false);
+              }}
+              disabled={deleteMutation.status === 'pending'}
+            >
+              Delete
+            </Button>
+          </Stack>
+        </div>
+      </SlideModal>
     </>
   );
 }

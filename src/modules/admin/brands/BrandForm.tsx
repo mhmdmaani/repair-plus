@@ -41,6 +41,7 @@ export default function BrandForm({
   const [name, setName] = useState('');
   const [logo, setLogo] = useState('');
   const [isFeatured, setIsFeatured] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const handleFileChange = (event: any) => {
     setLogo(event.target.files[0]);
   };
@@ -49,6 +50,7 @@ export default function BrandForm({
     if (brand) {
       setName(brand.name);
       setIsFeatured(brand.isFeatured);
+      setIsActive(brand.isActive);
     }
   }, [brand]);
 
@@ -59,6 +61,7 @@ export default function BrandForm({
       name,
       logo: logo && logo !== '' ? logo : undefined,
       isFeatured,
+      isActive,
     };
 
     if (brand?.id) {
@@ -97,6 +100,17 @@ export default function BrandForm({
             />
           }
           label='Is Featured'
+        />
+      </FeildContainer>
+      <FeildContainer>
+        <FormControlLabel
+          control={
+            <Switch
+              checked={isActive}
+              onChange={(e) => setIsActive(e.target.checked)}
+            />
+          }
+          label='Is Active'
         />
       </FeildContainer>
       <FeildContainer>
