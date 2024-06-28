@@ -2,7 +2,6 @@
 import { useStateValue } from '@/providers/StateContext';
 import { styled, useMediaQuery } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
-import div from '@mui/material/div';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';

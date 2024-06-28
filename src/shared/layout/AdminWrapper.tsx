@@ -1,6 +1,5 @@
 import LoadingProvider from '@/providers/LoadingProvider';
 import { useStateValue } from '@/providers/StateContext';
-import { div } from '@mui/material';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';

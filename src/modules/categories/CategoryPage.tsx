@@ -2,7 +2,6 @@
 import { useSortAndSearch } from '@/hooks/useSearchAndSort';
 import EnhancedTable from '@/shared/table/EnhancedTable';
 import {
-  div,
   Button,
   Dialog,
   DialogContent,
@@ -121,7 +120,7 @@ export default function CategoryPage({ categoryId }: { categoryId: string }) {
                   <Grid item xs={12} sm={6} md={4} lg={3} key={model.id}>
                     <UnstyledLink href={`/fix/model/${model.id}`}>
                       <div
-                        sx={{
+                        style={{
                           cursor: 'pointer',
                           marginTop: '30px',
                         }}
