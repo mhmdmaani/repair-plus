@@ -54,7 +54,7 @@ export default function AboutHero() {
       <Content>
         <Container>
           <Typography variant='h3' fontWeight={'bold'}>
-            National Quick Currier
+            Repair Plus
           </Typography>
         </Container>
       </Content>

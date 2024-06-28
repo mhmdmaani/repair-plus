@@ -7,14 +7,14 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>National Quick Currier | About Us</title>
+        <title>Repair Plus | About Us</title>
         <meta
           name='description'
-          content='Book your delivery with National Quick Currier today!'
+          content='Book your delivery with Repair Plus today!'
         />
         <meta
           name='keywords'
-          content='National Quick Currier, About Us, Request Quote, delivery, shipping, courier, transport'
+          content='Repair Plus, About Us, Request Quote, delivery, shipping, courier, transport'
         />
       </Head>
       <AboutPage />

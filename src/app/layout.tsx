@@ -13,7 +13,7 @@ const inter = Rajdhani({
 });
 
 export const metadata: Metadata = {
-  title: 'National Quick Currier',
+  title: 'Repair Plus',
   description: 'Your Best solution for all your delivery needs',
   icons: [
     {
@@ -45,7 +45,7 @@ export default function RootLayout({
         />
         <meta
           name='keywords'
-          content='National Quick Currier, delivery, shipping, courier, transport'
+          content='Repair Plus, delivery, shipping, courier, transport'
         />
       </Head>
       <body className={inter.className}>
