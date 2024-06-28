@@ -122,6 +122,38 @@ export class CategoryService {
 
   static async delete(id: string) {
     const prisma = new PrismaClient();
+    // get all devices of this category
+    const devices = await prisma.device.findMany({
+      where: {
+        categoryId: id,
+      },
+    });
+    // get all repairs of these devices
+    const repairs = await prisma.repair.findMany({
+      where: {
+        deviceId: {
+          in: devices.map((device) => device.id),
+        },
+      },
+    });
+    // delete all repairs
+    await prisma.repair.deleteMany({
+      where: {
+        id: {
+          in: repairs.map((repair) => repair.id),
+        },
+      },
+    });
+
+    // delete all devices
+    await prisma.device.deleteMany({
+      where: {
+        id: {
+          in: devices.map((device) => device.id),
+        },
+      },
+    });
+
     const deleted = await prisma.category.delete({
       where: { id },
     });

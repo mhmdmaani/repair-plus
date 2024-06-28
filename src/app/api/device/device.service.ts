@@ -123,6 +123,15 @@ export class DeviceService {
 
   static async delete(id: string) {
     const prisma = new PrismaClient();
+    // get all repairs of this device
+    const repairs = await prisma.repair.findMany({
+      where: { deviceId: id },
+    });
+    // delete all repairs
+    await prisma.repair.deleteMany({
+      where: { deviceId: id },
+    });
+    // delete device
     const deleted = await prisma.device.delete({
       where: { id },
     });

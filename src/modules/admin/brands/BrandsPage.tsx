@@ -15,7 +15,13 @@ import {
 import { format } from 'date-fns';
 import { useEffect, useState } from 'react';
 import BrandForm from './BrandForm';
-import { useAllBrands, useSearchBrands } from '@/hooks/admin/useBrands';
+import {
+  useAllBrands,
+  useDeleteBrand,
+  useSearchBrands,
+} from '@/hooks/admin/useBrands';
+import SlideModal from '@/shared/modals/SlideModal';
+import { Brand } from 'prisma/prisma-client';
 
 const SearchContainer = styled('div')`
   display: flex;
@@ -25,6 +31,8 @@ const SearchContainer = styled('div')`
 
 export default function BrandsPage() {
   const [addNew, setAddNew] = useState(false);
+  const [deleteDialog, setDeleteDialog] = useState(false);
+  const deleteMutation = useDeleteBrand();
   const {
     page,
     perPage,
@@ -37,7 +45,7 @@ export default function BrandsPage() {
     setSearch,
     setSortBy,
   } = useSortAndSearch();
-  const [currentBrand, setCurrentBrand] = useState(null);
+  const [currentBrand, setCurrentBrand] = useState<Brand | null>(null);
   const { data } = useSearchBrands({
     searchKey: search,
     page,
@@ -91,6 +99,16 @@ export default function BrandsPage() {
             }}
           >
             Edit
+          </Button>
+
+          <Button
+            color='warning'
+            onClick={() => {
+              setCurrentBrand(row);
+              setDeleteDialog(true);
+            }}
+          >
+            Delete
           </Button>
         </Stack>
       ),
@@ -158,6 +176,39 @@ export default function BrandsPage() {
           <BrandForm brand={currentBrand} onAdd={() => setAddNew(false)} />
         </DialogContent>
       </Dialog>
+
+      <SlideModal
+        open={deleteDialog}
+        setOpen={setDeleteDialog}
+        title='Delete Brand'
+      >
+        <div className='text-lg p-2'>
+          <Typography variant='body2'>
+            Are you sure you want to delete this brand(All Devices and Repairs
+            in this brand will be removed )?
+          </Typography>
+
+          <Stack direction='row' spacing={2}>
+            <Button
+              onClick={() => {
+                setDeleteDialog(false);
+              }}
+            >
+              Cancel
+            </Button>
+            <Button
+              color='error'
+              onClick={() => {
+                currentBrand && deleteMutation.mutate(currentBrand?.id);
+                setDeleteDialog(false);
+              }}
+              disabled={deleteMutation.status === 'pending'}
+            >
+              Delete
+            </Button>
+          </Stack>
+        </div>
+      </SlideModal>
     </>
   );
 }

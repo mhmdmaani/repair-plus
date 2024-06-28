@@ -8,6 +8,7 @@ import DashboardCard from './DashboardCard';
 import { MdAlternateEmail } from 'react-icons/md';
 import { SiBrandfolder } from 'react-icons/si';
 import { BsFillPhoneFill } from 'react-icons/bs';
+import { FiTag } from 'react-icons/fi';
 
 export default function DashboardPage() {
   return (
@@ -30,6 +31,13 @@ export default function DashboardPage() {
             icon={<SiBrandfolder />}
             title='Brands'
             link={`/admin/brands`}
+          />
+        </Grid>
+        <Grid item xl={6} lg={6} md={6} sm={12}>
+          <DashboardCard
+            icon={<FiTag />}
+            title='Categories'
+            link={`/admin/categories`}
           />
         </Grid>
 

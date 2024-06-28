@@ -15,7 +15,12 @@ import {
 import { format } from 'date-fns';
 import { useEffect, useState } from 'react';
 import CategoryForm from './CategoryForm';
-import { useSearchCategories } from '@/hooks/admin/useCategories';
+import {
+  useDeleteCategory,
+  useSearchCategories,
+} from '@/hooks/admin/useCategories';
+import SlideModal from '@/shared/modals/SlideModal';
+import { Category } from 'prisma/prisma-client';
 
 const SearchContainer = styled('div')`
   display: flex;
@@ -25,6 +30,7 @@ const SearchContainer = styled('div')`
 
 export default function CategoriesPage() {
   const [addNew, setAddNew] = useState(false);
+  const [deleteDialog, setDeleteDialog] = useState(false);
   const {
     page,
     perPage,
@@ -37,7 +43,8 @@ export default function CategoriesPage() {
     setSearch,
     setSortBy,
   } = useSortAndSearch();
-  const [currentCategory, setCurrentCategory] = useState(null);
+  const [currentCategory, setCurrentCategory] = useState<Category | null>(null);
+  const deleteMutation = useDeleteCategory();
   const { data } = useSearchCategories({
     searchKey: search,
     page,
@@ -91,6 +98,17 @@ export default function CategoriesPage() {
             }}
           >
             Edit
+          </Button>
+
+          <Button
+            color='error'
+            onClick={() => {
+              currentCategory && deleteMutation.mutate(currentCategory?.id);
+              setDeleteDialog(false);
+            }}
+            disabled={deleteMutation.status === 'pending'}
+          >
+            Delete
           </Button>
         </Stack>
       ),
@@ -161,6 +179,39 @@ export default function CategoriesPage() {
           />
         </DialogContent>
       </Dialog>
+
+      <SlideModal
+        open={deleteDialog}
+        setOpen={setDeleteDialog}
+        title='Delete Brand'
+      >
+        <div className='text-lg p-2'>
+          <Typography variant='body2'>
+            Are you sure you want to delete this Category(All Devices and
+            Repairs in this Category will be removed )?
+          </Typography>
+
+          <Stack direction='row' spacing={2}>
+            <Button
+              onClick={() => {
+                setDeleteDialog(false);
+              }}
+            >
+              Cancel
+            </Button>
+            <Button
+              color='error'
+              onClick={() => {
+                currentCategory && deleteMutation.mutate(currentCategory?.id);
+                setDeleteDialog(false);
+              }}
+              disabled={deleteMutation.status === 'pending'}
+            >
+              Delete
+            </Button>
+          </Stack>
+        </div>
+      </SlideModal>
     </>
   );
 }

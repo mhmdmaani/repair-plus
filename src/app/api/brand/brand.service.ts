@@ -122,6 +122,36 @@ export class BrandService {
 
   static async delete(id: string) {
     const prisma = new PrismaClient();
+
+    // get all devices of this brand
+    const devices = await prisma.device.findMany({
+      where: {
+        brandId: id,
+      },
+    });
+    // get all repairs of these devices
+    const repairs = await prisma.repair.findMany({
+      where: {
+        deviceId: {
+          in: devices.map((d) => d.id),
+        },
+      },
+    });
+    // delete all repairs of these devices
+    await prisma.repair.deleteMany({
+      where: {
+        id: {
+          in: repairs.map((r) => r.id),
+        },
+      },
+    });
+    // delete all devices of this brand
+    await prisma.device.deleteMany({
+      where: {
+        brandId: id,
+      },
+    });
+    // delete the brand
     const deleted = await prisma.brand.delete({
       where: { id },
     });

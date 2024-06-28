@@ -62,9 +62,12 @@ export const useDeleteBrand = () => {
     mutationFn: Brand.delete,
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ['brands', 'brand'],
+        queryKey: ['brands'],
       });
       toast.success('Brand deleted successfully');
+      queryClient.invalidateQueries({
+        queryKey: ['brands'],
+      });
     },
   });
 };
