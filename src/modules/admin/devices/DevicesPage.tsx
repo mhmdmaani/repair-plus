@@ -156,19 +156,19 @@ export default function DevicesPage() {
           Add New
         </Button>
       </Stack>
-      <Box sx={{ width: '95vw' }}>
+      <div style={{ width: '95vw' }}>
         <SelectBrand
           selectedBrand={selectedBrand}
           onSelect={setSelectedBrand}
         />
-      </Box>
+      </div>
 
-      <Box sx={{ width: '95vw' }}>
+      <div style={{ width: '95vw' }}>
         <SelectCategory
           selectedCategory={selectedCategory}
           onSelect={setSelectedCategory}
         />
-      </Box>
+      </div>
 
       <EnhancedTable
         data={data?.data || []}

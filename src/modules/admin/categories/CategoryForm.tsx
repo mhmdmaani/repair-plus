@@ -43,7 +43,7 @@ export default function CategoryForm({
   const createMutation = useCreateCategory();
   const [name, setName] = useState('');
   const [image, setImage] = useState('');
-
+  const [isFeatured, setIsFeatured] = useState(false);
   const handleFileChange = (event: any) => {
     setImage(event.target.files[0]);
   };
@@ -51,6 +51,7 @@ export default function CategoryForm({
   useEffect(() => {
     if (category) {
       setName(category.name);
+      setIsFeatured(category.isFeatured);
     }
   }, [category]);
 
@@ -60,6 +61,7 @@ export default function CategoryForm({
       id: category?.id || '',
       name,
       image: image && image !== '' ? image : undefined,
+      isFeatured,
     };
 
     if (category?.id) {
@@ -88,6 +90,17 @@ export default function CategoryForm({
       </FeildContainer>
       <FeildContainer>
         <input type='file' onChange={handleFileChange} />
+      </FeildContainer>
+      <FeildContainer>
+        <FormControlLabel
+          control={
+            <Switch
+              checked={isFeatured}
+              onChange={(e) => setIsFeatured(e.target.checked)}
+            />
+          }
+          label='Is Featured'
+        />
       </FeildContainer>
       <FeildContainer>
         <Button variant='contained' onClick={onSave}>

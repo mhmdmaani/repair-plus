@@ -40,7 +40,7 @@ export default function BrandForm({
   const createMutation = useCreateBrand();
   const [name, setName] = useState('');
   const [logo, setLogo] = useState('');
-
+  const [isFeatured, setIsFeatured] = useState(false);
   const handleFileChange = (event: any) => {
     setLogo(event.target.files[0]);
   };
@@ -48,6 +48,7 @@ export default function BrandForm({
   useEffect(() => {
     if (brand) {
       setName(brand.name);
+      setIsFeatured(brand.isFeatured);
     }
   }, [brand]);
 
@@ -57,6 +58,7 @@ export default function BrandForm({
       id: brand?.id || '',
       name,
       logo: logo && logo !== '' ? logo : undefined,
+      isFeatured,
     };
 
     if (brand?.id) {
@@ -85,6 +87,17 @@ export default function BrandForm({
       </FeildContainer>
       <FeildContainer>
         <input type='file' onChange={handleFileChange} />
+      </FeildContainer>
+      <FeildContainer>
+        <FormControlLabel
+          control={
+            <Switch
+              checked={isFeatured}
+              onChange={(e) => setIsFeatured(e.target.checked)}
+            />
+          }
+          label='Is Featured'
+        />
       </FeildContainer>
       <FeildContainer>
         <Button variant='contained' onClick={onSave}>

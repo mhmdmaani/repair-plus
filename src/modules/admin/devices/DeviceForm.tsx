@@ -51,6 +51,7 @@ export default function OfferForm({
   const [name, setName] = useState('');
   const [image, setLogo] = useState('');
   const [brand, setBrand] = useState('');
+
   const handleFileChange = (event: any) => {
     setLogo(event.target.files[0]);
   };
@@ -124,7 +125,6 @@ export default function OfferForm({
           ))}
         </Select>
       </FeildContainer>
-
       <FeildContainer>
         <input type='file' onChange={handleFileChange} />
       </FeildContainer>
