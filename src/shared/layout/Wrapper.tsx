@@ -1,5 +1,4 @@
 import { useStateValue } from '@/providers/StateContext';
-import { Box } from '@mui/material';
 import AOS from 'aos';
 import React, { useEffect } from 'react';
 
@@ -14,14 +13,14 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <Box
-      sx={{
+    <div
+      style={{
         backgroundColor: state.mode === 'dark' ? '#121212' : '#fff',
         color: state.mode === 'dark' ? '#fff' : '#121212',
         minHeight: '100vh',
       }}
     >
       {children}
-    </Box>
+    </div>
   );
 }

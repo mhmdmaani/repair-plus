@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 
 const MainContainer = styled('div')`
-  padding: 60px 0;
+  padding: 80px 0;
 `;
 
 const Tagline = styled(Typography)`
@@ -104,21 +104,17 @@ export default function AboutSection() {
           justifyContent={'center'}
           alignItems={'center'}
         >
-          <Grid item xs={12} sm={6} md={6} lg={6} alignItems={'center'}>
+          <Grid item xs={12} sm={6} md={6} lg={6}>
             <Fade in timeout={1500}>
-              <Tagline
-                data-aos={'fade'}
-                variant='h5'
-                color={'primary'}
-                fontWeight={'bold'}
-              >
-                About Us
-              </Tagline>
+              <h1 className='text-start w-full heading mb-8'>
+                About
+                <span className='text-purple'> Us</span>
+              </h1>
             </Fade>
             <Fade in timeout={1600}>
               <Title variant='h3' fontWeight={'bold'}></Title>
             </Fade>
-            <Divider />
+
             <div data-aos='fade-right'>
               <Typography variant='body1' color={'GrayText'}>
                 Welcome to Repair Plus, your trusted partner in electronic

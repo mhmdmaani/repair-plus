@@ -1,6 +1,5 @@
 import { Subscription } from '@/api/Subscription';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { Truck } from '@/api/truck';
 
 export const useSubscriptions = ({
   searchKey,

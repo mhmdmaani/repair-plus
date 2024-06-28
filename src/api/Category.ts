@@ -89,4 +89,11 @@ export class Category {
       .then((res) => res.data);
     return result;
   }
+
+  static async getFeatured() {
+    const result = await axios
+      .get(`${BASE_URL}/category/feature`)
+      .then((res) => res.data);
+    return result;
+  }
 }

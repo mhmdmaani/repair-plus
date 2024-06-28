@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { Truck as TruckType } from 'prisma/prisma-client';
 import { BASE_URL } from './settings';
 
 export class Subscription {
@@ -14,7 +13,7 @@ export class Subscription {
     return result;
   }
 
-  static async update(data: TruckType) {
+  static async update(data: any) {
     // upload image if existed
     const response = await fetch(`${BASE_URL}/subscription/`, {
       method: 'PUT',

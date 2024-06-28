@@ -87,4 +87,11 @@ export class Brand {
       .then((res) => res.data);
     return result;
   }
+
+  static async getFeatured() {
+    const result = await axios
+      .get(`${BASE_URL}/brand/feature`)
+      .then((res) => res.data);
+    return result;
+  }
 }

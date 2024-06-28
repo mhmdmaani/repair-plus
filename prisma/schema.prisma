@@ -20,21 +20,23 @@ enum OrderStatus {
 }
 
 model Brand {
-  id        String   @id @default(uuid())
-  name      String   @unique
-  logo      String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  devices   Device[]
+  id         String   @id @default(uuid())
+  name       String   @unique
+  logo       String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  devices    Device[]
+  isFeatured Boolean  @default(false)
 }
 
 model Category {
-  id        String   @id @default(uuid())
-  name      String   @unique
-  image     String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  devices   Device[]
+  id         String   @id @default(uuid())
+  name       String   @unique
+  image      String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  devices    Device[]
+  isFeatured Boolean  @default(false)
 }
 
 model Device {

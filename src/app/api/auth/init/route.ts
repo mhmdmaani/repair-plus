@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { OfferService } from '@/app/api/offer/offer.service';
 import bcrypt from 'bcrypt';
 import { PrismaClient } from 'prisma/prisma-client';
 
@@ -12,7 +11,6 @@ export async function POST(request: NextRequest) {
     data: {
       email: adminEmail,
       password: hashedPassword,
-      active: true,
       createdAt: new Date(),
       updatedAt: new Date(),
       name: 'Admin',

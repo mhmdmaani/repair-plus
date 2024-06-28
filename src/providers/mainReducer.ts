@@ -1,11 +1,9 @@
-import { TruckType } from 'prisma/prisma-client';
-
 export const initialState = {
   user: null,
   isTabBarTransparent: false,
   isHiddenTabBar: false,
   displayAuthModal: false,
-  mode: 'light',
+  mode: 'dark',
   selectedVan: null,
   originObj: null,
   destinationObj: null,
@@ -48,7 +46,7 @@ export type GlobalStateType = {
   isHiddenTabBar: boolean;
   displayAuthModal: boolean;
   mode: string;
-  selectedVan: TruckType | null;
+  selectedVan: any | null;
   originObj: any;
   destinationObj: any;
   waypoints: any[];

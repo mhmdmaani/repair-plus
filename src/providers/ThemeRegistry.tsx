@@ -13,7 +13,7 @@ const darkTheme = (lang: string) =>
     palette: {
       mode: 'dark',
       primary: {
-        main: '#3F51B5',
+        main: '#CBACF9',
       },
       //@ts-ignore
       yellow: {

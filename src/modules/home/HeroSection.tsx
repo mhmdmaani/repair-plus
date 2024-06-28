@@ -104,15 +104,7 @@ const CustomButton = styled(Link)`
   }
 `;
 
-const CustomVideo = styled('video')`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-`;
+
 
 export default function HeroSection() {
   return (
@@ -120,11 +112,6 @@ export default function HeroSection() {
       <LargeText>
         <img src='nq.png' />
       </LargeText>
-
-      <CustomVideo autoPlay playsInline muted loop poster='./videoPoster.png'>
-        <source src='homeVideo.mp4' type='video/mp4' />
-        Your browser does not support HTML5 video.
-      </CustomVideo>
 
       <ContentContainer data-aos='fade'>
         <Container>

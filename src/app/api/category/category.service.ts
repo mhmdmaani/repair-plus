@@ -128,4 +128,15 @@ export class CategoryService {
     await prisma.$disconnect();
     return deleted;
   }
+
+  static async getFeatured() {
+    const prisma = new PrismaClient();
+    const results = await prisma.category.findMany({
+      where: {
+        isFeatured: true,
+      },
+    });
+    await prisma.$disconnect();
+    return results;
+  }
 }

@@ -9,6 +9,7 @@ import { StateProvider } from './StateContext';
 import ThemeRegistry from './ThemeRegistry';
 import { initialState, reducer } from './mainReducer';
 import { SessionProvider } from 'next-auth/react';
+import { ThemeProvider } from 'next-themes';
 
 const MainProvider = ({
   children,
@@ -19,18 +20,25 @@ const MainProvider = ({
 }) => {
   return (
     <StateProvider initialState={initialState} reducer={reducer}>
-      <ThemeRegistry>
-        <CssBaseline />
-        <QueryProvider>
-          <SessionProvider session={params?.session}>
-            <GoogleReCaptchaProvider reCaptchaKey='6Lc6KtYpAAAAAC9ESHD8NzqcTxp8CiULEGg7XGlZ'>
-              <Wrapper>
-                <div>{children}</div>
-              </Wrapper>
-            </GoogleReCaptchaProvider>
-          </SessionProvider>
-        </QueryProvider>
-      </ThemeRegistry>
+      <ThemeProvider
+        attribute='class'
+        defaultTheme='dark'
+        enableSystem
+        disableTransitionOnChange
+      >
+        <ThemeRegistry>
+          <CssBaseline />
+          <QueryProvider>
+            <SessionProvider session={params?.session}>
+              <GoogleReCaptchaProvider reCaptchaKey='6Lc6KtYpAAAAAC9ESHD8NzqcTxp8CiULEGg7XGlZ'>
+                <Wrapper>
+                  <div>{children}</div>
+                </Wrapper>
+              </GoogleReCaptchaProvider>
+            </SessionProvider>
+          </QueryProvider>
+        </ThemeRegistry>
+      </ThemeProvider>
     </StateProvider>
   );
 };

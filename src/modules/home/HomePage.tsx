@@ -11,25 +11,55 @@ import Services from './Services';
 import SubscribeSection from './SubscribeSection';
 import TopHeader from './TopHeader';
 import SelectDevice from './SelectDevice';
+import Hero from '@/components/Hero';
+import CategoriesGrid from './CategoriesGrid';
+import { FloatingNav } from '@/components/ui/FloatingNavbar';
+import BrandsGrid from './BrandsGrid';
 const MainContainer = styled('div')`
   overflow-x: hidden;
 `;
 export default function HomePage() {
   return (
-    <MainContainer>
-      <TopHeader />
-      <Appbar />
-      <HeroSection />
+    <div className='bg-black-100 overflow-hidden'>
+      <FloatingNav
+        navItems={[
+          {
+            name: 'Home',
+            link: '/',
+          },
+          {
+            name: 'About',
+            link: '/about',
+          },
+          {
+            name: 'Services',
+            link: '/services',
+          },
+          {
+            name: 'Contact',
+            link: '/contact',
+          },
+          {
+            name: 'Blog',
+            link: '/blog',
+          },
+          {
+            name: 'FAQ',
+            link: '/faq',
+          },
+        ]}
+      />
+      <Hero />
+      <CategoriesGrid />
+      <BrandsGrid />
       <SelectDevice />
       <div data-aos={'fade-up'}>
         <AboutSection />
       </div>
-
-      <Services />
       <ChooseUs />
       <SubscribeSection />
       <ClientsSection />
       <Footer />
-    </MainContainer>
+    </div>
   );
 }
