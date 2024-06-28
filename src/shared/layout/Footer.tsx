@@ -95,23 +95,23 @@ export default function Footer() {
               <Typography variant='body2' color={'white'}>
                 4200 Hamill Avenue, San Diego, California 92109
               </Typography>
-              <Box>
+              <div>
                 <Typography variant='caption' color={'white'}>
                   Email:
                 </Typography>
                 <Typography variant='body2' color={'white'}>
                   info@national-quick.com
                 </Typography>
-              </Box>
+              </div>
 
-              <Box>
+              <div>
                 <Typography variant='caption' color={'white'}>
                   Phone:
                 </Typography>
                 <Typography variant='body2' color={'white'}>
                   021 3456 789
                 </Typography>
-              </Box>
+              </div>
               <SocialContainer>
                 <SocialLink>
                   <FaFacebookF />
@@ -178,8 +178,8 @@ export default function Footer() {
             <Typography variant='caption' color={'white'}>
               &copy; 2021 Quick National. All Rights Reserved
             </Typography>
-            <Box
-              sx={{
+            <div
+              style={{
                 display: 'flex',
                 gap: 10,
               }}
@@ -195,7 +195,7 @@ export default function Footer() {
                   Terms & Conditions
                 </Typography>
               </Link>
-            </Box>
+            </div>
           </BottomBarContent>
         </Container>
       </BottomBar>
