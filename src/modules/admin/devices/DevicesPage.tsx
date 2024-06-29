@@ -12,11 +12,18 @@ import {
   TextField,
   Typography,
   styled,
+  FormControlLabel,
+  Switch,
+  Container,
 } from '@mui/material';
 import { format } from 'date-fns';
 import { useState } from 'react';
 import DeviceForm from './DeviceForm';
-import { useDeleteDevice, useSearchDevices } from '@/hooks/admin/useDevices';
+import {
+  useDeleteDevice,
+  useSearchDevices,
+  useUpdateDevice,
+} from '@/hooks/admin/useDevices';
 import SelectBrand from './SelectBrand';
 import { Brand, Device } from 'prisma/prisma-client';
 import { useRouter } from 'next/navigation';
@@ -49,6 +56,7 @@ export default function DevicesPage() {
   const [currentDevice, setCurrentDevice] = useState<Device | null>(null);
   const [deleteDialog, setDeleteDialog] = useState(false);
   const deleteMutation = useDeleteDevice();
+  const updateMutation = useUpdateDevice();
   const { data } = useSearchDevices({
     searchKey: search,
     page,
@@ -95,6 +103,48 @@ export default function DevicesPage() {
       label: 'Category',
       renderCell: (row: any) => <Typography>{row.category?.name}</Typography>,
     },
+
+    {
+      id: 'isActive',
+      label: 'Is Active',
+      renderCell: (row: any) => (
+        <FormControlLabel
+          control={
+            <Switch
+              checked={row.isActive}
+              onChange={() => {
+                updateMutation.mutate({
+                  id: row.id,
+                  isActive: !row.isActive,
+                });
+              }}
+            />
+          }
+          label={row.isActive ? 'Yes' : 'No'}
+        />
+      ),
+    },
+    {
+      id: 'isFeatured',
+      label: 'Is Featured',
+      renderCell: (row: any) => (
+        <FormControlLabel
+          control={
+            <Switch
+              checked={row.isFeatured}
+              onChange={() => {
+                updateMutation.mutate({
+                  id: row.id,
+                  isFeatured: !row.isFeatured,
+                });
+              }}
+            />
+          }
+          label={row.isFeatured ? 'Yes' : 'No'}
+        />
+      ),
+    },
+
     {
       id: 'createdAt',
       label: 'Created At',
@@ -169,19 +219,19 @@ export default function DevicesPage() {
           Add New
         </Button>
       </Stack>
-      <div style={{ width: '95vw' }}>
+      <Container>
         <SelectBrand
           selectedBrand={selectedBrand}
           onSelect={setSelectedBrand}
         />
-      </div>
+      </Container>
 
-      <div style={{ width: '95vw' }}>
+      <Container>
         <SelectCategory
           selectedCategory={selectedCategory}
           onSelect={setSelectedCategory}
         />
-      </div>
+      </Container>
 
       <EnhancedTable
         data={data?.data || []}

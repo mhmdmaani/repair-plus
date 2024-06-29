@@ -111,6 +111,7 @@ export class DeviceService {
         brandId: data.brandId,
         categoryId: data.categoryId,
         isActive: data.isActive,
+        isFeatured: data.isFeatured,
       },
     });
     await prisma.$disconnect();
@@ -127,6 +128,7 @@ export class DeviceService {
         brandId: data.brandId,
         categoryId: data.categoryId,
         isActive: data.isActive,
+        isFeatured: data.isFeatured,
       },
     });
     await prisma.$disconnect();

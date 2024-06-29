@@ -40,7 +40,7 @@ export class Device {
     return result;
   }
 
-  static async update(data: DeviceType) {
+  static async update(data: DeviceType | any) {
     // upload image if existed
     if (data.image && data.image !== '') {
       const formData = new FormData();

@@ -16,7 +16,7 @@ import {
   styled,
 } from '@mui/material';
 import { addMonths } from 'date-fns';
-import { Brand, Device } from 'prisma/prisma-client';
+import { Brand, Category, Device } from 'prisma/prisma-client';
 import { useEffect, useState } from 'react';
 
 const FormContainer = styled('div')`
@@ -51,6 +51,7 @@ export default function OfferForm({
   const [name, setName] = useState('');
   const [image, setLogo] = useState('');
   const [brand, setBrand] = useState('');
+  const [category, setCategory] = useState('');
   const [isActive, setIsActive] = useState(false);
 
   const handleFileChange = (event: any) => {
@@ -61,6 +62,7 @@ export default function OfferForm({
     if (device) {
       setName(device.name);
       setBrand(device.brandId);
+      setCategory(device.categoryId);
       setIsActive(device.isActive);
     }
   }, [device]);
@@ -71,6 +73,7 @@ export default function OfferForm({
       name,
       image: image && image !== '' ? image : undefined,
       brandId: brand || '',
+      categoryId: category || '',
       isActive,
     };
 
@@ -115,12 +118,12 @@ export default function OfferForm({
 
       <FeildContainer>
         <Select
-          value={brand}
+          value={category}
           onChange={(e) => {
-            setBrand(e.target.value);
+            setCategory(e.target.value);
           }}
         >
-          {categories.map((category: Brand) => (
+          {categories.map((category: Category) => (
             <MenuItem key={category.id} value={category.id}>
               {category.name}
             </MenuItem>

@@ -5,7 +5,11 @@ import { v4 as uuidv4 } from 'uuid';
 export class BrandService {
   static async getAll() {
     const prisma = new PrismaClient();
-    const results = await prisma.brand.findMany();
+    const results = await prisma.brand.findMany({
+      orderBy: {
+        name: 'asc',
+      },
+    });
     await prisma.$disconnect();
     return results;
   }
