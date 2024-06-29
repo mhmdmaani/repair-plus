@@ -79,7 +79,19 @@ export class RepairService {
   static async insert(data: Repair) {
     const prisma = new PrismaClient();
     const inserted = await prisma.repair.create({
-      data,
+      data: {
+        name: data.name,
+        deviceId: data.deviceId,
+        image: data.image,
+        description: data.description,
+        buyPrice: data.buyPrice,
+        sellPrice: data.sellPrice,
+        repairingPrice: data.repairingPrice,
+        repairingTimeMinutes: data.repairingTimeMinutes,
+        quantity: data.quantity,
+        quality: data.quality,
+        isActive: data.isActive,
+      },
     });
     await prisma.$disconnect();
     return inserted;
@@ -89,7 +101,19 @@ export class RepairService {
     const prisma = new PrismaClient();
     const updated = await prisma.repair.update({
       where: { id },
-      data,
+      data: {
+        name: data.name,
+        deviceId: data.deviceId,
+        image: data.image,
+        description: data.description,
+        buyPrice: data.buyPrice,
+        sellPrice: data.sellPrice,
+        repairingPrice: data.repairingPrice,
+        repairingTimeMinutes: data.repairingTimeMinutes,
+        quantity: data.quantity,
+        quality: data.quality,
+        isActive: data.isActive,
+      },
     });
     await prisma.$disconnect();
     return updated;

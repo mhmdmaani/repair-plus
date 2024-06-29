@@ -40,7 +40,7 @@ export class Category {
     return result;
   }
 
-  static async update(data: BrandType) {
+  static async update(data: BrandType | any) {
     // upload image if existed
     if (data.image && data.image !== '') {
       const formData = new FormData();

@@ -19,6 +19,7 @@ export class BrandService {
   }) {
     const prisma = new PrismaClient();
     const { searchKey, page, perPage, sortBy, isAsc } = dt;
+    const currentSortBy = !sortBy || sortBy === '' ? 'createdAt' : sortBy;
     const skip = page * perPage;
     const brands = await prisma.brand.findMany({
       where: {
@@ -35,7 +36,7 @@ export class BrandService {
             : undefined,
       },
       orderBy: {
-        [sortBy]: isAsc === 'true' ? 'asc' : 'desc',
+        [currentSortBy]: isAsc === 'true' ? 'asc' : 'desc',
       },
       skip: skip,
       take: parseInt(perPage),
@@ -164,6 +165,7 @@ export class BrandService {
     const results = await prisma.brand.findMany({
       where: {
         isFeatured: true,
+        isActive: true,
       },
     });
     await prisma.$disconnect();

@@ -105,7 +105,13 @@ export class DeviceService {
   static async insert(data: Device) {
     const prisma = new PrismaClient();
     const inserted = await prisma.device.create({
-      data,
+      data: {
+        name: data.name,
+        image: data.image,
+        brandId: data.brandId,
+        categoryId: data.categoryId,
+        isActive: data.isActive,
+      },
     });
     await prisma.$disconnect();
     return inserted;
@@ -115,7 +121,13 @@ export class DeviceService {
     const prisma = new PrismaClient();
     const updated = await prisma.device.update({
       where: { id },
-      data,
+      data: {
+        name: data.name,
+        image: data.image,
+        brandId: data.brandId,
+        categoryId: data.categoryId,
+        isActive: data.isActive,
+      },
     });
     await prisma.$disconnect();
     return updated;

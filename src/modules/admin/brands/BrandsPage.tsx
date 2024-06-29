@@ -6,8 +6,10 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
+  FormControlLabel,
   Link,
   Stack,
+  Switch,
   TextField,
   Typography,
   styled,
@@ -19,6 +21,7 @@ import {
   useAllBrands,
   useDeleteBrand,
   useSearchBrands,
+  useUpdateBrand,
 } from '@/hooks/admin/useBrands';
 import SlideModal from '@/shared/modals/SlideModal';
 import { Brand } from 'prisma/prisma-client';
@@ -33,6 +36,7 @@ export default function BrandsPage() {
   const [addNew, setAddNew] = useState(false);
   const [deleteDialog, setDeleteDialog] = useState(false);
   const deleteMutation = useDeleteBrand();
+  const updateMutation = useUpdateBrand();
   const {
     page,
     perPage,
@@ -46,6 +50,7 @@ export default function BrandsPage() {
     setSortBy,
   } = useSortAndSearch();
   const [currentBrand, setCurrentBrand] = useState<Brand | null>(null);
+
   const { data } = useSearchBrands({
     searchKey: search,
     page,
@@ -73,6 +78,46 @@ export default function BrandsPage() {
           src={row.logo}
           alt={row.name}
           style={{ width: 50, height: 50, objectFit: 'contain' }}
+        />
+      ),
+    },
+    {
+      id: 'isActive',
+      label: 'Is Active',
+      renderCell: (row: any) => (
+        <FormControlLabel
+          control={
+            <Switch
+              checked={row.isActive}
+              onChange={() => {
+                updateMutation.mutate({
+                  id: row.id,
+                  isActive: !row.isActive,
+                });
+              }}
+            />
+          }
+          label={row.isActive ? 'Yes' : 'No'}
+        />
+      ),
+    },
+    {
+      id: 'isFeatured',
+      label: 'Is Featured',
+      renderCell: (row: any) => (
+        <FormControlLabel
+          control={
+            <Switch
+              checked={row.isFeatured}
+              onChange={() => {
+                updateMutation.mutate({
+                  id: row.id,
+                  isFeatured: !row.isFeatured,
+                });
+              }}
+            />
+          }
+          label={row.isFeatured ? 'Yes' : 'No'}
         />
       ),
     },

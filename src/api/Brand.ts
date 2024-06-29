@@ -38,7 +38,7 @@ export class Brand {
     return result;
   }
 
-  static async update(data: BrandType) {
+  static async update(data: any) {
     // upload image if existed
     if (data.logo && data.logo !== '') {
       const formData = new FormData();
