@@ -40,20 +40,38 @@ export class Repair {
     return result;
   }
 
-  static async update(data: RepairType) {
+  static async update(data: RepairType | any) {
+    // upload image if existed
+    if (data.image && data.image !== '') {
+      const formData = new FormData();
+      formData.append('file', data.image);
+      const response = await fetch(`${BASE_URL}/upload`, {
+        method: 'POST',
+        body: formData,
+      });
+      const result = await response.json();
+      data.image = result.urls[0];
+    }
+
     const result = await axios
-      .put(`${BASE_URL}/repair`, {
-        params: {
-          id: data.id,
-        },
-        data,
-      })
+      .put(`${BASE_URL}/repair`, data)
       .then((res) => res.data);
 
     return result;
   }
 
   static async create(data: RepairType) {
+    if (data.image && data.image !== '') {
+      const formData = new FormData();
+      formData.append('file', data.image);
+      const response = await fetch(`${BASE_URL}/upload`, {
+        method: 'POST',
+        body: formData,
+      });
+      const result = await response.json();
+      data.image = result.urls[0];
+    }
+
     const result = await axios
       .post(`${BASE_URL}/repair`, data)
       .then((res) => res.data);

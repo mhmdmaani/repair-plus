@@ -1,9 +1,14 @@
+import { randomUUID } from 'crypto';
 import { Repair, PrismaClient } from 'prisma/prisma-client';
 
 export class RepairService {
   static async getAll() {
     const prisma = new PrismaClient();
-    const results = await prisma.repair.findMany();
+    const results = await prisma.repair.findMany({
+      orderBy: {
+        name: 'asc',
+      },
+    });
     await prisma.$disconnect();
     return results;
   }
@@ -80,6 +85,7 @@ export class RepairService {
     const prisma = new PrismaClient();
     const inserted = await prisma.repair.create({
       data: {
+        id: randomUUID(),
         name: data.name,
         deviceId: data.deviceId,
         image: data.image,

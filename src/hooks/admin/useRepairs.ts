@@ -52,7 +52,7 @@ export const useUpdateRepair = () => {
     mutationFn: Repair.update,
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ['repairs', 'repair'],
+        queryKey: ['repairs'],
       });
       toast.success('Repair updated successfully');
     },

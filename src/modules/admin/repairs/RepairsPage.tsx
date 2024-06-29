@@ -11,6 +11,8 @@ import {
   TextField,
   Typography,
   styled,
+  FormControlLabel,
+  Switch,
 } from '@mui/material';
 import { format } from 'date-fns';
 import { useEffect, useState } from 'react';
@@ -19,7 +21,11 @@ import { useAllBrands, useSearchBrands } from '@/hooks/admin/useBrands';
 import { useSearchDevices } from '@/hooks/admin/useDevices';
 import { Brand, Repair } from 'prisma/prisma-client';
 import { useRouter } from 'next/navigation';
-import { useDeleteRepair, useSearchRepairs } from '@/hooks/admin/useRepairs';
+import {
+  useDeleteRepair,
+  useSearchRepairs,
+  useUpdateRepair,
+} from '@/hooks/admin/useRepairs';
 import SlideModal from '@/shared/modals/SlideModal';
 
 const SearchContainer = styled('div')`
@@ -46,6 +52,7 @@ export default function RepairsPage({ deviceId }: { deviceId: string }) {
     setSortBy,
   } = useSortAndSearch();
   const deleteMutation = useDeleteRepair();
+  const updateMutation = useUpdateRepair();
   const { data } = useSearchRepairs({
     searchKey: search,
     page,
@@ -95,7 +102,26 @@ export default function RepairsPage({ deviceId }: { deviceId: string }) {
       label: 'Repair Time(Minutes)',
       renderCell: (row: any) => row.repairingTimeMinutes,
     },
-
+    {
+      id: 'isActive',
+      label: 'Is Active',
+      renderCell: (row: any) => (
+        <FormControlLabel
+          control={
+            <Switch
+              checked={row.isActive}
+              onChange={() => {
+                updateMutation.mutate({
+                  id: row.id,
+                  isActive: !row.isActive,
+                });
+              }}
+            />
+          }
+          label={row.isActive ? 'Yes' : 'No'}
+        />
+      ),
+    },
     {
       id: 'createdAt',
       label: 'Created At',
