@@ -150,4 +150,20 @@ export class DeviceService {
     await prisma.$disconnect();
     return deleted;
   }
+
+  static async getFeatured() {
+    const prisma = new PrismaClient();
+    const devices = await prisma.device.findMany({
+      where: {
+        isFeatured: true,
+        isActive: true,
+      },
+      include: {
+        brand: true,
+        category: true,
+      },
+    });
+    await prisma.$disconnect();
+    return devices;
+  }
 }
