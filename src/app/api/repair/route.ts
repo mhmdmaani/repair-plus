@@ -15,11 +15,9 @@ export async function POST(request: NextRequest) {
 
 // update
 export async function PUT(request: NextRequest) {
-  const { searchParams } = new URL(request.url);
-  const id = searchParams.get('id');
   const body = await request.json();
-
-  const updated = await RepairService.update(id as string, body);
+  console.log(body);
+  const updated = await RepairService.update(body.id, body);
   return NextResponse.json(updated);
 }
 

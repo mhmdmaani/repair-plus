@@ -105,7 +105,14 @@ export class DeviceService {
   static async insert(data: Device) {
     const prisma = new PrismaClient();
     const inserted = await prisma.device.create({
-      data,
+      data: {
+        name: data.name,
+        image: data.image,
+        brandId: data.brandId,
+        categoryId: data.categoryId,
+        isActive: data.isActive,
+        isFeatured: data.isFeatured,
+      },
     });
     await prisma.$disconnect();
     return inserted;
@@ -115,7 +122,14 @@ export class DeviceService {
     const prisma = new PrismaClient();
     const updated = await prisma.device.update({
       where: { id },
-      data,
+      data: {
+        name: data.name,
+        image: data.image,
+        brandId: data.brandId,
+        categoryId: data.categoryId,
+        isActive: data.isActive,
+        isFeatured: data.isFeatured,
+      },
     });
     await prisma.$disconnect();
     return updated;
@@ -137,5 +151,21 @@ export class DeviceService {
     });
     await prisma.$disconnect();
     return deleted;
+  }
+
+  static async getFeatured() {
+    const prisma = new PrismaClient();
+    const devices = await prisma.device.findMany({
+      where: {
+        isFeatured: true,
+        isActive: true,
+      },
+      include: {
+        brand: true,
+        category: true,
+      },
+    });
+    await prisma.$disconnect();
+    return devices;
   }
 }

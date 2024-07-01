@@ -40,7 +40,7 @@ export class Device {
     return result;
   }
 
-  static async update(data: DeviceType) {
+  static async update(data: DeviceType | any) {
     // upload image if existed
     if (data.image && data.image !== '') {
       const formData = new FormData();
@@ -85,6 +85,13 @@ export class Device {
           id,
         },
       })
+      .then((res) => res.data);
+    return result;
+  }
+
+  static async getFeatured() {
+    const result = await axios
+      .get(`${BASE_URL}/brand/feature`)
       .then((res) => res.data);
     return result;
   }

@@ -11,6 +11,8 @@ import {
   TextField,
   Typography,
   styled,
+  FormControlLabel,
+  Switch,
 } from '@mui/material';
 import { format } from 'date-fns';
 import { useEffect, useState } from 'react';
@@ -18,6 +20,7 @@ import CategoryForm from './CategoryForm';
 import {
   useDeleteCategory,
   useSearchCategories,
+  useUpdateCategory,
 } from '@/hooks/admin/useCategories';
 import SlideModal from '@/shared/modals/SlideModal';
 import { Category } from 'prisma/prisma-client';
@@ -31,6 +34,9 @@ const SearchContainer = styled('div')`
 export default function CategoriesPage() {
   const [addNew, setAddNew] = useState(false);
   const [deleteDialog, setDeleteDialog] = useState(false);
+  const [currentCategory, setCurrentCategory] = useState<Category | null>(null);
+  const deleteMutation = useDeleteCategory();
+  const updateMutation = useUpdateCategory();
   const {
     page,
     perPage,
@@ -43,8 +49,7 @@ export default function CategoriesPage() {
     setSearch,
     setSortBy,
   } = useSortAndSearch();
-  const [currentCategory, setCurrentCategory] = useState<Category | null>(null);
-  const deleteMutation = useDeleteCategory();
+
   const { data } = useSearchCategories({
     searchKey: search,
     page,
@@ -72,6 +77,46 @@ export default function CategoriesPage() {
           src={row.image}
           alt={row.name}
           style={{ width: 50, height: 50, objectFit: 'contain' }}
+        />
+      ),
+    },
+    {
+      id: 'isActive',
+      label: 'Is Active',
+      renderCell: (row: any) => (
+        <FormControlLabel
+          control={
+            <Switch
+              checked={row.isActive}
+              onChange={() => {
+                updateMutation.mutate({
+                  id: row.id,
+                  isActive: !row.isActive,
+                });
+              }}
+            />
+          }
+          label={row.isActive ? 'Yes' : 'No'}
+        />
+      ),
+    },
+    {
+      id: 'isFeatured',
+      label: 'Is Featured',
+      renderCell: (row: any) => (
+        <FormControlLabel
+          control={
+            <Switch
+              checked={row.isFeatured}
+              onChange={() => {
+                updateMutation.mutate({
+                  id: row.id,
+                  isFeatured: !row.isFeatured,
+                });
+              }}
+            />
+          }
+          label={row.isFeatured ? 'Yes' : 'No'}
         />
       ),
     },
@@ -163,7 +208,9 @@ export default function CategoriesPage() {
         onClose={() => setAddNew(false)}
       >
         <DialogTitle>
-          {currentCategory ? 'Edit Offer' : 'Add New Offer'}
+          {currentCategory
+            ? `Edit Category(${currentCategory?.name})`
+            : `Add New Category`}
         </DialogTitle>
         <DialogContent
           sx={{

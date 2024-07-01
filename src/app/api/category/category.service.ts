@@ -5,7 +5,11 @@ import { v4 as uuidv4 } from 'uuid';
 export class CategoryService {
   static async getAll() {
     const prisma = new PrismaClient();
-    const results = await prisma.category.findMany();
+    const results = await prisma.category.findMany({
+      orderBy: {
+        name: 'asc',
+      },
+    });
     await prisma.$disconnect();
     return results;
   }
@@ -19,6 +23,7 @@ export class CategoryService {
   }) {
     const prisma = new PrismaClient();
     const { searchKey, page, perPage, sortBy, isAsc } = dt;
+    const currentSortBy = !sortBy || sortBy === '' ? 'createdAt' : sortBy;
     const skip = page * perPage;
     const brands = await prisma.category.findMany({
       where: {
@@ -35,7 +40,7 @@ export class CategoryService {
             : undefined,
       },
       orderBy: {
-        [sortBy]: isAsc === 'true' ? 'asc' : 'desc',
+        [currentSortBy]: isAsc === 'true' ? 'asc' : 'desc',
       },
       skip: skip,
       take: parseInt(perPage),
@@ -166,6 +171,7 @@ export class CategoryService {
     const results = await prisma.category.findMany({
       where: {
         isFeatured: true,
+        isActive: true,
       },
     });
     await prisma.$disconnect();

@@ -5,6 +5,7 @@ import {
   useUpdateBrand,
 } from '@/hooks/admin/useBrands';
 import { useCreateDevice, useUpdateDevice } from '@/hooks/admin/useDevices';
+import { useCreateRepair, useUpdateRepair } from '@/hooks/admin/useRepairs';
 import {
   Button,
   FormControlLabel,
@@ -45,16 +46,16 @@ export default function RepairForm({
   currentRepair?: any;
   onAdd?: (a: any) => void;
 }) {
-  const updateMutation = useUpdateDevice();
-  const createMutation = useCreateDevice();
+  const updateMutation = useUpdateRepair();
+  const createMutation = useCreateRepair();
   const [name, setName] = useState('');
   const [image, setLogo] = useState('');
   const [description, setDescription] = useState('');
-  const [buyPrice, setBuyPrice] = useState(0);
-  const [sellPrice, setSellPrice] = useState(0);
-  const [repairingPrice, setRepairingPrice] = useState(0);
-  const [repairingTimeMinutes, setRepairingTimeMinutes] = useState(0);
-  const [quantity, setQuantity] = useState(0);
+  const [buyPrice, setBuyPrice] = useState('0');
+  const [sellPrice, setSellPrice] = useState('0');
+  const [repairingPrice, setRepairingPrice] = useState('0');
+  const [repairingTimeMinutes, setRepairingTimeMinutes] = useState('0');
+  const [quantity, setQuantity] = useState('0');
   const [quality, setQuality] = useState('');
   const [isActive, setIsActive] = useState(false);
   const handleFileChange = (event: any) => {
@@ -77,15 +78,22 @@ export default function RepairForm({
 
   const onSave = async () => {
     const data: any = {
-      id: deviceId,
+      id: currentRepair?.id,
+      deviceId: deviceId,
       name,
       image: image && image !== '' ? image : undefined,
+      isActive,
+      description,
+      buyPrice: parseFloat(buyPrice),
+      sellPrice: parseFloat(sellPrice),
+      repairingPrice: parseFloat(repairingPrice),
+      repairingTimeMinutes: parseFloat(repairingTimeMinutes),
+      quantity: parseFloat(quantity),
+      quality,
     };
 
-    if (deviceId) {
+    if (currentRepair) {
       const saved = await updateMutation.mutate(data);
-      // refetch trcuks
-      //  refetch();
       onAdd && onAdd(data);
     } else {
       // create
@@ -119,35 +127,35 @@ export default function RepairForm({
         <TextField
           label='Buy Price'
           value={buyPrice}
-          onChange={(e) => setBuyPrice(parseFloat(e.target.value))}
+          onChange={(e) => setBuyPrice(e.target.value)}
         />
       </FeildContainer>
       <FeildContainer>
         <TextField
           label='Sell Price'
           value={sellPrice}
-          onChange={(e) => setSellPrice(parseFloat(e.target.value))}
+          onChange={(e) => setSellPrice(e.target.value)}
         />
       </FeildContainer>
       <FeildContainer>
         <TextField
           label='Repairing Price'
           value={repairingPrice}
-          onChange={(e) => setRepairingPrice(parseFloat(e.target.value))}
+          onChange={(e) => setRepairingPrice(e.target.value)}
         />
       </FeildContainer>
       <FeildContainer>
         <TextField
           label='Repairing Time(Minutes)'
           value={repairingTimeMinutes}
-          onChange={(e) => setRepairingTimeMinutes(parseInt(e.target.value))}
+          onChange={(e) => setRepairingTimeMinutes(e.target.value)}
         />
       </FeildContainer>
       <FeildContainer>
         <TextField
           label='Quantity'
           value={quantity}
-          onChange={(e) => setQuantity(parseInt(e.target.value))}
+          onChange={(e) => setQuantity(e.target.value)}
         />
       </FeildContainer>
       <FeildContainer>

@@ -71,3 +71,10 @@ export const useDeleteDevice = () => {
     },
   });
 };
+
+export const useFeaturedDevices = () => {
+  return useQuery({
+    queryKey: ['featuredDevices'],
+    queryFn: Device.getFeatured,
+  });
+};

@@ -1,9 +1,14 @@
+import { randomUUID } from 'crypto';
 import { Repair, PrismaClient } from 'prisma/prisma-client';
 
 export class RepairService {
   static async getAll() {
     const prisma = new PrismaClient();
-    const results = await prisma.repair.findMany();
+    const results = await prisma.repair.findMany({
+      orderBy: {
+        name: 'asc',
+      },
+    });
     await prisma.$disconnect();
     return results;
   }
@@ -80,7 +85,20 @@ export class RepairService {
   static async insert(data: Repair) {
     const prisma = new PrismaClient();
     const inserted = await prisma.repair.create({
-      data,
+      data: {
+        id: randomUUID(),
+        name: data.name,
+        deviceId: data.deviceId,
+        image: data.image,
+        description: data.description,
+        buyPrice: data.buyPrice,
+        sellPrice: data.sellPrice,
+        repairingPrice: data.repairingPrice,
+        repairingTimeMinutes: data.repairingTimeMinutes,
+        quantity: data.quantity,
+        quality: data.quality,
+        isActive: data.isActive,
+      },
     });
     await prisma.$disconnect();
     return inserted;
@@ -90,7 +108,19 @@ export class RepairService {
     const prisma = new PrismaClient();
     const updated = await prisma.repair.update({
       where: { id },
-      data,
+      data: {
+        name: data.name,
+        deviceId: data.deviceId,
+        image: data.image,
+        description: data.description,
+        buyPrice: data.buyPrice,
+        sellPrice: data.sellPrice,
+        repairingPrice: data.repairingPrice,
+        repairingTimeMinutes: data.repairingTimeMinutes,
+        quantity: data.quantity,
+        quality: data.quality,
+        isActive: data.isActive,
+      },
     });
     await prisma.$disconnect();
     return updated;

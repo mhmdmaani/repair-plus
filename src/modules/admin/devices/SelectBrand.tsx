@@ -56,7 +56,7 @@ export default function SelectBrand({
           selected={selectedBrand?.id === brand.id}
           onClick={() => onSelect(brand)}
         >
-          <ItemImage src='https://via.placeholder.com/150' />
+          <ItemImage src={brand?.logo || 'https://via.placeholder.com/150'} />
           <Typography textAlign={'center'} variant='body1' my={1}>
             {brand.name}
           </Typography>
