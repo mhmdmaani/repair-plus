@@ -30,11 +30,12 @@ export class RepairService {
     deviceId?: string | null;
   }) {
     const prisma = new PrismaClient();
-    const { searchKey, page, perPage, sortBy, isAsc } = dt;
+    const { searchKey, page, perPage, sortBy, isAsc, deviceId } = dt;
     const skip = page * perPage;
+    console.log('deviceId', deviceId);
     const repairs = await prisma.repair.findMany({
       where: {
-        deviceId: dt.deviceId ? dt.deviceId : undefined,
+        deviceId: deviceId || '',
         OR:
           searchKey && searchKey !== ''
             ? [
