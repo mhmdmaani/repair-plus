@@ -73,9 +73,9 @@ export default function DevicesPage() {
 
   const columns = [
     {
-      id: 'id',
-      label: 'ID',
-      renderCell: (row: any) => row.id,
+      id: 'order',
+      label: 'Order',
+      renderCell: (row: any) => row.order,
     },
     {
       id: 'name',

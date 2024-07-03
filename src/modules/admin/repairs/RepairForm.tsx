@@ -58,6 +58,7 @@ export default function RepairForm({
   const [quantity, setQuantity] = useState('0');
   const [quality, setQuality] = useState('');
   const [isActive, setIsActive] = useState(false);
+  const [order, setOrder] = useState('0');
   const handleFileChange = (event: any) => {
     setLogo(event.target.files[0]);
   };
@@ -73,6 +74,7 @@ export default function RepairForm({
       setRepairingTimeMinutes(currentRepair.repairingTimeMinutes);
       setQuantity(currentRepair.quantity);
       setQuality(currentRepair.quality);
+      setOrder(currentRepair.order.toString());
     }
   }, [currentRepair]);
 
@@ -90,6 +92,7 @@ export default function RepairForm({
       repairingTimeMinutes: parseFloat(repairingTimeMinutes),
       quantity: parseFloat(quantity),
       quality,
+      order: parseInt(order),
     };
 
     if (currentRepair) {
@@ -112,6 +115,14 @@ export default function RepairForm({
           label='Name'
           value={name}
           onChange={(e) => setName(e.target.value)}
+        />
+      </FeildContainer>
+
+      <FeildContainer>
+        <TextField
+          label='Order'
+          value={order}
+          onChange={(e) => setOrder(e.target.value)}
         />
       </FeildContainer>
       <FeildContainer>

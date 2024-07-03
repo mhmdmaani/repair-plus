@@ -61,9 +61,9 @@ export default function BrandsPage() {
 
   const columns = [
     {
-      id: 'id',
-      label: 'ID',
-      renderCell: (row: any) => row.id,
+      id: 'order',
+      label: 'Order',
+      renderCell: (row: any) => row.order,
     },
     {
       id: 'name',
@@ -208,7 +208,7 @@ export default function BrandsPage() {
         onClose={() => setAddNew(false)}
       >
         <DialogTitle>
-          {currentBrand ? 'Edit Offer' : 'Add New Offer'}
+          {currentBrand ? 'Edit Brand' : 'Add New Brand'}
         </DialogTitle>
         <DialogContent
           sx={{

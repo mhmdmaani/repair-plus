@@ -7,7 +7,7 @@ import {
   TextField,
   styled,
 } from '@mui/material';
-import { addMonths } from 'date-fns';
+import { addMonths, set } from 'date-fns';
 import { Brand } from 'prisma/prisma-client';
 import { useEffect, useState } from 'react';
 
@@ -42,6 +42,8 @@ export default function BrandForm({
   const [logo, setLogo] = useState('');
   const [isFeatured, setIsFeatured] = useState(false);
   const [isActive, setIsActive] = useState(false);
+  const [order, setorder] = useState('0');
+
   const handleFileChange = (event: any) => {
     setLogo(event.target.files[0]);
   };
@@ -50,6 +52,7 @@ export default function BrandForm({
     if (brand) {
       setName(brand.name);
       setIsFeatured(brand.isFeatured);
+      setorder(brand.order.toString());
       setIsActive(brand.isActive);
     }
   }, [brand]);
@@ -62,6 +65,7 @@ export default function BrandForm({
       logo: logo && logo !== '' ? logo : undefined,
       isFeatured,
       isActive,
+      order: parseInt(order),
     };
 
     if (brand?.id) {
@@ -88,6 +92,15 @@ export default function BrandForm({
           onChange={(e) => setName(e.target.value)}
         />
       </FeildContainer>
+
+      <FeildContainer>
+        <TextField
+          label='Order'
+          value={order}
+          onChange={(e) => setorder(e.target.value)}
+        />
+      </FeildContainer>
+
       <FeildContainer>
         <input type='file' onChange={handleFileChange} />
       </FeildContainer>

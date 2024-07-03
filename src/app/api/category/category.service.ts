@@ -7,7 +7,7 @@ export class CategoryService {
     const prisma = new PrismaClient();
     const results = await prisma.category.findMany({
       orderBy: {
-        name: 'asc',
+        order: 'asc',
       },
     });
     await prisma.$disconnect();
@@ -23,7 +23,7 @@ export class CategoryService {
   }) {
     const prisma = new PrismaClient();
     const { searchKey, page, perPage, sortBy, isAsc } = dt;
-    const currentSortBy = !sortBy || sortBy === '' ? 'createdAt' : sortBy;
+    const currentSortBy = !sortBy || sortBy === '' ? 'order' : sortBy;
     const skip = page * perPage;
     const brands = await prisma.category.findMany({
       where: {
@@ -40,7 +40,7 @@ export class CategoryService {
             : undefined,
       },
       orderBy: {
-        [currentSortBy]: isAsc === 'true' ? 'asc' : 'desc',
+        [currentSortBy]: isAsc !== 'false' ? 'asc' : 'desc',
       },
       skip: skip,
       take: parseInt(perPage),
@@ -76,7 +76,11 @@ export class CategoryService {
     const result = await prisma.category.findUnique({
       where: { id },
       include: {
-        devices: true,
+        devices: {
+          orderBy: {
+            order: 'asc',
+          },
+        },
       },
     });
     await prisma.$disconnect();
@@ -94,7 +98,14 @@ export class CategoryService {
       include: {
         devices: {
           include: {
-            repairs: true,
+            repairs: {
+              orderBy: {
+                order: 'asc',
+              },
+            },
+          },
+          orderBy: {
+            order: 'asc',
           },
         },
       },
@@ -132,6 +143,9 @@ export class CategoryService {
       where: {
         categoryId: id,
       },
+      orderBy: {
+        order: 'asc',
+      },
     });
     // get all repairs of these devices
     const repairs = await prisma.repair.findMany({
@@ -139,6 +153,9 @@ export class CategoryService {
         deviceId: {
           in: devices.map((device) => device.id),
         },
+      },
+      orderBy: {
+        order: 'asc',
       },
     });
     // delete all repairs
@@ -172,6 +189,9 @@ export class CategoryService {
       where: {
         isFeatured: true,
         isActive: true,
+      },
+      orderBy: {
+        order: 'asc',
       },
     });
     await prisma.$disconnect();

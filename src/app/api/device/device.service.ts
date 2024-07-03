@@ -3,7 +3,11 @@ import { Device, PrismaClient } from 'prisma/prisma-client';
 export class DeviceService {
   static async getAll() {
     const prisma = new PrismaClient();
-    const results = await prisma.device.findMany();
+    const results = await prisma.device.findMany({
+      orderBy: {
+        order: 'asc',
+      },
+    });
     await prisma.$disconnect();
     return results;
   }
@@ -16,7 +20,11 @@ export class DeviceService {
     const result = await prisma.device.findUnique({
       where: { id },
       include: {
-        repairs: true,
+        repairs: {
+          orderBy: {
+            order: 'asc',
+          },
+        },
       },
     });
     await prisma.$disconnect();
@@ -32,7 +40,11 @@ export class DeviceService {
     const result = await prisma.device.findUnique({
       where: { id },
       include: {
-        repairs: true,
+        repairs: {
+          orderBy: {
+            order: 'asc',
+          },
+        },
       },
     });
     await prisma.$disconnect();
@@ -50,6 +62,8 @@ export class DeviceService {
   }) {
     const prisma = new PrismaClient();
     const { searchKey, page, perPage, sortBy, isAsc, brandId } = dt;
+    const currentSortBy = sortBy || 'order';
+    const currentIsAsc = isAsc || 'true';
     const skip = page * perPage;
     const devices = await prisma.device.findMany({
       where: {
@@ -75,7 +89,7 @@ export class DeviceService {
         category: true,
       },
       orderBy: {
-        [sortBy]: isAsc === 'true' ? 'asc' : 'desc',
+        [currentSortBy]: currentIsAsc === 'true' ? 'asc' : 'desc',
       },
       skip: skip,
       take: parseInt(perPage),
@@ -112,6 +126,7 @@ export class DeviceService {
         categoryId: data.categoryId,
         isActive: data.isActive,
         isFeatured: data.isFeatured,
+        order: data.order,
       },
     });
     await prisma.$disconnect();
@@ -129,6 +144,7 @@ export class DeviceService {
         categoryId: data.categoryId,
         isActive: data.isActive,
         isFeatured: data.isFeatured,
+        order: data.order,
       },
     });
     await prisma.$disconnect();
@@ -163,6 +179,9 @@ export class DeviceService {
       include: {
         brand: true,
         category: true,
+      },
+      orderBy: {
+        order: 'asc',
       },
     });
     await prisma.$disconnect();

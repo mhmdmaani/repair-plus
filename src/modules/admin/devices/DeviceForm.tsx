@@ -53,6 +53,7 @@ export default function OfferForm({
   const [brand, setBrand] = useState('');
   const [category, setCategory] = useState('');
   const [isActive, setIsActive] = useState(false);
+  const [order, setOrder] = useState('0');
 
   const handleFileChange = (event: any) => {
     setLogo(event.target.files[0]);
@@ -64,6 +65,7 @@ export default function OfferForm({
       setBrand(device.brandId);
       setCategory(device.categoryId);
       setIsActive(device.isActive);
+      setOrder(device.order.toString());
     }
   }, [device]);
 
@@ -75,6 +77,7 @@ export default function OfferForm({
       brandId: brand || '',
       categoryId: category || '',
       isActive,
+      order: parseInt(order),
     };
 
     if (device?.id) {
@@ -101,6 +104,16 @@ export default function OfferForm({
           onChange={(e) => setName(e.target.value)}
         />
       </FeildContainer>
+
+      <FeildContainer>
+        <TextField
+          label='Order'
+          inputProps={{ inputMode: 'numeric' }}
+          value={order}
+          onChange={(e) => setOrder(e.target.value)}
+        />
+      </FeildContainer>
+
       <FeildContainer>
         <Select
           value={brand}

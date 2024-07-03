@@ -45,6 +45,8 @@ export default function CategoryForm({
   const [image, setImage] = useState('');
   const [isFeatured, setIsFeatured] = useState(false);
   const [isActive, setIsActive] = useState(false);
+  const [order, setorder] = useState('0');
+
   const handleFileChange = (event: any) => {
     setImage(event.target.files[0]);
   };
@@ -54,6 +56,7 @@ export default function CategoryForm({
       setName(category.name);
       setIsFeatured(category.isFeatured);
       setIsActive(category.isActive);
+      setorder(category.order.toString());
     }
   }, [category]);
 
@@ -65,6 +68,7 @@ export default function CategoryForm({
       image: image && image !== '' ? image : undefined,
       isFeatured,
       isActive,
+      order: parseInt(order),
     };
 
     if (category?.id) {
@@ -91,6 +95,15 @@ export default function CategoryForm({
           onChange={(e) => setName(e.target.value)}
         />
       </FeildContainer>
+
+      <FeildContainer>
+        <TextField
+          label='Order'
+          value={order}
+          onChange={(e) => setorder(e.target.value)}
+        />
+      </FeildContainer>
+
       <FeildContainer>
         <input type='file' onChange={handleFileChange} />
       </FeildContainer>

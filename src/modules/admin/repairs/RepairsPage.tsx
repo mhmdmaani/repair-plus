@@ -64,6 +64,11 @@ export default function RepairsPage({ deviceId }: { deviceId: string }) {
 
   const columns = [
     {
+      id: 'order',
+      label: 'Order',
+      renderCell: (row: any) => row.order,
+    },
+    {
       id: 'name',
       label: 'Name',
       renderCell: (row: any) => row.name,

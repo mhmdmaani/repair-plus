@@ -7,7 +7,7 @@ export class BrandService {
     const prisma = new PrismaClient();
     const results = await prisma.brand.findMany({
       orderBy: {
-        name: 'asc',
+        order: 'asc',
       },
     });
     await prisma.$disconnect();
@@ -23,7 +23,8 @@ export class BrandService {
   }) {
     const prisma = new PrismaClient();
     const { searchKey, page, perPage, sortBy, isAsc } = dt;
-    const currentSortBy = !sortBy || sortBy === '' ? 'createdAt' : sortBy;
+    const currentSortBy = !sortBy || sortBy === '' ? 'order' : sortBy;
+    const currentIsAsc = isAsc !== 'desc' ? 'asc' : 'desc';
     const skip = page * perPage;
     const brands = await prisma.brand.findMany({
       where: {
@@ -76,7 +77,11 @@ export class BrandService {
     const result = await prisma.brand.findUnique({
       where: { id },
       include: {
-        devices: true,
+        devices: {
+          orderBy: {
+            order: 'asc',
+          },
+        },
       },
     });
     await prisma.$disconnect();
@@ -94,7 +99,14 @@ export class BrandService {
       include: {
         devices: {
           include: {
-            repairs: true,
+            repairs: {
+              orderBy: {
+                order: 'asc',
+              },
+            },
+          },
+          orderBy: {
+            order: 'asc',
           },
         },
       },
@@ -133,6 +145,9 @@ export class BrandService {
       where: {
         brandId: id,
       },
+      orderBy: {
+        order: 'asc',
+      },
     });
     // get all repairs of these devices
     const repairs = await prisma.repair.findMany({
@@ -140,6 +155,9 @@ export class BrandService {
         deviceId: {
           in: devices.map((d) => d.id),
         },
+      },
+      orderBy: {
+        order: 'asc',
       },
     });
     // delete all repairs of these devices
@@ -170,6 +188,9 @@ export class BrandService {
       where: {
         isFeatured: true,
         isActive: true,
+      },
+      orderBy: {
+        order: 'asc',
       },
     });
     await prisma.$disconnect();

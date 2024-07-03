@@ -1,0 +1,11 @@
+-- AlterTable
+ALTER TABLE "Brand" ADD COLUMN     "order" INTEGER NOT NULL DEFAULT 0;
+
+-- AlterTable
+ALTER TABLE "Category" ADD COLUMN     "order" INTEGER NOT NULL DEFAULT 0;
+
+-- AlterTable
+ALTER TABLE "Device" ADD COLUMN     "order" INTEGER NOT NULL DEFAULT 0;
+
+-- AlterTable
+ALTER TABLE "Repair" ADD COLUMN     "order" INTEGER NOT NULL DEFAULT 0;
