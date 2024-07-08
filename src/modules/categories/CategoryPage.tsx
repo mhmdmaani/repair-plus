@@ -23,6 +23,7 @@ import { useSearchDevices } from '@/hooks/admin/useDevices';
 import { Brand, Device } from 'prisma/prisma-client';
 import { useRouter } from 'next/navigation';
 import SelectBrand from './SelectBrand';
+import { useCategory } from '@/hooks/admin/useCategories';
 
 const SearchContainer = styled('div')`
   display: flex;
@@ -54,11 +55,13 @@ const CustomImage = styled('img')`
   transition: all 0.5s ease-in-out;
 `;
 
+const Title = styled(Typography)`
+  font-size: 2rem;
+`;
+
 export default function CategoryPage({ categoryId }: { categoryId: string }) {
-  const [addNew, setAddNew] = useState(false);
-  const router = useRouter();
+  const { data: category } = useCategory(categoryId);
   const [selectedBrand, setSelectedBrand] = useState<Brand | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<Brand | null>(null);
   const {
     page,
     perPage,
@@ -90,6 +93,7 @@ export default function CategoryPage({ categoryId }: { categoryId: string }) {
         spacing={2}
         padding={2}
       >
+        <Title>{category?.name}</Title>
         <SearchContainer>
           <TextField
             fullWidth

@@ -26,7 +26,7 @@ export const useSearchCategories = (data: any) => {
 export const useCategory = (id: string) => {
   return useQuery({
     queryKey: ['category', id],
-    queryFn: (a) => Category.getSingle,
+    queryFn: () => Category.getSingle(id),
   });
 };
 

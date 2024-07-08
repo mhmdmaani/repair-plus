@@ -82,7 +82,7 @@ export default function SelectBrand({
           onClick={() => onSelect(brand)}
         >
           <ListItemAvatar>
-            <ItemImage src='https://via.placeholder.com/150' />
+            <ItemImage src={brand.logo || ''} />
           </ListItemAvatar>
           <ListItemText primary={brand.name} />
         </CustomListItem>

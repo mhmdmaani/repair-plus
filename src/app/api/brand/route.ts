@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { BrandService } from './brand.service';
 
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+
 export async function GET(req: Request) {
   const res = await BrandService.getAll();
   return NextResponse.json(res);

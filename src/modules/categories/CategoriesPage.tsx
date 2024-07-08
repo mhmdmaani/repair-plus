@@ -14,6 +14,8 @@ import { Brand, Category } from 'prisma/prisma-client';
 import React from 'react';
 
 const Title = styled(Typography)`
+  margin-bottom: 20px;
+  margin-top: 20px;
   @media (max-width: 768px) {
     font-size: 2rem;
   }
@@ -26,8 +28,8 @@ const Title = styled(Typography)`
 `;
 
 const GridContainer = styled(Box)`
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 `;
 
 const UnstyledLink = styled(Link)`
@@ -58,7 +60,7 @@ export default function CategoriesPage({
       }}
     >
       <Title variant='h1' fontSize={'2rem'} fontWeight={'bold'}>
-        Brands
+        Categories
       </Title>
       <GridContainer>
         <Grid container spacing={2}>
@@ -83,7 +85,7 @@ export default function CategoriesPage({
                     />
                   </CardMedia>
                   <CardContent>
-                    <Typography variant='h4' fontWeight={'bold'}>
+                    <Typography variant='h6' fontWeight={'bold'}>
                       {category.name}
                     </Typography>
                   </CardContent>

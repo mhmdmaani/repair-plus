@@ -1,5 +1,11 @@
 import React from 'react';
 
-export default function Brand() {
-  return <div>Brand</div>;
+export default function Brand({
+  params,
+}: {
+  params: {
+    id: string;
+  };
+}) {
+  return <div>{params.id}</div>;
 }
