@@ -29,7 +29,7 @@ export const useSearchDevices = (data: any) => {
 export const useDevice = (id: string) => {
   return useQuery({
     queryKey: ['device', id],
-    queryFn: (a) => Device.getSingle,
+    queryFn: () => Device.getSingle(id),
   });
 };
 

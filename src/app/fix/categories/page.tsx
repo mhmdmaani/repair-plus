@@ -1,17 +1,20 @@
 import CategoriesPage from '@/modules/categories/CategoriesPage';
-import TopHeader from '@/modules/home/TopHeader';
-import Appbar from '@/shared/layout/Appbar';
 import { PrismaClient } from 'prisma/prisma-client';
 import React from 'react';
 
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+
 async function Categories() {
   const prisma = new PrismaClient();
-  const categories = await prisma.category.findMany();
+  const categories = await prisma.category.findMany({
+    where: {
+      isActive: true,
+    },
+  });
   await prisma.$disconnect();
   return (
     <>
-      <TopHeader />
-      <Appbar />
       <CategoriesPage categories={categories} />
     </>
   );

@@ -1,19 +1,21 @@
 import BrandsPage from '@/modules/brands/BrandsPage';
 import { Prisma, PrismaClient } from 'prisma/prisma-client';
 import React from 'react';
-import Appbar from '@/shared/layout/Appbar';
-import TopHeader from '@/modules/home/TopHeader';
-import { styled } from '@mui/material';
+
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 
 async function Brands() {
   const prisma = new PrismaClient();
-  const brands = await prisma.brand.findMany();
+  const brands = await prisma.brand.findMany({
+    where: {
+      isActive: true,
+    },
+  });
   await prisma.$disconnect();
 
   return (
     <>
-      <TopHeader />
-      <Appbar />
       <BrandsPage brands={brands} />
     </>
   );

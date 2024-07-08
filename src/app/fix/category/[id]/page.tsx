@@ -13,10 +13,7 @@ export default function Category({
 }) {
   return (
     <>
-      <TopHeader />
-      <Appbar />
       <CategoryPage categoryId={params.id} />
-      <Footer />
     </>
   );
 }

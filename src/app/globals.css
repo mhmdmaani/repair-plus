@@ -144,35 +144,15 @@ div::-webkit-scrollbar {
   height: 2px; /* height of the horizontal scrollbar */
 }
 
-/* Targets the draggable part of the scrollbar */
-div::-webkit-scrollbar-thumb {
-  background-color: #f00; /* color of the thumb */
-  border-radius: 20px; /* roundness of the ends */
-  border: 3px solid #f00; /* creates a border around the thumb */
-}
-
-/* Targets the part of the scrollbar track where the thumb isn't */
-div::-webkit-scrollbar-track {
-  background: #f1f1f1; /* color of the track */
-  border-radius: 10px; /* roundness of the ends */
-}
-
 body::-webkit-scrollbar {
   width: 2px; /* width of the vertical scrollbar */
   height: 2px; /* height of the horizontal scrollbar */
   background-color: transparent;
 }
 
-/* Targets the draggable part of the scrollbar */
-body::-webkit-scrollbar-thumb {
-  background-color: #f00; /* color of the thumb */
-  border-radius: 20px; /* roundness of the ends */
-  border: 3px solid #f00; /* creates a border around the thumb */
-}
-
 /* Targets the part of the scrollbar track where the thumb isn't */
 body::-webkit-scrollbar-track {
-  background: #f1f1f1; /* color of the track */
+  background: transparent; /* color of the track */
   border-radius: 10px; /* roundness of the ends */
 }
 

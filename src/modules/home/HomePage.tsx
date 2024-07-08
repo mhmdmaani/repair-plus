@@ -21,34 +21,6 @@ const MainContainer = styled('div')`
 export default function HomePage() {
   return (
     <div className='bg-black-100 overflow-hidden'>
-      <FloatingNav
-        navItems={[
-          {
-            name: 'Home',
-            link: '/',
-          },
-          {
-            name: 'About',
-            link: '/about',
-          },
-          {
-            name: 'Services',
-            link: '/services',
-          },
-          {
-            name: 'Contact',
-            link: '/contact',
-          },
-          {
-            name: 'Blog',
-            link: '/blog',
-          },
-          {
-            name: 'FAQ',
-            link: '/faq',
-          },
-        ]}
-      />
       <Hero />
       <CategoriesGrid />
       <BrandsGrid />

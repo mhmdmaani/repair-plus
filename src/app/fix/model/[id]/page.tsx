@@ -1,24 +1,29 @@
 import React from 'react';
-import CategoryPage from '@/modules/categories/CategoryPage';
-import Appbar from '@/shared/layout/Appbar';
-import TopHeader from '@/modules/home/TopHeader';
 import ModelPage from '@/modules/Model/ModelPage';
 import { PrismaClient } from 'prisma/prisma-client';
 
-async function Model({ id }: any) {
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+
+async function Model({
+  params,
+}: {
+  params: {
+    id: string;
+  };
+}) {
   const prisma = new PrismaClient();
   const repairs = await prisma.repair.findMany({
     where: {
-      deviceId: id,
+      deviceId: params.id,
+      isActive: true,
     },
   });
   await prisma.$disconnect();
 
   return (
     <>
-      <TopHeader />
-      <Appbar />
-      <ModelPage repairs={repairs} />
+      <ModelPage repairs={repairs} deviceId={params.id} />
     </>
   );
 }
