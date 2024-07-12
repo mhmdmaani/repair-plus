@@ -5,9 +5,17 @@ import { useAllBrands } from '@/hooks/admin/useBrands';
 import Link from 'next/link';
 import { Avatar, Card, Grid } from '@mui/material';
 import { useFeaturedBrands } from '@/hooks/useFeaturedBrands';
+import { PrismaClient } from 'prisma/prisma-client';
 
-export default function BrandsGrid() {
-  const { data } = useFeaturedBrands();
+async function BrandsGrid() {
+  const prisma = new PrismaClient();
+  const brands = await prisma.brand.findMany({
+    where: {
+      isActive: true,
+      isFeatured: true,
+    },
+  });
+  await prisma.$disconnect();
   return (
     <div className='relative max-w-5xl mx-auto px-8 py-20'>
       <h1 className='heading mb-5'>
@@ -16,7 +24,7 @@ export default function BrandsGrid() {
       </h1>
       <Vortex backgroundColor='transparent'>
         <Grid container spacing={2} justifyContent={'center'}>
-          {data?.map((item: any) => (
+          {brands?.map((item: any) => (
             <Grid
               item
               key={item?.link}
@@ -42,8 +50,6 @@ export default function BrandsGrid() {
                     style={{
                       width: '80px',
                       height: 'auto',
-                      filter:
-                        'drop-shadow(0 0 0 red) drop-shadow(0 0 10px red);',
                     }}
                   />
                 </div>
@@ -56,3 +62,5 @@ export default function BrandsGrid() {
     </div>
   );
 }
+
+export default BrandsGrid;

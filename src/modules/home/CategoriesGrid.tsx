@@ -9,6 +9,7 @@ async function CategoriesGrid() {
   const categories = await prisma.category.findMany({
     where: {
       isActive: true,
+      isFeatured: true,
     },
   });
   await prisma.$disconnect();

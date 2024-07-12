@@ -38,9 +38,12 @@ export class DeviceService {
 
     const prisma = new PrismaClient();
     const result = await prisma.device.findUnique({
-      where: { id },
+      where: { id, isActive: true },
       include: {
         repairs: {
+          where: {
+            isActive: true,
+          },
           orderBy: {
             order: 'asc',
           },
@@ -67,6 +70,7 @@ export class DeviceService {
     const skip = page * perPage;
     const devices = await prisma.device.findMany({
       where: {
+        isActive: true,
         OR:
           searchKey && searchKey !== ''
             ? [
@@ -96,6 +100,7 @@ export class DeviceService {
     });
     const total = await prisma.device.count({
       where: {
+        isActive: true,
         OR:
           searchKey && searchKey !== ''
             ? [
