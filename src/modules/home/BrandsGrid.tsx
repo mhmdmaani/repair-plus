@@ -1,13 +1,11 @@
 import React from 'react';
-import { CardHoverEffect } from '@/components/ui/CardHoverEffect';
-import { Vortex } from '@/components/ui/Vortex';
-import { useAllBrands } from '@/hooks/admin/useBrands';
-import Link from 'next/link';
-import { Avatar, Card, Grid } from '@mui/material';
-import { useFeaturedBrands } from '@/hooks/useFeaturedBrands';
 
-export default function BrandsGrid() {
-  const { data } = useFeaturedBrands();
+import { Vortex } from '@/components/ui/Vortex';
+import Link from 'next/link';
+import { Grid } from '@mui/material';
+import { Brand } from 'prisma/prisma-client';
+
+export default function BrandsGrid({ brands }: { brands: Brand[] }) {
   return (
     <div className='relative max-w-5xl mx-auto px-8 py-20'>
       <h1 className='heading mb-5'>
@@ -16,10 +14,10 @@ export default function BrandsGrid() {
       </h1>
       <Vortex backgroundColor='transparent'>
         <Grid container spacing={2} justifyContent={'center'}>
-          {data?.map((item: any) => (
+          {brands?.map((item: any) => (
             <Grid
               item
-              key={item?.link}
+              key={item?.id}
               justifyContent={'center'}
               alignItems={'center'}
               lg={3}
@@ -27,7 +25,7 @@ export default function BrandsGrid() {
               sm={6}
             >
               <Link
-                href={`/brand/${item?.id}`}
+                href={`/fix/brand/${item?.id}`}
                 className='flex justify-center items-center flex-col'
               >
                 <div
@@ -42,8 +40,6 @@ export default function BrandsGrid() {
                     style={{
                       width: '80px',
                       height: 'auto',
-                      filter:
-                        'drop-shadow(0 0 0 red) drop-shadow(0 0 10px red);',
                     }}
                   />
                 </div>

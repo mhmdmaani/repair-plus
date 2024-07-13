@@ -1,18 +1,8 @@
 import { CardHoverEffect } from '@/components/ui/CardHoverEffect';
-import { useFeaturedCategories } from '@/hooks/useFeaturedCategories';
-import { PrismaClient } from 'prisma/prisma-client';
-
+import { Category } from 'prisma/prisma-client';
 import React from 'react';
 
-async function CategoriesGrid() {
-  const prisma = new PrismaClient();
-  const categories = await prisma.category.findMany({
-    where: {
-      isActive: true,
-    },
-  });
-  await prisma.$disconnect();
-
+function CategoriesGrid({ categories }: { categories: Category[] }) {
   return (
     <div className='relative max-w-5xl mx-auto px-8 pb-20 pt-28 '>
       <h1 className='heading'>

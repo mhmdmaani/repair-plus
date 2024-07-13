@@ -10,6 +10,13 @@ export const useAllDevices = () => {
   });
 };
 
+export const useSearchDevicesByName = (name: any) => {
+  return useQuery({
+    queryKey: ['devicesByName', name],
+    queryFn: () => Device.getSearchByName(name),
+  });
+};
+
 export const useSearchDevices = (data: any) => {
   return useQuery({
     queryKey: [

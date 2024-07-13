@@ -1,25 +1,40 @@
-import { Device } from '@/api/Device';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'react-toastify';
+import { Brand } from '@/api/Brand';
+import { FixOrder } from '@/api/FixOrder';
 
 export const useAllFixOrders = () => {
   return useQuery({
     queryKey: ['devices'],
-    queryFn: Device.getAll,
+    queryFn: FixOrder.getAll,
+  });
+};
+
+export const useSearchFixOrders = (data: any) => {
+  return useQuery({
+    queryKey: [
+      'fixOrders',
+      data.searchKey,
+      data.page,
+      data.perPage,
+      data.sortBy,
+      data.isAsc,
+    ],
+    queryFn: () => FixOrder.getSearch(data),
   });
 };
 
 export const useFixOrder = (id: string) => {
   return useQuery({
     queryKey: ['device', id],
-    queryFn: (a) => Device.getSingle,
+    queryFn: () => FixOrder.getById(id),
   });
 };
 
 export const useCreateFixOrder = () => {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: Device.create,
+    mutationFn: FixOrder.create,
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ['devices'],
@@ -32,7 +47,7 @@ export const useCreateFixOrder = () => {
 export const useUpdateFixOrder = () => {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: Device.update,
+    mutationFn: FixOrder.update,
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ['devices', 'device'],
@@ -42,10 +57,10 @@ export const useUpdateFixOrder = () => {
   });
 };
 
-export const useDeleteDevice = () => {
+export const useDeleteFixOrder = () => {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: Device.delete,
+    mutationFn: FixOrder.delete,
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ['devices', 'device'],

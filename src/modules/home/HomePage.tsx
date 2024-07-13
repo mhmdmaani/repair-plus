@@ -15,23 +15,31 @@ import Hero from '@/components/Hero';
 import CategoriesGrid from './CategoriesGrid';
 import { FloatingNav } from '@/components/ui/FloatingNavbar';
 import BrandsGrid from './BrandsGrid';
+import { Brand, Category } from 'prisma/prisma-client';
 const MainContainer = styled('div')`
   overflow-x: hidden;
 `;
-export default function HomePage() {
+export default function HomePage({
+  categories,
+  featuredBrands,
+  activeBrands,
+}: {
+  categories: Category[];
+  featuredBrands: Brand[];
+  activeBrands: Brand[];
+}) {
   return (
     <div className='bg-black-100 overflow-hidden'>
       <Hero />
-      <CategoriesGrid />
-      <BrandsGrid />
-      <SelectDevice />
+      <CategoriesGrid categories={categories} />
+      <BrandsGrid brands={featuredBrands} />
+      <SelectDevice brands={activeBrands} />
       <div data-aos={'fade-up'}>
         <AboutSection />
       </div>
       <ChooseUs />
       <SubscribeSection />
       <ClientsSection />
-      <Footer />
     </div>
   );
 }

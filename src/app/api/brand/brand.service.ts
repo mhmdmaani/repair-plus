@@ -20,6 +20,7 @@ export class BrandService {
     perPage: any;
     sortBy?: any;
     isAsc?: any;
+    isAdmin?: any;
   }) {
     const prisma = new PrismaClient();
     const { searchKey, page, perPage, sortBy, isAsc } = dt;
@@ -28,6 +29,7 @@ export class BrandService {
     const skip = page * perPage;
     const brands = await prisma.brand.findMany({
       where: {
+        isActive: dt.isAdmin === 'true' ? undefined : true,
         OR:
           searchKey && searchKey !== ''
             ? [
@@ -98,12 +100,8 @@ export class BrandService {
       where: { id },
       include: {
         devices: {
-          include: {
-            repairs: {
-              orderBy: {
-                order: 'asc',
-              },
-            },
+          where: {
+            isActive: true,
           },
           orderBy: {
             order: 'asc',

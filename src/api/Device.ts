@@ -9,6 +9,17 @@ export class Device {
     return result;
   }
 
+  static async getSearchByName(name: string) {
+    const result = await axios
+      .get(`${BASE_URL}/device/search/name`, {
+        params: {
+          name,
+        },
+      })
+      .then((res) => res.data);
+    return result;
+  }
+
   static async getSearch(data: any) {
     const result = await axios
       .get(`${BASE_URL}/device/search`, {

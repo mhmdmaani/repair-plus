@@ -44,19 +44,20 @@ model Category {
 }
 
 model Device {
-  id         String   @id @default(uuid())
-  name       String   @unique
+  id         String     @id @default(uuid())
+  name       String     @unique
   image      String?
-  brand      Brand    @relation(fields: [brandId], references: [id])
-  category   Category @relation(fields: [categoryId], references: [id])
+  brand      Brand      @relation(fields: [brandId], references: [id])
+  category   Category   @relation(fields: [categoryId], references: [id])
   categoryId String
   brandId    String
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
-  isActive   Boolean  @default(true)
-  isFeatured Boolean  @default(false)
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+  isActive   Boolean    @default(true)
+  isFeatured Boolean    @default(false)
   repairs    Repair[]
-  order      Int      @default(0)
+  order      Int        @default(0)
+  orders     FixOrder[]
 }
 
 model Repair {
@@ -85,6 +86,7 @@ model FixOrder {
   image             String?
   problems          String[]
   repairs           Repair[]
+  devices           Device[]
   userNote          String?
   user              User        @relation(fields: [userId], references: [id])
   userId            String
@@ -92,6 +94,7 @@ model FixOrder {
   status            OrderStatus @default(WAITING)
   price             Float
   vat               Float
+  discount          Float       @default(0)
   totalPrice        Float
   doneAt            DateTime?
   receivedAt        DateTime?
@@ -100,6 +103,19 @@ model FixOrder {
   expectedDateToFix DateTime?
   createdAt         DateTime    @default(now())
   updatedAt         DateTime    @updatedAt
+  reference         Int         @default(autoincrement())
+  fixes             Fix[]
+}
+
+model Fix {
+  id                   String   @id @default(uuid())
+  name                 String
+  price                Float
+  order                FixOrder @relation(fields: [orderId], references: [id])
+  orderId              String
+  repairingTimeMinutes Int      @default(0)
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
 }
 
 model User {

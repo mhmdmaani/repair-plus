@@ -21,11 +21,7 @@ async function Model({
   });
   await prisma.$disconnect();
 
-  return (
-    <>
-      <ModelPage repairs={repairs} deviceId={params.id} />
-    </>
-  );
+  return <ModelPage repairs={repairs} deviceId={params.id} />;
 }
 
 export default Model;

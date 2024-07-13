@@ -41,6 +41,9 @@ export class DeviceService {
       where: { id },
       include: {
         repairs: {
+          where: {
+            isActive: true,
+          },
           orderBy: {
             order: 'asc',
           },
@@ -175,6 +178,30 @@ export class DeviceService {
       where: {
         isFeatured: true,
         isActive: true,
+      },
+      include: {
+        brand: true,
+        category: true,
+      },
+      orderBy: {
+        order: 'asc',
+      },
+    });
+    await prisma.$disconnect();
+    return devices;
+  }
+
+  static async getSearchByName(name: string | null) {
+    if (!name) {
+      return [];
+    }
+    const prisma = new PrismaClient();
+    const devices = await prisma.device.findMany({
+      where: {
+        name: {
+          contains: name,
+          mode: 'insensitive',
+        },
       },
       include: {
         brand: true,

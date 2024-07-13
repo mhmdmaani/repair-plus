@@ -134,4 +134,39 @@ export class RepairService {
     await prisma.$disconnect();
     return deleted;
   }
+
+  // searchByDevices;
+  static async searchByDevices({
+    searchKey,
+    devices,
+  }: {
+    searchKey: string | undefined | null;
+    devices: string[];
+  }) {
+    console.log('searchByDevices', searchKey, devices);
+    const prisma = new PrismaClient();
+    const repairs = await prisma.repair.findMany({
+      where: {
+        deviceId: {
+          in: devices,
+        },
+        name:
+          searchKey === null ||
+          searchKey === undefined ||
+          searchKey.length === 0
+            ? undefined
+            : {
+                contains: searchKey,
+                mode: 'insensitive',
+              },
+      },
+      orderBy: {
+        name: 'asc',
+      },
+    });
+    await prisma.$disconnect();
+
+    console.log('repairs', repairs);
+    return repairs;
+  }
 }
