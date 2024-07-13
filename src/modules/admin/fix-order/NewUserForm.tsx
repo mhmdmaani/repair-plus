@@ -63,7 +63,7 @@ const NewUserForm = ({
 
   return (
     <Container maxWidth='sm'>
-      <Box sx={{ mt: 4 }}>
+      <div style={{ marginTop: 20 }}>
         <Typography variant='h4' component='h1' gutterBottom>
           New User Form
         </Typography>
@@ -128,7 +128,7 @@ const NewUserForm = ({
             Submit
           </Button>
         </form>
-      </Box>
+      </div>
     </Container>
   );
 };
