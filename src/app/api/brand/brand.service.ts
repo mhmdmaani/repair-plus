@@ -50,6 +50,7 @@ export class BrandService {
     });
     const total = await prisma.brand.count({
       where: {
+        isActive: true,
         OR:
           searchKey && searchKey !== ''
             ? [
@@ -80,6 +81,9 @@ export class BrandService {
       where: { id },
       include: {
         devices: {
+          where: {
+            isActive: true,
+          },
           orderBy: {
             order: 'asc',
           },
@@ -150,6 +154,7 @@ export class BrandService {
     // get all repairs of these devices
     const repairs = await prisma.repair.findMany({
       where: {
+        isActive: true,
         deviceId: {
           in: devices.map((d) => d.id),
         },
@@ -192,6 +197,7 @@ export class BrandService {
       },
     });
     await prisma.$disconnect();
+    console.log('results', results);
     return results;
   }
 }
