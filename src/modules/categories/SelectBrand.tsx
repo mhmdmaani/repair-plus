@@ -64,11 +64,12 @@ const CustomListItem = styled(ListItem)<{
 export default function SelectBrand({
   onSelect,
   selectedBrand,
+  brands,
 }: {
-  onSelect: any;
-  selectedBrand: any;
+  onSelect: (brand: Brand) => void;
+  selectedBrand: Brand | null;
+  brands: Brand[];
 }) {
-  const { data: brands } = useAllBrands();
   return (
     <List
       sx={{

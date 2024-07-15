@@ -78,6 +78,7 @@ export default function InputWithSugession({
   suggestions,
   onSelectSuggesstion,
   icon,
+  label,
   ...props
 }: {
   value: string;
@@ -103,6 +104,7 @@ export default function InputWithSugession({
               <IconContainer>{icon}</IconContainer>
             </InputAdornment>
           ),
+          autoComplete: 'off',
         }}
         {...props}
       />
@@ -116,9 +118,7 @@ export default function InputWithSugession({
                 onClick={() => onSelectSuggesstion(suggestion)}
                 key={index}
               >
-                <Typography variant='caption'>
-                  {suggestion.description}
-                </Typography>
+                <Typography variant='caption'>{suggestion[label]}</Typography>
               </ListItemButton>
             ))
           }

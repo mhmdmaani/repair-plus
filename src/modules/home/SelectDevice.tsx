@@ -82,9 +82,8 @@ const Tagline = styled(Typography)`
   }
 `;
 
-export default function SelectDevice() {
+export default function SelectDevice({ brands }: { brands: Brand[] }) {
   const { data: settings } = useSettings();
-  const { data: brands, isLoading } = useAllBrands();
   const [selectedBrand, setSelectedBrand] = React.useState<Brand | null>(null);
   const [selectedDevice, setSelectedDevice] = React.useState<Device | null>(
     null
@@ -111,7 +110,10 @@ export default function SelectDevice() {
 
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={4} lg={4}>
-            <div className=' border-4 border-purple h-96 overflow-y-auto p-2'>
+            <div
+              className=' border-4 border-purple overflow-y-auto p-2'
+              style={{ height: 700 }}
+            >
               <List component='nav' aria-label='main mailbox folders'>
                 {brands?.map((brand: Brand) => (
                   <CustomListItem
@@ -132,7 +134,10 @@ export default function SelectDevice() {
             </div>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={4}>
-            <div className=' border-4 border-purple h-96 overflow-y-auto p-2'>
+            <div
+              className=' border-4 border-purple overflow-y-auto p-2'
+              style={{ height: 700 }}
+            >
               <List component='nav' aria-label='main mailbox folders'>
                 {brand?.devices?.map((device: Device) => (
                   <CustomListItem
@@ -158,7 +163,10 @@ export default function SelectDevice() {
             </div>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={4}>
-            <div className=' border-4 border-purple h-96 overflow-y-auto p-2'>
+            <div
+              className=' border-4 border-purple overflow-y-auto p-2'
+              style={{ height: 700 }}
+            >
               <List component='nav' aria-label='main mailbox folders'>
                 {device?.repairs?.map((repair: Repair) => (
                   <CustomListItem

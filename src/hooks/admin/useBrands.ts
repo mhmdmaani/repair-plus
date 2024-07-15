@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 
 export const useAllBrands = () => {
   return useQuery({
-    queryKey: ['brands'],
+    queryKey: ['allBrands'],
     queryFn: Brand.getAll,
   });
 };
@@ -12,12 +12,13 @@ export const useAllBrands = () => {
 export const useSearchBrands = (data: any) => {
   return useQuery({
     queryKey: [
-      'brands',
+      'searchBrands',
       data.searchKey,
       data.page,
       data.perPage,
       data.sortBy,
       data.isAsc,
+      data.isAdmin,
     ],
     queryFn: () => Brand.getSearch(data),
   });

@@ -1,21 +1,11 @@
 import React from 'react';
-import { CardHoverEffect } from '@/components/ui/CardHoverEffect';
-import { Vortex } from '@/components/ui/Vortex';
-import { useAllBrands } from '@/hooks/admin/useBrands';
-import Link from 'next/link';
-import { Avatar, Card, Grid } from '@mui/material';
-import { useFeaturedBrands } from '@/hooks/useFeaturedBrands';
-import { PrismaClient } from 'prisma/prisma-client';
 
-async function BrandsGrid() {
-  const prisma = new PrismaClient();
-  const brands = await prisma.brand.findMany({
-    where: {
-      isActive: true,
-      isFeatured: true,
-    },
-  });
-  await prisma.$disconnect();
+import { Vortex } from '@/components/ui/Vortex';
+import Link from 'next/link';
+import { Grid } from '@mui/material';
+import { Brand } from 'prisma/prisma-client';
+
+export default function BrandsGrid({ brands }: { brands: Brand[] }) {
   return (
     <div className='relative max-w-5xl mx-auto px-8 py-20'>
       <h1 className='heading mb-5'>
@@ -27,7 +17,7 @@ async function BrandsGrid() {
           {brands?.map((item: any) => (
             <Grid
               item
-              key={item?.link}
+              key={item?.id}
               justifyContent={'center'}
               alignItems={'center'}
               lg={3}
@@ -35,7 +25,7 @@ async function BrandsGrid() {
               sm={6}
             >
               <Link
-                href={`/brand/${item?.id}`}
+                href={`/fix/brand/${item?.id}`}
                 className='flex justify-center items-center flex-col'
               >
                 <div
@@ -62,5 +52,3 @@ async function BrandsGrid() {
     </div>
   );
 }
-
-export default BrandsGrid;

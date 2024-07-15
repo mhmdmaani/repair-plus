@@ -88,4 +88,17 @@ export class Repair {
       .then((res) => res.data);
     return result;
   }
+
+  static async searchByDevices(data: any) {
+    console.log('searchByDevices-------------', data);
+    const result = await axios
+      .get(`${BASE_URL}/repair/devices`, {
+        params: {
+          searchKey: data.searchKey,
+          devices: data.devices,
+        },
+      })
+      .then((res) => res.data);
+    return result;
+  }
 }

@@ -38,7 +38,7 @@ export class DeviceService {
 
     const prisma = new PrismaClient();
     const result = await prisma.device.findUnique({
-      where: { id, isActive: true },
+      where: { id },
       include: {
         repairs: {
           where: {
@@ -70,7 +70,6 @@ export class DeviceService {
     const skip = page * perPage;
     const devices = await prisma.device.findMany({
       where: {
-        isActive: true,
         OR:
           searchKey && searchKey !== ''
             ? [
@@ -100,7 +99,6 @@ export class DeviceService {
     });
     const total = await prisma.device.count({
       where: {
-        isActive: true,
         OR:
           searchKey && searchKey !== ''
             ? [
@@ -180,6 +178,30 @@ export class DeviceService {
       where: {
         isFeatured: true,
         isActive: true,
+      },
+      include: {
+        brand: true,
+        category: true,
+      },
+      orderBy: {
+        order: 'asc',
+      },
+    });
+    await prisma.$disconnect();
+    return devices;
+  }
+
+  static async getSearchByName(name: string | null) {
+    if (!name) {
+      return [];
+    }
+    const prisma = new PrismaClient();
+    const devices = await prisma.device.findMany({
+      where: {
+        name: {
+          contains: name,
+          mode: 'insensitive',
+        },
       },
       include: {
         brand: true,

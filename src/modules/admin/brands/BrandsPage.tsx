@@ -57,6 +57,7 @@ export default function BrandsPage() {
     perPage,
     sortBy,
     isAsc: isASC,
+    isAdmin: true,
   });
 
   const columns = [

@@ -9,6 +9,26 @@ export class FixOrder {
     return result;
   }
 
+  static async getById(id: string) {
+    const result = await axios
+      .get(`${BASE_URL}/fix-order`, {
+        params: {
+          id,
+        },
+      })
+      .then((res) => res.data);
+    return result;
+  }
+
+  static async getSearch(data: any) {
+    const result = await axios
+      .get(`${BASE_URL}/fix-order/search`, {
+        params: data,
+      })
+      .then((res) => res.data);
+    return result;
+  }
+
   static async update(data: FixOrderType) {
     const result = await axios
       .put(`${BASE_URL}/fix-order`, {

@@ -56,7 +56,7 @@ export default function CategoriesPage({
   return (
     <Container
       sx={{
-        paddingTop: '40px',
+        paddingTop: '100px',
       }}
     >
       <Title variant='h1' fontSize={'2rem'} fontWeight={'bold'}>

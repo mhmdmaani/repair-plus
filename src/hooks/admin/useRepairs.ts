@@ -71,3 +71,10 @@ export const useDeleteRepair = () => {
     },
   });
 };
+
+export const useSearchByDevices = (data: any) => {
+  return useQuery({
+    queryKey: ['repairsByDevices', data.searchKey, data.devices],
+    queryFn: () => Repair.searchByDevices(data),
+  });
+};
