@@ -62,6 +62,7 @@ export class DeviceService {
     isAsc?: any;
     brandId?: any;
     categoryId?: any;
+    isAdmin?: any;
   }) {
     const prisma = new PrismaClient();
     const { searchKey, page, perPage, sortBy, isAsc, brandId } = dt;
@@ -70,6 +71,7 @@ export class DeviceService {
     const skip = page * perPage;
     const devices = await prisma.device.findMany({
       where: {
+        isActive: dt.isAdmin === 'true' ? undefined : true,
         OR:
           searchKey && searchKey !== ''
             ? [
@@ -99,6 +101,7 @@ export class DeviceService {
     });
     const total = await prisma.device.count({
       where: {
+        isActive: dt.isAdmin === 'true' ? undefined : true,
         OR:
           searchKey && searchKey !== ''
             ? [

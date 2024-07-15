@@ -28,6 +28,7 @@ export const useSearchRepairs = (data: any) => {
       data.sortBy,
       data.isAsc,
       data.deviceId,
+      data.isAdmin,
     ],
     queryFn: () => Repair.getSearch(data),
   });

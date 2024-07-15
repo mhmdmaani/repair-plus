@@ -13,6 +13,7 @@ export async function GET(req: Request) {
   const isAsc = searchParams.get('isAsc');
   const brandId = searchParams.get('brandId');
   const categoryId = searchParams.get('categoryId');
+  const isAdmin = searchParams.get('isAdmin');
   const res = await DeviceService.getSearch({
     searchKey,
     page,
@@ -21,6 +22,7 @@ export async function GET(req: Request) {
     isAsc,
     brandId,
     categoryId,
+    isAdmin,
   });
   return NextResponse.json(res);
 }

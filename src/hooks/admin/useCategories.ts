@@ -18,6 +18,7 @@ export const useSearchCategories = (data: any) => {
       data.perPage,
       data.sortBy,
       data.isAsc,
+      data.isAdmin,
     ],
     queryFn: () => Category.getSearch(data),
   });

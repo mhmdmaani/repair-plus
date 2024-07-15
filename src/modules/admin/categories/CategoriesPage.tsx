@@ -6,7 +6,6 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
-  Link,
   Stack,
   TextField,
   Typography,
@@ -15,7 +14,7 @@ import {
   Switch,
 } from '@mui/material';
 import { format } from 'date-fns';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import CategoryForm from './CategoryForm';
 import {
   useDeleteCategory,
@@ -56,6 +55,7 @@ export default function CategoriesPage() {
     perPage,
     sortBy,
     isAsc: isASC,
+    isAdmin: true,
   });
 
   const columns = [

@@ -28,6 +28,7 @@ export const useSearchDevices = (data: any) => {
       data.isAsc,
       data.brandId,
       data.categoryId,
+      data.isAdmin,
     ],
     queryFn: () => Device.getSearch(data),
   });

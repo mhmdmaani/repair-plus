@@ -20,6 +20,7 @@ export class CategoryService {
     perPage: any;
     sortBy?: any;
     isAsc?: any;
+    isAdmin?: any;
   }) {
     const prisma = new PrismaClient();
     const { searchKey, page, perPage, sortBy, isAsc } = dt;
@@ -27,6 +28,7 @@ export class CategoryService {
     const skip = page * perPage;
     const brands = await prisma.category.findMany({
       where: {
+        isActive: dt.isAdmin === 'true' ? undefined : true,
         OR:
           searchKey && searchKey !== ''
             ? [
@@ -47,6 +49,7 @@ export class CategoryService {
     });
     const total = await prisma.category.count({
       where: {
+        isActive: dt.isAdmin === 'true' ? undefined : true,
         OR:
           searchKey && searchKey !== ''
             ? [

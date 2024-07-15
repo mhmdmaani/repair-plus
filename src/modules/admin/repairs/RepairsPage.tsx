@@ -60,6 +60,7 @@ export default function RepairsPage({ deviceId }: { deviceId: string }) {
     sortBy,
     isAsc: isASC,
     deviceId,
+    isAdmin: true,
   });
 
   const columns = [

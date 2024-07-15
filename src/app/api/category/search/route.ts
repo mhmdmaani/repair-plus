@@ -11,12 +11,14 @@ export async function GET(req: Request) {
   const perPage = searchParams.get('perPage');
   const sortBy = searchParams.get('sortBy');
   const isAsc = searchParams.get('isAsc');
+  const isAdmin = searchParams.get('isAdmin');
   const res = await CategoryService.getSearch({
     searchKey,
     page,
     perPage,
     sortBy,
     isAsc,
+    isAdmin,
   });
   return NextResponse.json(res);
 }

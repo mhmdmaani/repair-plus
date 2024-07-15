@@ -69,6 +69,7 @@ export default function DevicesPage() {
       !selectedCategory || !selectedCategory?.id
         ? undefined
         : selectedCategory?.id,
+    isAdmin: true,
   });
 
   const columns = [

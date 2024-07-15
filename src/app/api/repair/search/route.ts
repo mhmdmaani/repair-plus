@@ -12,6 +12,7 @@ export async function GET(req: Request) {
   const sortBy = searchParams.get('sortBy');
   const isAsc = searchParams.get('isAsc');
   const deviceId = searchParams.get('deviceId');
+  const isAdmin = searchParams.get('isAdmin');
   const res = await RepairService.getSearch({
     searchKey,
     page,
@@ -19,6 +20,7 @@ export async function GET(req: Request) {
     sortBy,
     isAsc,
     deviceId,
+    isAdmin,
   });
   return NextResponse.json(res);
 }
