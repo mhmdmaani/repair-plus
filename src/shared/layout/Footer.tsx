@@ -39,7 +39,7 @@ const SocialContainer = styled('div')`
 const SocialLink = styled('a')`
   text-decoration: none;
   font-size: 1.5rem;
-  color: ${(props) => props.theme.palette.primary.contrastText};
+  color: ${(props) => props.theme.palette.common.white};
   cursor: pointer;
 `;
 const SectionTitle = styled(Typography)``;
@@ -59,7 +59,7 @@ const LinksContainer = styled('div')`
 `;
 const CustomLink = styled(Link)`
   text-decoration: none;
-  color: ${(props) => props.theme.palette.primary.contrastText};
+  color: ${(props) => props.theme.palette.common.white};
 `;
 
 const containerStyle = {
@@ -74,7 +74,6 @@ const center = {
 
 const BottomBar = styled('div')`
   width: 100%;
-  background: #d42b22;
   padding: 20px 0;
 `;
 
@@ -91,16 +90,16 @@ export default function Footer() {
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={4} lg={4}>
             <LogoSection>
-              <Logo src='nq.png' />
+              <Logo src='' />
               <Typography variant='body2' color={'white'}>
-                4200 Hamill Avenue, San Diego, California 92109
+                Kardanvägen 10, 461 38 Trollhättan
               </Typography>
               <div>
                 <Typography variant='caption' color={'white'}>
                   Email:
                 </Typography>
                 <Typography variant='body2' color={'white'}>
-                  info@national-quick.com
+                  info@mnb.se
                 </Typography>
               </div>
 
@@ -109,7 +108,7 @@ export default function Footer() {
                   Phone:
                 </Typography>
                 <Typography variant='body2' color={'white'}>
-                  021 3456 789
+                  0701414101
                 </Typography>
               </div>
               <SocialContainer>
@@ -172,11 +171,12 @@ export default function Footer() {
           </Grid>
         </Grid>
       </Container>
-      <BottomBar>
+      <BottomBar className='bg-black-100 mt-4'>
         <Container>
           <BottomBarContent>
-            <Typography variant='caption' color={'white'}>
-              &copy; 2021 Quick National. All Rights Reserved
+            <Typography variant='caption' color={'white'} fontWeight={'bold'}>
+              &copy; {new Date().getFullYear()} MNB Mobilteknik AB. All Rights
+              Reserved
             </Typography>
             <div
               style={{
@@ -185,13 +185,21 @@ export default function Footer() {
               }}
             >
               <Link href='/privacy'>
-                <Typography variant='caption' color={'white'}>
+                <Typography
+                  variant='caption'
+                  color={'white'}
+                  fontWeight={'bold'}
+                >
                   Privacy Policy
                 </Typography>
               </Link>
 
               <Link href='/terms'>
-                <Typography variant='caption' color={'white'}>
+                <Typography
+                  variant='caption'
+                  color={'white'}
+                  fontWeight={'bold'}
+                >
                   Terms & Conditions
                 </Typography>
               </Link>

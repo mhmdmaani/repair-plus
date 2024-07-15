@@ -104,7 +104,7 @@ export default function SelectDevice({ brands }: { brands: Brand[] }) {
         <Fade in timeout={1500}>
           <h1 className='heading mb-8'>
             Select What You Want
-            <span className='text-purple'>To Repair</span>
+            <span className='text-purple ml-1'> To Repair</span>
           </h1>
         </Fade>
 

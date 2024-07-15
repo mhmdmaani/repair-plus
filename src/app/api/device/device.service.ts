@@ -67,6 +67,7 @@ export class DeviceService {
     const prisma = new PrismaClient();
     const { searchKey, page, perPage, sortBy, isAsc, brandId } = dt;
     const currentSortBy = sortBy || 'order';
+    console.log(currentSortBy, 'sort by');
     const currentIsAsc = isAsc || 'true';
     const skip = page * perPage;
     const devices = await prisma.device.findMany({

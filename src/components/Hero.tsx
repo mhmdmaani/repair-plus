@@ -6,6 +6,7 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import { BackgroundBeams } from './ui/BackgroundBeam';
 import HeroSection from '@/modules/home/HeroSection';
 import { styled } from '@mui/material';
+import Link from 'next/link';
 
 const CustomVideo = styled('video')`
   width: 100%;
@@ -26,7 +27,7 @@ const Hero = () => {
        */}
       <div className='absolute top-0 left-0 h-screen w-full z-0'>
         <CustomVideo autoPlay playsInline muted loop poster='./videoPoster.png'>
-          <source src='homeVideo.mp4' type='video/mp4' />
+          <source src='/homeVideo.mp4' type='video/mp4' />
           Your browser does not support HTML5 video.
         </CustomVideo>
       </div>
@@ -79,13 +80,13 @@ const Hero = () => {
             words=' Your One-Stop Solution for All Electronic Devices'
             className='text-center text-2 md:text-1xl lg:text-2xl'
           />
-          <a href='./mohammadAlmaniCV.pdf' download>
+          <Link href='/fix/categories' download>
             <MagicButton
-              title='Download CV'
+              title='Explore Repairs'
               icon={<FaLocationArrow />}
               position='right'
             />
-          </a>
+          </Link>
         </div>
       </div>
       <BackgroundBeams />

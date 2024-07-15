@@ -171,3 +171,16 @@ model Term {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Review {
+  id           String   @id @default(uuid())
+  referenceId  String
+  author_name  String
+  author_image String
+  author_email String
+  rating       Int
+  text         String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  isActive     Boolean  @default(false)
+}
