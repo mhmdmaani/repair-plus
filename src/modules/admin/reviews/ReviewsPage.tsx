@@ -217,9 +217,7 @@ export default function ReviewsPage() {
               width: 300,
             },
           }}
-        >
-          <BrandForm brand={currentBrand} onAdd={() => setAddNew(false)} />
-        </DialogContent>
+        ></DialogContent>
       </Dialog>
 
       <SlideModal
