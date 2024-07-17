@@ -69,8 +69,11 @@ export class ReviewService {
   }
 
   static async importFromGoogleMaps() {
-    const apiKey = process.env.GOOGLE_API_KEY;
-    const placeId = process.env.GOOGLE_PLACE_ID;
+    const apiKey = process.env.GOOGLE_API_KEY || '';
+    const placeId = process.env.GOOGLE_PLACE_ID || '';
+
+    const result = await this.getGoogleMapsReviews(placeId, apiKey);
+    return result;
   }
 
   static async getPlaceId(businessName: string, apiKey: string) {
@@ -104,6 +107,7 @@ export class ReviewService {
           },
         }
       );
+      console.log(response.data);
       return response.data.result.reviews;
     } catch (error) {
       console.error(error);
@@ -120,7 +124,7 @@ export class ReviewService {
   }) {
     const prisma = new PrismaClient();
     const { searchKey, page, perPage, sortBy, isAsc } = dt;
-    const currentSortBy = !sortBy || sortBy === '' ? 'order' : sortBy;
+    const currentSortBy = !sortBy || sortBy === '' ? 'createdAt' : sortBy;
     const currentIsAsc = isAsc !== 'desc' ? 'asc' : 'desc';
     const skip = page * perPage;
     const reviews = await prisma.review.findMany({

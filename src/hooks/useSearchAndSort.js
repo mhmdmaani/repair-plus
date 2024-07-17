@@ -1,6 +1,6 @@
 import { useState } from 'react';
 export const useSortAndSearch = () => {
-  const [sortBy, setSortBy] = useState('order');
+  const [sortBy, setSortBy] = useState('');
   const [isASC, setIsASC] = useState(false);
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(0);

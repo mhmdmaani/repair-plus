@@ -15,15 +15,17 @@ import {
   styled,
 } from '@mui/material';
 import { format } from 'date-fns';
-import { useEffect, useState } from 'react';
-import {
-  useAllBrands,
-  useDeleteBrand,
-  useSearchBrands,
-  useUpdateBrand,
-} from '@/hooks/admin/useBrands';
+import { useState } from 'react';
+
 import SlideModal from '@/shared/modals/SlideModal';
-import { Brand } from 'prisma/prisma-client';
+import { Review } from 'prisma/prisma-client';
+import {
+  useDeleteReview,
+  useSearchReviews,
+  useUpdateReview,
+} from '@/hooks/admin/useReviews';
+import ReviewForm from './ReviewForm';
+import ImportReviews from './ImportReviews';
 
 const SearchContainer = styled('div')`
   display: flex;
@@ -34,8 +36,7 @@ const SearchContainer = styled('div')`
 export default function ReviewsPage() {
   const [addNew, setAddNew] = useState(false);
   const [deleteDialog, setDeleteDialog] = useState(false);
-  const deleteMutation = useDeleteBrand();
-  const updateMutation = useUpdateBrand();
+
   const {
     page,
     perPage,
@@ -48,9 +49,10 @@ export default function ReviewsPage() {
     setSearch,
     setSortBy,
   } = useSortAndSearch();
-  const [currentBrand, setCurrentBrand] = useState<Brand | null>(null);
+  const [currentReview, setCurrentReview] = useState<Review | null>(null);
+  const [displayImportReviews, setDisplayImportReviews] = useState(false);
 
-  const { data } = useSearchBrands({
+  const { data } = useSearchReviews({
     searchKey: search,
     page,
     perPage,
@@ -59,23 +61,21 @@ export default function ReviewsPage() {
     isAdmin: true,
   });
 
+  const updateMutation = useUpdateReview();
+  const deleteMutation = useDeleteReview();
+
   const columns = [
     {
-      id: 'order',
-      label: 'Order',
-      renderCell: (row: any) => row.order,
+      id: 'referenceId',
+      label: 'Ref Id',
+      renderCell: (row: any) => row.referenceId,
     },
     {
-      id: 'name',
-      label: 'Name',
-      renderCell: (row: any) => row.name,
-    },
-    {
-      id: 'logo',
-      label: 'Logo',
+      id: 'author_image',
+      label: 'Author Image',
       renderCell: (row: any) => (
         <img
-          src={row.logo}
+          src={row.author_image}
           alt={row.name}
           style={{ width: 50, height: 50, objectFit: 'contain' }}
         />
@@ -102,26 +102,6 @@ export default function ReviewsPage() {
       ),
     },
     {
-      id: 'isFeatured',
-      label: 'Is Featured',
-      renderCell: (row: any) => (
-        <FormControlLabel
-          control={
-            <Switch
-              checked={row.isFeatured}
-              onChange={() => {
-                updateMutation.mutate({
-                  id: row.id,
-                  isFeatured: !row.isFeatured,
-                });
-              }}
-            />
-          }
-          label={row.isFeatured ? 'Yes' : 'No'}
-        />
-      ),
-    },
-    {
       id: 'createdAt',
       label: 'Created At',
       renderCell: (row: any) => format(new Date(row.createdAt), 'dd/MM/yyyy'),
@@ -139,7 +119,7 @@ export default function ReviewsPage() {
         <Stack direction='row' spacing={2}>
           <Button
             onClick={() => {
-              setCurrentBrand(row);
+              setCurrentReview(row);
               setAddNew(true);
             }}
           >
@@ -149,7 +129,7 @@ export default function ReviewsPage() {
           <Button
             color='error'
             onClick={() => {
-              setCurrentBrand(row);
+              setCurrentReview(row);
               setDeleteDialog(true);
             }}
           >
@@ -162,7 +142,7 @@ export default function ReviewsPage() {
 
   return (
     <>
-      <Typography variant='h4'>Brands List</Typography>
+      <Typography variant='h4'>Reviews List</Typography>
       <Stack
         direction='row'
         justifyContent={'space-between'}
@@ -176,9 +156,18 @@ export default function ReviewsPage() {
             onChange={(e) => setSearch(e.target.value)}
           />
         </SearchContainer>
+
         <Button
           onClick={() => {
-            setCurrentBrand(null);
+            setDisplayImportReviews(true);
+          }}
+        >
+          Import Reviews From Google maps
+        </Button>
+
+        <Button
+          onClick={() => {
+            setCurrentReview(null);
             setAddNew(true);
           }}
         >
@@ -208,7 +197,7 @@ export default function ReviewsPage() {
         onClose={() => setAddNew(false)}
       >
         <DialogTitle>
-          {currentBrand ? 'Edit Brand' : 'Add New Brand'}
+          {currentReview ? 'Edit Review' : 'Add New Review'}
         </DialogTitle>
         <DialogContent
           sx={{
@@ -217,13 +206,35 @@ export default function ReviewsPage() {
               width: 300,
             },
           }}
-        ></DialogContent>
+        >
+          <ReviewForm review={currentReview} />
+        </DialogContent>
+      </Dialog>
+
+      <Dialog
+        sx={{
+          width: '100%',
+        }}
+        open={displayImportReviews}
+        onClose={() => setDisplayImportReviews(false)}
+      >
+        <DialogTitle>Import Reviews</DialogTitle>
+        <DialogContent
+          sx={{
+            width: 500,
+            '@media (max-width: 600px)': {
+              width: 300,
+            },
+          }}
+        >
+          <ImportReviews setOpen={setDisplayImportReviews} />
+        </DialogContent>
       </Dialog>
 
       <SlideModal
         open={deleteDialog}
         setOpen={setDeleteDialog}
-        title='Delete Brand'
+        title='Delete Review'
       >
         <div className='text-lg p-2'>
           <Typography variant='body2'>
@@ -242,7 +253,7 @@ export default function ReviewsPage() {
             <Button
               color='error'
               onClick={() => {
-                currentBrand && deleteMutation.mutate(currentBrand?.id);
+                currentReview && deleteMutation.mutate(currentReview?.id);
                 setDeleteDialog(false);
               }}
               disabled={deleteMutation.status === 'pending'}

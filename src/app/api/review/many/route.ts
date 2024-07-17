@@ -12,6 +12,6 @@ export async function GET(req: Request) {
 export async function POST(request: NextRequest) {
   const body = await request.json();
 
-  const created = await ReviewService.createMany(body);
+  const created = await ReviewService.createMany(body.data);
   return NextResponse.json(created);
 }

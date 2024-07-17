@@ -63,4 +63,18 @@ export class Review {
       .then((res) => res.data);
     return result;
   }
+
+  static async importFromGoogleMaps() {
+    const result = await axios
+      .get(`${BASE_URL}/review/many`)
+      .then((res) => res.data);
+    return result;
+  }
+
+  static async createMany(data: any) {
+    const result = await axios
+      .post(`${BASE_URL}/review/many`, { data })
+      .then((res) => res.data);
+    return result;
+  }
 }

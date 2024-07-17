@@ -1,5 +1,6 @@
 'use client';
 import { useCreateBrand, useUpdateBrand } from '@/hooks/admin/useBrands';
+import { useCreateReview, useUpdateReview } from '@/hooks/admin/useReviews';
 import {
   Button,
   FormControlLabel,
@@ -8,7 +9,7 @@ import {
   styled,
 } from '@mui/material';
 import { addMonths, set } from 'date-fns';
-import { Brand } from 'prisma/prisma-client';
+import { Brand, Review } from 'prisma/prisma-client';
 import { useEffect, useState } from 'react';
 
 const FormContainer = styled('div')`
@@ -29,46 +30,50 @@ const FeildContainer = styled('div')`
     gap: 5px;
   }
 `;
-export default function BrandForm({
-  brand,
+export default function ReviewForm({
+  review,
   onAdd,
 }: {
-  brand?: Brand | null;
+  review?: Review | null;
   onAdd?: (a: any) => void;
 }) {
-  const updateMutation = useUpdateBrand();
-  const createMutation = useCreateBrand();
-  const [name, setName] = useState('');
-  const [logo, setLogo] = useState('');
-  const [isFeatured, setIsFeatured] = useState(false);
-  const [isActive, setIsActive] = useState(false);
-  const [order, setorder] = useState('0');
+  const updateMutation = useUpdateReview();
+  const createMutation = useCreateReview();
+  const [author_name, setAuthorName] = useState('');
+  const [author_image, setAuthorImage] = useState('');
+  const [author_email, setAuthorEmail] = useState('');
+  const [rating, setRating] = useState(0);
+  const [text, setText] = useState('');
+  const [isActive, setIsActive] = useState(true);
 
   const handleFileChange = (event: any) => {
-    setLogo(event.target.files[0]);
+    setAuthorImage(event.target.files[0]);
   };
 
   useEffect(() => {
-    if (brand) {
-      setName(brand.name);
-      setIsFeatured(brand.isFeatured);
-      setorder(brand.order.toString());
-      setIsActive(brand.isActive);
+    if (review) {
+      setAuthorName(review.author_name);
+      setAuthorImage(review.author_image);
+      setAuthorEmail(review.author_email);
+      setRating(review.rating);
+      setText(review.text);
+      setIsActive(review.isActive);
     }
-  }, [brand]);
+  }, [review]);
 
   const onSave = async () => {
     let saved = null;
     const data: any = {
-      id: brand?.id || '',
-      name,
-      logo: logo && logo !== '' ? logo : undefined,
-      isFeatured,
+      id: review?.id || '',
+      author_name,
+      author_email,
+      author_image:
+        author_image && author_image !== '' ? author_image : undefined,
+      rating,
       isActive,
-      order: parseInt(order),
     };
 
-    if (brand?.id) {
+    if (review?.id) {
       const saved = await updateMutation.mutate(data);
       // refetch trcuks
       //  refetch();
@@ -88,32 +93,38 @@ export default function BrandForm({
       <FeildContainer>
         <TextField
           label='Name'
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={author_name}
+          onChange={(e) => setAuthorName(e.target.value)}
         />
       </FeildContainer>
 
       <FeildContainer>
         <TextField
-          label='Order'
-          value={order}
-          onChange={(e) => setorder(e.target.value)}
+          label='Author Email'
+          value={author_email}
+          onChange={(e) => setAuthorEmail(e.target.value)}
+        />
+      </FeildContainer>
+
+      <FeildContainer>
+        <TextField
+          label='Rating'
+          value={rating}
+          onChange={(e) => setRating(parseInt(e.target.value))}
+          type='number'
+        />
+      </FeildContainer>
+
+      <FeildContainer>
+        <TextField
+          label='Text'
+          value={text}
+          onChange={(e) => setText(e.target.value)}
         />
       </FeildContainer>
 
       <FeildContainer>
         <input type='file' onChange={handleFileChange} />
-      </FeildContainer>
-      <FeildContainer>
-        <FormControlLabel
-          control={
-            <Switch
-              checked={isFeatured}
-              onChange={(e) => setIsFeatured(e.target.checked)}
-            />
-          }
-          label='Is Featured'
-        />
       </FeildContainer>
       <FeildContainer>
         <FormControlLabel
