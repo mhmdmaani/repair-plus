@@ -31,6 +31,12 @@ export default async function Home() {
     },
   });
 
+  const activeReviews = await prisma.review.findMany({
+    where: {
+      isActive: true,
+    },
+  });
+
   await prisma.$disconnect();
 
   return (
@@ -38,6 +44,7 @@ export default async function Home() {
       categories={categories}
       featuredBrands={brands}
       activeBrands={activeBrands}
+      reviews={activeReviews}
     />
   );
 }

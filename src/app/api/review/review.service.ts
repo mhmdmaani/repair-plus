@@ -50,8 +50,13 @@ export class ReviewService {
 
   static async createMany(data: any) {
     const prisma = new PrismaClient();
+    const allReviews = await prisma.review.findMany();
+    const existingIds = allReviews.map((r) => r.referenceId);
+    const newData = data.filter(
+      (r: any) => !existingIds.includes(r.referenceId)
+    );
     const created = await prisma.review.createMany({
-      data,
+      data: newData,
     });
     await prisma.$disconnect();
     return created;

@@ -15,7 +15,8 @@ import Hero from '@/components/Hero';
 import CategoriesGrid from './CategoriesGrid';
 import { FloatingNav } from '@/components/ui/FloatingNavbar';
 import BrandsGrid from './BrandsGrid';
-import { Brand, Category } from 'prisma/prisma-client';
+import { Brand, Category, Review } from 'prisma/prisma-client';
+import { ReviewsSlider } from './ReviewsSlider';
 const MainContainer = styled('div')`
   overflow-x: hidden;
 `;
@@ -23,10 +24,12 @@ export default function HomePage({
   categories,
   featuredBrands,
   activeBrands,
+  reviews,
 }: {
   categories: Category[];
   featuredBrands: Brand[];
   activeBrands: Brand[];
+  reviews: Review[];
 }) {
   return (
     <div className='bg-black-100 overflow-hidden'>
@@ -34,9 +37,11 @@ export default function HomePage({
       <CategoriesGrid categories={categories} />
       <BrandsGrid brands={featuredBrands} />
       <SelectDevice brands={activeBrands} />
+      <ReviewsSlider reviews={reviews} />
       <div data-aos={'fade-up'}>
         <AboutSection />
       </div>
+
       <ChooseUs />
       <SubscribeSection />
       <ClientsSection />

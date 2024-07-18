@@ -34,7 +34,17 @@ export default function ImportReviews({ setOpen }: { setOpen: any }) {
   const createManyMutation = useCreateManyReview();
 
   const handleClick = () => {
-    createManyMutation.mutate(selectedItems);
+    createManyMutation.mutate(
+      selectedItems.map((r) => ({
+        author_name: r.author_name,
+        author_image: r.profile_photo_url,
+        author_email: '',
+        referenceId: r.author_url,
+        text: r.text,
+        rating: r.rating,
+        isActive: true,
+      }))
+    );
     setOpen(false);
   };
 

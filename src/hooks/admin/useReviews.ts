@@ -4,15 +4,22 @@ import { toast } from 'react-toastify';
 
 export const useAllReviews = () => {
   return useQuery({
-    queryKey: ['allBrands'],
+    queryKey: ['allReviews'],
     queryFn: Review.getAll,
+  });
+};
+
+export const useActiveReviews = () => {
+  return useQuery({
+    queryKey: ['activeReviews'],
+    queryFn: Review.getActive,
   });
 };
 
 export const useSearchReviews = (data: any) => {
   return useQuery({
     queryKey: [
-      'searchBrands',
+      'searchReviews',
       data.searchKey,
       data.page,
       data.perPage,
@@ -30,7 +37,15 @@ export const useCreateReview = () => {
     mutationFn: Review.create,
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ['reviews'],
+        queryKey: ['allReviews'],
+      });
+
+      queryClient.invalidateQueries({
+        queryKey: ['activeReviews'],
+      });
+
+      queryClient.invalidateQueries({
+        queryKey: ['searchReviews'],
       });
       toast.success('Review created successfully');
     },
@@ -43,8 +58,17 @@ export const useUpdateReview = () => {
     mutationFn: Review.update,
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ['reviews'],
+        queryKey: ['allReviews'],
       });
+
+      queryClient.invalidateQueries({
+        queryKey: ['activeReviews'],
+      });
+
+      queryClient.invalidateQueries({
+        queryKey: ['searchReviews'],
+      });
+
       toast.success('Review updated successfully');
     },
   });
@@ -56,7 +80,15 @@ export const useDeleteReview = () => {
     mutationFn: Review.delete,
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ['reviews'],
+        queryKey: ['allReviews'],
+      });
+
+      queryClient.invalidateQueries({
+        queryKey: ['activeReviews'],
+      });
+
+      queryClient.invalidateQueries({
+        queryKey: ['searchReviews'],
       });
       toast.success('Review deleted successfully');
       queryClient.invalidateQueries({
@@ -79,7 +111,15 @@ export const useCreateManyReview = () => {
     mutationFn: Review.createMany,
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ['reviews'],
+        queryKey: ['allReviews'],
+      });
+
+      queryClient.invalidateQueries({
+        queryKey: ['activeReviews'],
+      });
+
+      queryClient.invalidateQueries({
+        queryKey: ['searchReviews'],
       });
       toast.success('Review created successfully');
     },
