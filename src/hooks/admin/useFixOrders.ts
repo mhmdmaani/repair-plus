@@ -34,7 +34,7 @@ export const useFixOrder = (id: string) => {
 export const useCreateFixOrder = () => {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: FixOrder.create,
+    mutationFn: FixOrder.save,
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ['devices'],

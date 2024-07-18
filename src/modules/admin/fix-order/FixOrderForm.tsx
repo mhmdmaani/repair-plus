@@ -12,7 +12,7 @@ import ExpectedDateSection from './ExpectedDateSection';
 import StatusSection from './StatusSection';
 import ReviewOrder from './ReviewOrder';
 
-export default function FixOrderForm() {
+export default function FixOrderForm({ id }: { id: string | undefined }) {
   const [user, setUser] = React.useState(null);
   const [devices, setDevices] = React.useState([]);
   const [problems, setProblems] = React.useState([]);
@@ -22,6 +22,7 @@ export default function FixOrderForm() {
   const [repairs, setRepairs] = React.useState([]);
   const [fixes, setFixes] = React.useState([]);
   const [status, setStatus] = React.useState('WAITING');
+  const [discount, setDiscount] = React.useState(0);
   return (
     <Grid container spacing={3}>
       <Grid item lg={4} md={4} sm={12}>
@@ -70,6 +71,9 @@ export default function FixOrderForm() {
           maintenanceNote={maintenanceNote}
           fixes={fixes}
           status={status}
+          fixOrderId={id}
+          discount={discount}
+          setDiscount={setDiscount}
         />
       </Grid>
     </Grid>

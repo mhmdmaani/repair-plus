@@ -82,7 +82,7 @@ model Repair {
 
 model FixOrder {
   id                String      @id @default(uuid())
-  imei              String
+  imei              String?
   image             String?
   problems          String[]
   repairs           Repair[]
@@ -92,6 +92,7 @@ model FixOrder {
   userId            String
   maintenanceNote   String?
   status            OrderStatus @default(WAITING)
+  timeToFixMinutes  Int
   price             Float
   vat               Float
   discount          Float       @default(0)

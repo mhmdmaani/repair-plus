@@ -42,13 +42,12 @@ export class FixOrder {
     return result;
   }
 
-  static async create(data: FixOrderType) {
+  static async save(data: any) {
     const result = await axios
       .post(`${BASE_URL}/fix-order`, data)
       .then((res) => res.data);
     return result;
   }
-
   static async delete(id: string) {
     const result = await axios
       .delete(`${BASE_URL}/fix-order`, {

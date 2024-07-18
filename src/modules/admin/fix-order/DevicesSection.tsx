@@ -8,10 +8,11 @@ import {
   CardContent,
   CardMedia,
   Card,
+  IconButton,
 } from '@mui/material';
 import { Device, User } from 'prisma/prisma-client';
 import React, { useEffect } from 'react';
-import { FiUser } from 'react-icons/fi';
+import { FiUser, FiX } from 'react-icons/fi';
 import NewUserForm from './NewUserForm';
 import { useSearchDevicesByName } from '@/hooks/admin/useDevices';
 import { set } from 'date-fns';
@@ -76,7 +77,7 @@ export default function DevicesSection({
               style={{
                 cursor: 'pointer',
                 marginTop: '30px',
-                height: 250,
+                height: 270,
               }}
             >
               <CardMedia
@@ -84,7 +85,7 @@ export default function DevicesSection({
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  height: '80%',
+                  height: '65%',
                 }}
               >
                 <CustomImage
@@ -92,7 +93,7 @@ export default function DevicesSection({
                   alt={device.name}
                   style={{
                     width: 'auto',
-                    height: '80%',
+                    height: '65%',
                     objectFit: 'cover',
                     margin: 'auto',
                   }}
@@ -106,6 +107,16 @@ export default function DevicesSection({
                 >
                   {device.name}
                 </Typography>
+                <Button
+                  color='error'
+                  onClick={() => {
+                    setDevices(
+                      devices.filter((d: Device) => d.id !== device.id)
+                    );
+                  }}
+                >
+                  Delete
+                </Button>
               </CardContent>
             </ItemCard>
           </Grid>
