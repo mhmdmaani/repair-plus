@@ -1,9 +1,9 @@
 import { Container, Grid } from '@mui/material';
 import { BiSolidOffer } from 'react-icons/bi';
-import { FaCogs, FaTruck } from 'react-icons/fa';
+import { FaCogs, FaJediOrder, FaStar, FaTruck } from 'react-icons/fa';
 import { FaTruckFast, FaUserTie } from 'react-icons/fa6';
 import { LiaFileContractSolid } from 'react-icons/lia';
-import { MdLibraryBooks } from 'react-icons/md';
+import { MdHomeRepairService, MdLibraryBooks } from 'react-icons/md';
 import DashboardCard from './DashboardCard';
 import { MdAlternateEmail } from 'react-icons/md';
 import { SiBrandfolder } from 'react-icons/si';
@@ -69,6 +69,22 @@ export default function DashboardPage() {
             icon={<LiaFileContractSolid />}
             title='Terms & Conditions'
             link={`/admin/term`}
+          />
+        </Grid>
+
+        <Grid item xl={6} lg={6} md={6} sm={12}>
+          <DashboardCard
+            icon={<FaStar />}
+            title='Reviews'
+            link={`/admin/reviews`}
+          />
+        </Grid>
+
+        <Grid item xl={6} lg={6} md={6} sm={12}>
+          <DashboardCard
+            icon={<MdHomeRepairService />}
+            title='Fix-Orders'
+            link={`/admin/fix-order`}
           />
         </Grid>
       </Grid>
