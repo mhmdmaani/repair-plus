@@ -8,8 +8,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 58.294319685530695,
-  lng: 12.318252428027709,
+  lat: 58.29419460462419,
+  lng: 12.317553455341615,
 };
 
 export default function OurLocationMap() {
@@ -41,13 +41,6 @@ export default function OurLocationMap() {
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
-      <Marker position={center}>
-        <div style={{ backgroundColor: 'white', padding: 10, borderRadius: 5 }}>
-          <h3>MNB Mobilteknik AB</h3>
-          <p>Some description</p>
-        </div>
-      </Marker>
-
       {/* Child components, such as markers, info windows, etc. */}
       <></>
     </GoogleMap>
