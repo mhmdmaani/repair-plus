@@ -229,6 +229,7 @@ export default function DevicesPage() {
 
       <Container>
         <SelectCategory
+          brand={selectedBrand}
           selectedCategory={selectedCategory}
           onSelect={setSelectedCategory}
         />

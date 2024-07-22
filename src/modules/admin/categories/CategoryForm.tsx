@@ -9,10 +9,13 @@ import {
   Switch,
   TextField,
   styled,
+  MenuItem,
+  Select,
 } from '@mui/material';
 import { addMonths } from 'date-fns';
 import { Brand, Category } from 'prisma/prisma-client';
 import { useEffect, useState } from 'react';
+import { useAllBrands } from '@/hooks/admin/useBrands';
 
 const FormContainer = styled('div')`
   border: 2px solid #efebe9;
@@ -41,11 +44,15 @@ export default function CategoryForm({
 }) {
   const updateMutation = useUpdateCategory();
   const createMutation = useCreateCategory();
+
+  const { data: brands } = useAllBrands();
+
   const [name, setName] = useState('');
   const [image, setImage] = useState('');
   const [isFeatured, setIsFeatured] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [order, setorder] = useState('0');
+  const [brand, setBrand] = useState('');
 
   const handleFileChange = (event: any) => {
     setImage(event.target.files[0]);
@@ -57,6 +64,7 @@ export default function CategoryForm({
       setIsFeatured(category.isFeatured);
       setIsActive(category.isActive);
       setorder(category.order.toString());
+      setBrand(category.brandId);
     }
   }, [category]);
 
@@ -69,6 +77,7 @@ export default function CategoryForm({
       isFeatured,
       isActive,
       order: parseInt(order),
+      brandId: brand,
     };
 
     if (category?.id) {
@@ -94,6 +103,21 @@ export default function CategoryForm({
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+      </FeildContainer>
+
+      <FeildContainer>
+        <Select
+          value={brand}
+          onChange={(e) => {
+            setBrand(e.target.value);
+          }}
+        >
+          {brands?.map((brand: Brand) => (
+            <MenuItem key={brand.id} value={brand.id}>
+              {brand.name}
+            </MenuItem>
+          ))}
+        </Select>
       </FeildContainer>
 
       <FeildContainer>

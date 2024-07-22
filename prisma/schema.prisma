@@ -39,7 +39,7 @@ model Category {
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
   brand      Brand    @relation(fields: [brandId], references: [id])
-  brandId    String
+  brandId    String   @default("0")
   devices    Device[]
   isFeatured Boolean  @default(false)
   isActive   Boolean  @default(true)

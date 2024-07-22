@@ -200,4 +200,22 @@ export class CategoryService {
     await prisma.$disconnect();
     return results;
   }
+
+  static async getByBrandId(id: string | null) {
+    if (!id) {
+      return null;
+    }
+    const prisma = new PrismaClient();
+    const results = await prisma.category.findMany({
+      where: {
+        brandId: id,
+        isActive: true,
+      },
+      orderBy: {
+        order: 'asc',
+      },
+    });
+    await prisma.$disconnect();
+    return results;
+  }
 }

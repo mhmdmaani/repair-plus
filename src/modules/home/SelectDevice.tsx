@@ -1,6 +1,7 @@
 'use client';
 import { useAllBrands } from '@/hooks/admin/useBrands';
-import { useDevice } from '@/hooks/admin/useDevices';
+import { useCategoriesByBrand } from '@/hooks/admin/useCategories';
+import { useDevice, useDevicesByCategory } from '@/hooks/admin/useDevices';
 import { useBrandTree } from '@/hooks/useBrandTree';
 import { useDeviceTree } from '@/hooks/useDeviceTree';
 import { useSettings } from '@/hooks/useSettings';
@@ -17,7 +18,7 @@ import {
   styled,
   Fade,
 } from '@mui/material';
-import { Brand, Device, Repair } from 'prisma/prisma-client';
+import { Brand, Category, Device, Repair } from 'prisma/prisma-client';
 import React from 'react';
 
 const CustomListItem = styled(ListItem)<{
@@ -85,6 +86,9 @@ const Tagline = styled(Typography)`
 export default function SelectDevice({ brands }: { brands: Brand[] }) {
   const { data: settings } = useSettings();
   const [selectedBrand, setSelectedBrand] = React.useState<Brand | null>(null);
+  const [selectedCategory, setSelectedCategory] =
+    React.useState<Category | null>(null);
+
   const [selectedDevice, setSelectedDevice] = React.useState<Device | null>(
     null
   );
@@ -92,6 +96,10 @@ export default function SelectDevice({ brands }: { brands: Brand[] }) {
     null
   );
   const { data: brand } = useBrandTree(selectedBrand?.id || '');
+  const { data: categories } = useCategoriesByBrand(selectedBrand?.id || '');
+
+  const { data: devices } = useDevicesByCategory(selectedCategory?.id || '');
+
   const { data: device } = useDeviceTree(selectedDevice?.id || '');
   return (
     <div className=' mt-32 '>
@@ -109,7 +117,7 @@ export default function SelectDevice({ brands }: { brands: Brand[] }) {
         </Fade>
 
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
+          <Grid item xs={12} sm={6} md={3} lg={3}>
             <div
               className=' border-4 border-purple overflow-y-auto p-2'
               style={{ height: 700 }}
@@ -133,13 +141,39 @@ export default function SelectDevice({ brands }: { brands: Brand[] }) {
               </List>
             </div>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
+
+          <Grid item xs={12} sm={6} md={3} lg={3}>
             <div
               className=' border-4 border-purple overflow-y-auto p-2'
               style={{ height: 700 }}
             >
               <List component='nav' aria-label='main mailbox folders'>
-                {brand?.devices?.map((device: Device) => (
+                {categories?.map((cat: Category) => (
+                  <CustomListItem
+                    key={cat.id}
+                    disablePadding
+                    onClick={() => setSelectedCategory(cat)}
+                    selected={selectedCategory?.id === cat.id}
+                  >
+                    <ListItemIcon>
+                      <Image src={cat?.image || ''} alt={cat.name} />
+                    </ListItemIcon>
+                    <CustomText>
+                      <ListItemText primary={cat.name} />
+                    </CustomText>
+                  </CustomListItem>
+                ))}
+              </List>
+            </div>
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3} lg={3}>
+            <div
+              className=' border-4 border-purple overflow-y-auto p-2'
+              style={{ height: 700 }}
+            >
+              <List component='nav' aria-label='main mailbox folders'>
+                {devices?.map((device: Device) => (
                   <CustomListItem
                     key={device.id}
                     disablePadding
@@ -162,7 +196,7 @@ export default function SelectDevice({ brands }: { brands: Brand[] }) {
               </List>
             </div>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
+          <Grid item xs={12} sm={6} md={3} lg={3}>
             <div
               className=' border-4 border-purple overflow-y-auto p-2'
               style={{ height: 700 }}

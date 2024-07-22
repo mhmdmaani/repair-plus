@@ -39,6 +39,11 @@ export const useCreateCategory = () => {
       queryClient.invalidateQueries({
         queryKey: ['categories'],
       });
+
+      queryClient.invalidateQueries({
+        queryKey: ['brandCategories'],
+      });
+
       toast.success('Category created successfully');
     },
   });
@@ -51,6 +56,10 @@ export const useUpdateCategory = () => {
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ['categories'],
+      });
+
+      queryClient.invalidateQueries({
+        queryKey: ['brandCategories'],
       });
       toast.success('Category updated successfully');
     },
@@ -67,5 +76,12 @@ export const useDeleteCategory = () => {
       });
       toast.success('Category deleted successfully');
     },
+  });
+};
+
+export const useCategoriesByBrand = (id: string | null | undefined) => {
+  return useQuery({
+    queryKey: ['brandCategories', id],
+    queryFn: () => Category.getByBrandId(id),
   });
 };

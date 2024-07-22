@@ -1,5 +1,8 @@
 import { useAllBrands } from '@/hooks/admin/useBrands';
-import { useAllCategories } from '@/hooks/admin/useCategories';
+import {
+  useAllCategories,
+  useCategoriesByBrand,
+} from '@/hooks/admin/useCategories';
 import { Typography, styled } from '@mui/material';
 import { Brand, Category } from 'prisma/prisma-client';
 import React from 'react';
@@ -39,11 +42,13 @@ const ItemImage = styled('img')`
 export default function SelectCategory({
   onSelect,
   selectedCategory,
+  brand,
 }: {
   onSelect: any;
   selectedCategory: any;
+  brand: Brand | null;
 }) {
-  const { data: brands } = useAllCategories();
+  const { data: cats } = useCategoriesByBrand(brand?.id);
   return (
     <Container>
       <Item selected={selectedCategory === null} onClick={() => onSelect(null)}>
@@ -52,7 +57,7 @@ export default function SelectCategory({
           All
         </Typography>
       </Item>
-      {brands?.map((category: Category) => (
+      {cats?.map((category: Category) => (
         <Item
           selected={selectedCategory?.id === category.id}
           onClick={() => onSelect(category)}

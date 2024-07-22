@@ -86,3 +86,10 @@ export const useFeaturedDevices = () => {
     queryFn: Device.getFeatured,
   });
 };
+
+export const useDevicesByCategory = (categoryId: string) => {
+  return useQuery({
+    queryKey: ['devicesByCategory', categoryId],
+    queryFn: () => Device.getByCategory(categoryId),
+  });
+};

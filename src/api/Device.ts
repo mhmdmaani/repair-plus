@@ -106,4 +106,15 @@ export class Device {
       .then((res) => res.data);
     return result;
   }
+
+  static async getByCategory(id: string) {
+    const result = await axios
+      .get(`${BASE_URL}/device/category`, {
+        params: {
+          categoryId: id,
+        },
+      })
+      .then((res) => res.data);
+    return result;
+  }
 }
