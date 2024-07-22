@@ -218,4 +218,28 @@ export class DeviceService {
     await prisma.$disconnect();
     return devices;
   }
+
+  static async getByCategoryId(categoryId: string | null) {
+    if (!categoryId) {
+      return [];
+    }
+    const prisma = new PrismaClient();
+    const devices = await prisma.device.findMany({
+      where: {
+        categoryId,
+      },
+      include: {
+        repairs: {
+          orderBy: {
+            order: 'asc',
+          },
+        },
+      },
+      orderBy: {
+        order: 'asc',
+      },
+    });
+    await prisma.$disconnect();
+    return devices;
+  }
 }

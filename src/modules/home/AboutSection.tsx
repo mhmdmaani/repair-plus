@@ -141,7 +141,7 @@ export default function AboutSection() {
           <Grid item xs={12} sm={6} md={6} lg={6}>
             <ImageContainer data-aos='fade-left'>
               <img
-                src='./about.jpg'
+                src='./about.png'
                 alt='delivery'
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />

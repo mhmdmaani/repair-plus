@@ -7,17 +7,6 @@ import {
 } from '@mui/material';
 import { BsSend } from 'react-icons/bs';
 
-const MainContainer = styled('div')`
-  margin: 60px 0;
-  background: ${(props) =>
-    props.theme.palette.mode === 'dark' ? '#333333' : '#eff4f9'};
-  padding: 60px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-`;
-
 const CustomButton = styled(Button)`
   height: 50px;
   width: 100%;
@@ -112,7 +101,7 @@ const FormSection = styled('div')`
 `;
 export default function SubscribeSection() {
   return (
-    <MainContainer>
+    <div className='h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden'>
       <Container>
         <TitleContainer>
           <Tagline
@@ -141,6 +130,6 @@ export default function SubscribeSection() {
           </FormSection>
         </MainFormSection>
       </Container>
-    </MainContainer>
+    </div>
   );
 }

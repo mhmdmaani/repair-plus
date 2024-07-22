@@ -4,7 +4,10 @@ import {
   useCreateBrand,
   useUpdateBrand,
 } from '@/hooks/admin/useBrands';
-import { useAllCategories } from '@/hooks/admin/useCategories';
+import {
+  useAllCategories,
+  useCategoriesByBrand,
+} from '@/hooks/admin/useCategories';
 import { useCreateDevice, useUpdateDevice } from '@/hooks/admin/useDevices';
 import {
   Button,
@@ -44,16 +47,17 @@ export default function OfferForm({
   device?: Device | null;
   onAdd?: (a: any) => void;
 }) {
-  const { data: brands } = useAllBrands();
-  const { data: categories } = useAllCategories();
-  const updateMutation = useUpdateDevice();
-  const createMutation = useCreateDevice();
   const [name, setName] = useState('');
   const [image, setLogo] = useState('');
   const [brand, setBrand] = useState('');
   const [category, setCategory] = useState('');
   const [isActive, setIsActive] = useState(false);
   const [order, setOrder] = useState('0');
+
+  const { data: brands } = useAllBrands();
+  const { data: categories } = useCategoriesByBrand(brand);
+  const updateMutation = useUpdateDevice();
+  const createMutation = useCreateDevice();
 
   const handleFileChange = (event: any) => {
     setLogo(event.target.files[0]);
@@ -121,7 +125,7 @@ export default function OfferForm({
             setBrand(e.target.value);
           }}
         >
-          {brands.map((brand: Brand) => (
+          {brands?.map((brand: Brand) => (
             <MenuItem key={brand.id} value={brand.id}>
               {brand.name}
             </MenuItem>
@@ -136,7 +140,7 @@ export default function OfferForm({
             setCategory(e.target.value);
           }}
         >
-          {categories.map((category: Category) => (
+          {categories?.map((category: Category) => (
             <MenuItem key={category.id} value={category.id}>
               {category.name}
             </MenuItem>

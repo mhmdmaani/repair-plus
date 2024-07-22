@@ -96,4 +96,18 @@ export class Category {
       .then((res) => res.data);
     return result;
   }
+
+  static async getByBrandId(brandId: string | null | undefined) {
+    if (!brandId) {
+      return [];
+    }
+    const result = await axios
+      .get(`${BASE_URL}/category/brand`, {
+        params: {
+          brandId,
+        },
+      })
+      .then((res) => res.data);
+    return result;
+  }
 }

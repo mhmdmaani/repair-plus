@@ -85,92 +85,95 @@ const BottomBarContent = styled('div')`
 
 export default function Footer() {
   return (
-    <MainContainer>
-      <Container>
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
-            <LogoSection>
-              <Logo src='' />
-              <Typography variant='body2' color={'white'}>
-                Kardanvägen 10, 461 38 Trollhättan
-              </Typography>
-              <div>
-                <Typography variant='caption' color={'white'}>
-                  Email:
-                </Typography>
+    <>
+      <div className='h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden'>
+        <Container>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6} md={4} lg={4}>
+              <LogoSection>
+                <Logo src='' />
                 <Typography variant='body2' color={'white'}>
-                  info@mnb.se
+                  Kardanvägen 10, 461 38 Trollhättan
                 </Typography>
-              </div>
+                <div>
+                  <Typography variant='caption' color={'white'}>
+                    Email:
+                  </Typography>
+                  <Typography variant='body2' color={'white'}>
+                    info@mnb.se
+                  </Typography>
+                </div>
 
-              <div>
-                <Typography variant='caption' color={'white'}>
-                  Phone:
-                </Typography>
-                <Typography variant='body2' color={'white'}>
-                  0701414101
-                </Typography>
-              </div>
-              <SocialContainer>
-                <SocialLink>
-                  <FaFacebookF />
-                </SocialLink>
-                <SocialLink>
-                  <FaInstagram />
-                </SocialLink>
-                <SocialLink>
-                  <FaLinkedinIn />
-                </SocialLink>
+                <div>
+                  <Typography variant='caption' color={'white'}>
+                    Phone:
+                  </Typography>
+                  <Typography variant='body2' color={'white'}>
+                    0701414101
+                  </Typography>
+                </div>
+                <SocialContainer>
+                  <SocialLink>
+                    <FaFacebookF />
+                  </SocialLink>
+                  <SocialLink>
+                    <FaInstagram />
+                  </SocialLink>
+                  <SocialLink>
+                    <FaLinkedinIn />
+                  </SocialLink>
 
-                <SocialLink>
-                  <FaYoutube />
-                </SocialLink>
-              </SocialContainer>
-            </LogoSection>
+                  <SocialLink>
+                    <FaYoutube />
+                  </SocialLink>
+                </SocialContainer>
+              </LogoSection>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={4}>
+              <SectionTitle variant='h6' color={'white'}>
+                Quick Links
+              </SectionTitle>
+              <Divider />
+              <LinksContainer>
+                <CustomLink href='/'>
+                  <Typography variant='caption' textTransform={'uppercase'}>
+                    Home
+                  </Typography>
+                </CustomLink>
+                <CustomLink href='/services'>
+                  <Typography variant='caption' textTransform={'uppercase'}>
+                    Services
+                  </Typography>
+                </CustomLink>
+                <CustomLink href='/about'>
+                  <Typography variant='caption' textTransform={'uppercase'}>
+                    About
+                  </Typography>
+                </CustomLink>
+                <CustomLink href='/contact'>
+                  <Typography variant='caption' textTransform={'uppercase'}>
+                    Contact
+                  </Typography>
+                </CustomLink>
+                <CustomLink href='/terms'>
+                  <Typography variant='caption' textTransform={'uppercase'}>
+                    Terms
+                  </Typography>
+                </CustomLink>
+                <CustomLink href='/privacy'>
+                  <Typography variant='caption' textTransform={'uppercase'}>
+                    Privacy Policy
+                  </Typography>
+                </CustomLink>
+              </LinksContainer>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={4}>
+              <OurLocationMap />
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
-            <SectionTitle variant='h6' color={'white'}>
-              Quick Links
-            </SectionTitle>
-            <Divider />
-            <LinksContainer>
-              <CustomLink href='/'>
-                <Typography variant='caption' textTransform={'uppercase'}>
-                  Home
-                </Typography>
-              </CustomLink>
-              <CustomLink href='/services'>
-                <Typography variant='caption' textTransform={'uppercase'}>
-                  Services
-                </Typography>
-              </CustomLink>
-              <CustomLink href='/about'>
-                <Typography variant='caption' textTransform={'uppercase'}>
-                  About
-                </Typography>
-              </CustomLink>
-              <CustomLink href='/contact'>
-                <Typography variant='caption' textTransform={'uppercase'}>
-                  Contact
-                </Typography>
-              </CustomLink>
-              <CustomLink href='/terms'>
-                <Typography variant='caption' textTransform={'uppercase'}>
-                  Terms
-                </Typography>
-              </CustomLink>
-              <CustomLink href='/privacy'>
-                <Typography variant='caption' textTransform={'uppercase'}>
-                  Privacy Policy
-                </Typography>
-              </CustomLink>
-            </LinksContainer>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4}>
-            <OurLocationMap />
-          </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </div>
+
       <BottomBar className='bg-black-100 mt-4'>
         <Container>
           <BottomBarContent>
@@ -207,6 +210,6 @@ export default function Footer() {
           </BottomBarContent>
         </Container>
       </BottomBar>
-    </MainContainer>
+    </>
   );
 }
