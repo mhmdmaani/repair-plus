@@ -35,50 +35,50 @@ export class RepairService {
     deviceId?: string | null;
     isAdmin?: any;
   }) {
-    const prisma = new PrismaClient();
-    const { searchKey, page, perPage, sortBy, isAsc, deviceId } = dt;
-    const skip = page * perPage;
-    console.log('deviceId', deviceId);
+    const prisma = new PrismaClient({
+      log: ['query', 'info', 'warn', 'error'],
+    });
+
+    console.log('dt', dt);
+    const { searchKey, page, perPage, sortBy, isAsc, deviceId, isAdmin } = dt;
+    const skip = parseInt(page) * parseInt(perPage);
+
+    const whereClause: any = {
+      isActive: isAdmin === 'true' ? undefined : true,
+    };
+
+    if (deviceId) {
+      whereClause.deviceId = deviceId;
+    }
+
+    if (searchKey && searchKey !== '') {
+      whereClause.OR = [
+        {
+          name: {
+            contains: searchKey,
+            mode: 'insensitive',
+          },
+        },
+      ];
+    }
+
     const repairs = await prisma.repair.findMany({
-      where: {
-        isActive: dt.isAdmin === 'true' ? undefined : true,
-        deviceId: deviceId || '',
-        OR:
-          searchKey && searchKey !== ''
-            ? [
-                {
-                  name: {
-                    contains: searchKey,
-                    mode: 'insensitive',
-                  },
-                },
-              ]
-            : undefined,
-      },
-      orderBy: {
-        [sortBy]: isAsc === 'true' ? 'asc' : 'desc',
-      },
+      where: whereClause,
+      orderBy:
+        sortBy && isAsc
+          ? { [sortBy]: isAsc === 'true' ? 'asc' : 'desc' }
+          : undefined,
+
       skip: skip,
       take: parseInt(perPage),
     });
+
     const total = await prisma.repair.count({
-      where: {
-        isActive: dt.isAdmin === 'true' ? undefined : true,
-        deviceId: dt.deviceId ? dt.deviceId : undefined,
-        OR:
-          searchKey && searchKey !== ''
-            ? [
-                {
-                  name: {
-                    contains: searchKey,
-                    mode: 'insensitive',
-                  },
-                },
-              ]
-            : undefined,
-      },
+      where: whereClause,
     });
-    prisma.$disconnect();
+
+    await prisma.$disconnect();
+
     return {
       data: repairs,
       total,
