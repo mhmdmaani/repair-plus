@@ -5,7 +5,7 @@ export class DeviceService {
     const prisma = new PrismaClient();
     const results = await prisma.device.findMany({
       orderBy: {
-        order: 'asc',
+        order: 'desc',
       },
     });
     await prisma.$disconnect();
@@ -188,7 +188,7 @@ export class DeviceService {
         category: true,
       },
       orderBy: {
-        order: 'asc',
+        order: 'desc',
       },
     });
     await prisma.$disconnect();
@@ -212,7 +212,7 @@ export class DeviceService {
         category: true,
       },
       orderBy: {
-        order: 'asc',
+        order: 'desc',
       },
     });
     await prisma.$disconnect();
@@ -231,12 +231,12 @@ export class DeviceService {
       include: {
         repairs: {
           orderBy: {
-            order: 'asc',
+            order: 'desc',
           },
         },
       },
       orderBy: {
-        order: 'asc',
+        order: 'desc',
       },
     });
     await prisma.$disconnect();

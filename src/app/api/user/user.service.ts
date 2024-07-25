@@ -185,7 +185,7 @@ export class UserService {
         brandId: id,
       },
       orderBy: {
-        order: 'asc',
+        order: 'desc',
       },
     });
     // get all repairs of these devices
@@ -196,7 +196,7 @@ export class UserService {
         },
       },
       orderBy: {
-        order: 'asc',
+        order: 'desc',
       },
     });
     // delete all repairs of these devices

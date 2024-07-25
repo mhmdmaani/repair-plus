@@ -164,7 +164,7 @@ export class RepairService {
               },
       },
       orderBy: {
-        name: 'asc',
+        order: 'desc',
       },
     });
     await prisma.$disconnect();

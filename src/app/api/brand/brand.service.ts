@@ -7,7 +7,7 @@ export class BrandService {
     const prisma = new PrismaClient();
     const results = await prisma.brand.findMany({
       orderBy: {
-        order: 'asc',
+        order: 'desc',
       },
     });
     await prisma.$disconnect();
@@ -148,7 +148,7 @@ export class BrandService {
         brandId: id,
       },
       orderBy: {
-        order: 'asc',
+        order: 'desc',
       },
     });
     // get all repairs of these devices
@@ -160,7 +160,7 @@ export class BrandService {
         },
       },
       orderBy: {
-        order: 'asc',
+        order: 'desc',
       },
     });
     // delete all repairs of these devices
@@ -193,7 +193,7 @@ export class BrandService {
         isActive: true,
       },
       orderBy: {
-        order: 'asc',
+        order: 'desc',
       },
     });
     await prisma.$disconnect();
