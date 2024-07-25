@@ -1,11 +1,40 @@
+import BrandPage from '@/modules/brands/BrandPage';
+import { PrismaClient } from 'prisma/prisma-client';
 import React from 'react';
 
-export default function Brand({
+async function Brand({
   params,
 }: {
   params: {
     id: string;
   };
 }) {
-  return <div>{params.id}</div>;
+  const prisma = new PrismaClient();
+  const brand = await prisma.brand.findFirst({
+    where: {
+      id: params.id,
+    },
+    include: {
+      categories: {
+        where: {
+          isActive: true,
+        },
+        orderBy: {
+          order: 'asc',
+        },
+      },
+    },
+  });
+
+  await prisma.$disconnect();
+
+  return (
+    <BrandPage
+      brandId={params.id}
+      brand={brand}
+      categories={brand?.categories || []}
+    />
+  );
 }
+
+export default Brand;

@@ -34,7 +34,7 @@ export default function HomePage({
   return (
     <div className='bg-black-100 overflow-hidden'>
       <Hero />
-      <CategoriesGrid categories={categories} />
+
       <BrandsGrid brands={featuredBrands} />
       <SelectDevice brands={activeBrands} />
       <ReviewsSlider reviews={reviews} />
