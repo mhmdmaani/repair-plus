@@ -150,7 +150,7 @@ export default function CategoryPage({
                           style={{
                             cursor: 'pointer',
                             marginTop: '30px',
-                            height: 250,
+                            height: 300,
                           }}
                         >
                           <CardMedia
@@ -158,7 +158,7 @@ export default function CategoryPage({
                               display: 'flex',
                               justifyContent: 'center',
                               alignItems: 'center',
-                              height: '80%',
+                              height: '70%',
                             }}
                           >
                             <CustomImage
@@ -166,7 +166,7 @@ export default function CategoryPage({
                               alt={model.name}
                               style={{
                                 width: 'auto',
-                                height: '80%',
+                                height: '70%',
                                 objectFit: 'cover',
                                 margin: 'auto',
                               }}
@@ -179,6 +179,14 @@ export default function CategoryPage({
                               textAlign={'center'}
                             >
                               {model.name}
+                            </Typography>
+                            <Typography
+                              variant='body2'
+                              fontWeight={'bold'}
+                              textAlign={'center'}
+                            >
+                              {' '}
+                              {model.modelNumber}{' '}
                             </Typography>
                           </CardContent>
                         </ItemCard>

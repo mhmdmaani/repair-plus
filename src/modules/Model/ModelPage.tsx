@@ -72,7 +72,7 @@ export default function ModelPage({
         >
           <div>
             <Typography variant='h4' textAlign={'center'} fontWeight={'bold'}>
-              {model?.name}
+              {`${model?.name} (${model?.modelNumber})`}
             </Typography>
           </div>
           <SearchContainer>
