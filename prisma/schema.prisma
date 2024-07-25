@@ -83,6 +83,7 @@ model Repair {
   isActive             Boolean    @default(true)
   order                Int        @default(0)
   color                String?
+  momsPercent          Int        @default(0)
 }
 
 model FixOrder {
