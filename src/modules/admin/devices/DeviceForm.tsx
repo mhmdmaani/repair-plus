@@ -53,7 +53,7 @@ export default function OfferForm({
   const [category, setCategory] = useState('');
   const [isActive, setIsActive] = useState(false);
   const [order, setOrder] = useState('0');
-
+  const [modelNumber, setModelNumber] = useState('');
   const { data: brands } = useAllBrands();
   const { data: categories } = useCategoriesByBrand(brand);
   const updateMutation = useUpdateDevice();
@@ -70,6 +70,7 @@ export default function OfferForm({
       setCategory(device.categoryId);
       setIsActive(device.isActive);
       setOrder(device.order.toString());
+      setModelNumber(device?.modelNumber || '');
     }
   }, [device]);
 
@@ -82,6 +83,7 @@ export default function OfferForm({
       categoryId: category || '',
       isActive,
       order: parseInt(order),
+      modelNumber,
     };
 
     if (device?.id) {
@@ -106,6 +108,14 @@ export default function OfferForm({
           label='Name'
           value={name}
           onChange={(e) => setName(e.target.value)}
+        />
+      </FeildContainer>
+
+      <FeildContainer>
+        <TextField
+          label='Model Number'
+          value={modelNumber}
+          onChange={(e) => setModelNumber(e.target.value)}
         />
       </FeildContainer>
 
