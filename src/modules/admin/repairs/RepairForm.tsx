@@ -58,6 +58,7 @@ export default function RepairForm({
   const [quantity, setQuantity] = useState('0');
   const [quality, setQuality] = useState('');
   const [isActive, setIsActive] = useState(false);
+  const [color, setColor] = useState('');
   const [order, setOrder] = useState('0');
   const handleFileChange = (event: any) => {
     setLogo(event.target.files[0]);
@@ -75,6 +76,7 @@ export default function RepairForm({
       setQuantity(currentRepair.quantity);
       setQuality(currentRepair.quality);
       setOrder(currentRepair.order.toString());
+      setColor(currentRepair.color);
     }
   }, [currentRepair]);
 
@@ -93,6 +95,7 @@ export default function RepairForm({
       quantity: parseFloat(quantity),
       quality,
       order: parseInt(order),
+      color: color,
     };
 
     if (currentRepair) {
@@ -179,6 +182,13 @@ export default function RepairForm({
 
       <FeildContainer>
         <input type='file' onChange={handleFileChange} />
+      </FeildContainer>
+      <FeildContainer>
+        <input
+          type='color'
+          value={color}
+          onChange={(e) => setColor(e.target.value)}
+        />
       </FeildContainer>
 
       <FeildContainer>
