@@ -29,6 +29,9 @@ export default async function Home() {
     where: {
       isActive: true,
     },
+    orderBy: {
+      order: 'asc',
+    },
   });
 
   const activeReviews = await prisma.review.findMany({

@@ -7,7 +7,7 @@ export class CategoryService {
     const prisma = new PrismaClient();
     const results = await prisma.category.findMany({
       orderBy: {
-        order: 'asc',
+        order: 'desc',
       },
     });
     await prisma.$disconnect();
@@ -147,7 +147,7 @@ export class CategoryService {
         categoryId: id,
       },
       orderBy: {
-        order: 'asc',
+        order: 'desc',
       },
     });
     // get all repairs of these devices
@@ -158,7 +158,7 @@ export class CategoryService {
         },
       },
       orderBy: {
-        order: 'asc',
+        order: 'desc',
       },
     });
     // delete all repairs
@@ -194,7 +194,7 @@ export class CategoryService {
         isActive: true,
       },
       orderBy: {
-        order: 'asc',
+        order: 'desc',
       },
     });
     await prisma.$disconnect();
@@ -212,7 +212,7 @@ export class CategoryService {
         isActive: true,
       },
       orderBy: {
-        order: 'asc',
+        order: 'desc',
       },
     });
     await prisma.$disconnect();
