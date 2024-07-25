@@ -9,7 +9,7 @@ import {
   Typography,
   styled,
 } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const FormContainer = styled('div')`
   border: 2px solid #efebe9;
@@ -63,6 +63,22 @@ export default function SettingsPage() {
       displayEmailInSeperatePage,
     });
   };
+
+  useEffect(() => {
+    if (data) {
+      setCurrency(data.currency);
+      setCurrencySymbol(data.currencySymbol);
+      setVatPercentage(data.vatPercentage.toString());
+      setContactPhone(data.contactPhone);
+      setContactEmail(data.contactEmail);
+      setFacebook(data.facebook);
+      setInstagram(data.instagram);
+      setTwitter(data.twitter);
+      setLinkedIn(data.linkedin);
+      setYoutube(data.youtube);
+      setDisplayEmailInSeperatePage(data.displayEmailInSeperatePage);
+    }
+  }, [data]);
 
   return (
     <Container>
