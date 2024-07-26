@@ -153,7 +153,7 @@ export default function BrandPage({
                           style={{
                             cursor: 'pointer',
                             marginTop: '30px',
-                            height: 250,
+                            height: 290,
                           }}
                         >
                           <CardMedia
@@ -161,7 +161,7 @@ export default function BrandPage({
                               display: 'flex',
                               justifyContent: 'center',
                               alignItems: 'center',
-                              height: '80%',
+                              height: 200,
                             }}
                           >
                             <CustomImage
@@ -197,7 +197,7 @@ export default function BrandPage({
                   page={page}
                   onPageChange={(_: any, newPage: number) => setPage(newPage)}
                   onRowsPerPageChange={(event: any) => {
-                    setPerPage(parseInt(event.target.value, 10));
+                    setPerPage(parseInt(event.target.value));
                     setPage(0);
                   }}
                 />

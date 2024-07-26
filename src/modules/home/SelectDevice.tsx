@@ -131,10 +131,10 @@ export default function SelectDevice({ brands }: { brands: Brand[] }) {
                     selected={selectedBrand?.id === brand.id}
                   >
                     <ListItemIcon>
-                      <Image src={brand?.logo || ''} alt={brand.name} />
+                      <Image src={brand?.logo || ''} alt={brand?.name} />
                     </ListItemIcon>
                     <CustomText>
-                      <ListItemText primary={brand.name} />
+                      <ListItemText primary={brand?.name} />
                     </CustomText>
                   </CustomListItem>
                 ))}

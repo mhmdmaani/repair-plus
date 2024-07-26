@@ -4,6 +4,8 @@ import type { Metadata } from 'next';
 import { Rajdhani } from 'next/font/google';
 import 'react-quill/dist/quill.snow.css';
 import './globals.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 import Head from 'next/head';
 
