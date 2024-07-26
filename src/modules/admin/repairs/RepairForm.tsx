@@ -60,6 +60,7 @@ export default function RepairForm({
   const [isActive, setIsActive] = useState(false);
   const [color, setColor] = useState('');
   const [order, setOrder] = useState('0');
+  const [momsPercent, setMomsPercent] = useState('0');
   const handleFileChange = (event: any) => {
     setLogo(event.target.files[0]);
   };
@@ -77,6 +78,7 @@ export default function RepairForm({
       setQuality(currentRepair.quality);
       setOrder(currentRepair.order.toString());
       setColor(currentRepair.color);
+      setMomsPercent(currentRepair.momsPercent);
     }
   }, [currentRepair]);
 
@@ -96,6 +98,7 @@ export default function RepairForm({
       quality,
       order: parseInt(order),
       color: color,
+      momsPercent: parseFloat(momsPercent),
     };
 
     if (currentRepair) {
@@ -156,6 +159,15 @@ export default function RepairForm({
           label='Repairing Price'
           value={repairingPrice}
           onChange={(e) => setRepairingPrice(e.target.value)}
+        />
+      </FeildContainer>
+
+      <FeildContainer>
+        <TextField
+          label='Moms Percent'
+          value={momsPercent}
+          onChange={(e) => setMomsPercent(e.target.value)}
+          type='number'
         />
       </FeildContainer>
       <FeildContainer>

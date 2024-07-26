@@ -108,6 +108,12 @@ export default function RepairsPage({ deviceId }: { deviceId: string }) {
       label: 'Repair Time(Minutes)',
       renderCell: (row: any) => row.repairingTimeMinutes,
     },
+
+    {
+      id: 'momsPercent',
+      label: 'Moms',
+      renderCell: (row: any) => row.momsPercent,
+    },
     {
       id: 'isActive',
       label: 'Is Active',
