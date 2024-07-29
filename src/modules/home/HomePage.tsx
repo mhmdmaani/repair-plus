@@ -17,6 +17,7 @@ import { FloatingNav } from '@/components/ui/FloatingNavbar';
 import BrandsGrid from './BrandsGrid';
 import { Brand, Category, Review } from 'prisma/prisma-client';
 import { ReviewsSlider } from './ReviewsSlider';
+import CategoriesSLides from './CategoriesSlides';
 const MainContainer = styled('div')`
   overflow-x: hidden;
 `;
@@ -38,6 +39,7 @@ export default function HomePage({
       <BrandsGrid brands={featuredBrands} />
       <SelectDevice brands={activeBrands} />
       <ReviewsSlider reviews={reviews} />
+      <CategoriesSLides categories={categories} />
       <div data-aos={'fade-up'}>
         <AboutSection />
       </div>

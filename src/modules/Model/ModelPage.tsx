@@ -20,6 +20,7 @@ import React, { useEffect, useState } from 'react';
 import RepairDetails from './RepairDetails';
 import RepairPopUp from './RepairPopUp';
 import { useDevice } from '@/hooks/admin/useDevices';
+import Link from 'next/link';
 
 const CustomImage = styled('img')`
   transition: all 0.5s ease-in-out;
@@ -34,6 +35,11 @@ const SearchContainer = styled('div')`
   @media (max-width: 768px) {
     width: 100%;
   }
+`;
+
+const UnstyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
 `;
 
 export default function ModelPage({
@@ -72,7 +78,9 @@ export default function ModelPage({
         >
           <div>
             <Typography variant='h4' textAlign={'center'} fontWeight={'bold'}>
-              {`${model?.name} (${model?.modelNumber})`}
+              {`${model?.name} ${
+                model?.modelNumber ? `(${model?.modelNumber})` : ''
+              }`}
             </Typography>
           </div>
           <SearchContainer>
@@ -90,61 +98,63 @@ export default function ModelPage({
         <Grid container spacing={3}>
           {results.map((repair) => (
             <Grid item xs={12} sm={6} md={4} lg={4} key={repair.id}>
-              <Card
-                sx={{
-                  cursor: 'pointer',
-                  marginTop: '30px',
-                }}
-              >
-                <CardMedia
+              <UnstyledLink href={`/fix/repair/${repair.id}`}>
+                <Card
                   sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    height: 300,
-                    overflow: 'hidden',
+                    cursor: 'pointer',
+                    marginTop: '30px',
                   }}
                 >
-                  <CustomImage
-                    src={repair.image || ''}
-                    alt={repair.name}
+                  <CardMedia
+                    sx={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      height: 300,
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <CustomImage
+                      src={repair.image || ''}
+                      alt={repair.name}
+                      style={{
+                        width: '60%',
+                        height: '90%',
+                        objectFit: 'cover',
+                        margin: 'auto',
+                      }}
+                    />
+                  </CardMedia>
+                  <CardContent
                     style={{
-                      width: '60%',
-                      height: '90%',
-                      objectFit: 'cover',
-                      margin: 'auto',
-                    }}
-                  />
-                </CardMedia>
-                <CardContent
-                  style={{
-                    height: '75px',
-                    display: 'flex',
-                  }}
-                >
-                  <Typography
-                    variant='body2'
-                    fontWeight={'bold'}
-                    textAlign={'center'}
-                  >
-                    {repair.name}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    fullWidth
-                    variant='contained'
-                    size='small'
-                    color='primary'
-                    onClick={() => {
-                      setCurrentRepair(repair);
-                      setOpen(true);
+                      height: '75px',
+                      display: 'flex',
                     }}
                   >
-                    {`${repair.sellPrice} ${settings?.currencySymbol}`}
-                  </Button>
-                </CardActions>
-              </Card>
+                    <Typography
+                      variant='body2'
+                      fontWeight={'bold'}
+                      textAlign={'center'}
+                    >
+                      {repair.name}
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button
+                      fullWidth
+                      variant='contained'
+                      size='small'
+                      color='primary'
+                      onClick={() => {
+                        setCurrentRepair(repair);
+                        setOpen(true);
+                      }}
+                    >
+                      {`${repair.sellPrice} ${settings?.currencySymbol}`}
+                    </Button>
+                  </CardActions>
+                </Card>
+              </UnstyledLink>
             </Grid>
           ))}
         </Grid>

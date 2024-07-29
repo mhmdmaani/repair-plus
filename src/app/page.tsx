@@ -9,10 +9,16 @@ export default async function Home() {
   const categories = await prisma.category.findMany({
     where: {
       isActive: true,
-      isFeatured: true,
     },
-    orderBy: {
-      order: 'asc',
+    include: {
+      devices: {
+        where: {
+          isActive: true,
+        },
+        orderBy: {
+          order: 'desc',
+        },
+      },
     },
   });
   const brands = await prisma.brand.findMany({
@@ -21,7 +27,7 @@ export default async function Home() {
       isFeatured: true,
     },
     orderBy: {
-      order: 'asc',
+      order: 'desc',
     },
   });
 
@@ -30,7 +36,7 @@ export default async function Home() {
       isActive: true,
     },
     orderBy: {
-      order: 'asc',
+      order: 'desc',
     },
   });
 
