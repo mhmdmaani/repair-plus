@@ -17,7 +17,15 @@ async function Repair({
     where: {
       id: params.id,
     },
+    include: {
+      device: {
+        include: {
+          brand: true,
+        },
+      },
+    },
   });
+
   await prisma.$disconnect();
 
   return <RepairPage repair={repair} />;
