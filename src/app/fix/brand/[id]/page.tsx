@@ -1,4 +1,5 @@
 import BrandPage from '@/modules/brands/BrandPage';
+import BrandPageAlt from '@/modules/brands/BrandPageAlt';
 import { PrismaClient } from 'prisma/prisma-client';
 import React from 'react';
 
@@ -29,7 +30,7 @@ async function Brand({
   await prisma.$disconnect();
 
   return (
-    <BrandPage
+    <BrandPageAlt
       brandId={params.id}
       brand={brand}
       categories={brand?.categories || []}

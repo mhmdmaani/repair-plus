@@ -58,6 +58,7 @@ const Title = styled(Typography)`
 const ItemCard = styled(Card)`
   background: rgba(17, 25, 40, 1);
   border-width: 2px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   :hover {
@@ -67,17 +68,18 @@ const ItemCard = styled(Card)`
     transform: scale(1.1);
   }
 `;
-export default function CategoryPage({
-  categoryId,
-  category,
-  brands,
-}: {
-  categoryId: string;
 
+const CustomTextField = styled(TextField)(({ theme }) => ({
+  '& .MuiOutlinedInput-root': {
+    borderRadius: '12px', // Adjust this value as needed
+  },
+}));
+
+export default function CategoryPage({
+  category,
+}: {
   category: Category | null;
-  brands: Brand[];
 }) {
-  const [selectedBrand, setSelectedBrand] = useState<Brand | null>(null);
   const {
     page,
     perPage,
@@ -96,9 +98,8 @@ export default function CategoryPage({
     perPage,
     sortBy,
     isAsc: isASC,
-    brandId:
-      !selectedBrand || !selectedBrand?.id ? undefined : selectedBrand?.id,
-    categoryId: categoryId,
+    brandId: undefined,
+    categoryId: category?.id,
   });
 
   return (
@@ -117,7 +118,9 @@ export default function CategoryPage({
         >
           <Title>{category?.name}</Title>
           <SearchContainer>
-            <TextField
+            <CustomTextField
+              sx={{ borderRadius: '12px' }}
+              style={{ borderRadius: '12px' }}
               fullWidth
               value={search}
               label={'Model Name'}
@@ -127,19 +130,11 @@ export default function CategoryPage({
         </Stack>
         <GridContainer>
           <Grid container spacing={1}>
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-              <CustomCard>
-                <SelectBrand
-                  selectedBrand={selectedBrand}
-                  onSelect={setSelectedBrand}
-                  brands={brands}
-                />
-              </CustomCard>
-            </Grid>
-            <Grid item xs={9}>
+            <Grid item xs={12}>
               <CustomCard
                 sx={{
                   minHeight: 'calc(100vh - 200px)',
+                  borderRadius: '30px',
                 }}
               >
                 <Grid container spacing={1}>
@@ -152,6 +147,7 @@ export default function CategoryPage({
                             marginTop: '30px',
                             height: 300,
                           }}
+                          className='group'
                         >
                           <CardMedia
                             sx={{
@@ -173,13 +169,15 @@ export default function CategoryPage({
                             />
                           </CardMedia>
                           <CardContent>
-                            <Typography
-                              variant='body2'
-                              fontWeight={'bold'}
-                              textAlign={'center'}
-                            >
-                              {model.name}
-                            </Typography>
+                            <div className='group-hover:animate-bounce'>
+                              <Typography
+                                variant='body2'
+                                fontWeight={'bold'}
+                                textAlign={'center'}
+                              >
+                                {model.name}
+                              </Typography>
+                            </div>
                             <Typography
                               variant='body2'
                               fontWeight={'bold'}

@@ -17,6 +17,13 @@ async function Category({
     where: {
       id: params.id,
     },
+    include: {
+      devices: {
+        orderBy: {
+          order: 'desc',
+        },
+      },
+    },
   });
 
   const activeBrands = await prisma.brand.findMany({
@@ -29,11 +36,7 @@ async function Category({
 
   return (
     <>
-      <CategoryPage
-        categoryId={params.id}
-        category={category}
-        brands={activeBrands}
-      />
+      <CategoryPage category={category} />
     </>
   );
 }
