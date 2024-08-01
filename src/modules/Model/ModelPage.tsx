@@ -14,6 +14,7 @@ import {
   Button,
   TextField,
   Stack,
+  Avatar,
 } from '@mui/material';
 import { Repair } from 'prisma/prisma-client';
 import React, { useEffect, useState } from 'react';
@@ -28,7 +29,9 @@ const CustomImage = styled('img')`
 
 const SearchContainer = styled('div')`
   display: flex;
+  width: 100%;
   justify-content: space-between;
+  flex-direction: row-reverse;
   margin-bottom: 20px;
   margin-top: 20px;
   width: 50%;
@@ -73,19 +76,12 @@ export default function ModelPage({
       <Container>
         <Stack
           justifyContent={'space-between'}
-          direction='row'
+          direction='row-reverse'
           alignItems='center'
+          width='100%'
         >
-          <div>
-            <Typography variant='h4' textAlign={'center'} fontWeight={'bold'}>
-              {`${model?.name} ${
-                model?.modelNumber ? `(${model?.modelNumber})` : ''
-              }`}
-            </Typography>
-          </div>
           <SearchContainer>
             <TextField
-              fullWidth
               value={search}
               label={'Search By Name'}
               onChange={(e) => setSearch(e.target.value)}
@@ -95,68 +91,56 @@ export default function ModelPage({
             />
           </SearchContainer>
         </Stack>
-        <Grid container spacing={3}>
-          {results.map((repair) => (
-            <Grid item xs={12} sm={6} md={4} lg={4} key={repair.id}>
-              <UnstyledLink href={`/fix/repair/${repair.id}`}>
-                <Card
-                  sx={{
-                    cursor: 'pointer',
-                    marginTop: '30px',
-                  }}
-                >
-                  <CardMedia
-                    sx={{
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      height: 300,
-                      overflow: 'hidden',
-                    }}
-                  >
-                    <CustomImage
-                      src={repair.image || ''}
-                      alt={repair.name}
-                      style={{
-                        width: '60%',
-                        height: '90%',
-                        objectFit: 'cover',
-                        margin: 'auto',
-                      }}
+        <Grid
+          container
+          spacing={3}
+          justifyItems={'center'}
+          alignItems={'center'}
+        >
+          <Grid item xs={12} sm={6} md={6} lg={6}>
+            <Typography
+              variant='h4'
+              textAlign={'center'}
+              fontWeight={'bold'}
+              marginBottom={2}
+            >
+              {`${model?.name} ${
+                model?.modelNumber ? `(${model?.modelNumber})` : ''
+              }`}
+            </Typography>
+            <img
+              src={model?.image}
+              alt={model?.name}
+              className='w-full h-auto'
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} md={6} lg={6}>
+            {results.map((repair) => (
+              <div className='w-fill p-2 flex justify-between items-center border-b-2 border-white-100'>
+                <div className='flex items-center'>
+                  {!repair?.image || repair?.image === '' ? (
+                    <Avatar>{repair?.name.charAt(0).toUpperCase()}</Avatar>
+                  ) : (
+                    <img
+                      src={repair?.image || ''}
+                      alt={repair?.name}
+                      className='w-12 h-auto mr-3'
                     />
-                  </CardMedia>
-                  <CardContent
-                    style={{
-                      height: '75px',
-                      display: 'flex',
-                    }}
-                  >
-                    <Typography
-                      variant='body2'
-                      fontWeight={'bold'}
-                      textAlign={'center'}
-                    >
-                      {repair.name}
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button
-                      fullWidth
-                      variant='contained'
-                      size='small'
-                      color='primary'
-                      onClick={() => {
-                        setCurrentRepair(repair);
-                        setOpen(true);
-                      }}
-                    >
-                      {`${repair.sellPrice} ${settings?.currencySymbol}`}
-                    </Button>
-                  </CardActions>
-                </Card>
-              </UnstyledLink>
-            </Grid>
-          ))}
+                  )}
+
+                  <Typography variant='h6' fontWeight={'bold'} marginLeft={2}>
+                    {repair?.name}
+                  </Typography>
+                </div>
+                <div>
+                  {parseFloat(
+                    (repair?.sellPrice + repair?.repairingPrice).toString()
+                  ).toFixed(2)}{' '}
+                  {settings?.currencySymbol}
+                </div>
+              </div>
+            ))}
+          </Grid>
         </Grid>
         <RepairPopUp open={open} setOpen={setOpen}>
           <RepairDetails repair={currentRepair} />

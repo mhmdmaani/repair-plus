@@ -1,38 +1,50 @@
 import axios, { AxiosInstance } from 'axios';
+import { ZettleOAuthService } from './ZettleAuth';
 
 class ZettleProductApiService {
   private axiosInstance: AxiosInstance;
   private baseURL = 'https://products.izettle.com';
+  private token: string;
 
-  constructor(private token: string) {
+  constructor() {
+    this.token = '';
     this.axiosInstance = axios.create({
       baseURL: this.baseURL,
-      headers: {
-        Authorization: `Bearer ${this.token}`,
-        'Content-Type': 'application/json',
-      },
     });
   }
 
+  public async init() {
+    const auth = new ZettleOAuthService(); // Provide your redirect URI if needed
+    const tokenResponse = await auth.retrieveAccessToken();
+    this.token = tokenResponse.access_token;
+    // Set the Authorization header with the retrieved token
+    this.axiosInstance.defaults.headers[
+      'Authorization'
+    ] = `Bearer ${this.token}`;
+  }
   // Categories
-  async getCategories(organizationUuid: string) {
+  async getCategories() {
+    await this.init();
     const response = await this.axiosInstance.get(
-      `/organizations/${organizationUuid}/categories/v2`
+      `/organizations/self/categories/v2`
     );
+
     return response.data;
   }
 
-  async createCategory(organizationUuid: string, category: any) {
+  async createCategory(categories: { id: string; name: string }[]) {
     const response = await this.axiosInstance.post(
-      `/organizations/${organizationUuid}/categories/v2`,
-      category
+      `/organizations/self/categories/v2`,
+      {
+        categories,
+      }
     );
     return response.data;
   }
 
   async deleteCategory(organizationUuid: string, categoryUuid: string) {
     await this.axiosInstance.delete(
-      `/organizations/${organizationUuid}/categories/v2/${categoryUuid}`
+      `/organizations/self/categories/v2/${categoryUuid}`
     );
   }
 
@@ -42,7 +54,7 @@ class ZettleProductApiService {
     name: string
   ) {
     await this.axiosInstance.patch(
-      `/organizations/${organizationUuid}/categories/v2/${categoryUuid}`,
+      `/organizations/self/categories/v2/${categoryUuid}`,
       { name }
     );
   }

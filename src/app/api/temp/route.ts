@@ -1,9 +1,43 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { PrismaClient } from 'prisma/prisma-client';
+import ZettleProductApiService from '../zettle/ZettleProductApi.service';
 
 export const dynamic = 'force-dynamic';
 export const fetchCache = 'force-no-store';
 
+export async function GET(req: NextRequest) {
+  const zettleProducts = new ZettleProductApiService();
+  const cats = await zettleProducts.getCategories();
+  console.log(cats);
+
+  /*
+  const prisma = new PrismaClient();
+  const categories = await prisma.category.findMany({
+    where: {
+      isActive: true,
+    },
+  });
+
+  console.log(categories);
+  console.log('Categories fetched');
+  if (!categories) {
+    return NextResponse.json({ error: 'No categories found' });
+  }
+
+  const createdCategories = await zettleProducts.createCategory(
+    categories.map((category) => {
+      return {
+        name: category.name,
+        uuid: category.id,
+      };
+    })
+  );
+  */
+
+  return NextResponse.json(null);
+}
+
+/** 
 export async function GET(req: Request) {
   const prisma = new PrismaClient();
   const iphoneRepairs = await prisma.device.findFirst({
@@ -55,3 +89,5 @@ export async function GET(req: Request) {
   await prisma.$disconnect();
   return NextResponse.json(iphoneRepairs);
 }
+
+*/

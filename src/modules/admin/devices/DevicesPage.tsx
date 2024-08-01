@@ -36,6 +36,12 @@ const SearchContainer = styled('div')`
   margin-bottom: 20px;
 `;
 
+const CustomTextField = styled(TextField)(({ theme }) => ({
+  '& .MuiOutlinedInput-root': {
+    borderRadius: '12px', // Adjust this value as needed
+  },
+}));
+
 export default function DevicesPage() {
   const [addNew, setAddNew] = useState(false);
   const router = useRouter();
@@ -204,7 +210,7 @@ export default function DevicesPage() {
         padding={2}
       >
         <SearchContainer>
-          <TextField
+          <CustomTextField
             value={search}
             label={'Search'}
             onChange={(e) => setSearch(e.target.value)}

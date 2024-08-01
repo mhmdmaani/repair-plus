@@ -32,6 +32,12 @@ const SearchContainer = styled('div')`
   margin-bottom: 20px;
 `;
 
+const CustomTextField = styled(TextField)(({ theme }) => ({
+  '& .MuiOutlinedInput-root': {
+    borderRadius: '12px', // Adjust this value as needed
+  },
+}));
+
 export default function BrandsPage() {
   const [addNew, setAddNew] = useState(false);
   const [deleteDialog, setDeleteDialog] = useState(false);
@@ -171,7 +177,7 @@ export default function BrandsPage() {
         padding={2}
       >
         <SearchContainer>
-          <TextField
+          <CustomTextField
             value={search}
             label={'Search'}
             onChange={(e) => setSearch(e.target.value)}
