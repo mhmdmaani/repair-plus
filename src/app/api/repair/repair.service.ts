@@ -92,6 +92,7 @@ export class RepairService {
         id: randomUUID(),
         name: data.name,
         deviceId: data.deviceId,
+        order: data.order,
         image: data.image,
         description: data.description,
         buyPrice: data.buyPrice,
@@ -101,6 +102,7 @@ export class RepairService {
         quantity: data.quantity,
         quality: data.quality,
         isActive: data.isActive,
+        momsPercent: data.momsPercent,
       },
     });
     await prisma.$disconnect();
@@ -115,6 +117,7 @@ export class RepairService {
         name: data.name,
         deviceId: data.deviceId,
         image: data.image,
+        order: data.order,
         description: data.description,
         buyPrice: data.buyPrice,
         sellPrice: data.sellPrice,
@@ -123,6 +126,7 @@ export class RepairService {
         quantity: data.quantity,
         quality: data.quality,
         isActive: data.isActive,
+        momsPercent: data.momsPercent,
       },
     });
     await prisma.$disconnect();
