@@ -9,8 +9,8 @@ export default function BrandsGrid({ brands }: { brands: Brand[] }) {
   return (
     <div className='relative max-w-5xl mx-auto px-8 py-20'>
       <h1 className='heading mb-5'>
-        Most Common Brands
-        <span className='text-purple'> We Fix</span>
+        De vanligaste märkena
+        <span className='text-purple'> vi reparerar</span>
       </h1>
       <Vortex backgroundColor='transparent'>
         <Grid container spacing={2} justifyContent={'center'}>

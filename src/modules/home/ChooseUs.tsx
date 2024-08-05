@@ -1,5 +1,15 @@
 import { Container, Grid, styled, Typography } from '@mui/material';
-import { FaShippingFast } from 'react-icons/fa';
+import {
+  FaCertificate,
+  FaDollarSign,
+  FaFastForward,
+  FaLeaf,
+  FaMedal,
+  FaRegThumbsUp,
+  FaShippingFast,
+  FaSmile,
+  FaWrench,
+} from 'react-icons/fa';
 import { RiTeamFill } from 'react-icons/ri';
 import ChooseUsCard from './ChooseUsCard';
 
@@ -59,60 +69,45 @@ export default function ChooseUs() {
             color={'primary'}
             fontWeight={'bold'}
           >
-            WHY CHOOSE US
+            VARFÖR VÄLJA OSS
           </Tagline>
           <Title data-aos='fade-up' variant='h3' fontWeight={'bold'}>
-            Why Our Customers Choose Us!
+            Varför våra kunder väljer oss!
           </Title>
           <Divider data-aos='fade-up' />
           <Typography data-aos='fade-up' variant='body1' color={'GrayText'}>
-            We are a team of dedicated professionals, ready to do whatever it
-            takes to make your business grow.
+            Vi är ett team av engagerade yrkespersoner, redo att göra vad som
+            krävs för att hjälpa ditt företag att växa.
           </Typography>
         </TitleContainer>
-        <Grid container spacing={3} marginY={4}>
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
-            <ChooseUsCard
-              data-aos='fade-up'
-              Icon={
-                <Typography
-                  data-aos='zoom-in'
-                  data-aos-delay='300'
-                  variant='h5'
-                  fontWeight={'bolder'}
-                  color='#FFC107'
-                >
-                  +10
-                </Typography>
-              }
-              title='10 years of experience'
-              description={`
-                We have been in the industry for over 10 years and have
-                successfully delivered over 1000 projects to our clients.
-            `}
-            />
-          </Grid>
+        <Grid
+          container
+          justifyContent={'center'}
+          alignItems={'center'}
+          spacing={3}
+          marginY={4}
+        >
           <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
             <ChooseUsCard
               data-aos='fade-up'
               Icon={
                 <div data-aos='zoom-in' data-aos-delay='500'>
-                  <RiTeamFill size={50} color='#FFC107' />
+                  <FaFastForward size={50} color='#FFC107' />
                 </div>
               }
-              title='Experience Team'
+              title='Snabb leverans'
               description={`
-                We have a team of experienced professionals who are dedicated
-                to providing the best services to our clients.
+               Vi vet hur viktigt din enhet är för dig, och därför prioriterar vi snabba och effektiva reparationer. De flesta problem åtgärdas inom 24 till 48 timmar, så att du kan återgå till din vardag utan långa förseningar.
             `}
             />
           </Grid>
+
           <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
             <ChooseUsCard
               data-aos='fade-up'
               Icon={
                 <div data-aos='zoom-in' data-aos-delay='500'>
-                  <FaShippingFast
+                  <FaMedal
                     data-aos='zoom-in'
                     data-aos-delay='300'
                     size={50}
@@ -120,10 +115,127 @@ export default function ChooseUs() {
                   />
                 </div>
               }
-              title='Fast Response'
+              title='Erfarenhet'
               description={`
-                We provide fast response to our clients and ensure that their
-                needs are met in a timely manner.
+               Med över ett decennium av praktisk erfarenhet har vårt team sett och reparerat allt. Oavsett om det handlar om en enkel skärmbyte eller en komplex moderkortsreparation, säkerställer vår omfattande kunskap att din enhet är i trygga händer.
+            `}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+            <ChooseUsCard
+              data-aos='fade-up'
+              Icon={
+                <div data-aos='zoom-in' data-aos-delay='500'>
+                  <FaCertificate
+                    data-aos='zoom-in'
+                    data-aos-delay='300'
+                    size={50}
+                    color='#FFC107'
+                  />
+                </div>
+              }
+              title='Certifierade tekniker'
+              description={`
+               Våra tekniker är inte bara erfarna, utan även certifierade inom olika reparationsområden. Detta säkerställer att varje reparation uppfyller de högsta kvalitets- och tillförlitlighetsstandarderna.
+            `}
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+            <ChooseUsCard
+              data-aos='fade-up'
+              Icon={
+                <div data-aos='zoom-in' data-aos-delay='500'>
+                  <FaDollarSign
+                    data-aos='zoom-in'
+                    data-aos-delay='300'
+                    size={50}
+                    color='#FFC107'
+                  />
+                </div>
+              }
+              title='Prisvärd prissättning'
+              description={`
+             Högkvalitativa reparationer behöver inte vara dyra. Vi erbjuder konkurrenskraftiga priser på alla våra tjänster, vilket ger dig bästa möjliga värde för pengarna.
+            `}
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+            <ChooseUsCard
+              data-aos='fade-up'
+              Icon={
+                <div data-aos='zoom-in' data-aos-delay='500'>
+                  <FaRegThumbsUp
+                    data-aos='zoom-in'
+                    data-aos-delay='300'
+                    size={50}
+                    color='#FFC107'
+                  />
+                </div>
+              }
+              title='Kvalitetsdelar'
+              description={`
+              Vi använder endast delar av högsta kvalitet för alla reparationer, vilket säkerställer att din enhet fungerar som ny. Vår kompromisslösa inställning till kvalitet betyder att din enhet kommer att hålla längre och prestera bättre.
+            `}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+            <ChooseUsCard
+              data-aos='fade-up'
+              Icon={
+                <div data-aos='zoom-in' data-aos-delay='500'>
+                  <FaSmile
+                    data-aos='zoom-in'
+                    data-aos-delay='300'
+                    size={50}
+                    color='#FFC107'
+                  />
+                </div>
+              }
+              title='Kundnöjdhetsgaranti'
+              description={`
+            Din tillfredsställelse är vår högsta prioritet. Vi står bakom kvaliteten på vårt arbete med en nöjdhetsgaranti, så du kan vara säker på att din enhet är i goda händer.
+            `}
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+            <ChooseUsCard
+              data-aos='fade-up'
+              Icon={
+                <div data-aos='zoom-in' data-aos-delay='500'>
+                  <FaWrench
+                    data-aos='zoom-in'
+                    data-aos-delay='300'
+                    size={50}
+                    color='#FFC107'
+                  />
+                </div>
+              }
+              title='Brett utbud av tjänster'
+              description={`
+         Från smartphones och surfplattor till spelkonsoler och elsparkcyklar, vi hanterar reparationer av ett brett spektrum av elektroniska enheter. Oavsett problemet, har vi en lösning för dig.
+            `}
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+            <ChooseUsCard
+              data-aos='fade-up'
+              Icon={
+                <div data-aos='zoom-in' data-aos-delay='500'>
+                  <FaLeaf
+                    data-aos='zoom-in'
+                    data-aos-delay='300'
+                    size={50}
+                    color='#FFC107'
+                  />
+                </div>
+              }
+              title='Miljövänligt förhållningssätt'
+              description={`
+       Vi är engagerade i att minska elektroniskt avfall genom att förlänga livslängden på dina enheter. Genom att välja oss, sparar du inte bara pengar utan bidrar också till en grönare planet.
             `}
             />
           </Grid>
