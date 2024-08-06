@@ -42,6 +42,8 @@ export class RepairService {
     console.log('dt', dt);
     const { searchKey, page, perPage, sortBy, isAsc, deviceId, isAdmin } = dt;
     const skip = parseInt(page) * parseInt(perPage);
+    const currentSort = sortBy ? sortBy : 'order';
+    const currentIsASC = isAsc ? isAsc : false;
 
     const whereClause: any = {
       isActive: isAdmin === 'true' ? undefined : true,
@@ -65,8 +67,8 @@ export class RepairService {
     const repairs = await prisma.repair.findMany({
       where: whereClause,
       orderBy:
-        sortBy && isAsc
-          ? { [sortBy]: isAsc === 'true' ? 'asc' : 'desc' }
+        currentSort && currentIsASC
+          ? { [currentSort]: currentIsASC === 'true' ? 'asc' : 'desc' }
           : undefined,
 
       skip: skip,

@@ -94,6 +94,16 @@ const Title = styled(Typography)`
     font-size: 1.2rem;
   }
 `;
+
+const Description = styled(Typography)`
+  font-size: 1.25rem;
+  @media (max-width: 600px) {
+    font-size: 1.25rem;
+  }
+  @media (max-width: 400px) {
+    font-size: 1rem;
+  }
+`;
 export default function AboutSection() {
   return (
     <MainContainer>
@@ -107,8 +117,8 @@ export default function AboutSection() {
           <Grid item xs={12} sm={6} md={6} lg={6}>
             <Fade in timeout={1500}>
               <h1 className='text-start w-full heading mb-8'>
-                About
-                <span className='text-purple'> Us</span>
+                Om
+                <span className='text-purple'> oss</span>
               </h1>
             </Fade>
             <Fade in timeout={1600}>
@@ -116,27 +126,27 @@ export default function AboutSection() {
             </Fade>
 
             <div data-aos='fade-right'>
-              <Typography variant='body1' color={'GrayText'}>
-                Welcome to Repair Plus, your trusted partner in electronic
-                device repairs. We are dedicated to providing high-quality
-                repair services for a wide range of electronic devices,
-                including smartphones, tablets, PlayStation consoles,
-                e-scooters, and more. Our mission is to deliver reliable,
-                efficient, and affordable repair solutions to get your devices
-                back in perfect working condition.
-              </Typography>
+              <Description color={'white'}>
+                Välkommen till Repair Plus, din pålitliga partner för reparation
+                av elektroniska enheter. Vi är engagerade i att erbjuda
+                högkvalitativa reparations tjänster för ett brett spektrum av
+                elektroniska enheter, inklusive smartphones, surfplattor,
+                PlayStation-konsoler, elsparkcyklar och mer. Vår mission är att
+                leverera pålitliga, effektiva och prisvärda reparationstjänster
+                för att få dina enheter tillbaka i perfekt skick.
+              </Description>
 
-              <Typography variant='body1' color={'GrayText'} mt={1}>
-                At Repair Plus, we understand the inconvenience and frustration
-                that comes with a malfunctioning device. That's why our team of
-                experienced and certified technicians is committed to diagnosing
-                and fixing your electronic issues swiftly and accurately.
-                Whether it's a cracked screen, battery issue, software problem,
-                or any other technical glitch, we have the expertise to handle
-                it all.
-              </Typography>
+              <Description color={'white'} mt={1}>
+                På Repair Plus förstår vi den olägenhet och frustration som
+                följer med en trasig enhet. Därför är vårt team av erfarna och
+                certifierade tekniker engagerade i att snabbt och noggrant
+                diagnostisera och åtgärda dina elektroniska problem. Oavsett om
+                det handlar om en sprucken skärm, batteriproblem, mjukvarufel
+                eller någon annan teknisk glitch, har vi expertisen att hantera
+                det hela.
+              </Description>
             </div>
-            <CustomButton variant='contained'>Learn More</CustomButton>
+            <CustomButton variant='contained'>LÄS MER</CustomButton>
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={6}>
             <ImageContainer data-aos='fade-left'>

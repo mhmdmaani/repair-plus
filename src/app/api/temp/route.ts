@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { PrismaClient } from 'prisma/prisma-client';
 import ZettleProductApiService from '../zettle/ZettleProductApi.service';
+import * as uuid from 'uuid';
 
 export const dynamic = 'force-dynamic';
 export const fetchCache = 'force-no-store';
@@ -10,8 +11,8 @@ export async function GET(req: NextRequest) {
   const cats = await zettleProducts.getCategories();
   console.log(cats);
 
-  /*
   const prisma = new PrismaClient();
+
   const categories = await prisma.category.findMany({
     where: {
       isActive: true,
@@ -28,13 +29,15 @@ export async function GET(req: NextRequest) {
     categories.map((category) => {
       return {
         name: category.name,
-        uuid: category.id,
+        uuid: uuid.v1(),
       };
     })
   );
-  */
-
-  return NextResponse.json(null);
+  console.log('------------------------');
+  console.log(createdCategories?.data?.violations);
+  console.log('------------------------');
+  await prisma.$disconnect();
+  return NextResponse.json(createdCategories);
 }
 
 /** 

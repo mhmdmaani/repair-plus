@@ -72,15 +72,15 @@ const Hero = () => {
            *  change md:text-6xl, add more responsive code
            */}
           <TextGenerateEffect
-            words='  Repair Plus'
+            words='Repair Plus'
             className='text-center text-[30px] md:text-5xl lg:text-6xl'
           />
 
           <TextGenerateEffect
-            words=' Your One-Stop Solution for All Electronic Devices'
+            words='Din helhetslösning för alla elektroniska enheter'
             className='text-center text-2 md:text-1xl lg:text-2xl'
           />
-          <Link href='/fix/categories' download>
+          <Link href='/fix/brands'>
             <MagicButton
               title='Explore Repairs'
               icon={<FaLocationArrow />}

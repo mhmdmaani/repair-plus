@@ -37,7 +37,6 @@ export default function HomePage({
       <Hero />
 
       <BrandsGrid brands={featuredBrands} />
-      <SelectDevice brands={activeBrands} />
       <ReviewsSlider reviews={reviews} />
       <CategoriesSLides categories={categories} />
       <div data-aos={'fade-up'}>

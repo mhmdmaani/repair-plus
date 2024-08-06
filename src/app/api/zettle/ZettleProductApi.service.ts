@@ -32,14 +32,19 @@ class ZettleProductApiService {
     return response.data;
   }
 
-  async createCategory(categories: { id: string; name: string }[]) {
-    const response = await this.axiosInstance.post(
-      `/organizations/self/categories/v2`,
-      {
-        categories,
-      }
-    );
-    return response.data;
+  async createCategory(categories: { uuid: string; name: string }[]) {
+    try {
+      const response = await this.axiosInstance.post(
+        `/organizations/self/categories/v2`,
+        {
+          categories,
+        }
+      );
+      return response.data;
+    } catch (error) {
+      console.error('error?.data?.violations');
+      console.error('================================================');
+    }
   }
 
   async deleteCategory(organizationUuid: string, categoryUuid: string) {

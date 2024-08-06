@@ -63,44 +63,55 @@ const ImageContainer = styled(CardMedia)`
   align-items: center;
 `;
 
+const MainContainer = styled('div')`
+  padding-top: 120px;
+  padding-bottom: 100px;
+`;
 export default function BrandsPage({ brands }: { brands: Brand[] }) {
   return (
-    <Container>
-      <Title variant='h1' fontSize={'2rem'} fontWeight={'bold'}>
-        Brands
-      </Title>
-      <GridContainer>
-        <Grid container spacing={2}>
-          {brands.map((brand) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} key={brand.id}>
-              <UnstyledLink href={`/fix/brand/${brand.id}`}>
-                <CustomCard
-                  sx={{
-                    height: '100%',
-                    cursor: 'pointer',
-                  }}
-                >
-                  <ImageContainer>
-                    <CustomImage
-                      src={brand.logo || ''}
-                      alt={brand.name}
-                      style={{
-                        objectFit: 'cover',
-                      }}
-                    />
-                  </ImageContainer>
+    <MainContainer>
+      <Container>
+        <Title variant='h4' fontWeight={'bold'} textAlign={'center'}>
+          Välj ett märke
+        </Title>
+        <GridContainer>
+          <Grid
+            container
+            spacing={2}
+            justifyContent={'center'}
+            alignItems={'center'}
+          >
+            {brands.map((brand) => (
+              <Grid item xs={12} sm={6} md={4} lg={3} key={brand.id}>
+                <UnstyledLink href={`/fix/brand/${brand.id}`}>
+                  <CustomCard
+                    sx={{
+                      height: '100%',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <ImageContainer>
+                      <CustomImage
+                        src={brand.logo || ''}
+                        alt={brand.name}
+                        style={{
+                          objectFit: 'cover',
+                        }}
+                      />
+                    </ImageContainer>
 
-                  <CardContent>
-                    <Typography variant='h6' fontWeight={'bold'}>
-                      {brand.name}
-                    </Typography>
-                  </CardContent>
-                </CustomCard>
-              </UnstyledLink>
-            </Grid>
-          ))}
-        </Grid>
-      </GridContainer>
-    </Container>
+                    <CardContent>
+                      <Typography variant='h6' fontWeight={'bold'}>
+                        {brand.name}
+                      </Typography>
+                    </CardContent>
+                  </CustomCard>
+                </UnstyledLink>
+              </Grid>
+            ))}
+          </Grid>
+        </GridContainer>
+      </Container>
+    </MainContainer>
   );
 }
