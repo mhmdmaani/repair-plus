@@ -71,6 +71,15 @@ export default function ModelPage({
     }
   }, [search, repairs]);
 
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat('sv-SE', {
+      style: 'currency',
+      currency: 'SEK',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(price);
+  };
+
   return (
     <div className='bg-black-100 min-h-screen pt-28'>
       <Container>
@@ -91,12 +100,7 @@ export default function ModelPage({
             />
           </SearchContainer>
         </Stack>
-        <Grid
-          container
-          spacing={3}
-          justifyItems={'center'}
-          alignItems={'center'}
-        >
+        <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={6} lg={6}>
             <Typography
               variant='h4'
@@ -115,31 +119,30 @@ export default function ModelPage({
             />
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={6}>
-            {results.map((repair) => (
-              <div className='w-fill p-2 flex justify-between items-center border-b-2 border-white-100'>
-                <div className='flex items-center'>
-                  {!repair?.image || repair?.image === '' ? (
-                    <Avatar>{repair?.name.charAt(0).toUpperCase()}</Avatar>
-                  ) : (
-                    <img
-                      src={repair?.image || ''}
-                      alt={repair?.name}
-                      className='w-12 h-auto mr-3'
-                    />
-                  )}
+            <div className='w-full pt-8'>
+              {results.map((repair) => (
+                <div className='w-fill p-2 flex justify-between items-center border-b-2 border-white-100'>
+                  <div className='flex items-center'>
+                    {!repair?.image || repair?.image === '' ? (
+                      <Avatar>{repair?.name.charAt(0).toUpperCase()}</Avatar>
+                    ) : (
+                      <img
+                        src={repair?.image || ''}
+                        alt={repair?.name}
+                        className='w-12 h-auto mr-3'
+                      />
+                    )}
 
-                  <Typography variant='h6' fontWeight={'bold'} marginLeft={2}>
-                    {repair?.name}
-                  </Typography>
+                    <Typography variant='h6' fontWeight={'bold'} marginLeft={2}>
+                      {repair?.name}
+                    </Typography>
+                  </div>
+                  <div>
+                    {formatPrice(repair?.sellPrice + repair?.repairingPrice)}
+                  </div>
                 </div>
-                <div>
-                  {parseFloat(
-                    (repair?.sellPrice + repair?.repairingPrice).toString()
-                  ).toFixed(2)}{' '}
-                  {settings?.currencySymbol}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </Grid>
         </Grid>
         <RepairPopUp open={open} setOpen={setOpen}>
