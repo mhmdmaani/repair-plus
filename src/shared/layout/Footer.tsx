@@ -8,6 +8,7 @@ import React from 'react';
 import { FaFacebookF, FaYoutube } from 'react-icons/fa';
 import { FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
 import OurLocationMap from './OurLocationMap';
+import { useSettings } from '@/hooks/useSettings';
 
 const MainContainer = styled('div')`
   background: ${(props) =>
@@ -84,6 +85,7 @@ const BottomBarContent = styled('div')`
 `;
 
 export default function Footer() {
+  const { data } = useSettings();
   return (
     <>
       <div className='h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden'>
@@ -91,25 +93,27 @@ export default function Footer() {
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={4} lg={4}>
               <LogoSection>
-                <Logo src='' />
+                <Typography variant='h4' color={'white'}>
+                  Repair Plus
+                </Typography>
                 <Typography variant='body2' color={'white'}>
                   Kardanvägen 10, 461 38 Trollhättan
                 </Typography>
                 <div>
                   <Typography variant='caption' color={'white'}>
-                    Email:
+                    E-post:
                   </Typography>
                   <Typography variant='body2' color={'white'}>
-                    info@mnb.se
+                    {data?.contactEmail}
                   </Typography>
                 </div>
 
                 <div>
                   <Typography variant='caption' color={'white'}>
-                    Phone:
+                    Telefon:
                   </Typography>
                   <Typography variant='body2' color={'white'}>
-                    0701414101
+                    {data?.contactPhone}
                   </Typography>
                 </div>
                 <SocialContainer>
@@ -131,38 +135,38 @@ export default function Footer() {
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={4}>
               <SectionTitle variant='h6' color={'white'}>
-                Quick Links
+                Snabblänkar
               </SectionTitle>
               <Divider />
               <LinksContainer>
                 <CustomLink href='/'>
                   <Typography variant='caption' textTransform={'uppercase'}>
-                    Home
+                    Hem
                   </Typography>
                 </CustomLink>
-                <CustomLink href='/services'>
+                <CustomLink href='/fix/brands'>
                   <Typography variant='caption' textTransform={'uppercase'}>
-                    Services
+                    Reparation
                   </Typography>
                 </CustomLink>
                 <CustomLink href='/about'>
                   <Typography variant='caption' textTransform={'uppercase'}>
-                    About
+                    Om oss
                   </Typography>
                 </CustomLink>
                 <CustomLink href='/contact'>
                   <Typography variant='caption' textTransform={'uppercase'}>
-                    Contact
+                    Kontakt
                   </Typography>
                 </CustomLink>
                 <CustomLink href='/terms'>
                   <Typography variant='caption' textTransform={'uppercase'}>
-                    Terms
+                    Villkor
                   </Typography>
                 </CustomLink>
                 <CustomLink href='/privacy'>
                   <Typography variant='caption' textTransform={'uppercase'}>
-                    Privacy Policy
+                    Sekretesspolicy
                   </Typography>
                 </CustomLink>
               </LinksContainer>
@@ -178,8 +182,8 @@ export default function Footer() {
         <Container>
           <BottomBarContent>
             <Typography variant='caption' color={'white'} fontWeight={'bold'}>
-              &copy; {new Date().getFullYear()} MNB Mobilteknik AB. All Rights
-              Reserved
+              &copy; {new Date().getFullYear()} MNB Mobilteknik AB. Alla
+              rättigheter förbehållna
             </Typography>
             <div
               style={{
@@ -193,7 +197,7 @@ export default function Footer() {
                   color={'white'}
                   fontWeight={'bold'}
                 >
-                  Privacy Policy
+                  Sekretesspolicy
                 </Typography>
               </Link>
 
@@ -203,7 +207,7 @@ export default function Footer() {
                   color={'white'}
                   fontWeight={'bold'}
                 >
-                  Terms & Conditions
+                  Villkor
                 </Typography>
               </Link>
             </div>

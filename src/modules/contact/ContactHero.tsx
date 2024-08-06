@@ -54,7 +54,7 @@ export default function ContactHero() {
       <Content>
         <Container>
           <Typography variant='h3' fontWeight={'bold'}>
-            Contact Us
+            Kontakta oss
           </Typography>
         </Container>
       </Content>

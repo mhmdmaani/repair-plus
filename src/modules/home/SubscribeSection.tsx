@@ -63,6 +63,7 @@ const Tagline = styled(Typography)`
     font-size: 1rem;
   }
 `;
+
 const Divider = styled('div')`
   width: 120px;
   height: 5px;
@@ -83,7 +84,6 @@ const Title = styled(Typography)`
     font-size: 1.2rem;
   }
 `;
-
 const MainFormSection = styled('div')`
   width: 100%;
   display: flex;
@@ -105,26 +105,26 @@ export default function SubscribeSection() {
       <Container>
         <TitleContainer>
           <Tagline
-            data-aos={'fade-up'}
+            data-aos='fade-up'
             variant='h5'
             color={'primary'}
             fontWeight={'bold'}
           >
-            Subscribe to
+            Håll dig uppdaterad med det senaste
           </Tagline>
-          <Title data-aos={'fade-up'} variant='h3' fontWeight={'bold'}>
-            Get the latest updates
+          <Title data-aos='fade-up' variant='h3' fontWeight={'bold'}>
+            nyheter och uppdateringar
           </Title>
-          <Divider data-aos={'fade-up'} />
-          <Typography data-aos={'fade-up'} variant='body1' color={'GrayText'}>
-            Subscribe to our newsletter to get the latest updates and news
+          <Divider data-aos='fade-up' />
+          <Typography data-aos='fade-up' variant='body1' color={'GrayText'}>
+            Prenumerera nu för exklusivt innehåll och erbjudanden!
           </Typography>
         </TitleContainer>
         <MainFormSection>
           <FormSection data-aos={'fade-up'}>
             <TextField label='Email' variant='outlined' fullWidth />
             <CustomButton>
-              Subscribe
+              prenumerera
               <BsSend />
             </CustomButton>
           </FormSection>

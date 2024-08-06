@@ -1,3 +1,4 @@
+import FadeInUp from '@/components/ui/FadeInUp';
 import {
   Button,
   Container,
@@ -6,6 +7,7 @@ import {
   Typography,
   styled,
 } from '@mui/material';
+import Link from 'next/link';
 
 const MainContainer = styled('div')`
   padding: 80px 0;
@@ -104,7 +106,16 @@ const Description = styled(Typography)`
     font-size: 1rem;
   }
 `;
-export default function AboutSection() {
+
+const UnstyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+export default function AboutSection({
+  displayMore,
+}: {
+  displayMore?: boolean;
+}) {
   return (
     <MainContainer>
       <Container>
@@ -146,7 +157,13 @@ export default function AboutSection() {
                 det hela.
               </Description>
             </div>
-            <CustomButton variant='contained'>LÄS MER</CustomButton>
+            {displayMore && (
+              <FadeInUp>
+                <UnstyledLink href='/about'>
+                  <CustomButton variant='contained'>LÄS MER</CustomButton>
+                </UnstyledLink>
+              </FadeInUp>
+            )}
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={6}>
             <ImageContainer data-aos='fade-left'>

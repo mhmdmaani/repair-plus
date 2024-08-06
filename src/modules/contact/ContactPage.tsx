@@ -21,19 +21,19 @@ const MainContainer = styled('div')`
 export default function ContactPage() {
   return (
     <>
-      <TopHeader />
-      <Appbar />
       <ContactHero />
       <Container>
         <MainContainer>
           <ContactTypes />
           <Grid container spacing={4}>
             <Grid item xs={12} md={6}>
-              <SectionTitle variant='h4'>Contact Us</SectionTitle>
+              <SectionTitle variant='h4'>Kontakta oss</SectionTitle>
               <ContactForm />
             </Grid>
             <Grid item xs={12} md={6}>
-              <SectionTitle variant='h4'>Welcome to our office</SectionTitle>
+              <SectionTitle variant='h4'>
+                Välkommen till vårt kontor!
+              </SectionTitle>
               <OurLocationMap />
             </Grid>
           </Grid>
@@ -41,7 +41,6 @@ export default function ContactPage() {
         </MainContainer>
       </Container>
       <SubscribeSection />
-      <Footer />
     </>
   );
 }

@@ -1,3 +1,4 @@
+import { useSettings } from '@/hooks/useSettings';
 import { Grid, keyframes, styled, useTheme } from '@mui/material';
 import React from 'react';
 import { BiSolidComment } from 'react-icons/bi';
@@ -55,37 +56,38 @@ const UnstyledLink = styled('a')`
 `;
 export default function ContactTypes() {
   const theme = useTheme();
+  const { data } = useSettings();
   return (
     <MainContainer>
       <Grid container spacing={4}>
         <Grid item sm={12} md={4} lg={4}>
-          <UnstyledLink href='tel:+447888899997'>
+          <UnstyledLink href={`https://wa.me/${data?.contactPhone}`}>
             <SectionContainer color='green'>
               <IconContainer>
                 <BsWhatsapp color={theme.palette.success.main} />
               </IconContainer>
-              Whatsapp (07 8888 9999 7)
+              Whatsapp ({data?.contactPhone})
             </SectionContainer>
           </UnstyledLink>
         </Grid>
 
         <Grid item sm={12} md={4} lg={4}>
-          <UnstyledLink href='tel:+447888899997'>
+          <UnstyledLink href={`tel:${data?.contactPhone}`}>
             <SectionContainer color={theme.palette.error.main}>
               <IconContainer>
                 <BsPhoneFill color={theme.palette.error.main} />
               </IconContainer>
-              Call(07 8888 9999 7)
+              Call({data?.contactPhone})
             </SectionContainer>
           </UnstyledLink>
         </Grid>
         <Grid item sm={12} md={4} lg={4}>
-          <UnstyledLink href='tel:+447888899997'>
+          <UnstyledLink href={`sms:${data?.contactPhone}`}>
             <SectionContainer color={theme.palette.info.main}>
               <IconContainer>
                 <BiSolidComment color={theme.palette.info.main} />
               </IconContainer>
-              SMS(07 8888 9999 7)
+              SMS({data?.contactPhone})
             </SectionContainer>
           </UnstyledLink>
         </Grid>

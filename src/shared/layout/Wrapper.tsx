@@ -28,27 +28,24 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
         <FloatingNav
           navItems={[
             {
-              name: 'Home',
+              name: 'Hem',
               link: '/',
             },
             {
-              name: 'Repair',
-              link: '/fix/categories',
+              name: 'Reparation',
+              link: '/fix/brands',
+            },
+
+            {
+              name: 'Om oss',
+              link: '/about',
             },
             {
-              name: 'Buy',
-              link: '/services',
-            },
-            {
-              name: 'Contact',
+              name: 'Kontakt',
               link: '/contact',
             },
             {
-              name: 'Blog',
-              link: '/blog',
-            },
-            {
-              name: 'FAQ',
+              name: 'Vanliga frågor',
               link: '/faq',
             },
           ]}

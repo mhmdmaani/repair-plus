@@ -7,8 +7,8 @@ function CategoriesSLides({ categories }: { categories: any[] }) {
   return (
     <div className='relative max-w-5xl mx-auto px-8 py-20'>
       <h1 className='heading mb-5'>
-        Most Common Models
-        <span className='text-purple'> We Fix</span>
+        De vanligaste modellerna
+        <span className='text-purple'> vi reparerar</span>
       </h1>
       {categories.map((category) => (
         <div className='pt-5' key={category.id}>

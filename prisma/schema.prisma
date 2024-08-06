@@ -44,6 +44,7 @@ model Category {
   isFeatured Boolean  @default(false)
   isActive   Boolean  @default(true)
   order      Int      @default(0)
+  Item       Item[]
 }
 
 model Device {
@@ -62,6 +63,7 @@ model Device {
   repairs     Repair[]
   order       Int        @default(0)
   orders      FixOrder[]
+  items       Item[]
 }
 
 model Repair {
@@ -84,6 +86,7 @@ model Repair {
   order                Int        @default(0)
   color                String?
   momsPercent          Int        @default(0)
+  Item                 Item[]
 }
 
 model FixOrder {
@@ -93,6 +96,7 @@ model FixOrder {
   problems          String[]
   repairs           Repair[]
   devices           Device[]
+  items             Item[]
   userNote          String?
   user              User        @relation(fields: [userId], references: [id])
   userId            String
@@ -136,7 +140,8 @@ model User {
   orgNumber String?
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
-  orders    FixOrder[]
+  fixOrders FixOrder[]
+  orders    Order[]
 }
 
 model Admin {
@@ -190,4 +195,43 @@ model Review {
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
   isActive     Boolean  @default(false)
+}
+
+model Item {
+  id          String     @id @default(uuid())
+  name        String
+  description String
+  sellPrice   Float
+  buyPrice    Float
+  quantity    Int
+  qrCode      String?
+  isUsed      Boolean    @default(false)
+  quality     String
+  model       Device?    @relation(fields: [modelId], references: [id])
+  modelId     String?
+  repair      Repair?    @relation(fields: [repairId], references: [id])
+  repairId    String?
+  isPublished Boolean    @default(false)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  momsPercent Int        @default(0)
+  category    Category?  @relation(fields: [categoryId], references: [id])
+  categoryId  String?
+  fixOrders   FixOrder[]
+  orders      Order[]
+}
+
+model Order {
+  id            String      @id @default(uuid())
+  reference     Int         @default(autoincrement())
+  isBuy         Boolean     @default(false)
+  isPaid        Boolean     @default(false)
+  paymentMethod String
+  user          User        @relation(fields: [userId], references: [id])
+  userId        String
+  status        OrderStatus
+  totalAmount   Float
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  items         Item[]
 }
