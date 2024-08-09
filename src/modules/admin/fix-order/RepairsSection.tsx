@@ -8,6 +8,7 @@ import {
   Typography,
   Button,
   Stack,
+  Avatar,
 } from '@mui/material';
 import { FiX } from 'react-icons/fi';
 import { useSearchByDevices } from '@/hooks/admin/useRepairs';
@@ -79,8 +80,13 @@ export default function RepairsSection({
           {repairs.map((repair: any, index: number) => (
             <ListItem key={index}>
               <Stack direction={'row'} alignItems={'center'}>
-                <Image src={repair?.image} alt='repair' />
-                <div className='w-full'>
+                {repair?.image ? (
+                  <Image src={repair?.image} alt='repair' />
+                ) : (
+                  <Avatar>{repair.name.charAt(0).toUpperCase()}</Avatar>
+                )}
+
+                <div className='w-full ml-2'>
                   <Typography variant='h6'>{repair.name}</Typography>
                   <Stack direction={'row'} spacing={3}>
                     <Typography>
@@ -140,8 +146,18 @@ export default function RepairsSection({
                   }}
                 >
                   <Stack direction={'row'} alignItems={'center'}>
-                    <Image src={repair.image} alt='repair' />
-                    <Stack direction={'column'}>
+                    {repair?.image ? (
+                      <Image src={repair.image} alt='repair' />
+                    ) : (
+                      <Avatar>{repair.name.charAt(0).toUpperCase()}</Avatar>
+                    )}
+
+                    <Stack
+                      direction={'column'}
+                      style={{
+                        marginLeft: '10px',
+                      }}
+                    >
                       <Typography>{repair?.name}</Typography>
                       <Typography>
                         {repair?.quantity > 0

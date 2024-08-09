@@ -245,8 +245,13 @@ export default function ReviewOrder({
           <SectionTitle>Repairs</SectionTitle>
           {repairs.map((repair: any, index: number) => (
             <Stack direction={'row'} alignItems={'center'} marginBottom={2}>
-              <Image src={repair?.image} alt='repair' />
-              <div className='w-full'>
+              {repair?.image ? (
+                <Image src={repair?.image} alt='repair' />
+              ) : (
+                <Avatar>{repair.name.charAt(0).toUpperCase()}</Avatar>
+              )}
+
+              <div className='w-full ml-3'>
                 <Stack
                   direction={'row'}
                   justifyContent={'space-between'}

@@ -52,6 +52,10 @@ const CustomTextField = styled(TextField)(({ theme }) => ({
   },
 }));
 
+const CustomCard = styled(Card)`
+  height: 300px;
+`;
+
 export default function AllRepairsPage() {
   const [addNew, setAddNew] = useState(false);
   const router = useRouter();
@@ -125,6 +129,11 @@ export default function AllRepairsPage() {
       id: 'device',
       label: 'Device',
       renderCell: (row: any) => <Typography>{row.device?.name}</Typography>,
+    },
+    {
+      id: 'quantity',
+      label: 'Quantity',
+      renderCell: (row: any) => <Typography>{row.quantity}</Typography>,
     },
     {
       id: 'isActive',
@@ -239,31 +248,31 @@ export default function AllRepairsPage() {
       >
         <Grid container spacing={2}>
           <Grid item xs={12} md={4}>
-            <Card>
+            <CustomCard>
               <SelectBrand
                 selectedBrand={selectedBrand}
                 onSelect={setSelectedBrand}
               />
-            </Card>
+            </CustomCard>
           </Grid>
           <Grid item xs={12} md={4}>
-            <Card>
+            <CustomCard>
               <SelectCategory
                 brand={selectedBrand}
                 selectedCategory={selectedCategory}
                 onSelect={setSelectedCategory}
               />
-            </Card>
+            </CustomCard>
           </Grid>
           <Grid item xs={12} md={4}>
-            <Card>
+            <CustomCard>
               <SelectDevice
                 brand={selectedBrand}
                 category={selectedCategory}
                 selectedDevice={selectedDevice}
                 onSelect={setSelectedDevice}
               />
-            </Card>
+            </CustomCard>
           </Grid>
         </Grid>
       </Container>

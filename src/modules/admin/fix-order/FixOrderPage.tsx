@@ -16,12 +16,6 @@ import {
 } from '@mui/material';
 import { format } from 'date-fns';
 import { useEffect, useState } from 'react';
-import {
-  useAllBrands,
-  useDeleteBrand,
-  useSearchBrands,
-  useUpdateBrand,
-} from '@/hooks/admin/useBrands';
 import SlideModal from '@/shared/modals/SlideModal';
 import { Brand } from 'prisma/prisma-client';
 import {
