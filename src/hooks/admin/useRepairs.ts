@@ -79,3 +79,21 @@ export const useSearchByDevices = (data: any) => {
     queryFn: () => Repair.searchByDevices(data),
   });
 };
+
+export const useSearchAll = (data: any) => {
+  return useQuery({
+    queryKey: [
+      'repairsAll',
+      data.searchKey,
+      data.page,
+      data.perPage,
+      data.sortBy,
+      data.isAsc,
+      data.deviceId,
+      data.isAdmin,
+      data.categoryId,
+      data.brandId,
+    ],
+    queryFn: () => Repair.searchAll(data),
+  });
+};

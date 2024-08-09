@@ -101,4 +101,14 @@ export class Repair {
       .then((res) => res.data);
     return result;
   }
+
+  static async searchAll(data: any) {
+    console.log('searchAll-------------', data);
+    const result = await axios
+      .get(`${BASE_URL}/repair/all`, {
+        params: data,
+      })
+      .then((res) => res.data);
+    return result;
+  }
 }

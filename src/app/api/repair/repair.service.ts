@@ -61,6 +61,14 @@ export class RepairService {
             mode: 'insensitive',
           },
         },
+        {
+          device: {
+            name: {
+              contains: searchKey,
+              mode: 'insensitive',
+            },
+          },
+        },
       ];
     }
 
@@ -81,6 +89,99 @@ export class RepairService {
 
     await prisma.$disconnect();
 
+    return {
+      data: repairs,
+      total,
+    };
+  }
+
+  static async searchAll(dt: {
+    searchKey: any;
+    page: any;
+    perPage: any;
+    sortBy?: any;
+    isAsc?: any;
+    deviceId?: string | null;
+    isAdmin?: any;
+    categoryId?: string | null;
+    brandId?: string | null;
+  }) {
+    const prisma = new PrismaClient({
+      log: ['query', 'info', 'warn', 'error'],
+    });
+    let devicesIds: string[] = [];
+    if (dt.deviceId) {
+      devicesIds = [dt.deviceId];
+    } else if (dt.categoryId) {
+      const catDevices = await prisma.device.findMany({
+        where: {
+          categoryId: dt.categoryId,
+        },
+      });
+      devicesIds = catDevices.map((d) => d.id);
+    } else if (dt.brandId) {
+      const brandDevices = await prisma.device.findMany({
+        where: {
+          brandId: dt.brandId,
+        },
+      });
+      devicesIds = brandDevices.map((d) => d.id);
+    }
+
+    const { searchKey, page, perPage, sortBy, isAsc, isAdmin } = dt;
+    const skip = parseInt(page) * parseInt(perPage);
+    const currentSort = sortBy ? sortBy : 'order';
+    const currentIsASC = isAsc ? isAsc : false;
+
+    const whereClause: any = {
+      isActive: isAdmin === 'true' ? undefined : true,
+    };
+
+    if (devicesIds.length > 0) {
+      whereClause.deviceId = {
+        in: devicesIds,
+      };
+    }
+
+    if (searchKey && searchKey !== '') {
+      whereClause.OR = [
+        {
+          name: {
+            contains: searchKey,
+            mode: 'insensitive',
+          },
+        },
+        {
+          device: {
+            name: {
+              contains: searchKey,
+              mode: 'insensitive',
+            },
+          },
+        },
+      ];
+    }
+
+    const repairs = await prisma.repair.findMany({
+      where: whereClause,
+      include: {
+        device: true,
+      },
+      orderBy:
+        currentSort && currentIsASC
+          ? { [currentSort]: currentIsASC === 'true' ? 'asc' : 'desc' }
+          : undefined,
+
+      skip: skip,
+      take: parseInt(perPage),
+    });
+
+    const total = await prisma.repair.count({
+      where: whereClause,
+    });
+
+    await prisma.$disconnect();
+    console.log('repairs', repairs);
     return {
       data: repairs,
       total,
