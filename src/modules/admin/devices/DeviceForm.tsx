@@ -18,7 +18,7 @@ import {
   TextField,
   styled,
 } from '@mui/material';
-import { addMonths } from 'date-fns';
+import { addMonths, set } from 'date-fns';
 import { Brand, Category, Device } from 'prisma/prisma-client';
 import { useEffect, useState } from 'react';
 
@@ -43,9 +43,11 @@ const FeildContainer = styled('div')`
 export default function OfferForm({
   device,
   onAdd,
+  currentCategory,
 }: {
   device?: Device | null;
   onAdd?: (a: any) => void;
+  currentCategory?: Category | null;
 }) {
   const [name, setName] = useState('');
   const [image, setLogo] = useState('');
@@ -73,6 +75,13 @@ export default function OfferForm({
       setModelNumber(device?.modelNumber || '');
     }
   }, [device]);
+
+  useEffect(() => {
+    if (currentCategory) {
+      setCategory(currentCategory.id);
+      setBrand(currentCategory.brandId);
+    }
+  }, [currentCategory]);
 
   const onSave = async () => {
     const data: any = {

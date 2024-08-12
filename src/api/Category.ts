@@ -29,7 +29,7 @@ export class Category {
     return result;
   }
 
-  static async getBrandTree(id: string) {
+  static async getTree({ id }: { id: string | null | undefined }) {
     const result = await axios
       .get(`${BASE_URL}/category/tree`, {
         params: {

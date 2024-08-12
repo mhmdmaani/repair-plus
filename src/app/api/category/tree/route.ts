@@ -7,6 +7,6 @@ export const fetchCache = 'force-no-store';
 export async function GET(req: Request) {
   const searchParams = new URL(req.url).searchParams;
   const id = searchParams.get('id');
-  const res = await CategoryService.getBrandTree(id);
+  const res = await CategoryService.getTree(id);
   return NextResponse.json(res);
 }

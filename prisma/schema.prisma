@@ -33,18 +33,22 @@ model Brand {
 }
 
 model Category {
-  id         String   @id @default(uuid())
-  name       String   @unique
+  id         String     @id @default(uuid())
+  name       String     @unique
   image      String?
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
-  brand      Brand    @relation(fields: [brandId], references: [id])
-  brandId    String   @default("0")
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+  brand      Brand      @relation(fields: [brandId], references: [id])
+  brandId    String     @default("0")
   devices    Device[]
-  isFeatured Boolean  @default(false)
-  isActive   Boolean  @default(true)
-  order      Int      @default(0)
+  isFeatured Boolean    @default(false)
+  isActive   Boolean    @default(true)
+  order      Int        @default(0)
   Item       Item[]
+  // New fields for tree structure
+  parentId   String?
+  parent     Category?  @relation("CategoryToParent", fields: [parentId], references: [id])
+  children   Category[] @relation("CategoryToParent")
 }
 
 model Device {
