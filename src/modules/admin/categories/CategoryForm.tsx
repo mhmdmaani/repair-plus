@@ -38,9 +38,13 @@ const FeildContainer = styled('div')`
 export default function CategoryForm({
   category,
   onAdd,
+  categories,
+  parentCategory,
 }: {
   category?: Category | null;
   onAdd?: (a: any) => void;
+  categories: Category[];
+  parentCategory: Category | null;
 }) {
   const updateMutation = useUpdateCategory();
   const createMutation = useCreateCategory();
@@ -53,6 +57,7 @@ export default function CategoryForm({
   const [isActive, setIsActive] = useState(false);
   const [order, setorder] = useState('0');
   const [brand, setBrand] = useState('');
+  const [parentId, setParentId] = useState<String | null>(null);
 
   const handleFileChange = (event: any) => {
     setImage(event.target.files[0]);
@@ -65,8 +70,15 @@ export default function CategoryForm({
       setIsActive(category.isActive);
       setorder(category.order.toString());
       setBrand(category.brandId);
+      setParentId(category.parentId);
     }
   }, [category]);
+
+  useEffect(() => {
+    if (parentCategory) {
+      setParentId(parentCategory.id);
+    }
+  }, [parentCategory]);
 
   const onSave = async () => {
     let saved = null;
@@ -78,6 +90,7 @@ export default function CategoryForm({
       isActive,
       order: parseInt(order),
       brandId: brand,
+      parentId,
     };
 
     if (category?.id) {
@@ -115,6 +128,21 @@ export default function CategoryForm({
           {brands?.map((brand: Brand) => (
             <MenuItem key={brand.id} value={brand.id}>
               {brand.name}
+            </MenuItem>
+          ))}
+        </Select>
+      </FeildContainer>
+
+      <FeildContainer>
+        <Select
+          value={parentId}
+          onChange={(e) => {
+            setParentId(e.target.value);
+          }}
+        >
+          {categories?.map((cat: Category) => (
+            <MenuItem key={cat.id} value={cat.id}>
+              {cat.name}
             </MenuItem>
           ))}
         </Select>

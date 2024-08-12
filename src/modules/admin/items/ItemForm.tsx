@@ -9,8 +9,6 @@ import {
   TextField,
   styled,
 } from '@mui/material';
-import { addMonths, set } from 'date-fns';
-import { Brand, Device } from 'prisma/prisma-client';
 import { useEffect, useState } from 'react';
 
 const FormContainer = styled('div')`
@@ -31,13 +29,13 @@ const FeildContainer = styled('div')`
     gap: 5px;
   }
 `;
+
 export default function ItemForm({
-  deviceId,
   onAdd,
-  currentRepair,
+  currentItem,
 }: {
   deviceId?: string | null;
-  currentRepair?: any;
+  currentItem?: any;
   onAdd?: (a: any) => void;
 }) {
   const updateMutation = useUpdateItem();
@@ -49,56 +47,67 @@ export default function ItemForm({
   const [sellPrice, setSellPrice] = useState('0');
   const [quantity, setQuantity] = useState('0');
   const [quality, setQuality] = useState('');
-  const [isActive, setIsActive] = useState(false);
-  const [color, setColor] = useState('');
+  const [isUsed, setIsUsed] = useState(false);
+  const [isPublished, setIsPublished] = useState(false);
+  const [qrCode, setQrCode] = useState('');
+  const [modelId, setModelId] = useState('');
+  const [repairId, setRepairId] = useState('');
+  const [categoryId, setCategoryId] = useState('');
   const [order, setOrder] = useState('0');
   const [momsPercent, setMomsPercent] = useState('0');
+  const [color, setColor] = useState('');
+
   const handleFileChange = (event: any) => {
     setLogo(event.target.files[0]);
   };
 
   useEffect(() => {
-    if (currentRepair) {
-      setName(currentRepair.name);
-      setIsActive(currentRepair.isActive);
-      setDescription(currentRepair.description);
-      setBuyPrice(currentRepair.buyPrice);
-      setSellPrice(currentRepair.sellPrice);
-      setRepairingPrice(currentRepair.repairingPrice);
-      setRepairingTimeMinutes(currentRepair.repairingTimeMinutes);
-      setQuantity(currentRepair.quantity);
-      setQuality(currentRepair.quality);
-      setOrder(currentRepair.order.toString());
-      setColor(currentRepair.color);
-      setMomsPercent(currentRepair.momsPercent);
+    if (currentItem) {
+      setName(currentItem.name);
+      setDescription(currentItem.description);
+      setBuyPrice(currentItem.buyPrice);
+      setSellPrice(currentItem.sellPrice);
+      setQuantity(currentItem.quantity);
+      setQuality(currentItem.quality);
+      setIsUsed(currentItem.isUsed);
+      setIsPublished(currentItem.isPublished);
+      setQrCode(currentItem.qrCode || '');
+      setModelId(currentItem.modelId || '');
+      setRepairId(currentItem.repairId || '');
+      setCategoryId(currentItem.categoryId || '');
+      setOrder(currentItem.order.toString());
+      setColor(currentItem.color);
+      setMomsPercent(currentItem.momsPercent);
     }
-  }, [currentRepair]);
+  }, [currentItem]);
 
   const onSave = async () => {
     const data: any = {
-      id: currentRepair?.id,
-      deviceId: deviceId,
+      id: currentItem?.id,
       name,
       image: image && image !== '' ? image : undefined,
-      isActive,
       description,
       buyPrice: parseFloat(buyPrice),
       sellPrice: parseFloat(sellPrice),
-      repairingPrice: parseFloat(repairingPrice),
-      repairingTimeMinutes: parseFloat(repairingTimeMinutes),
-      quantity: parseFloat(quantity),
+      quantity: parseInt(quantity),
       quality,
+      isUsed,
+      isPublished,
+      qrCode,
+      modelId,
+      repairId,
+      categoryId,
       order: parseInt(order),
-      color: color,
       momsPercent: parseFloat(momsPercent),
+      color,
     };
 
-    if (currentRepair) {
-      const saved = await updateMutation.mutate(data);
+    if (currentItem) {
+      await updateMutation.mutate(data);
       onAdd && onAdd(data);
     } else {
       // create
-      const saved = await createMutation.mutate(data, {
+      await createMutation.mutate(data, {
         onSuccess: (data) => {
           onAdd && onAdd(data);
         },
@@ -129,7 +138,7 @@ export default function ItemForm({
           rows={4}
           label='Description'
           value={description}
-          onChange={(e) => set}
+          onChange={(e) => setDescription(e.target.value)}
         />
       </FeildContainer>
       <FeildContainer>
@@ -148,29 +157,6 @@ export default function ItemForm({
       </FeildContainer>
       <FeildContainer>
         <TextField
-          label='Repairing Price'
-          value={repairingPrice}
-          onChange={(e) => setRepairingPrice(e.target.value)}
-        />
-      </FeildContainer>
-
-      <FeildContainer>
-        <TextField
-          label='Moms Percent'
-          value={momsPercent}
-          onChange={(e) => setMomsPercent(e.target.value)}
-          type='number'
-        />
-      </FeildContainer>
-      <FeildContainer>
-        <TextField
-          label='Repairing Time(Minutes)'
-          value={repairingTimeMinutes}
-          onChange={(e) => setRepairingTimeMinutes(e.target.value)}
-        />
-      </FeildContainer>
-      <FeildContainer>
-        <TextField
           label='Quantity'
           value={quantity}
           onChange={(e) => setQuantity(e.target.value)}
@@ -181,6 +167,35 @@ export default function ItemForm({
           label='Quality'
           value={quality}
           onChange={(e) => setQuality(e.target.value)}
+        />
+      </FeildContainer>
+
+      <FeildContainer>
+        <TextField
+          label='QR Code'
+          value={qrCode}
+          onChange={(e) => setQrCode(e.target.value)}
+        />
+      </FeildContainer>
+      <FeildContainer>
+        <TextField
+          label='Model ID'
+          value={modelId}
+          onChange={(e) => setModelId(e.target.value)}
+        />
+      </FeildContainer>
+      <FeildContainer>
+        <TextField
+          label='Repair ID'
+          value={repairId}
+          onChange={(e) => setRepairId(e.target.value)}
+        />
+      </FeildContainer>
+      <FeildContainer>
+        <TextField
+          label='Category ID'
+          value={categoryId}
+          onChange={(e) => setCategoryId(e.target.value)}
         />
       </FeildContainer>
 
@@ -196,16 +211,37 @@ export default function ItemForm({
       </FeildContainer>
 
       <FeildContainer>
+        <TextField
+          label='Moms Percent'
+          value={momsPercent}
+          onChange={(e) => setMomsPercent(e.target.value)}
+          type='number'
+        />
+      </FeildContainer>
+
+      <FeildContainer>
         <FormControlLabel
           control={
             <Switch
-              checked={isActive}
-              onChange={(e) => setIsActive(e.target.checked)}
+              checked={isUsed}
+              onChange={(e) => setIsUsed(e.target.checked)}
             />
           }
-          label='Is Active'
+          label='Is Used'
         />
       </FeildContainer>
+      <FeildContainer>
+        <FormControlLabel
+          control={
+            <Switch
+              checked={isPublished}
+              onChange={(e) => setIsPublished(e.target.checked)}
+            />
+          }
+          label='Is Published'
+        />
+      </FeildContainer>
+
       <FeildContainer>
         <Button variant='contained' onClick={onSave}>
           Submit

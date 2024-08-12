@@ -2,27 +2,33 @@
 import { useSortAndSearch } from '@/hooks/useSearchAndSort';
 import EnhancedTable from '@/shared/table/EnhancedTable';
 import {
+  Box,
   Button,
   Dialog,
   DialogContent,
   DialogTitle,
+  Link,
   Stack,
   TextField,
   Typography,
   styled,
   FormControlLabel,
   Switch,
+  Container,
 } from '@mui/material';
 import { format } from 'date-fns';
 import { useState } from 'react';
-import CategoryForm from './CategoryForm';
 import {
-  useDeleteCategory,
-  useSearchCategories,
-  useUpdateCategory,
-} from '@/hooks/admin/useCategories';
+  useDeleteDevice,
+  useSearchDevices,
+  useUpdateDevice,
+} from '@/hooks/admin/useDevices';
+import { Brand, Category, Device } from 'prisma/prisma-client';
+import { useRouter } from 'next/navigation';
 import SlideModal from '@/shared/modals/SlideModal';
-import { Category } from 'prisma/prisma-client';
+import SelectBrand from '../../devices/SelectBrand';
+import SelectCategory from '../../devices/SelectCategory';
+import DeviceForm from '../../devices/DeviceForm';
 
 const SearchContainer = styled('div')`
   display: flex;
@@ -36,12 +42,13 @@ const CustomTextField = styled(TextField)(({ theme }) => ({
   },
 }));
 
-export default function CategoriesPage() {
+export default function CategoryDevices({
+  category,
+}: {
+  category: Category | null;
+}) {
   const [addNew, setAddNew] = useState(false);
-  const [deleteDialog, setDeleteDialog] = useState(false);
-  const [currentCategory, setCurrentCategory] = useState<Category | null>(null);
-  const deleteMutation = useDeleteCategory();
-  const updateMutation = useUpdateCategory();
+  const router = useRouter();
   const {
     page,
     perPage,
@@ -54,13 +61,18 @@ export default function CategoriesPage() {
     setSearch,
     setSortBy,
   } = useSortAndSearch();
-
-  const { data } = useSearchCategories({
+  const [currentDevice, setCurrentDevice] = useState<Device | null>(null);
+  const [deleteDialog, setDeleteDialog] = useState(false);
+  const deleteMutation = useDeleteDevice();
+  const updateMutation = useUpdateDevice();
+  const { data } = useSearchDevices({
     searchKey: search,
     page,
     perPage,
     sortBy,
     isAsc: isASC,
+    brandId: undefined,
+    categoryId: category?.id,
     isAdmin: true,
   });
 
@@ -86,6 +98,17 @@ export default function CategoriesPage() {
         />
       ),
     },
+    {
+      id: 'brand',
+      label: 'Brand',
+      renderCell: (row: any) => <Typography>{row.brand?.name}</Typography>,
+    },
+    {
+      id: 'category',
+      label: 'Category',
+      renderCell: (row: any) => <Typography>{row.category?.name}</Typography>,
+    },
+
     {
       id: 'isActive',
       label: 'Is Active',
@@ -126,6 +149,7 @@ export default function CategoriesPage() {
         />
       ),
     },
+
     {
       id: 'createdAt',
       label: 'Created At',
@@ -144,7 +168,7 @@ export default function CategoriesPage() {
         <Stack direction='row' spacing={2}>
           <Button
             onClick={() => {
-              setCurrentCategory(row);
+              setCurrentDevice(row);
               setAddNew(true);
             }}
           >
@@ -152,12 +176,20 @@ export default function CategoriesPage() {
           </Button>
 
           <Button
-            color='error'
+            variant='contained'
             onClick={() => {
-              currentCategory && deleteMutation.mutate(currentCategory?.id);
-              setDeleteDialog(false);
+              router.push(`/admin/devices/${row.id}`);
             }}
-            disabled={deleteMutation.status === 'pending'}
+          >
+            View Repairs
+          </Button>
+
+          <Button
+            color='warning'
+            onClick={() => {
+              setCurrentDevice(row);
+              setDeleteDialog(true);
+            }}
           >
             Delete
           </Button>
@@ -168,7 +200,7 @@ export default function CategoriesPage() {
 
   return (
     <>
-      <Typography variant='h4'>Categories List</Typography>
+      <Typography variant='h4'>{category?.name}</Typography>
       <Stack
         direction='row'
         justifyContent={'space-between'}
@@ -182,9 +214,10 @@ export default function CategoriesPage() {
             onChange={(e) => setSearch(e.target.value)}
           />
         </SearchContainer>
+
         <Button
           onClick={() => {
-            setCurrentCategory(null);
+            setCurrentDevice(null);
             setAddNew(true);
           }}
         >
@@ -214,9 +247,7 @@ export default function CategoriesPage() {
         onClose={() => setAddNew(false)}
       >
         <DialogTitle>
-          {currentCategory
-            ? `Edit Category(${currentCategory?.name})`
-            : `Add New Category`}
+          {currentDevice ? 'Edit Device' : 'Add New Device'}
         </DialogTitle>
         <DialogContent
           sx={{
@@ -226,11 +257,10 @@ export default function CategoriesPage() {
             },
           }}
         >
-          <CategoryForm
-            category={currentCategory}
+          <DeviceForm
+            device={currentDevice}
             onAdd={() => setAddNew(false)}
-            categories={data?.data || []}
-            parentCategory={null}
+            currentCategory={category}
           />
         </DialogContent>
       </Dialog>
@@ -242,8 +272,8 @@ export default function CategoriesPage() {
       >
         <div className='text-lg p-2'>
           <Typography variant='body2'>
-            Are you sure you want to delete this Category(All Devices and
-            Repairs in this Category will be removed )?
+            Are you sure you want to delete this brand(All Devices and Repairs
+            in this brand will be removed )?
           </Typography>
 
           <Stack direction='row' spacing={2}>
@@ -257,7 +287,7 @@ export default function CategoriesPage() {
             <Button
               color='error'
               onClick={() => {
-                currentCategory && deleteMutation.mutate(currentCategory?.id);
+                currentDevice && deleteMutation.mutate(currentDevice?.id);
                 setDeleteDialog(false);
               }}
               disabled={deleteMutation.status === 'pending'}

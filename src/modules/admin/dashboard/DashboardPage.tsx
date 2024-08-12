@@ -43,6 +43,14 @@ export default function DashboardPage() {
 
         <Grid item xl={6} lg={6} md={6} sm={12}>
           <DashboardCard
+            icon={<FiTag />}
+            title='Categories Tree'
+            link={`/admin/categories/tree`}
+          />
+        </Grid>
+
+        <Grid item xl={6} lg={6} md={6} sm={12}>
+          <DashboardCard
             icon={<BsFillPhoneFill />}
             title='Devices'
             link={`/admin/devices`}
@@ -54,6 +62,14 @@ export default function DashboardPage() {
             icon={<BsPhoneVibrate />}
             title='Repairs'
             link={`/admin/repairs`}
+          />
+        </Grid>
+
+        <Grid item xl={6} lg={6} md={6} sm={12}>
+          <DashboardCard
+            icon={<BsPhoneVibrate />}
+            title='Items'
+            link={`/admin/items`}
           />
         </Grid>
 
