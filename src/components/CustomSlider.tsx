@@ -61,6 +61,29 @@ const CardSlider = ({ items }: { items: any }) => {
     speed: 500,
     slidesToShow: 3, // Number of cards per slide
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768, // mobile devices
+        settings: {
+          slidesToShow: 1, // Show 1 card on mobile devices
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024, // tablets
+        settings: {
+          slidesToShow: 2, // Show 2 cards on tablets
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1200, // large screens
+        settings: {
+          slidesToShow: 3, // Show 3 cards on large screens
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (

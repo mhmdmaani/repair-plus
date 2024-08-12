@@ -201,6 +201,7 @@ model Item {
   id          String     @id @default(uuid())
   name        String
   description String
+  image       String
   sellPrice   Float
   buyPrice    Float
   quantity    Int
@@ -219,6 +220,7 @@ model Item {
   categoryId  String?
   fixOrders   FixOrder[]
   orders      Order[]
+  order       Int        @default(0)
 }
 
 model Order {

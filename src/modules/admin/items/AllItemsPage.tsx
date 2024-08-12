@@ -22,23 +22,14 @@ import {
 import { format } from 'date-fns';
 import { useState } from 'react';
 import RepairForm from './../repairs/RepairForm';
-import {
-  useDeleteDevice,
-  useSearchDevices,
-  useUpdateDevice,
-} from '@/hooks/admin/useDevices';
 import SelectBrand from './SelectBrand';
 import { Brand, Category, Device, Repair } from 'prisma/prisma-client';
 import { useRouter } from 'next/navigation';
 import SelectCategory from './SelectCategory';
 import SlideModal from '@/shared/modals/SlideModal';
-import {
-  useDeleteRepair,
-  useSearchAll,
-  useSearchRepairs,
-  useUpdateRepair,
-} from '@/hooks/admin/useRepairs';
+import { useSearchAll } from '@/hooks/admin/useItems';
 import SelectDevice from './SelectDevice';
+import { useDeleteItem, useUpdateItem } from '@/hooks/admin/useItems';
 
 const SearchContainer = styled('div')`
   display: flex;
@@ -56,7 +47,7 @@ const CustomCard = styled(Card)`
   height: 300px;
 `;
 
-export default function AllRepairsPage() {
+export default function AllItemsPage() {
   const [addNew, setAddNew] = useState(false);
   const router = useRouter();
   const [selectedBrand, setSelectedBrand] = useState<Brand | null>(null);
@@ -78,8 +69,8 @@ export default function AllRepairsPage() {
   const [currentRepair, setCurrentRepair] = useState<Repair | null>(null);
   const [selectedDevice, setSelectedDevice] = useState<Device | null>(null);
   const [deleteDialog, setDeleteDialog] = useState(false);
-  const deleteMutation = useDeleteRepair();
-  const updateMutation = useUpdateRepair();
+  const deleteMutation = useDeleteItem();
+  const updateMutation = useUpdateItem();
   const { data } = useSearchAll({
     searchKey: search,
     page,
@@ -135,19 +126,6 @@ export default function AllRepairsPage() {
       label: 'Quantity',
       renderCell: (row: any) => <Typography>{row.quantity}</Typography>,
     },
-
-    {
-      id: 'sellPrice',
-      label: 'sellPrice',
-      renderCell: (row: any) => <Typography>{row.sellPrice}</Typography>,
-    },
-
-    {
-      id: 'buyPrice',
-      label: 'buyPrice',
-      renderCell: (row: any) => <Typography>{row.buyPrice}</Typography>,
-    },
-
     {
       id: 'isActive',
       label: 'Is Active',
@@ -229,7 +207,7 @@ export default function AllRepairsPage() {
 
   return (
     <>
-      <Typography variant='h4'>Repairs List</Typography>
+      <Typography variant='h4'>Items List</Typography>
       <Stack
         direction='row'
         justifyContent={'space-between'}
@@ -250,7 +228,7 @@ export default function AllRepairsPage() {
               setAddNew(true);
             }}
           >
-            Add New Repair
+            Add New Item
           </Button>
         )}
       </Stack>

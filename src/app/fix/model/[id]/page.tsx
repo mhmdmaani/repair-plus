@@ -18,6 +18,9 @@ async function Model({
       deviceId: params.id,
       isActive: true,
     },
+    orderBy: {
+      order: 'desc',
+    },
   });
   await prisma.$disconnect();
 
