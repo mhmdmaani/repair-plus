@@ -229,7 +229,6 @@ export default function CategoriesPage() {
           <CategoryForm
             category={currentCategory}
             onAdd={() => setAddNew(false)}
-            categories={data?.data || []}
             parentCategory={null}
           />
         </DialogContent>

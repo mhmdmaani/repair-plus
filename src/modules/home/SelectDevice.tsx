@@ -96,7 +96,10 @@ export default function SelectDevice({ brands }: { brands: Brand[] }) {
     null
   );
   const { data: brand } = useBrandTree(selectedBrand?.id || '');
-  const { data: categories } = useCategoriesByBrand(selectedBrand?.id || '');
+  const { data: categories } = useCategoriesByBrand(
+    selectedBrand?.id || '',
+    false
+  );
 
   const { data: devices } = useDevicesByCategory(selectedCategory?.id || '');
 
