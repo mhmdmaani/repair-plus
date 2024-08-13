@@ -4,6 +4,7 @@ import Appbar from '@/shared/layout/Appbar';
 import TopHeader from '@/modules/home/TopHeader';
 import Footer from '@/shared/layout/Footer';
 import { PrismaClient } from 'prisma/prisma-client';
+import { flattenCategories } from '@/utils/flatenCategories';
 
 async function Category({
   params,
@@ -18,25 +19,41 @@ async function Category({
       id: params.id,
     },
     include: {
-      devices: {
+      children: {
         orderBy: {
-          order: 'desc',
+          order: 'asc',
+        },
+        include: {
+          children: {
+            orderBy: {
+              order: 'asc',
+            },
+            include: {
+              children: {
+                orderBy: {
+                  order: 'asc',
+                },
+                include: {
+                  children: {
+                    orderBy: {
+                      order: 'asc',
+                    },
+                  },
+                },
+              },
+            },
+          },
         },
       },
     },
   });
-
-  const activeBrands = await prisma.brand.findMany({
-    where: {
-      isActive: true,
-    },
-  });
-
   await prisma.$disconnect();
+
+  const flettenedCategories = flattenCategories(category?.children);
 
   return (
     <>
-      <CategoryPage category={category} />
+      <CategoryPage category={category} subCategories={flettenedCategories} />
     </>
   );
 }

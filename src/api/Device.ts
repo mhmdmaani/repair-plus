@@ -29,6 +29,15 @@ export class Device {
     return result;
   }
 
+  static async getSearchByCategories(data: any) {
+    const result = await axios
+      .get(`${BASE_URL}/device/search/categories`, {
+        params: data,
+      })
+      .then((res) => res.data);
+    return result;
+  }
+
   static async getSingle(id: string) {
     const result = await axios
       .get(`${BASE_URL}/device/id`, {

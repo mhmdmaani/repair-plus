@@ -57,7 +57,7 @@ export default function OfferForm({
   const [order, setOrder] = useState('0');
   const [modelNumber, setModelNumber] = useState('');
   const { data: brands } = useAllBrands();
-  const { data: categories } = useCategoriesByBrand(brand);
+  const { data: categories } = useCategoriesByBrand(brand, true);
   const updateMutation = useUpdateDevice();
   const createMutation = useCreateDevice();
 

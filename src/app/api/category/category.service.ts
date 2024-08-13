@@ -160,14 +160,9 @@ export class CategoryService {
         isFeatured: data.isFeatured,
         isActive: data.isActive,
         order: data.order,
-        parent: data.parentId && {
-          connect: {
-            id: data.parentId,
-          },
-        },
       };
 
-      if (data.brandId) {
+      if (data.brandId && data.brandId !== null) {
         updateData.brand = {
           connect: {
             id: data.brandId,
@@ -247,7 +242,10 @@ export class CategoryService {
     return results;
   }
 
-  static async getByBrandId(id: string | null) {
+  static async getByBrandId(
+    id: string | null,
+    isAdmin: string | boolean | undefined | null
+  ) {
     if (!id) {
       return null;
     }
@@ -255,7 +253,7 @@ export class CategoryService {
     const results = await prisma.category.findMany({
       where: {
         brandId: id,
-        isActive: true,
+        isActive: isAdmin || isAdmin === 'true' ? undefined : true,
       },
       orderBy: {
         order: 'desc',

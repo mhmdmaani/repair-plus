@@ -17,6 +17,7 @@ import {
   CardContent,
   CardMedia,
   TablePagination,
+  Avatar,
 } from '@mui/material';
 import { useState } from 'react';
 import { useSearchDevices } from '@/hooks/admin/useDevices';
@@ -25,6 +26,7 @@ import { useRouter } from 'next/navigation';
 import { useCategory } from '@/hooks/admin/useCategories';
 import SelectCategory from './SelectCategory';
 import { FiChevronRight } from 'react-icons/fi';
+import CategoryItemAlt from '../categories/CategoryItemAlt';
 
 const SearchContainer = styled('div')`
   display: flex;
@@ -89,39 +91,27 @@ export default function BrandPageAlt({
       <Container>
         <Stack
           direction='row'
-          justifyContent={'space-between'}
+          gap={2}
           alignItems={'center'}
           spacing={2}
           padding={2}
         >
+          {brand?.logo ? (
+            <img
+              src={brand.logo}
+              alt={brand.name}
+              style={{ width: '50px', height: 'auto' }}
+            />
+          ) : (
+            <Avatar>{brand?.name.charAt(0).toUpperCase()}</Avatar>
+          )}
           <Title>{brand?.name}</Title>
         </Stack>
         <GridContainer>
           <Grid container spacing={1}>
             {categories.map((category) => (
               <Grid item xs={12} sm={6} md={6} lg={6}>
-                <Link key={category?.id} href={`/fix/category/${category?.id}`}>
-                  <div
-                    className={`group p-4 flex row w-full rounded-md  bg-black-100 cursor-pointer
-                              group-hover:animate-pulse transition duration-300 ease-in-out group-hover:border0opacity-50
-                `}
-                  >
-                    <div className='flex w-1/3 p-3 group-hover:animate-pulse transition duration-300 ease-in-out'>
-                      <img
-                        src={category?.image || ''}
-                        className='w-full h-auto'
-                      />
-                    </div>
-                    <div className='flex  justify-between items-center w-2/3'>
-                      <div className='flex flex-col w-2/3 pt-3 group-hover:animate-bounce'>
-                        <h1 className='text-3xl font-bold'>{category?.name}</h1>
-                      </div>
-                      <div className='p-2 group-hover:animate-pulse group-hover:-translate-x-1 transition duration-300 ease-in-out'>
-                        <FiChevronRight size={30} />
-                      </div>
-                    </div>
-                  </div>
-                </Link>
+                <CategoryItemAlt category={category} />
               </Grid>
             ))}
           </Grid>

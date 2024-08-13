@@ -34,6 +34,23 @@ export const useSearchDevices = (data: any) => {
   });
 };
 
+export const useSearchDevicesByCategories = (data: any) => {
+  return useQuery({
+    queryKey: [
+      'devices',
+      data.searchKey,
+      data.page,
+      data.perPage,
+      data.sortBy,
+      data.isAsc,
+      data.brandId,
+      data.categoryId,
+      data.isAdmin,
+    ],
+    queryFn: () => Device.getSearchByCategories(data),
+  });
+};
+
 export const useDevice = (id: string) => {
   return useQuery({
     queryKey: ['device', id],

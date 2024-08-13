@@ -39,8 +39,8 @@ const CategoryTreeView: React.FC = () => {
   const handleToggle = (id: string) => {
     setOpen((prevOpen) => ({ ...prevOpen, [id]: !prevOpen[id] }));
   };
-  const onAdd = (id: string) => {
-    setCurrentParent(categories?.find((category: any) => category.id === id));
+  const onAdd = (cat) => {
+    setCurrentParent(cat);
     setOpenForm(true);
   };
 
@@ -87,7 +87,7 @@ const CategoryTreeView: React.FC = () => {
           size='small'
           onClick={(e: any) => {
             e.stopPropagation();
-            onAdd(nodes?.id);
+            onAdd(nodes);
           }}
         >
           <FiPlus />
@@ -166,7 +166,6 @@ const CategoryTreeView: React.FC = () => {
           }}
         >
           <CategoryForm
-            categories={categories}
             category={currentCategory}
             onAdd={() => {}}
             parentCategory={currentParent}

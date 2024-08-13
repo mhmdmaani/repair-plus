@@ -93,10 +93,13 @@ export const useDeleteCategory = () => {
   });
 };
 
-export const useCategoriesByBrand = (id: string | null | undefined) => {
+export const useCategoriesByBrand = (
+  id: string | null | undefined,
+  isAdmin: boolean
+) => {
   return useQuery({
     queryKey: ['brandCategories', id],
-    queryFn: () => Category.getByBrandId(id),
+    queryFn: () => Category.getByBrandId({ brandId: id, isAdmin }),
   });
 };
 

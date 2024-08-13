@@ -22,6 +22,7 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
         backgroundColor: state.mode === 'dark' ? '#000319' : '#fff',
         color: state.mode === 'dark' ? '#fff' : '#121212',
         minHeight: '100vh',
+        paddingTop: '80px',
       }}
     >
       {!currentUrl.includes('admin') && (

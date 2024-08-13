@@ -1,5 +1,6 @@
 'use client';
 import {
+  useCategoriesByBrand,
   useCreateCategory,
   useUpdateCategory,
 } from '@/hooks/admin/useCategories';
@@ -38,12 +39,10 @@ const FeildContainer = styled('div')`
 export default function CategoryForm({
   category,
   onAdd,
-  categories,
   parentCategory,
 }: {
   category?: Category | null;
   onAdd?: (a: any) => void;
-  categories: Category[];
   parentCategory: Category | null;
 }) {
   const updateMutation = useUpdateCategory();
@@ -59,6 +58,10 @@ export default function CategoryForm({
   const [brand, setBrand] = useState('');
   const [parentId, setParentId] = useState<String | null>(null);
 
+  const { data: categories } = useCategoriesByBrand(
+    brand || parentCategory?.brandId,
+    true
+  );
   const handleFileChange = (event: any) => {
     setImage(event.target.files[0]);
   };
@@ -71,12 +74,20 @@ export default function CategoryForm({
       setorder(category.order.toString());
       setBrand(category.brandId);
       setParentId(category.parentId);
+    } else {
+      setName('');
+      setIsFeatured(false);
+      setIsActive(false);
+      setorder('0');
+      setBrand('');
+      setParentId(null);
     }
   }, [category]);
 
   useEffect(() => {
     if (parentCategory) {
       setParentId(parentCategory.id);
+      setBrand(parentCategory.brandId);
     }
   }, [parentCategory]);
 

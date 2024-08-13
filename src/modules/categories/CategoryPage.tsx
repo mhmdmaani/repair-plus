@@ -19,11 +19,16 @@ import {
   TablePagination,
 } from '@mui/material';
 import { useState } from 'react';
-import { useSearchDevices } from '@/hooks/admin/useDevices';
+import {
+  useSearchDevices,
+  useSearchDevicesByCategories,
+} from '@/hooks/admin/useDevices';
 import { Brand, Category, Device } from 'prisma/prisma-client';
 import { useRouter } from 'next/navigation';
 import SelectBrand from './SelectBrand';
 import { useCategory } from '@/hooks/admin/useCategories';
+import CategoryItem from './CategoryItem';
+import CategoryItemAlt from './CategoryItemAlt';
 
 const SearchContainer = styled('div')`
   display: flex;
@@ -77,8 +82,10 @@ const CustomTextField = styled(TextField)(({ theme }) => ({
 
 export default function CategoryPage({
   category,
+  subCategories,
 }: {
   category: Category | null;
+  subCategories: Category[];
 }) {
   const {
     page,
@@ -92,14 +99,14 @@ export default function CategoryPage({
     setSearch,
     setSortBy,
   } = useSortAndSearch();
-  const { data } = useSearchDevices({
+  const { data } = useSearchDevicesByCategories({
     searchKey: search,
     page,
     perPage,
     sortBy,
     isAsc: isASC,
     brandId: undefined,
-    categoryId: category?.id,
+    categoryId: [category?.id, ...subCategories?.map((c: any) => c.id)],
   });
 
   return (
@@ -110,6 +117,16 @@ export default function CategoryPage({
       }}
     >
       <Container>
+        <GridContainer>
+          <Grid container spacing={2}>
+            {subCategories.map((cat) => (
+              <Grid item xs={12} sm={6} md={6} lg={4} key={cat.id}>
+                <CategoryItem category={cat} />
+              </Grid>
+            ))}
+          </Grid>
+        </GridContainer>
+
         <Stack
           direction='row'
           justifyContent={'space-between'}

@@ -123,6 +123,78 @@ export class DeviceService {
     };
   }
 
+  static async getSearchByCategories(dt: {
+    searchKey: any;
+    page: any;
+    perPage: any;
+    sortBy?: any;
+    isAsc?: any;
+    brandId?: any;
+    categoryId?: any;
+    isAdmin?: any;
+  }) {
+    const prisma = new PrismaClient();
+    const { searchKey, page, perPage, sortBy, isAsc, brandId } = dt;
+    const currentSortBy = sortBy || 'order';
+    console.log(currentSortBy, 'sort by');
+    const currentIsAsc = isAsc || 'true';
+    const skip = page * perPage;
+    const devices = await prisma.device.findMany({
+      where: {
+        isActive: dt.isAdmin === 'true' ? undefined : true,
+        OR:
+          searchKey && searchKey !== ''
+            ? [
+                {
+                  name: {
+                    contains: searchKey,
+                    mode: 'insensitive',
+                  },
+                },
+              ]
+            : undefined,
+        brandId: brandId && brandId?.length > 0 ? brandId : undefined,
+        categoryId: {
+          in: dt.categoryId,
+        },
+      },
+      include: {
+        brand: true,
+        category: true,
+      },
+      orderBy: {
+        [currentSortBy]: currentIsAsc === 'true' ? 'asc' : 'desc',
+      },
+      skip: skip,
+      take: parseInt(perPage),
+    });
+    const total = await prisma.device.count({
+      where: {
+        isActive: dt.isAdmin === 'true' ? undefined : true,
+        OR:
+          searchKey && searchKey !== ''
+            ? [
+                {
+                  name: {
+                    contains: searchKey,
+                    mode: 'insensitive',
+                  },
+                },
+              ]
+            : undefined,
+        brandId: brandId && brandId?.length > 0 ? brandId : undefined,
+        categoryId: {
+          in: dt.categoryId,
+        },
+      },
+    });
+    prisma.$disconnect();
+    return {
+      data: devices,
+      total,
+    };
+  }
+
   static async insert(data: Device) {
     const prisma = new PrismaClient();
     const inserted = await prisma.device.create({

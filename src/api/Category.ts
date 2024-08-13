@@ -97,7 +97,13 @@ export class Category {
     return result;
   }
 
-  static async getByBrandId(brandId: string | null | undefined) {
+  static async getByBrandId({
+    brandId,
+    isAdmin,
+  }: {
+    brandId: string | null | undefined;
+    isAdmin: boolean;
+  }) {
     if (!brandId) {
       return [];
     }
@@ -105,6 +111,7 @@ export class Category {
       .get(`${BASE_URL}/category/brand`, {
         params: {
           brandId,
+          isAdmin,
         },
       })
       .then((res) => res.data);

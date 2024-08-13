@@ -3,6 +3,9 @@ import BrandPageAlt from '@/modules/brands/BrandPageAlt';
 import { PrismaClient } from 'prisma/prisma-client';
 import React from 'react';
 
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+
 async function Brand({
   params,
 }: {
@@ -19,6 +22,7 @@ async function Brand({
       categories: {
         where: {
           isActive: true,
+          parentId: null,
         },
         orderBy: {
           order: 'asc',
