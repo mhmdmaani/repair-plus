@@ -1,3 +1,4 @@
+import { flattenCategories } from '@/utils/flatenCategories';
 import { Device, PrismaClient } from 'prisma/prisma-client';
 
 export class DeviceService {
@@ -134,11 +135,13 @@ export class DeviceService {
     isAdmin?: any;
   }) {
     const prisma = new PrismaClient();
-    const { searchKey, page, perPage, sortBy, isAsc, brandId } = dt;
+    const { searchKey, page, perPage, sortBy, isAsc, brandId, categoryId } = dt;
     const currentSortBy = sortBy || 'order';
-    console.log(currentSortBy, 'sort by');
     const currentIsAsc = isAsc || 'true';
     const skip = page * perPage;
+
+    const categories = await this.getFlattenCategories(categoryId);
+    const categoriesIds = categories.map((c) => c.id);
     const devices = await prisma.device.findMany({
       where: {
         isActive: dt.isAdmin === 'true' ? undefined : true,
@@ -155,7 +158,7 @@ export class DeviceService {
             : undefined,
         brandId: brandId && brandId?.length > 0 ? brandId : undefined,
         categoryId: {
-          in: dt.categoryId,
+          in: categoriesIds,
         },
       },
       include: {
@@ -184,7 +187,7 @@ export class DeviceService {
             : undefined,
         brandId: brandId && brandId?.length > 0 ? brandId : undefined,
         categoryId: {
-          in: dt.categoryId,
+          in: categoriesIds,
         },
       },
     });
@@ -313,5 +316,45 @@ export class DeviceService {
     });
     await prisma.$disconnect();
     return devices;
+  }
+
+  static async getFlattenCategories(categoryId: string | null) {
+    if (!categoryId) {
+      return [];
+    }
+    const prisma = new PrismaClient();
+    const category = await prisma.category.findUnique({
+      where: { id: categoryId },
+      include: {
+        children: {
+          orderBy: {
+            order: 'asc',
+          },
+          include: {
+            children: {
+              orderBy: {
+                order: 'asc',
+              },
+              include: {
+                children: {
+                  orderBy: {
+                    order: 'asc',
+                  },
+                  include: {
+                    children: {
+                      orderBy: {
+                        order: 'asc',
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    });
+    await prisma.$disconnect();
+    return [category, ...flattenCategories(category?.children)];
   }
 }

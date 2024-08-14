@@ -35,6 +35,7 @@ export const useSearchDevices = (data: any) => {
 };
 
 export const useSearchDevicesByCategories = (data: any) => {
+  console.log(data, 'data');
   return useQuery({
     queryKey: [
       'devices',

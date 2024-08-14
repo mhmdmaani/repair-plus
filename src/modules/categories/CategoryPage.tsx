@@ -106,20 +106,24 @@ export default function CategoryPage({
     sortBy,
     isAsc: isASC,
     brandId: undefined,
-    categoryId: [category?.id, ...subCategories?.map((c: any) => c.id)],
+    categoryId: category?.id,
   });
 
   return (
     <div
       className='bg-black-100'
       style={{
-        paddingTop: 100,
+        paddingTop: 120,
       }}
     >
       <Container>
+        <Typography variant='h4' textAlign='center' fontWeight='bold'>
+          {category?.name}
+        </Typography>
         <GridContainer>
           <Grid container spacing={2}>
-            {subCategories.map((cat) => (
+            {/*//@ts-ignore */}
+            {category?.children?.map((cat: any) => (
               <Grid item xs={12} sm={6} md={6} lg={4} key={cat.id}>
                 <CategoryItem category={cat} />
               </Grid>
