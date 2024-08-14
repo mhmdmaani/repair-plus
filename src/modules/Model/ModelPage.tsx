@@ -106,9 +106,9 @@ export default function ModelPage({
               variant='h4'
               textAlign={'center'}
               fontWeight={'bold'}
-              marginBottom={2}
+              marginBottom={3}
             >
-              {`${model?.name} ${
+              {`${model?.name || ''} ${
                 model?.modelNumber ? `(${model?.modelNumber})` : ''
               }`}
             </Typography>
