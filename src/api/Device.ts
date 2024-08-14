@@ -30,6 +30,7 @@ export class Device {
   }
 
   static async getSearchByCategories(data: any) {
+    console.log(data, 'data in axios');
     const result = await axios
       .get(`${BASE_URL}/device/search/categories`, {
         params: data,

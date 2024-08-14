@@ -106,7 +106,7 @@ export default function CategoryPage({
     sortBy,
     isAsc: isASC,
     brandId: undefined,
-    categoryId: [category?.id, ...subCategories?.map((c: any) => c.id)],
+    categoryId: category?.id,
   });
 
   return (
@@ -117,6 +117,9 @@ export default function CategoryPage({
       }}
     >
       <Container>
+        <Typography variant='h4' textAlign='center' fontWeight='bold'>
+          {category?.name}
+        </Typography>
         <GridContainer>
           <Grid container spacing={2}>
             {subCategories.map((cat) => (

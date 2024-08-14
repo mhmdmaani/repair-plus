@@ -12,8 +12,9 @@ export async function GET(req: Request) {
   const sortBy = searchParams.get('sortBy');
   const isAsc = searchParams.get('isAsc');
   const brandId = searchParams.get('brandId');
-  const categoryId = searchParams.getAll('categoryId');
+  const categoryId = searchParams.get('categoryId');
   const isAdmin = searchParams.get('isAdmin');
+  console.log(categoryId, 'category id route');
   const res = await DeviceService.getSearchByCategories({
     searchKey,
     page,
