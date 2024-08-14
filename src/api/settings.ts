@@ -6,7 +6,7 @@ export const STRIPE_PUBLISHABLE_KEY =
 export const BASE_URL =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000/api'
-    : 'https://repair-plus.vercel.app/api';
+    : 'https://www.repairplus.se/api';
 
 export class GetSettings {
   static async getSettings() {
