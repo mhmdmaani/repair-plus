@@ -48,7 +48,7 @@ export default function SelectCategory({
   selectedCategory: any;
   brand: Brand | null;
 }) {
-  const { data: cats } = useCategoriesByBrand(brand?.id);
+  const { data: cats } = useCategoriesByBrand(brand?.id, true);
   return (
     <Container>
       <Item selected={selectedCategory === null} onClick={() => onSelect(null)}>
