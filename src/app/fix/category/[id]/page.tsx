@@ -21,22 +21,22 @@ async function Category({
     include: {
       children: {
         orderBy: {
-          order: 'asc',
+          order: 'desc',
         },
         include: {
           children: {
             orderBy: {
-              order: 'asc',
+              order: 'desc',
             },
             include: {
               children: {
                 orderBy: {
-                  order: 'asc',
+                  order: 'desc',
                 },
                 include: {
                   children: {
                     orderBy: {
-                      order: 'asc',
+                      order: 'desc',
                     },
                   },
                 },

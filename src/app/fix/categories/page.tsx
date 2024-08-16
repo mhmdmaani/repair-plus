@@ -11,6 +11,9 @@ async function Categories() {
     where: {
       isActive: true,
     },
+    orderBy: {
+      order: 'desc',
+    },
   });
   await prisma.$disconnect();
   return (
