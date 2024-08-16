@@ -18,28 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${process.env.BASE_URL}/terms`, // Replace with your homepage
       lastModified: new Date(),
     },
-
-    {
-      url: `${process.env.BASE_URL}/quote`, // Replace with your homepage
-      lastModified: new Date(),
-    },
-    {
-      url: `${process.env.BASE_URL}/fleets`, // Replace with your homepage
-      lastModified: new Date(),
-    },
-    {
-      url: `${process.env.BASE_URL}/confirm-quote`, // Replace with your homepage
-      lastModified: new Date(),
-    },
-
-    {
-      url: `${process.env.BASE_URL}/privacy`, // Replace with your homepage
-      lastModified: new Date(),
-    },
-    {
-      url: `${process.env.BASE_URL}/privacy`, // Replace with your homepage
-      lastModified: new Date(),
-    },
   ];
 
   return links;

@@ -6,6 +6,7 @@ import 'react-quill/dist/quill.snow.css';
 import './globals.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 import Head from 'next/head';
 
@@ -57,6 +58,7 @@ export default function RootLayout({
           </MainProvider>
         </AppRouterCacheProvider>
       </body>
+      <GoogleAnalytics gaId='G-HJX44W8V06' />
     </html>
   );
 }

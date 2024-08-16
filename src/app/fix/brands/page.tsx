@@ -11,6 +11,9 @@ async function Brands() {
     where: {
       isActive: true,
     },
+    orderBy: {
+      order: 'desc',
+    },
   });
   await prisma.$disconnect();
 
