@@ -8,6 +8,7 @@ export const BASE_URL =
     ? 'http://localhost:3000/api'
     : 'https://www.repairplus.se/api';
 
+export const FRONT_END_URL = 'https://www.repairplus.se';
 export class GetSettings {
   static async getSettings() {
     const result = await axios
