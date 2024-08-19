@@ -5,6 +5,65 @@ import TopHeader from '@/modules/home/TopHeader';
 import Footer from '@/shared/layout/Footer';
 import { PrismaClient } from 'prisma/prisma-client';
 import { flattenCategories } from '@/utils/flatenCategories';
+import { Metadata, ResolvingMetadata } from 'next';
+
+type Props = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const id = params.id;
+  const prisma = new PrismaClient();
+  const category = await prisma.category.findUnique({
+    where: {
+      id: params.id,
+    },
+    include: {
+      children: {
+        orderBy: {
+          order: 'desc',
+        },
+        include: {
+          children: {
+            orderBy: {
+              order: 'desc',
+            },
+            include: {
+              children: {
+                orderBy: {
+                  order: 'desc',
+                },
+                include: {
+                  children: {
+                    orderBy: {
+                      order: 'desc',
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  });
+
+  const flatedCategories = flattenCategories(category?.children);
+  const generatedKeywords = flatedCategories.map((cat) => cat.name).join(', ');
+
+  await prisma.$disconnect();
+  return {
+    title: `Repair Plus | ${category?.name}`,
+    description:
+      'Repair Plus offers professional and fast repair services for mobile phones, tablets, laptops, and other electronic devices. Our expert technicians provide reliable fixes for all major brands, ensuring your gadgets are back in perfect working order. Convenient, affordable, and trusted across Sweden.',
+    keywords: `Repair Plus, ${category?.name}, ${generatedKeywords}, About Us, Request Quote, delivery, shipping, courier, transport`,
+  };
+}
 
 async function Category({
   params,
