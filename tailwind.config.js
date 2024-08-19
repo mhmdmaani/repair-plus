@@ -26,6 +26,9 @@ const config = {
       },
     },
     extend: {
+        fontFamily: {
+        sans: ['Uber Move', 'sans-serif'], // Add this line
+      },
       colors: {
         black: {
           DEFAULT: '#000',

@@ -927,5 +927,8 @@ body::-webkit-scrollbar-track {
     transform: rotate(360deg);
   }
 }
+* {
+  font-family: 'Uber Move';
+}
 
 /*# sourceMappingURL=ReactToastify.css.map */
