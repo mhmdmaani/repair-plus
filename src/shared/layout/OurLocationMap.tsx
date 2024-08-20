@@ -43,7 +43,6 @@ export default function OurLocationMap() {
       options={{
         disableDefaultUI: true,
         zoomControl: true,
-        mapTypeId: 'satellite',
       }}
     >
       <></>

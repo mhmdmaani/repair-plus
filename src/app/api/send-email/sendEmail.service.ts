@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { EmailService } from '../utils/email.service';
+import { clientContact } from './templates/emailTemplates';
 
 export class SendEmailService {
   static async sendEmail(data: any) {
@@ -37,6 +38,14 @@ export class SendEmailService {
         console.error('Error sending email:', error);
         throw new Error('Error sending email');
       });
+
+    const sentToClient = await EmailService.sendEmail({
+      to: email,
+      subject: 'Repair Plus Kontakt',
+      text: `Tack för att du kontaktar oss. Vi återkommer snart.`,
+      html: clientContact(name),
+      attachments: [],
+    });
 
     return sent;
   }
