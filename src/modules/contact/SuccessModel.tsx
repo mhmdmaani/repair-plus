@@ -12,6 +12,9 @@ const Container = styled('div')`
 const IconContainer = styled('div')`
   font-size: 100px;
   padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 export default function SuccessModel({
   open,
