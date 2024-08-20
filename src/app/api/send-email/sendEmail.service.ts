@@ -15,6 +15,7 @@ export class SendEmailService {
     if (!response) {
       throw new Error('Recaptcha verification failed');
     }
+
     const sent = await EmailService.sendEmail({
       to: process.env.ADMIN_EMAIL || '',
       subject: 'Contact Form',
@@ -38,16 +39,17 @@ export class SendEmailService {
   }
 
   static async verifyRecaptcha(token: string) {
-    const secretKey = process.env.RECAPTHA_SECRET_KEY;
+    const secretKey = process.env.RECAPTHA_SECRET_KEY || '';
     const bodyRequest = {
       event: {
         token: token,
         expectedAction: 'USER_ACTION',
-        siteKey: '6Lc6KtYpAAAAAC9ESHD8NzqcTxp8CiULEGg7XGlZ',
+        siteKey: '6Ldd9SoqAAAAAJ6bCnW9tQOa4zJZqiEUCr4aID-F',
       },
     };
     const verificationUrl = `https://recaptchaenterprise.googleapis.com/v1/projects/national-quick-1715204072654/assessments?key=${secretKey}`;
     const result = await axios.post(verificationUrl, bodyRequest);
+    console.log('Recaptcha result:', result.data);
     if (
       !result.data ||
       !result.data.riskAnalysis ||
