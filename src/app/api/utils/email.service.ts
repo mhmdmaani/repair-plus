@@ -20,8 +20,7 @@ export class EmailService {
       //@ts-ignore
       host: process.env.EMAIL_SMTP_HOST || '',
       port: process.env.EMAIL_SMTP_HOST_PORT,
-      secure: true,
-      secureConnection: true,
+      secure: false,
       auth: {
         user: process.env.EMAIL_SENDER,
         pass: process.env.EMAIL_SENDER_PASSWORD,
@@ -29,7 +28,7 @@ export class EmailService {
     });
 
     const mailOptions = {
-      from: `NationalQuick <${process.env.EMAIL_SENDER}>` || '',
+      from: `Repair Plus <${process.env.EMAIL_SENDER}>` || '',
       to,
       subject,
       text,
@@ -52,6 +51,7 @@ export class EmailService {
       const info = await transporter.sendMail(mailOptions);
       return info;
     } catch (err) {
+      console.error('Error sending email:', err);
       return err;
     }
   }

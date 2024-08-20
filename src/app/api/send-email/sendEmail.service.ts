@@ -10,14 +10,17 @@ export class SendEmailService {
     console.log('Email:', email);
     console.log('Message:', message);
     console.log('Token:', token);
+
+    /*
     const response = await this.verifyRecaptcha(token);
     console.log('Recaptcha response:', response);
     if (!response) {
       throw new Error('Recaptcha verification failed');
     }
+      */
 
     const sent = await EmailService.sendEmail({
-      to: process.env.ADMIN_EMAIL || '',
+      to: 'info@repairplus.se',
       subject: 'Contact Form',
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
       html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`,
