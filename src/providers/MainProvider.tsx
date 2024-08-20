@@ -30,7 +30,7 @@ const MainProvider = ({
           <CssBaseline />
           <QueryProvider>
             <SessionProvider session={params?.session}>
-              <GoogleReCaptchaProvider reCaptchaKey='6Lc6KtYpAAAAAC9ESHD8NzqcTxp8CiULEGg7XGlZ'>
+              <GoogleReCaptchaProvider reCaptchaKey='6Ldd9SoqAAAAAJ6bCnW9tQOa4zJZqiEUCr4aID-F'>
                 <Wrapper>
                   <div>{children}</div>
                 </Wrapper>
