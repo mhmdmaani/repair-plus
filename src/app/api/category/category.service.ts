@@ -127,19 +127,19 @@ export class CategoryService {
         isFeatured: data.isFeatured,
         isActive: data.isActive,
         order: data.order,
-        parent: data.parentId && {
+        parent: data.parentId
+          ? {
+              connect: {
+                id: data.parentId,
+              },
+            }
+          : undefined,
+        // Only include the brand connection if brandId is provided
+        brand: {
           connect: {
-            id: data.parentId,
+            id: data.brandId,
           },
         },
-        // Only include the brand connection if brandId is provided
-        ...(data.brandId && {
-          brand: {
-            connect: {
-              id: data.brandId,
-            },
-          },
-        }),
       };
 
       const inserted = await prisma.category.create({
