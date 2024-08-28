@@ -29,7 +29,7 @@ export default function BrandsGrid({ brands }: { brands: Brand[] }) {
                 className='flex justify-center items-center flex-col'
               >
                 <div
-                  className='bg-white rounded-full flex justify-center items-center transform hover:scale-130 transition-all duration-300 ease-in-out'
+                  className='rounded-full flex justify-center items-center transform hover:scale-130 transition-all duration-300 ease-in-out'
                   style={{
                     width: '150px',
                     height: '150px',

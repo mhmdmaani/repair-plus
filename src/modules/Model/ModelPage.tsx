@@ -108,10 +108,19 @@ export default function ModelPage({
               fontWeight={'bold'}
               marginBottom={3}
             >
-              {`${model?.name || ''} ${
-                model?.modelNumber ? `(${model?.modelNumber})` : ''
-              }`}
+              {`${model?.name || ''}`}
             </Typography>
+            {model?.modelNumber && model?.modelNumber !== '' && (
+              <Typography
+                variant='h6'
+                textAlign={'center'}
+                fontWeight={'bold'}
+                marginBottom={3}
+              >
+                {`${model?.modelNumber || ''}`}
+              </Typography>
+            )}
+
             <img
               src={model?.image}
               alt={model?.name}

@@ -123,18 +123,32 @@ const CategoryTreeView: React.FC = () => {
             marginBottom: '20px',
           }}
         >
-          <Stack direction='row' alignItems='center' gap={2}>
-            {brand?.logo && brand.logo !== '' ? (
-              <img
-                src={brand.logo}
-                alt={brand.name}
-                style={{ width: '50px', height: 'auto' }}
-              />
-            ) : (
-              <Avatar>{brand.name.charAt(0).toUpperCase()}</Avatar>
-            )}
+          <Stack
+            direction='row'
+            justifyContent='between'
+            alignItems={'center'}
+            gap={2}
+          >
+            <Stack direction='row' alignItems='center' gap={2}>
+              {brand?.logo && brand.logo !== '' ? (
+                <img
+                  src={brand.logo}
+                  alt={brand.name}
+                  style={{ width: '50px', height: 'auto' }}
+                />
+              ) : (
+                <Avatar>{brand.name.charAt(0).toUpperCase()}</Avatar>
+              )}
 
-            <Typography variant='h5'>{brand.name}</Typography>
+              <Typography variant='h5'>{brand.name}</Typography>
+            </Stack>
+            <IconButton
+              size='small'
+              onClick={() => onAdd(null)}
+              title='Add New Category'
+            >
+              <FiPlus color='white' />
+            </IconButton>
           </Stack>
           <List>
             {categories

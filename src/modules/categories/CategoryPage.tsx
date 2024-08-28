@@ -204,8 +204,7 @@ export default function CategoryPage({
                               fontWeight={'bold'}
                               textAlign={'center'}
                             >
-                              {' '}
-                              {model.modelNumber}{' '}
+                              {model.modelNumber}
                             </Typography>
                           </CardContent>
                         </ItemCard>

@@ -82,7 +82,7 @@ const Hero = () => {
           />
           <Link href='/fix/brands'>
             <MagicButton
-              title='Explore Repairs'
+              title='Utforska reparationer'
               icon={<FaLocationArrow />}
               position='right'
             />

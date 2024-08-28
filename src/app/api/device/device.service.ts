@@ -204,6 +204,7 @@ export class DeviceService {
       data: {
         name: data.name,
         image: data.image,
+        modelNumber: data.modelNumber,
         brandId: data.brandId,
         categoryId: data.categoryId,
         isActive: data.isActive,
@@ -223,6 +224,7 @@ export class DeviceService {
         name: data.name,
         image: data.image,
         brandId: data.brandId,
+        modelNumber: data.modelNumber,
         categoryId: data.categoryId,
         isActive: data.isActive,
         isFeatured: data.isFeatured,
