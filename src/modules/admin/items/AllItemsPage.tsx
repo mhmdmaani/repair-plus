@@ -21,7 +21,7 @@ import {
 } from '@mui/material';
 import { format } from 'date-fns';
 import { useState } from 'react';
-import RepairForm from './../repairs/RepairForm';
+import ItemForm from './ItemForm';
 import SelectBrand from './SelectBrand';
 import { Brand, Category, Device, Repair } from 'prisma/prisma-client';
 import { useRouter } from 'next/navigation';
@@ -290,7 +290,7 @@ export default function AllItemsPage() {
         onClose={() => setAddNew(false)}
       >
         <DialogTitle>
-          {currentRepair ? 'Edit Device' : 'Add New Device'}
+          {currentRepair ? 'Edit Item' : 'Add New Item'}
         </DialogTitle>
         <DialogContent
           sx={{
@@ -300,7 +300,7 @@ export default function AllItemsPage() {
             },
           }}
         >
-          <RepairForm
+          <ItemForm
             deviceId={selectedDevice?.id}
             currentRepair={currentRepair}
             onAdd={() => setAddNew(false)}
