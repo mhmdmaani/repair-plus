@@ -6,15 +6,21 @@ import { useRepairs } from '@/hooks/admin/useRepairs';
 import {
   Autocomplete,
   Button,
+  Card,
+  CardActions,
+  CardMedia,
   FormControlLabel,
   Grid,
+  IconButton,
   MenuItem,
   Select,
   Switch,
   TextField,
   styled,
 } from '@mui/material';
+import { Category, Device, Repair } from 'prisma/prisma-client';
 import { useEffect, useState } from 'react';
+import { FiDelete } from 'react-icons/fi';
 
 const FormContainer = styled('div')`
   border: 2px solid #efebe9;
@@ -35,6 +41,31 @@ const FeildContainer = styled('div')`
   }
 `;
 
+// model Item {
+//   id          String     @id @default(uuid())
+//   name        String
+//   description String
+//   image       String
+//   sellPrice   Float
+//   buyPrice    Float
+//   quantity    Int
+//   qrCode      String?
+//   isUsed      Boolean    @default(false)
+//   quality     String
+//   isPublished Boolean    @default(false)
+//   createdAt   DateTime   @default(now())
+//   updatedAt   DateTime   @updatedAt
+//   momsPercent Int        @default(0)
+//   categories  Category[]
+//   repairs     Repair[]
+//   devices     Device[]
+//   fixOrders   FixOrder[]
+//   images      String[]
+//   discount    Float?     @default(0)
+//   orders      Order[]
+//   order       Int        @default(0)
+// }
+
 export default function ItemForm({
   onAdd,
   currentItem,
@@ -46,7 +77,7 @@ export default function ItemForm({
   const updateMutation = useUpdateItem();
   const createMutation = useCreateItem();
   const [name, setName] = useState('');
-  const [image, setLogo] = useState('');
+  const [image, setImage] = useState('');
   const [description, setDescription] = useState('');
   const [buyPrice, setBuyPrice] = useState('0');
   const [sellPrice, setSellPrice] = useState('0');
@@ -55,18 +86,31 @@ export default function ItemForm({
   const [isUsed, setIsUsed] = useState(false);
   const [isPublished, setIsPublished] = useState(false);
   const [qrCode, setQrCode] = useState('');
-  const [models, setModels] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [repairs, setRepairs] = useState([]);
+  const [models, setModels] = useState<Device[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [repairs, setRepairs] = useState<Repair[]>([]);
   const [order, setOrder] = useState('0');
   const [momsPercent, setMomsPercent] = useState('0');
   const [color, setColor] = useState('');
+  const [images, setImages] = useState<string[]>([]);
   const { data: allDevices } = useAllDevices();
   const { data: allCategories } = useAllCategories();
   const { data: allRepairs } = useRepairs();
 
   const handleFileChange = (event: any) => {
-    setLogo(event.target.files[0]);
+    setImage(event.target.files[0]);
+  };
+
+  const handleAddImage = (event: any) => {
+    const files = event.target.files as FileList;
+    const newImages = Array.from(files).map((file) =>
+      URL.createObjectURL(file)
+    );
+    setImages((prevImages) => [...prevImages, ...newImages]);
+  };
+
+  const handleRemoveImage = (index: number) => {
+    setImages((prevImages) => prevImages.filter((_, i) => i !== index));
   };
 
   useEffect(() => {
@@ -97,17 +141,16 @@ export default function ItemForm({
       description,
       buyPrice: parseFloat(buyPrice),
       sellPrice: parseFloat(sellPrice),
-      quantity: parseInt(quantity),
-      quality,
+      quantity: parseInt(quantity) || 1,
+      quality: quality || 'new',
       isUsed,
       isPublished,
       qrCode,
-      models: models.map((model) => model.id),
-      repairs,
-      categories: categories.map((category) => category.id),
+      devices: models.map((model) => model?.id),
+      categories: categories.map((category) => category?.id),
       order: parseInt(order),
       momsPercent: parseFloat(momsPercent),
-      color,
+      color: color,
     };
 
     if (currentItem) {
@@ -123,7 +166,7 @@ export default function ItemForm({
   };
 
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={4}>
       <Grid item lg={4} md={6} xs={12}>
         <FormContainer>
           <FeildContainer>
@@ -274,16 +317,55 @@ export default function ItemForm({
                 )}
               />
             </FeildContainer>
-
-            <FeildContainer>
-              <Button variant='contained' onClick={onSave}>
-                Submit
-              </Button>
-            </FeildContainer>
           </FormContainer>
         </FormContainer>
       </Grid>
-      <Grid item lg={4} md={6} xs={12}></Grid>
+      <Grid item lg={12} md={12} xs={12}>
+        <FormContainer>
+          <Button variant='contained' component='label'>
+            Upload Images
+            <input
+              type='file'
+              accept='image/*'
+              hidden
+              multiple
+              onChange={handleAddImage}
+            />
+          </Button>
+
+          <FeildContainer>
+            <Grid container spacing={2} style={{ marginTop: '20px' }}>
+              {images.map((image, index) => (
+                <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+                  <Card>
+                    <CardMedia
+                      component='img'
+                      height='200'
+                      image={image}
+                      alt={`Uploaded Image ${index + 1}`}
+                    />
+                    <CardActions>
+                      <IconButton
+                        aria-label='delete'
+                        onClick={() => handleRemoveImage(index)}
+                      >
+                        <FiDelete />
+                      </IconButton>
+                    </CardActions>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </FeildContainer>
+        </FormContainer>
+      </Grid>
+      <Grid item lg={12} md={12} xs={12}>
+        <FeildContainer>
+          <Button variant='contained' onClick={onSave}>
+            Submit
+          </Button>
+        </FeildContainer>
+      </Grid>
     </Grid>
   );
 }

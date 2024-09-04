@@ -224,6 +224,7 @@ model Item {
   discount    Float?     @default(0)
   orders      Order[]
   order       Int        @default(0)
+  color       String?
 }
 
 model Order {

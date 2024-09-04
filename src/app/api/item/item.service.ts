@@ -138,8 +138,12 @@ export class ItemService {
     };
 
     if (devicesIds.length > 0) {
-      whereClause.modelId = {
-        in: devicesIds,
+      whereClause.devices = {
+        some: {
+          id: {
+            in: devicesIds,
+          },
+        },
       };
     }
 
@@ -165,7 +169,7 @@ export class ItemService {
     const repairs = await prisma.item.findMany({
       where: whereClause,
       include: {
-        model: true,
+        devices: true,
       },
       orderBy:
         currentSort && currentIsASC
@@ -188,10 +192,20 @@ export class ItemService {
     };
   }
 
-  static async insert(data: Item) {
+  static async insert(data: any) {
     const prisma = new PrismaClient();
+    const { categories, devices, ...rest } = data;
     const inserted = await prisma.item.create({
-      data,
+      data: {
+        ...rest,
+        id: randomUUID(),
+        devices: {
+          connect: devices.map((id: string) => ({ id })),
+        },
+        categories: {
+          connect: categories.map((id: string) => ({ id })),
+        },
+      },
     });
     await prisma.$disconnect();
     return inserted;
@@ -228,8 +242,12 @@ export class ItemService {
     const prisma = new PrismaClient();
     const repairs = await prisma.item.findMany({
       where: {
-        modelId: {
-          in: devices,
+        devices: {
+          some: {
+            id: {
+              in: devices,
+            },
+          },
         },
         name:
           searchKey === null ||
