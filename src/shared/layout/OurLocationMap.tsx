@@ -42,7 +42,7 @@ export default function OurLocationMap() {
       onUnmount={onUnmount}
       options={{
         zoomControl: true,
-        mapTypeId: 'satellite',
+        mapTypeId: 'hybrid',
       }}
     >
       <></>
