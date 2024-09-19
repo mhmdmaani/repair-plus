@@ -37,11 +37,12 @@ export default function OurLocationMap() {
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}
-      zoom={50}
+      zoom={20}
       onLoad={onLoad}
       onUnmount={onUnmount}
       options={{
         zoomControl: true,
+        mapTypeId: 'satellite',
       }}
     >
       <></>
