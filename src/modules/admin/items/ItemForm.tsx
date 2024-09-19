@@ -53,9 +53,9 @@ export default function ItemForm({
   const [isUsed, setIsUsed] = useState(false);
   const [isPublished, setIsPublished] = useState(false);
   const [qrCode, setQrCode] = useState('');
-  const [modelId, setModelId] = useState(null);
+  const [modelId, setModelId] = useState<any>(null);
   const [repairId, setRepairId] = useState(null);
-  const [categoryId, setCategoryId] = useState(null);
+  const [categoryId, setCategoryId] = useState<any>(null);
   const [order, setOrder] = useState('0');
   const [momsPercent, setMomsPercent] = useState('0');
   const [color, setColor] = useState('');
@@ -78,12 +78,13 @@ export default function ItemForm({
       setIsPublished(currentItem.isPublished);
       setQrCode(currentItem.qrCode || '');
       setModelId(
-        allDevices?.find((device) => device.id === currentItem.modelId) || null
+        allDevices?.find((device: any) => device.id === currentItem.modelId) ||
+          null
       );
       setRepairId(currentItem.repairId || null);
       setCategoryId(
         allCategories?.find(
-          (category) => category.id === currentItem.categoryId
+          (category: any) => category.id === currentItem.categoryId
         ) || null
       );
       setOrder(currentItem?.order?.toString());
@@ -191,7 +192,7 @@ export default function ItemForm({
       <FeildContainer>
         <Autocomplete
           disablePortal
-          options={allDevices?.map((option) => ({
+          options={allDevices?.map((option: any) => ({
             id: option.id,
             label: option.name,
           }))}
@@ -205,14 +206,14 @@ export default function ItemForm({
         <TextField
           label='Repair ID'
           value={repairId}
-          onChange={(e) => setRepairId(e.target.value)}
+          onChange={(e) => setRepairId(e.target.value as any)}
         />
       </FeildContainer>
 
       <FeildContainer>
         <Autocomplete
           disablePortal
-          options={allCategories?.map((option) => ({
+          options={allCategories?.map((option: any) => ({
             id: option.id,
             label: option.name,
           }))}

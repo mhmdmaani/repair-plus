@@ -302,7 +302,7 @@ export default function AllItemsPage() {
         >
           <ItemForm
             deviceId={selectedDevice?.id}
-            currentRepair={currentRepair}
+            currentItem={currentRepair}
             onAdd={() => setAddNew(false)}
           />
         </DialogContent>

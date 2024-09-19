@@ -65,6 +65,9 @@ export default async function Home() {
       isActive: true,
       isFeatured: true,
     },
+    orderBy: {
+      order: 'desc',
+    },
     include: {
       devices: {
         where: {

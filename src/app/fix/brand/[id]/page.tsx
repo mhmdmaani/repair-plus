@@ -53,7 +53,7 @@ async function Brand({
           parentId: null,
         },
         orderBy: {
-          order: 'asc',
+          order: 'desc',
         },
       },
     },
