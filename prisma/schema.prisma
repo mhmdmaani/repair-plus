@@ -241,3 +241,11 @@ model Order {
   updatedAt     DateTime    @updatedAt
   items         Item[]
 }
+
+model Faq {
+  id       String  @id @default(uuid())
+  question String
+  answer   String
+  order    Int     @default(0)
+  isActive Boolean @default(true)
+}
