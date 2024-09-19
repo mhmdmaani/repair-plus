@@ -103,6 +103,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${FRONT_END_URL}/privacy`,
       lastModified: new Date(),
     },
+
+    {
+      url: `${FRONT_END_URL}/faq`,
+      lastModified: new Date(),
+    },
   ];
 
   // Dynamic links from the database
