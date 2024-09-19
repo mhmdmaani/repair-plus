@@ -1,6 +1,9 @@
 'use client';
+import { useAllCategories } from '@/hooks/admin/useCategories';
+import { useAllDevices } from '@/hooks/admin/useDevices';
 import { useCreateItem, useUpdateItem } from '@/hooks/admin/useItems';
 import {
+  Autocomplete,
   Button,
   FormControlLabel,
   MenuItem,
@@ -50,12 +53,14 @@ export default function ItemForm({
   const [isUsed, setIsUsed] = useState(false);
   const [isPublished, setIsPublished] = useState(false);
   const [qrCode, setQrCode] = useState('');
-  const [modelId, setModelId] = useState('');
-  const [repairId, setRepairId] = useState('');
-  const [categoryId, setCategoryId] = useState('');
+  const [modelId, setModelId] = useState<any>(null);
+  const [repairId, setRepairId] = useState(null);
+  const [categoryId, setCategoryId] = useState<any>(null);
   const [order, setOrder] = useState('0');
   const [momsPercent, setMomsPercent] = useState('0');
   const [color, setColor] = useState('');
+  const { data: allDevices } = useAllDevices();
+  const { data: allCategories } = useAllCategories();
 
   const handleFileChange = (event: any) => {
     setLogo(event.target.files[0]);
@@ -72,14 +77,21 @@ export default function ItemForm({
       setIsUsed(currentItem.isUsed);
       setIsPublished(currentItem.isPublished);
       setQrCode(currentItem.qrCode || '');
-      setModelId(currentItem.modelId || '');
-      setRepairId(currentItem.repairId || '');
-      setCategoryId(currentItem.categoryId || '');
-      setOrder(currentItem.order.toString());
-      setColor(currentItem.color);
-      setMomsPercent(currentItem.momsPercent);
+      setModelId(
+        allDevices?.find((device: any) => device.id === currentItem.modelId) ||
+          null
+      );
+      setRepairId(currentItem.repairId || null);
+      setCategoryId(
+        allCategories?.find(
+          (category: any) => category.id === currentItem.categoryId
+        ) || null
+      );
+      setOrder(currentItem?.order?.toString());
+      setColor(currentItem?.color);
+      setMomsPercent(currentItem?.momsPercent);
     }
-  }, [currentItem]);
+  }, [currentItem, allDevices, allCategories]);
 
   const onSave = async () => {
     const data: any = {
@@ -94,9 +106,9 @@ export default function ItemForm({
       isUsed,
       isPublished,
       qrCode,
-      modelId,
+      modelId: modelId?.id || '',
       repairId,
-      categoryId,
+      categoryId: categoryId?.id || '',
       order: parseInt(order),
       momsPercent: parseFloat(momsPercent),
       color,
@@ -106,7 +118,6 @@ export default function ItemForm({
       await updateMutation.mutate(data);
       onAdd && onAdd(data);
     } else {
-      // create
       await createMutation.mutate(data, {
         onSuccess: (data) => {
           onAdd && onAdd(data);
@@ -177,25 +188,38 @@ export default function ItemForm({
           onChange={(e) => setQrCode(e.target.value)}
         />
       </FeildContainer>
+
       <FeildContainer>
-        <TextField
-          label='Model ID'
+        <Autocomplete
+          disablePortal
+          options={allDevices?.map((option: any) => ({
+            id: option.id,
+            label: option.name,
+          }))}
           value={modelId}
-          onChange={(e) => setModelId(e.target.value)}
+          onChange={(event, newValue) => setModelId(newValue)}
+          renderInput={(params) => <TextField {...params} label='Model' />}
         />
       </FeildContainer>
+
       <FeildContainer>
         <TextField
           label='Repair ID'
           value={repairId}
-          onChange={(e) => setRepairId(e.target.value)}
+          onChange={(e) => setRepairId(e.target.value as any)}
         />
       </FeildContainer>
+
       <FeildContainer>
-        <TextField
-          label='Category ID'
+        <Autocomplete
+          disablePortal
+          options={allCategories?.map((option: any) => ({
+            id: option.id,
+            label: option.name,
+          }))}
           value={categoryId}
-          onChange={(e) => setCategoryId(e.target.value)}
+          onChange={(event, newValue) => setCategoryId(newValue)}
+          renderInput={(params) => <TextField {...params} label='Category' />}
         />
       </FeildContainer>
 

@@ -212,19 +212,19 @@ model Item {
   qrCode      String?
   isUsed      Boolean    @default(false)
   quality     String
-  model       Device?    @relation(fields: [modelId], references: [id])
-  modelId     String?
-  repair      Repair?    @relation(fields: [repairId], references: [id])
-  repairId    String?
   isPublished Boolean    @default(false)
   createdAt   DateTime   @default(now())
   updatedAt   DateTime   @updatedAt
   momsPercent Int        @default(0)
-  category    Category?  @relation(fields: [categoryId], references: [id])
-  categoryId  String?
+  categories  Category[]
+  repairs     Repair[]
+  devices     Device[]
   fixOrders   FixOrder[]
+  images      String[]
+  discount    Float?     @default(0)
   orders      Order[]
   order       Int        @default(0)
+  color       String?
 }
 
 model Order {
