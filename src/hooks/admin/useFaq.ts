@@ -71,31 +71,3 @@ export const useDeleteReview = () => {
     },
   });
 };
-
-export const useImportReviews = () => {
-  return useQuery({
-    queryKey: ['importReviews'],
-    queryFn: Faq.importFromGoogleMaps,
-  });
-};
-
-export const useCreateManyReview = () => {
-  const queryClient = useQueryClient();
-  return useMutation({
-    mutationFn: Faq.createMany,
-    onSuccess: () => {
-      queryClient.invalidateQueries({
-        queryKey: ['allFaqs'],
-      });
-
-      queryClient.invalidateQueries({
-        queryKey: ['activeReviews'],
-      });
-
-      queryClient.invalidateQueries({
-        queryKey: ['searchReviews'],
-      });
-      toast.success('Faq created successfully');
-    },
-  });
-};
