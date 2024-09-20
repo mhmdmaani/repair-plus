@@ -37,7 +37,7 @@ export default function OurLocationMap() {
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}
-      zoom={20}
+      zoom={19}
       onLoad={onLoad}
       onUnmount={onUnmount}
       options={{
