@@ -28,6 +28,7 @@ import {
   useUpdateRepair,
 } from '@/hooks/admin/useRepairs';
 import SlideModal from '@/shared/modals/SlideModal';
+import ImportRepairsDialog from './ImportRepairsDialog';
 
 const SearchContainer = styled('div')`
   display: flex;
@@ -39,6 +40,8 @@ export default function RepairsPage({ deviceId }: { deviceId: string }) {
   const [addNew, setAddNew] = useState(false);
   const [currentRepair, setCurrentRepair] = useState<Repair | null>(null);
   const [deleteDialog, setDeleteDialog] = useState(false);
+  const [importDialog, setImportDialog] = useState(false);
+
   const router = useRouter();
   const {
     page,
@@ -185,15 +188,24 @@ export default function RepairsPage({ deviceId }: { deviceId: string }) {
             onChange={(e) => setSearch(e.target.value)}
           />
         </SearchContainer>
+        <Stack direction='row' spacing={2}>
+          <Button
+            onClick={() => {
+              setImportDialog(true);
+            }}
+          >
+            Import From Other Device
+          </Button>
 
-        <Button
-          onClick={() => {
-            setCurrentRepair(null);
-            setAddNew(true);
-          }}
-        >
-          Add New
-        </Button>
+          <Button
+            onClick={() => {
+              setCurrentRepair(null);
+              setAddNew(true);
+            }}
+          >
+            Add New
+          </Button>
+        </Stack>
       </Stack>
 
       <EnhancedTable
@@ -268,6 +280,11 @@ export default function RepairsPage({ deviceId }: { deviceId: string }) {
           </Stack>
         </div>
       </SlideModal>
+      <ImportRepairsDialog
+        open={importDialog}
+        setOpen={setImportDialog}
+        targetDeviceId={deviceId}
+      />
     </>
   );
 }

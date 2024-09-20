@@ -279,4 +279,34 @@ export class RepairService {
     console.log('repairs', repairs);
     return repairs;
   }
+
+  static async importRepairs(data: { targetId: string; sourceId: string }) {
+    const prisma = new PrismaClient();
+    const repairs = await prisma.repair.findMany({
+      where: {
+        deviceId: data.sourceId,
+      },
+    });
+
+    const inserted = await prisma.repair.createMany({
+      data: repairs.map((r) => ({
+        id: randomUUID(),
+        name: r.name,
+        deviceId: data.targetId,
+        order: r.order,
+        image: r.image,
+        description: r.description,
+        buyPrice: r.buyPrice,
+        sellPrice: r.sellPrice,
+        repairingPrice: r.repairingPrice,
+        repairingTimeMinutes: r.repairingTimeMinutes,
+        quantity: r.quantity,
+        quality: r.quality,
+        isActive: false,
+        momsPercent: r.momsPercent,
+      })),
+    });
+
+    return inserted;
+  }
 }
