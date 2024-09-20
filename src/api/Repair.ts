@@ -111,4 +111,11 @@ export class Repair {
       .then((res) => res.data);
     return result;
   }
+
+  static async importFromDevice(data: any) {
+    const result = await axios
+      .post(`${BASE_URL}/repair/import`, data)
+      .then((res) => res.data);
+    return result;
+  }
 }

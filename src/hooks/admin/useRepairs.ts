@@ -97,3 +97,16 @@ export const useSearchAll = (data: any) => {
     queryFn: () => Repair.searchAll(data),
   });
 };
+
+export const useImportRepairs = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: Repair.importFromDevice,
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ['repairs'],
+      });
+      toast.success('Repairs imported successfully');
+    },
+  });
+};
