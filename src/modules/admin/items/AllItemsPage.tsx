@@ -221,16 +221,13 @@ export default function AllItemsPage() {
             onChange={(e) => setSearch(e.target.value)}
           />
         </SearchContainer>
-        {selectedDevice?.id && (
-          <Button
-            onClick={() => {
-              setCurrentRepair(null);
-              setAddNew(true);
-            }}
-          >
-            Add New Item
-          </Button>
-        )}
+        <Button
+          onClick={() => {
+            router.push('/admin/items/new');
+          }}
+        >
+          Add New Item
+        </Button>
       </Stack>
       <Container
         style={{
