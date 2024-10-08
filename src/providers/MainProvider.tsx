@@ -23,8 +23,8 @@ const MainProvider = ({
       <ThemeProvider
         attribute='class'
         defaultTheme='dark'
-        enableSystem
-        disableTransitionOnChange
+        enableSystem={false}
+        disableTransitionOnChange={false}
       >
         <ThemeRegistry>
           <CssBaseline />

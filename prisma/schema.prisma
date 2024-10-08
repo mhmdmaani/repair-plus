@@ -165,20 +165,22 @@ model Subscription {
 }
 
 model Settings {
-  id                         String   @id @default(uuid())
-  currency                   String
-  currencySymbol             String
-  vatPercentage              Float
-  contactPhone               String?
-  contactEmail               String?
-  facebook                   String?
-  instagram                  String?
-  twitter                    String?
-  linkedin                   String?
-  youtube                    String?
-  createdAt                  DateTime @default(now())
-  updatedAt                  DateTime @updatedAt
-  displayEmailInSeperatePage Boolean  @default(false)
+  id             String   @id @default(uuid())
+  currency       String
+  currencySymbol String
+  vatPercentage  Float
+  contactPhone   String?
+  contactEmail   String?
+  facebook       String?
+  instagram      String?
+  twitter        String?
+  linkedin       String?
+  youtube        String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  companyName    String?  @default("Repair Plus")
+  address        String?  @default("Kardanvägen 10")
+  registerNumber String?  @default("")
 }
 
 model Term {
