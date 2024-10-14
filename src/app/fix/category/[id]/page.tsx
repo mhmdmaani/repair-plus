@@ -79,21 +79,33 @@ async function Category({
     },
     include: {
       children: {
+        where: {
+          isActive: true,
+        },
         orderBy: {
           order: 'desc',
         },
         include: {
           children: {
+            where: {
+              isActive: true,
+            },
             orderBy: {
               order: 'desc',
             },
             include: {
               children: {
+                where: {
+                  isActive: true,
+                },
                 orderBy: {
                   order: 'desc',
                 },
                 include: {
                   children: {
+                    where: {
+                      isActive: true,
+                    },
                     orderBy: {
                       order: 'desc',
                     },
