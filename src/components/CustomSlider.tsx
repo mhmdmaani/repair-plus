@@ -1,6 +1,7 @@
-import { Card, CardContent, CardMedia, styled } from '@mui/material';
+import { CardContent, CardMedia, styled } from '@mui/material';
 import Link from 'next/link';
 import Slider from 'react-slick';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 const SliderContainer = styled('div')`
   width: 80%;
@@ -40,6 +41,7 @@ const Title = styled('h2')`
   margin-bottom: 10px;
   text-align: center;
 `;
+
 const CardContainer = styled('div')`
   padding: 20px;
 `;
@@ -53,33 +55,70 @@ const UnstyledLink = styled(Link)`
   color: inherit;
 `;
 
+// Custom arrow components
+const ArrowButton = styled('div')`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+`;
+
+const NextArrow = (props: any) => {
+  const { onClick } = props;
+  return (
+    <ArrowButton style={{ right: '-20px' }} onClick={onClick}>
+      <FiChevronRight size={50} />
+    </ArrowButton>
+  );
+};
+
+const PrevArrow = (props: any) => {
+  const { onClick } = props;
+  return (
+    <ArrowButton className='' style={{ left: '-20px' }} onClick={onClick}>
+      <FiChevronLeft size={50} />
+    </ArrowButton>
+  );
+};
+
 const CardSlider = ({ items }: { items: any }) => {
   const settings = {
     dots: false,
-    infinite: false,
-    autoPlay: true,
+    infinite: true,
+    autoplay: true,
     speed: 500,
-    slidesToShow: 3, // Number of cards per slide
+    slidesToShow: 3,
     slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 768, // mobile devices
+        breakpoint: 768,
         settings: {
-          slidesToShow: 1, // Show 1 card on mobile devices
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 1024, // tablets
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 2, // Show 2 cards on tablets
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 1200, // large screens
+        breakpoint: 1200,
         settings: {
-          slidesToShow: 3, // Show 3 cards on large screens
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
@@ -89,10 +128,10 @@ const CardSlider = ({ items }: { items: any }) => {
   return (
     <SliderContainer>
       <Slider {...settings}>
-        {items?.map((card: any, index: number) => (
+        {items?.map((card: any) => (
           <UnstyledLink key={card.id} href={`/fix/model/${card.id}`}>
             <CardContainer>
-              <CustomCard key={index}>
+              <CustomCard>
                 <CustomCardMedia>
                   <CustomImage src={card.image} alt={card.title} />
                 </CustomCardMedia>

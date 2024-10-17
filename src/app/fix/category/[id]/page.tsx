@@ -61,7 +61,20 @@ export async function generateMetadata(
     title: `Repair Plus | ${category?.name}`,
     description:
       'Repair Plus offers professional and fast repair services for mobile phones, tablets, laptops, and other electronic devices. Our expert technicians provide reliable fixes for all major brands, ensuring your gadgets are back in perfect working order. Convenient, affordable, and trusted across Sweden.',
-    keywords: `Repair Plus, ${category?.name}, ${generatedKeywords}, About Us, Request Quote, delivery, shipping, courier, transport`,
+    keywords: `Repair Plus, ${category?.name}, ${generatedKeywords}, About Us, laga, mobil, surfplatta, dator, elektronik, reparation, service, fix, electronics, gadgets, Sweden, Trollhattan`,
+    openGraph: {
+      title: `Repair Plus | ${category?.name}`,
+      description:
+        'Repair Plus offers professional and fast repair services for mobile phones, tablets, laptops, and other electronic devices. Our expert technicians provide reliable fixes for all major brands, ensuring your gadgets are back in perfect working order.',
+      images: [
+        {
+          url: category?.image || '/default-image.jpg', // Fallback image if brand image is unavailable
+          width: 1200,
+          height: 630,
+          alt: `Image of ${category?.name}`,
+        },
+      ],
+    },
   };
 }
 

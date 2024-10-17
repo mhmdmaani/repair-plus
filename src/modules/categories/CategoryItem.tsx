@@ -16,10 +16,16 @@ const UnstyledLink = styled(Link)`
 `;
 
 const CustomCard = styled(Card)`
-  transition: all 0.5s ease-in-out;
+  background: rgba(17, 25, 40, 1);
+  border-width: 2px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  :hover {
+    border-color: #cbacf9;
+  }
   :hover img {
     transform: scale(1.1);
-    transition: all 0.5s ease-in-out;
   }
 `;
 

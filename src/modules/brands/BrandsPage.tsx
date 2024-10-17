@@ -36,17 +36,17 @@ const UnstyledLink = styled(Link)`
   text-decoration: none;
   color: inherit;
 `;
-
-const CustomCard = styled(Card)`
-  transition: all 0.5s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
+const ItemCard = styled(Card)`
+  background: rgba(17, 25, 40, 1);
+  border-width: 2px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  :hover {
+    border-color: #cbacf9;
+  }
   :hover img {
     transform: scale(1.1);
-    transition: all 0.5s ease-in-out;
   }
 `;
 
@@ -84,11 +84,13 @@ export default function BrandsPage({ brands }: { brands: Brand[] }) {
             {brands.map((brand) => (
               <Grid item xs={12} sm={6} md={4} lg={3} key={brand.id}>
                 <UnstyledLink href={`/fix/brand/${brand.id}`}>
-                  <CustomCard
-                    sx={{
-                      height: '100%',
+                  <ItemCard
+                    style={{
                       cursor: 'pointer',
+                      marginTop: '30px',
+                      height: 300,
                     }}
+                    className='group'
                   >
                     <ImageContainer>
                       <CustomImage
@@ -105,7 +107,7 @@ export default function BrandsPage({ brands }: { brands: Brand[] }) {
                         {brand.name}
                       </Typography>
                     </CardContent>
-                  </CustomCard>
+                  </ItemCard>
                 </UnstyledLink>
               </Grid>
             ))}

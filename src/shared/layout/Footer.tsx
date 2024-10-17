@@ -88,7 +88,7 @@ export default function Footer() {
   const { data } = useSettings();
   return (
     <>
-      <div className='h-[40rem] mt-24 rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden'>
+      <div className='h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden'>
         <Container>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={4} lg={4}>

@@ -31,6 +31,19 @@ export async function generateMetadata(
     description:
       'Repair Plus offers professional and fast repair services for mobile phones, tablets, laptops, and other electronic devices. Our expert technicians provide reliable fixes for all major brands, ensuring your gadgets are back in perfect working order. Convenient, affordable, and trusted across Sweden.',
     keywords: `${brand?.name}, Repair Plus, fix, electronics, gadgets, Sweden, Trollhattan`,
+    openGraph: {
+      title: `Repair Plus | ${brand?.name}`,
+      description:
+        'Repair Plus offers professional and fast repair services for mobile phones, tablets, laptops, and other electronic devices. Our expert technicians provide reliable fixes for all major brands, ensuring your gadgets are back in perfect working order.',
+      images: [
+        {
+          url: brand?.logo || '/default-image.jpg', // Fallback image if brand image is unavailable
+          width: 1200,
+          height: 630,
+          alt: `Image of ${brand?.name}`,
+        },
+      ],
+    },
   };
 }
 
