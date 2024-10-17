@@ -51,10 +51,10 @@ export async function generateMetadata(
     .join(', ');
 
   return {
-    title: `Repair Plus | Home`,
+    title: `Repair Plus | Hem`,
     description:
-      'Repair Plus offers professional and fast repair services for mobile phones, tablets, laptops, and other electronic devices. Our expert technicians provide reliable fixes for all major brands, ensuring your gadgets are back in perfect working order. Convenient, affordable, and trusted across Sweden.',
-    keywords: `Repair Plus, ${generatedBrandsKeywords}, ${generatedCategoriesKeywords}, fix, electronics, gadgets, Sweden, Trollhattan`,
+      'Repair Plus erbjuder professionella och snabba reparationstjänster för mobiltelefoner, surfplattor, bärbara datorer och andra elektroniska enheter. Våra experttekniker erbjuder pålitliga reparationer för alla stora varumärken och ser till att dina enheter återställs till perfekt skick. Bekvämt, prisvärt och betrott över hela Sverige.',
+    keywords: `Repair Plus, ${generatedBrandsKeywords}, ${generatedCategoriesKeywords}, reparation, elektronik, prylar, Sverige, Trollhättan`,
   };
 }
 

@@ -8,6 +8,15 @@ const Container = styled('div')`
   top: 65px;
   z-index: 1000;
 `;
+
+const CustomLinearProgress = styled(LinearProgress)`
+  height: 2px; /* Customize the height */
+  border-radius: 2px; /* Optional: round the edges */
+  & .MuiLinearProgress-bar {
+    background-color: #111928; /* Custom bar color */
+  }
+`;
+
 export default function LoadingProvider({
   children,
 }: {
@@ -19,7 +28,7 @@ export default function LoadingProvider({
     <>
       {isLoading ? (
         <Container>
-          <LinearProgress color='warning' />
+          <CustomLinearProgress />
         </Container>
       ) : null}
       <>{children}</>

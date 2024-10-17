@@ -45,7 +45,7 @@ export default function HomePage({
 
       <ChooseUs />
       <SubscribeSection />
-      <ClientsSection />
+      {/* <ClientsSection /> */}
     </div>
   );
 }

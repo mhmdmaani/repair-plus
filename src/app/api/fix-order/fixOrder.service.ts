@@ -1,6 +1,7 @@
 import { FixOrder, PrismaClient } from 'prisma/prisma-client';
 import { EmailService } from '../utils/email.service';
 import { randomUUID } from 'crypto';
+import generateReceiptWithTerms from './generateFixOrderPdf';
 
 export class FixOrderService {
   static async getAll() {
@@ -116,7 +117,7 @@ export class FixOrderService {
         })),
       });
       if (!newFixes || !Array.isArray(newFixes)) {
-        return null;
+        // return null;
       }
 
       const updated = await prisma.fixOrder.update({
@@ -211,12 +212,27 @@ export class FixOrderService {
       });
 
       if (!insertedNewFixes || !Array.isArray(insertedNewFixes)) {
-        return null;
+        // return null;
       }
 
       id = inserted.id;
     }
+
+    const currentOrder = await prisma.fixOrder.findUnique({
+      where: {
+        id,
+      },
+      include: {
+        repairs: true,
+        fixes: true,
+        user: true,
+        devices: true,
+      },
+    });
     await prisma.$disconnect();
+
+    await generateReceiptWithTerms(currentOrder);
+
     // send Email to user
     await EmailService.sendEmail({
       to: data.user.email,
