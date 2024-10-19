@@ -9,7 +9,6 @@ import {
   Typography,
 } from '@mui/material';
 import Link from 'next/link';
-
 const UnstyledLink = styled(Link)`
   text-decoration: none;
   color: inherit;
@@ -37,20 +36,18 @@ export default function CategoryItem({ category }: { category: Category }) {
   return (
     <UnstyledLink href={`/fix/category/${category.id}`}>
       <CustomCard
-        sx={{
-          height: '100%',
+        style={{
           cursor: 'pointer',
-          justifyContent: 'center',
-          alignItems: 'center',
-          paddingTop: 2,
-          paddingBottom: 2,
+          marginTop: '30px',
+          height: 300,
         }}
       >
         <CardMedia
-          style={{
+          sx={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            height: '70%',
           }}
         >
           {!category.image ? (
@@ -69,9 +66,10 @@ export default function CategoryItem({ category }: { category: Category }) {
               src={category.image || ''}
               alt={category.name}
               style={{
-                width: '100%',
-                height: '100%',
+                width: 'auto',
+                height: '70%',
                 objectFit: 'cover',
+                margin: 'auto',
               }}
             />
           )}
