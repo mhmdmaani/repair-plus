@@ -36,10 +36,11 @@ const UnstyledLink = styled(Link)`
   text-decoration: none;
   color: inherit;
 `;
-const ItemCard = styled(Card)`
+const ItemCard = styled('div')`
   background: rgba(17, 25, 40, 1);
-  border-width: 2px;
   border-radius: 12px;
+  border-width: 2px;
+  border-color: transparent;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   :hover {
@@ -103,7 +104,11 @@ export default function BrandsPage({ brands }: { brands: Brand[] }) {
                     </ImageContainer>
 
                     <CardContent>
-                      <Typography variant='h6' fontWeight={'bold'}>
+                      <Typography
+                        variant='h6'
+                        fontWeight={'bold'}
+                        style={{ textAlign: 'center' }}
+                      >
                         {brand.name}
                       </Typography>
                     </CardContent>

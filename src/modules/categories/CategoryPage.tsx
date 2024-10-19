@@ -124,8 +124,8 @@ export default function CategoryPage({
           <Grid container spacing={2}>
             {/*//@ts-ignore */}
             {category?.children?.map((cat: any) => (
-              <Grid item xs={12} sm={6} md={6} lg={4} key={cat.id}>
-                <CategoryItem category={cat} />
+              <Grid item xs={12} sm={6} md={6} lg={6} key={cat.id}>
+                <CategoryItemAlt category={cat} />
               </Grid>
             ))}
           </Grid>
